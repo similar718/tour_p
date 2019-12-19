@@ -1,0 +1,97 @@
+<resources>
+    <string name="app_name">小马在途</string>
+
+    <!-- 公共 -->
+    <string name="cny_unit">¥</string>
+    <string name="common_save">保存</string>
+    <string name="common_confirm">确定</string>
+    <string name="common_cancel">取消</string>
+    <string name="common_monetary_unit">¥</string>
+
+    <string name="btn_send">发送</string>
+
+    <!-- ModifyNicknameActivity -->
+    <string name="mna_modify_nickname">修改昵称</string>
+
+    <!-- MineFragment -->
+    <string name="mf_text_1">Hi～等你好久了</string>
+    <string name="mf_text_2">一起来开启你的自驾游之旅</string>
+
+    <!-- PwdLoginActivity -->
+    <string name="pla_other_login">其他登录方式</string>
+
+
+    <!-- RegisterActivity -->
+    <string name="ra_verification_code_hint">请输入验证码</string>
+    <string name="ra_get_the_verification_code">获取验证码</string>
+    <string name="ra_text">注册或登录，即代表你已同意</string>
+    <string name="ra_text_1">《用户协议》</string>
+    <string name="ra_text_2">《免责声明》《隐私政策》</string>
+    <string name="ra_resend">S重新获取</string>
+
+    <!-- FindPwdActivity -->
+    <string name="fpa_new_password_hint">新密码</string>
+    <string name="fpa_confirm_password_hint">确认密码</string>
+
+    <!-- VerificationCodeLoginActivity -->
+
+    <!-- MyOrderActivity -->
+    <string name="moa_all">全部</string>
+    <string name="moa_unpaid">待支付</string>
+
+    <!-- InformationActivity -->
+
+    <!-- CouponActivity -->
+
+    <string name="cra_used">已使用</string>
+    <string name="cra_expired">已过期</string>
+
+    <!-- 上下拉刷新 -->
+
+
+    <!-- 首页 -->
+    <string name="home_tag_weekend_tour">周末游</string>
+    <string name="home_text_private_order">私人订制</string>
+
+    <!-- 对讲 -->
+    <string name="intercom_prompt_net_broken">当前网络不可用</string>
+
+
+    <string name="intercom_input_panel_photo">照片</string>
+    <string name="intercom_input_panel_position">定位</string>
+    <string name="intercom_input_panel_video">小视频</string>
+    <string name="intercom_input_panel_camera">相机</string>
+    <string name="intercom_input_panel_broadcast">广播</string>
+    <string name="intercom_input_panel_contact_leader">联系领队</string>
+
+    <string name="black_list_send_tip">消息已发送，但对方拒收</string>
+
+
+    <string name="go_bind">去绑定</string>
+    <string name="go_change">去修改</string>
+    <string name="go_setting">去设置</string>
+    <string name="set_pay_psd">设置支付密码</string>
+    <string name="change_pay_psd">修改/找回支付密码</string>
+    <string name="satisfy">满</string>
+    <string name="available">元可用</string>
+    <string name="my_collection">我的收藏</string>
+    <string name="collection_complete">完成</string>
+    <string name="collection_edit">编辑</string>
+    <string name="add_tourer">新增常用出游人</string>
+    <string name="edit_tourer">编辑常用出游人</string>
+
+
+    <string name="year">年</string>
+    <string name="month">月</string>
+    <string name="day">日</string>
+    <string name="hour">时</string>
+    <string name="minute">分</string>
+
+    <string name="shared_navigation_bottom_list_jihe">集结点</string>
+    <string name="shared_navigation_bottom_list_bus">交通</string>
+    <string name="shared_navigation_bottom_list_trip">行程</string>
+    <string name="shared_navigation_bottom_list_live">住宿</string>
+    <string name="shared_navigation_go_here_empty_txt">步行路程太长\n建议采用其他出行方式</string>
+
+
+</resources>

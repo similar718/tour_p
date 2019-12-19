@@ -1,0 +1,10 @@
+<resources>
+    <!-- name 是Style的名称，parent 继承那个父类样式 -->
+    <style name="AppTheme.Main" parent="AppTheme" >
+        <item name="android:windowTranslucentStatus">true</item>
+        <!--<item name="android:windowTranslucentNavigation">true</item>-->
+    </style>
+    <style name="VideoPlayTheme" parent="AppTheme.Main">
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+</resources>

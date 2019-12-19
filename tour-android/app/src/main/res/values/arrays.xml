@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="markArray4">
+        <item>￥0</item>
+        <item>￥150</item>
+        <item>￥300</item>
+        <item>￥450</item>
+        <item>￥600</item>
+        <item>￥750</item>
+        <item>￥900</item>
+        <item>900以上</item>
+    </string-array>
+    <string-array name="carTypeArray">
+        <item>普通车牌</item>
+        <item>新能源汽车</item>
+        <item>大型车</item>
+        <item>大使馆或港澳出入境车辆</item>
+        <item>其他</item>
+    </string-array>
+</resources>

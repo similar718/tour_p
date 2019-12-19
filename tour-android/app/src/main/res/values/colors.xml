@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="colorPrimary">#FFFFFFFF</color>
+    <color name="colorPrimaryDark">#FFFFFFFF</color>
+    <color name="colorAccent">#24A4FF</color>
+    <color name="white">#ffffffff</color>
+
+    <color name="title_color">#333333</color>
+    <!-- 背景颜色 -->
+    <color name="background">#F4F4F4</color>
+
+    <!-- 黑色 -->
+    <color name="black">#000000</color>
+    <color name="black_guide_status_bg">#192536</color>
+    <color name="white_guide_status_bg">#FFFFFF</color>
+
+    <!-- 蓝色 -->
+    <color name="blue">#24A4FF</color>
+    <color name="blue_1">#188EE9</color>
+    <color name="blue_2">#4EBEFD</color>
+    <color name="blue_3">#24A4FF</color>
+    <color name="blue_4">#40BAFF</color>
+
+    <!-- 灰色 -->
+    <color name="gray">#999999</color>
+    <color name="gray_1">#E5E5E5</color>
+    <color name="gray_2">#DBF2FF</color>
+    <color name="gray_3">#666666</color>
+    <color name="gray_5">#F4F4F4</color>
+
+    <!-- 红色 -->
+    <color name="red_2">#4FA0CC</color>
+
+    <!-- 橙色 -->
+    <color name="orange">#FF9600</color>
+
+    <!-- 绿色 -->
+    <color name="green">#3FCE94</color>
+    <color name="green_2">#FF6000</color>
+
+    <color name="color_e5e5e5">#e5e5e5</color>
+    <color name="color_ff9600">#ff9600</color>
+    <color name="color_f4f4f4">#f4f4f4</color>
+    <color name="color_F7F8F9">#F7F8F9</color>
+
+    <!-- 酒店模块用到的色值 -->
+
+    <color name="color_33_33_33">#333333</color>
+    <color name="color_F3_F3_F3">#F3F3F3</color>
+    <color name="color_F4_F4_F4">#F4F4F4</color>
+    <color name="color_FF_FF_FF">#FFFFFF</color>
+    <color name="color_FF_FF_FF_70">#B3FFFFFF</color>
+    <color name="color_FF_FF_FF_50">#80FFFFFF</color>
+    <color name="color_FF_FC_FC">#FFFCFC</color>
+    <color name="color_56_56_56">#565656</color>
+    <color name="color_E5_E5_E5">#E5E5E5</color>
+    <color name="color_99_99_99">#999999</color>
+    <color name="color_49_BE_FF">#24A4FF</color>
+    <color name="color_88_49_BE_FF">#8824A4FF</color>
+    <color name="color_00_49_BE_FF">#0024A4FF</color>
+    <color name="color_18_8E_E9">#188EE9</color>
+    <color name="color_66_66_66">#666666</color>
+    <color name="color_4E_BE_FD">#4EBEFD</color>
+    <color name="color_FF_60_00">#FF6000</color>
+    <color name="color_FC_E3_BD">#FCE3BD</color>
+    <color name="color_FC_B6_4C">#FCB64C</color>
+    <color name="color_70_70_70">#707070</color>
+    <color name="color_DA_DA_DA">#DADADA</color>
+    <color name="color_C2_C2_C2">#C2C2C2</color>
+    <color name="color_FF_83_1E">#FF831E</color>
+    <color name="color_FF_C5_5F">#FFC55F</color>
+    <color name="color_63_C4_FA">#63C4FA</color>
+    <color name="color_FC_E5_CB">#FCE5CB</color>
+    <color name="color_00_BC_FF">#00BCFF</color>
+    <color name="color_DBF2FF">#DBF2FF</color>
+    <color name="color_FF0C0C">#FF0C0C</color>
+    <color name="color_FF0C0C_50">#80FF0C0C</color>
+
+    <!-- 特价门票用到的颜色值 -->
+    <color name="color_FB825E">#FB825E</color>
+    <color name="color_FF6000">#FF6000</color>
+    <color name="color_FF8840">#FF8840</color>
+    <color name="color_00ffffff">#00ffffff</color>
+    <color name="color_ffffff_30">#4DFFFFFF</color> <!-- 30% 的透明度 -->
+    <color name="color_ffffff_50">#80FFFFFF</color> <!-- 30% 的透明度 -->
+    <color name="color_ffffff_85">#D9FFFFFF</color> <!-- 85% 的透明度 -->
+    <color name="color_000000_30">#4D000000</color> <!-- 30% 的透明度 -->
+    <color name="color_line">#E5E5E5</color>
+
+    <!-- 电子导览 -->
+    <color name="color_FF0c0c">#FF0c0c</color>
+    <color name="color_49BEFF">#49BEFF</color>
+    <color name="color_24A4FF">#24A4FF</color><!-- TODO 将所有的49BEFF更换为这个 -->
+    <color name="color_24A4FF_50">#8024A4FF</color><!-- TODO 将所有的49BEFF更换为这个 -->
+    <color name="color_FC_68_6A">#FC686A</color>
+    <color name="color_0049BEFF">#0049BEFF</color>
+
+    <color name="color_AD94B9">#AD94B9</color>
+
+    <color name="color_F2F3F4">#F2F3F4</color>
+    <color name="color_333333">#333333</color><!-- 80% 透明度 -->
+    <color name="color_CC333333">#CC333333</color><!-- 80% 透明度 -->
+    <color name="color_99333333">#99333333</color><!-- 60% 透明度 -->
+    <color name="color_66030303">#66030303</color><!-- 40% 透明度 -->
+    <color name="color_ffffff_60" tools:ignore="MissingDefaultResource">#99FFFFFF</color><!-- 60% 透明度 -->
+    <color name="color_ffffff_65" tools:ignore="MissingDefaultResource">#A6FFFFFF</color><!-- 60% 透明度 -->
+    <color name="color_49BEFF_19">#3049BEFF</color><!-- 19% 透明度 -->
+
+    <color name="color_24A4FF_10">#1A24A4FF</color><!-- 10% 透明度 -->
+    <color name="color_24A4FF_19">#3024A4FF</color><!-- 19% 透明度 -->
+    <color name="color_24A4FF_30">#4D24A4FF</color><!-- 30% 透明度 -->
+    <color name="transparent">#00000000</color>
+    <color name="color_999999">#999999</color>
+    <color name="color_999999_60">#99999999</color>
+    <color name="color_666666">#666666</color>
+    <color name="color_000000">#000000</color>
+    <color name="color_292E34">#292E34</color>
+    <color name="color_fff700">#fff700</color>
+    <color name="color_040404">#040404</color>
+
+
+    <!-- QRCode scanner color begin -->
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="result_view">#B0000000</color>
+    <color name="viewfinder_frame">#90FFFFFF</color>
+    <color name="result_point_color">#C0FFFF00</color>
+    <color name="color_FA_5E_61">#FA5E61</color>
+    <color name="color_66_28_2E_30">#66282E30</color>
+    <!-- QRCode scanner color end -->
+
+    <!-- sharednavigation color -->
+    <color name="colot_C8EBFF">#C8EBFF</color>
+    <color name="date_picker_text_dark">#333333</color>
+    <color name="date_picker_bg">#FFFFFF</color>
+    <color name="color_f5f5f5">#f5f5f5</color>
+    <color name="color_939CA4">#939CA4</color>
+    <color name="color_FF4F00">#FF4F00</color>
+    <color name="color_1A1F24">#1A1F24</color>
+    <color name="color_C8CBD5">#C8CBD5</color>
+    <color name="color_131519">#131519</color>
+    <color name="color_D9DBDE">#D9DBDE</color>
+    <color name="color_26233A">#26233A</color>
+    <color name="color_FE3D00">#FE3D00</color>
+    <color name="color_1590FF">#1590FF</color>
+    <color name="color_005dff">#005dff</color>
+    <color name="color_B7C9E6">#B7C9E6</color>
+    <!-- sharednavigation color -->
+    <color name="color_E64340">#E64340</color>
+    <color name="color_FEFFFF">#FEFFFF</color>
+    <color name="color_4DC197">#4DC197</color>
+</resources>

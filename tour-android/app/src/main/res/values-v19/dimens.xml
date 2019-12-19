@@ -1,0 +1,4 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. 状态栏默认高度-->
+    <dimen name="status_bar_height">25dp</dimen>
+</resources>
