@@ -1,0 +1,2954 @@
+[
+  {
+    "areaCode":"513200",
+    "parentCode":"510000",
+    "treeNames":"四川省/阿坝藏族羌族自治州",
+    "areaName":"阿坝藏族羌族自治州",
+    "areaNamePinYin":"A BA ZANG ZU QIANG ZU ZI ZHI ZHOU ",
+    "areaType":2
+  },
+  {
+    "areaCode":"652900",
+    "parentCode":"650000",
+    "treeNames":"新疆维吾尔自治区/阿克苏地区",
+    "areaName":"阿克苏地区",
+    "areaNamePinYin":"A KE SU DI QU ",
+    "areaType":2
+  },
+  {
+    "areaCode":"659002",
+    "parentCode":"650000",
+    "treeNames":"新疆维吾尔自治区/阿拉尔市",
+    "areaName":"阿拉尔市",
+    "areaNamePinYin":"A LA ER SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"152900",
+    "parentCode":"150000",
+    "treeNames":"内蒙古自治区/阿拉善盟",
+    "areaName":"阿拉善盟",
+    "areaNamePinYin":"A LA SHAN MENG ",
+    "areaType":2
+  },
+  {
+    "areaCode":"654300",
+    "parentCode":"650000",
+    "treeNames":"新疆维吾尔自治区/阿勒泰地区",
+    "areaName":"阿勒泰地区",
+    "areaNamePinYin":"A LE TAI DI QU ",
+    "areaType":2
+  },
+  {
+    "areaCode":"542500",
+    "parentCode":"540000",
+    "treeNames":"西藏自治区/阿里地区",
+    "areaName":"阿里地区",
+    "areaNamePinYin":"A LI DI QU ",
+    "areaType":2
+  },
+  {
+    "areaCode":"610900",
+    "parentCode":"610000",
+    "treeNames":"陕西省/安康市",
+    "areaName":"安康市",
+    "areaNamePinYin":"AN KANG SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"340800",
+    "parentCode":"340000",
+    "treeNames":"安徽省/安庆市",
+    "areaName":"安庆市",
+    "areaNamePinYin":"AN QING SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"210300",
+    "parentCode":"210000",
+    "treeNames":"辽宁省/鞍山市",
+    "areaName":"鞍山市",
+    "areaNamePinYin":"AN SHAN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"520400",
+    "parentCode":"520000",
+    "treeNames":"贵州省/安顺市",
+    "areaName":"安顺市",
+    "areaNamePinYin":"AN SHUN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"410500",
+    "parentCode":"410000",
+    "treeNames":"河南省/安阳市",
+    "areaName":"安阳市",
+    "areaNamePinYin":"AN YANG SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"150800",
+    "parentCode":"150000",
+    "treeNames":"内蒙古自治区/巴彦淖尔市",
+    "areaName":"巴彦淖尔市",
+    "areaNamePinYin":"BA YAN NAO ER SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"652800",
+    "parentCode":"650000",
+    "treeNames":"新疆维吾尔自治区/巴音郭楞蒙古自治州",
+    "areaName":"巴音郭楞蒙古自治州",
+    "areaNamePinYin":"BA YIN GUO LENG MENG GU ZI ZHI ZHOU ",
+    "areaType":2
+  },
+  {
+    "areaCode":"511900",
+    "parentCode":"510000",
+    "treeNames":"四川省/巴中市",
+    "areaName":"巴中市",
+    "areaNamePinYin":"BA ZHONG SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"220800",
+    "parentCode":"220000",
+    "treeNames":"吉林省/白城市",
+    "areaName":"白城市",
+    "areaNamePinYin":"BAI CHENG SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"451000",
+    "parentCode":"450000",
+    "treeNames":"广西壮族自治区/百色市",
+    "areaName":"百色市",
+    "areaNamePinYin":"BAI SE SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"469025",
+    "parentCode":"460000",
+    "treeNames":"海南省/白沙黎族自治县",
+    "areaName":"白沙黎族自治县",
+    "areaNamePinYin":"BAI SHA LI ZU ZI ZHI XIAN ",
+    "areaType":2
+  },
+  {
+    "areaCode":"220600",
+    "parentCode":"220000",
+    "treeNames":"吉林省/白山市",
+    "areaName":"白山市",
+    "areaNamePinYin":"BAI SHAN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"620400",
+    "parentCode":"620000",
+    "treeNames":"甘肃省/白银市",
+    "areaName":"白银市",
+    "areaNamePinYin":"BAI YIN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"340300",
+    "parentCode":"340000",
+    "treeNames":"安徽省/蚌埠市",
+    "areaName":"蚌埠市",
+    "areaNamePinYin":"BANG BU SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"130600",
+    "parentCode":"130000",
+    "treeNames":"河北省/保定市",
+    "areaName":"保定市",
+    "areaNamePinYin":"BAO DING SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"610300",
+    "parentCode":"610000",
+    "treeNames":"陕西省/宝鸡市",
+    "areaName":"宝鸡市",
+    "areaNamePinYin":"BAO JI SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"530500",
+    "parentCode":"530000",
+    "treeNames":"云南省/保山市",
+    "areaName":"保山市",
+    "areaNamePinYin":"BAO SHAN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"469029",
+    "parentCode":"460000",
+    "treeNames":"海南省/保亭黎族苗族自治县",
+    "areaName":"保亭黎族苗族自治县",
+    "areaNamePinYin":"BAO TING LI ZU MIAO ZU ZI ZHI XIAN ",
+    "areaType":2
+  },
+  {
+    "areaCode":"150200",
+    "parentCode":"150000",
+    "treeNames":"内蒙古自治区/包头市",
+    "areaName":"包头市",
+    "areaNamePinYin":"BAO TOU SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"450500",
+    "parentCode":"450000",
+    "treeNames":"广西壮族自治区/北海市",
+    "areaName":"北海市",
+    "areaNamePinYin":"BEI HAI SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"110100",
+    "parentCode":"110000",
+    "treeNames":"北京市/北京城区",
+    "areaName":"北京城区",
+    "areaNamePinYin":"BEI JING CHENG QU ",
+    "areaType":2
+  },
+  {
+    "areaCode":"659005",
+    "parentCode":"650000",
+    "treeNames":"新疆维吾尔自治区/北屯市",
+    "areaName":"北屯市",
+    "areaNamePinYin":"BEI TUN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"210500",
+    "parentCode":"210000",
+    "treeNames":"辽宁省/本溪市",
+    "areaName":"本溪市",
+    "areaNamePinYin":"BEN XI SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"520500",
+    "parentCode":"520000",
+    "treeNames":"贵州省/毕节市",
+    "areaName":"毕节市",
+    "areaNamePinYin":"BI JIE SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"371600",
+    "parentCode":"370000",
+    "treeNames":"山东省/滨州市",
+    "areaName":"滨州市",
+    "areaNamePinYin":"BIN ZHOU SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"652700",
+    "parentCode":"650000",
+    "treeNames":"新疆维吾尔自治区/博尔塔拉蒙古自治州",
+    "areaName":"博尔塔拉蒙古自治州",
+    "areaNamePinYin":"BO ER TA LA MENG GU ZI ZHI ZHOU ",
+    "areaType":2
+  },
+  {
+    "areaCode":"341600",
+    "parentCode":"340000",
+    "treeNames":"安徽省/亳州市",
+    "areaName":"亳州市",
+    "areaNamePinYin":"BO ZHOU SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"130900",
+    "parentCode":"130000",
+    "treeNames":"河北省/沧州市",
+    "areaName":"沧州市",
+    "areaNamePinYin":"CANG ZHOU SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"220100",
+    "parentCode":"220000",
+    "treeNames":"吉林省/长春市",
+    "areaName":"长春市",
+    "areaNamePinYin":"CHANG CHUN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"430700",
+    "parentCode":"430000",
+    "treeNames":"湖南省/常德市",
+    "areaName":"常德市",
+    "areaNamePinYin":"CHANG DE SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"540300",
+    "parentCode":"540000",
+    "treeNames":"西藏自治区/昌都市",
+    "areaName":"昌都市",
+    "areaNamePinYin":"CHANG DOU SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"652300",
+    "parentCode":"650000",
+    "treeNames":"新疆维吾尔自治区/昌吉回族自治州",
+    "areaName":"昌吉回族自治州",
+    "areaNamePinYin":"CHANG JI HUI ZU ZI ZHI ZHOU ",
+    "areaType":2
+  },
+  {
+    "areaCode":"469026",
+    "parentCode":"460000",
+    "treeNames":"海南省/昌江黎族自治县",
+    "areaName":"昌江黎族自治县",
+    "areaNamePinYin":"CHANG JIANG LI ZU ZI ZHI XIAN ",
+    "areaType":2
+  },
+  {
+    "areaCode":"430100",
+    "parentCode":"430000",
+    "treeNames":"湖南省/长沙市",
+    "areaName":"长沙市",
+    "areaNamePinYin":"CHANG SHA SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"140400",
+    "parentCode":"140000",
+    "treeNames":"山西省/长治市",
+    "areaName":"长治市",
+    "areaNamePinYin":"CHANG ZHI SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"320400",
+    "parentCode":"320000",
+    "treeNames":"江苏省/常州市",
+    "areaName":"常州市",
+    "areaNamePinYin":"CHANG ZHOU SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"211300",
+    "parentCode":"210000",
+    "treeNames":"辽宁省/朝阳市",
+    "areaName":"朝阳市",
+    "areaNamePinYin":"CHAO YANG SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"445100",
+    "parentCode":"440000",
+    "treeNames":"广东省/潮州市",
+    "areaName":"潮州市",
+    "areaNamePinYin":"CHAO ZHOU SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"431000",
+    "parentCode":"430000",
+    "treeNames":"湖南省/郴州市",
+    "areaName":"郴州市",
+    "areaNamePinYin":"CHEN ZHOU SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"130800",
+    "parentCode":"130000",
+    "treeNames":"河北省/承德市",
+    "areaName":"承德市",
+    "areaNamePinYin":"CHENG DE SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"510100",
+    "parentCode":"510000",
+    "treeNames":"四川省/成都市",
+    "areaName":"成都市",
+    "areaNamePinYin":"CHENG DOU SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"469023",
+    "parentCode":"460000",
+    "treeNames":"海南省/澄迈县",
+    "areaName":"澄迈县",
+    "areaNamePinYin":"CHENG MAI XIAN ",
+    "areaType":2
+  },
+  {
+    "areaCode":"150400",
+    "parentCode":"150000",
+    "treeNames":"内蒙古自治区/赤峰市",
+    "areaName":"赤峰市",
+    "areaNamePinYin":"CHI FENG SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"341700",
+    "parentCode":"340000",
+    "treeNames":"安徽省/池州市",
+    "areaName":"池州市",
+    "areaNamePinYin":"CHI ZHOU SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"500100",
+    "parentCode":"500000",
+    "treeNames":"重庆市/重庆城区",
+    "areaName":"重庆城区",
+    "areaNamePinYin":"CHONG QING CHENG QU ",
+    "areaType":2
+  },
+  {
+    "areaCode":"500200",
+    "parentCode":"500000",
+    "treeNames":"重庆市/重庆郊县",
+    "areaName":"重庆郊县",
+    "areaNamePinYin":"CHONG QING JIAO XIAN ",
+    "areaType":2
+  },
+  {
+    "areaCode":"451400",
+    "parentCode":"450000",
+    "treeNames":"广西壮族自治区/崇左市",
+    "areaName":"崇左市",
+    "areaNamePinYin":"CHONG ZUO SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"532300",
+    "parentCode":"530000",
+    "treeNames":"云南省/楚雄彝族自治州",
+    "areaName":"楚雄彝族自治州",
+    "areaNamePinYin":"CHU XIONG YI ZU ZI ZHI ZHOU ",
+    "areaType":2
+  },
+  {
+    "areaCode":"341100",
+    "parentCode":"340000",
+    "treeNames":"安徽省/滁州市",
+    "areaName":"滁州市",
+    "areaNamePinYin":"CHU ZHOU SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"532900",
+    "parentCode":"530000",
+    "treeNames":"云南省/大理白族自治州",
+    "areaName":"大理白族自治州",
+    "areaNamePinYin":"DA LI BAI ZU ZI ZHI ZHOU ",
+    "areaType":2
+  },
+  {
+    "areaCode":"210200",
+    "parentCode":"210000",
+    "treeNames":"辽宁省/大连市",
+    "areaName":"大连市",
+    "areaNamePinYin":"DA LIAN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"230600",
+    "parentCode":"230000",
+    "treeNames":"黑龙江省/大庆市",
+    "areaName":"大庆市",
+    "areaNamePinYin":"DA QING SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"140200",
+    "parentCode":"140000",
+    "treeNames":"山西省/大同市",
+    "areaName":"大同市",
+    "areaNamePinYin":"DA TONG SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"232700",
+    "parentCode":"230000",
+    "treeNames":"黑龙江省/大兴安岭地区",
+    "areaName":"大兴安岭地区",
+    "areaNamePinYin":"DA XING AN LING DI QU ",
+    "areaType":2
+  },
+  {
+    "areaCode":"511700",
+    "parentCode":"510000",
+    "treeNames":"四川省/达州市",
+    "areaName":"达州市",
+    "areaNamePinYin":"DA ZHOU SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"210600",
+    "parentCode":"210000",
+    "treeNames":"辽宁省/丹东市",
+    "areaName":"丹东市",
+    "areaNamePinYin":"DAN DONG SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"460400",
+    "parentCode":"460000",
+    "treeNames":"海南省/儋州市",
+    "areaName":"儋州市",
+    "areaNamePinYin":"DAN ZHOU SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"533100",
+    "parentCode":"530000",
+    "treeNames":"云南省/德宏傣族景颇族自治州",
+    "areaName":"德宏傣族景颇族自治州",
+    "areaNamePinYin":"DE HONG DAI ZU JING PO ZU ZI ZHI ZHOU ",
+    "areaType":2
+  },
+  {
+    "areaCode":"510600",
+    "parentCode":"510000",
+    "treeNames":"四川省/德阳市",
+    "areaName":"德阳市",
+    "areaNamePinYin":"DE YANG SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"371400",
+    "parentCode":"370000",
+    "treeNames":"山东省/德州市",
+    "areaName":"德州市",
+    "areaNamePinYin":"DE ZHOU SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"533400",
+    "parentCode":"530000",
+    "treeNames":"云南省/迪庆藏族自治州",
+    "areaName":"迪庆藏族自治州",
+    "areaNamePinYin":"DI QING ZANG ZU ZI ZHI ZHOU ",
+    "areaType":2
+  },
+  {
+    "areaCode":"469021",
+    "parentCode":"460000",
+    "treeNames":"海南省/定安县",
+    "areaName":"定安县",
+    "areaNamePinYin":"DING AN XIAN ",
+    "areaType":2
+  },
+  {
+    "areaCode":"621100",
+    "parentCode":"620000",
+    "treeNames":"甘肃省/定西市",
+    "areaName":"定西市",
+    "areaNamePinYin":"DING XI SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"469007",
+    "parentCode":"460000",
+    "treeNames":"海南省/东方市",
+    "areaName":"东方市",
+    "areaNamePinYin":"DONG FANG SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"441900",
+    "parentCode":"440000",
+    "treeNames":"广东省/东莞市",
+    "areaName":"东莞市",
+    "areaNamePinYin":"DONG GUAN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"442100",
+    "parentCode":"440000",
+    "treeNames":"广东省/东沙群岛",
+    "areaName":"东沙群岛",
+    "areaNamePinYin":"DONG SHA QUN DAO ",
+    "areaType":2
+  },
+  {
+    "areaCode":"370500",
+    "parentCode":"370000",
+    "treeNames":"山东省/东营市",
+    "areaName":"东营市",
+    "areaNamePinYin":"DONG YING SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"150600",
+    "parentCode":"150000",
+    "treeNames":"内蒙古自治区/鄂尔多斯市",
+    "areaName":"鄂尔多斯市",
+    "areaNamePinYin":"E ER DUO SI SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"420700",
+    "parentCode":"420000",
+    "treeNames":"湖北省/鄂州市",
+    "areaName":"鄂州市",
+    "areaNamePinYin":"E ZHOU SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"422800",
+    "parentCode":"420000",
+    "treeNames":"湖北省/恩施土家族苗族自治州",
+    "areaName":"恩施土家族苗族自治州",
+    "areaNamePinYin":"EN SHI TU JIA ZU MIAO ZU ZI ZHI ZHOU ",
+    "areaType":2
+  },
+  {
+    "areaCode":"450600",
+    "parentCode":"450000",
+    "treeNames":"广西壮族自治区/防城港市",
+    "areaName":"防城港市",
+    "areaNamePinYin":"FANG CHENG GANG SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"440600",
+    "parentCode":"440000",
+    "treeNames":"广东省/佛山市",
+    "areaName":"佛山市",
+    "areaNamePinYin":"FO SHAN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"210400",
+    "parentCode":"210000",
+    "treeNames":"辽宁省/抚顺市",
+    "areaName":"抚顺市",
+    "areaNamePinYin":"FU SHUN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"210900",
+    "parentCode":"210000",
+    "treeNames":"辽宁省/阜新市",
+    "areaName":"阜新市",
+    "areaNamePinYin":"FU XIN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"341200",
+    "parentCode":"340000",
+    "treeNames":"安徽省/阜阳市",
+    "areaName":"阜阳市",
+    "areaNamePinYin":"FU YANG SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"350100",
+    "parentCode":"350000",
+    "treeNames":"福建省/福州市",
+    "areaName":"福州市",
+    "areaNamePinYin":"FU ZHOU SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"361000",
+    "parentCode":"360000",
+    "treeNames":"江西省/抚州市",
+    "areaName":"抚州市",
+    "areaNamePinYin":"FU ZHOU SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"623000",
+    "parentCode":"620000",
+    "treeNames":"甘肃省/甘南藏族自治州",
+    "areaName":"甘南藏族自治州",
+    "areaNamePinYin":"GAN NAN ZANG ZU ZI ZHI ZHOU ",
+    "areaType":2
+  },
+  {
+    "areaCode":"360700",
+    "parentCode":"360000",
+    "treeNames":"江西省/赣州市",
+    "areaName":"赣州市",
+    "areaNamePinYin":"GAN ZHOU SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"513300",
+    "parentCode":"510000",
+    "treeNames":"四川省/甘孜藏族自治州",
+    "areaName":"甘孜藏族自治州",
+    "areaNamePinYin":"GAN ZI ZANG ZU ZI ZHI ZHOU ",
+    "areaType":2
+  },
+  {
+    "areaCode":"640400",
+    "parentCode":"640000",
+    "treeNames":"宁夏回族自治区/固原市",
+    "areaName":"固原市",
+    "areaNamePinYin":"GU YUAN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"511600",
+    "parentCode":"510000",
+    "treeNames":"四川省/广安市",
+    "areaName":"广安市",
+    "areaNamePinYin":"GUANG AN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"510800",
+    "parentCode":"510000",
+    "treeNames":"四川省/广元市",
+    "areaName":"广元市",
+    "areaNamePinYin":"GUANG YUAN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"440100",
+    "parentCode":"440000",
+    "treeNames":"广东省/广州市",
+    "areaName":"广州市",
+    "areaNamePinYin":"GUANG ZHOU SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"450800",
+    "parentCode":"450000",
+    "treeNames":"广西壮族自治区/贵港市",
+    "areaName":"贵港市",
+    "areaNamePinYin":"GUI GANG SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"450300",
+    "parentCode":"450000",
+    "treeNames":"广西壮族自治区/桂林市",
+    "areaName":"桂林市",
+    "areaNamePinYin":"GUI LIN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"520100",
+    "parentCode":"520000",
+    "treeNames":"贵州省/贵阳市",
+    "areaName":"贵阳市",
+    "areaNamePinYin":"GUI YANG SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"632600",
+    "parentCode":"630000",
+    "treeNames":"青海省/果洛藏族自治州",
+    "areaName":"果洛藏族自治州",
+    "areaNamePinYin":"GUO LUO ZANG ZU ZI ZHI ZHOU ",
+    "areaType":2
+  },
+  {
+    "areaCode":"230100",
+    "parentCode":"230000",
+    "treeNames":"黑龙江省/哈尔滨市",
+    "areaName":"哈尔滨市",
+    "areaNamePinYin":"HA ER BIN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"650500",
+    "parentCode":"650000",
+    "treeNames":"新疆维吾尔自治区/哈密市",
+    "areaName":"哈密市",
+    "areaNamePinYin":"HA MI SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"632200",
+    "parentCode":"630000",
+    "treeNames":"青海省/海北藏族自治州",
+    "areaName":"海北藏族自治州",
+    "areaNamePinYin":"HAI BEI ZANG ZU ZI ZHI ZHOU ",
+    "areaType":2
+  },
+  {
+    "areaCode":"630200",
+    "parentCode":"630000",
+    "treeNames":"青海省/海东市",
+    "areaName":"海东市",
+    "areaNamePinYin":"HAI DONG SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"460100",
+    "parentCode":"460000",
+    "treeNames":"海南省/海口市",
+    "areaName":"海口市",
+    "areaNamePinYin":"HAI KOU SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"632500",
+    "parentCode":"630000",
+    "treeNames":"青海省/海南藏族自治州",
+    "areaName":"海南藏族自治州",
+    "areaNamePinYin":"HAI NAN ZANG ZU ZI ZHI ZHOU ",
+    "areaType":2
+  },
+  {
+    "areaCode":"632800",
+    "parentCode":"630000",
+    "treeNames":"青海省/海西蒙古族藏族自治州",
+    "areaName":"海西蒙古族藏族自治州",
+    "areaNamePinYin":"HAI XI MENG GU ZU ZANG ZU ZI ZHI ZHOU ",
+    "areaType":2
+  },
+  {
+    "areaCode":"130400",
+    "parentCode":"130000",
+    "treeNames":"河北省/邯郸市",
+    "areaName":"邯郸市",
+    "areaNamePinYin":"HAN DAN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"610700",
+    "parentCode":"610000",
+    "treeNames":"陕西省/汉中市",
+    "areaName":"汉中市",
+    "areaNamePinYin":"HAN ZHONG SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"330100",
+    "parentCode":"330000",
+    "treeNames":"浙江省/杭州市",
+    "areaName":"杭州市",
+    "areaNamePinYin":"HANG ZHOU SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"410600",
+    "parentCode":"410000",
+    "treeNames":"河南省/鹤壁市",
+    "areaName":"鹤壁市",
+    "areaNamePinYin":"HE BI SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"451200",
+    "parentCode":"450000",
+    "treeNames":"广西壮族自治区/河池市",
+    "areaName":"河池市",
+    "areaNamePinYin":"HE CHI SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"340100",
+    "parentCode":"340000",
+    "treeNames":"安徽省/合肥市",
+    "areaName":"合肥市",
+    "areaNamePinYin":"HE FEI SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"230400",
+    "parentCode":"230000",
+    "treeNames":"黑龙江省/鹤岗市",
+    "areaName":"鹤岗市",
+    "areaNamePinYin":"HE GANG SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"653200",
+    "parentCode":"650000",
+    "treeNames":"新疆维吾尔自治区/和田地区",
+    "areaName":"和田地区",
+    "areaNamePinYin":"HE TIAN DI QU ",
+    "areaType":2
+  },
+  {
+    "areaCode":"441600",
+    "parentCode":"440000",
+    "treeNames":"广东省/河源市",
+    "areaName":"河源市",
+    "areaNamePinYin":"HE YUAN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"371700",
+    "parentCode":"370000",
+    "treeNames":"山东省/菏泽市",
+    "areaName":"菏泽市",
+    "areaNamePinYin":"HE ZE SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"451100",
+    "parentCode":"450000",
+    "treeNames":"广西壮族自治区/贺州市",
+    "areaName":"贺州市",
+    "areaNamePinYin":"HE ZHOU SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"231100",
+    "parentCode":"230000",
+    "treeNames":"黑龙江省/黑河市",
+    "areaName":"黑河市",
+    "areaNamePinYin":"HEI HE SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"131100",
+    "parentCode":"130000",
+    "treeNames":"河北省/衡水市",
+    "areaName":"衡水市",
+    "areaNamePinYin":"HENG SHUI SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"430400",
+    "parentCode":"430000",
+    "treeNames":"湖南省/衡阳市",
+    "areaName":"衡阳市",
+    "areaNamePinYin":"HENG YANG SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"532500",
+    "parentCode":"530000",
+    "treeNames":"云南省/红河哈尼族彝族自治州",
+    "areaName":"红河哈尼族彝族自治州",
+    "areaNamePinYin":"HONG HE HA NI ZU YI ZU ZI ZHI ZHOU ",
+    "areaType":2
+  },
+  {
+    "areaCode":"150100",
+    "parentCode":"150000",
+    "treeNames":"内蒙古自治区/呼和浩特市",
+    "areaName":"呼和浩特市",
+    "areaNamePinYin":"HU HE HAO TE SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"211400",
+    "parentCode":"210000",
+    "treeNames":"辽宁省/葫芦岛市",
+    "areaName":"葫芦岛市",
+    "areaNamePinYin":"HU LU DAO SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"150700",
+    "parentCode":"150000",
+    "treeNames":"内蒙古自治区/呼伦贝尔市",
+    "areaName":"呼伦贝尔市",
+    "areaNamePinYin":"HU LUN BEI ER SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"330500",
+    "parentCode":"330000",
+    "treeNames":"浙江省/湖州市",
+    "areaName":"湖州市",
+    "areaNamePinYin":"HU ZHOU SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"320800",
+    "parentCode":"320000",
+    "treeNames":"江苏省/淮安市",
+    "areaName":"淮安市",
+    "areaNamePinYin":"HUAI AN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"340600",
+    "parentCode":"340000",
+    "treeNames":"安徽省/淮北市",
+    "areaName":"淮北市",
+    "areaNamePinYin":"HUAI BEI SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"431200",
+    "parentCode":"430000",
+    "treeNames":"湖南省/怀化市",
+    "areaName":"怀化市",
+    "areaNamePinYin":"HUAI HUA SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"340400",
+    "parentCode":"340000",
+    "treeNames":"安徽省/淮南市",
+    "areaName":"淮南市",
+    "areaNamePinYin":"HUAI NAN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"421100",
+    "parentCode":"420000",
+    "treeNames":"湖北省/黄冈市",
+    "areaName":"黄冈市",
+    "areaNamePinYin":"HUANG GANG SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"632300",
+    "parentCode":"630000",
+    "treeNames":"青海省/黄南藏族自治州",
+    "areaName":"黄南藏族自治州",
+    "areaNamePinYin":"HUANG NAN ZANG ZU ZI ZHI ZHOU ",
+    "areaType":2
+  },
+  {
+    "areaCode":"341000",
+    "parentCode":"340000",
+    "treeNames":"安徽省/黄山市",
+    "areaName":"黄山市",
+    "areaNamePinYin":"HUANG SHAN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"420200",
+    "parentCode":"420000",
+    "treeNames":"湖北省/黄石市",
+    "areaName":"黄石市",
+    "areaNamePinYin":"HUANG SHI SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"441300",
+    "parentCode":"440000",
+    "treeNames":"广东省/惠州市",
+    "areaName":"惠州市",
+    "areaNamePinYin":"HUI ZHOU SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"360800",
+    "parentCode":"360000",
+    "treeNames":"江西省/吉安市",
+    "areaName":"吉安市",
+    "areaNamePinYin":"JI AN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"220200",
+    "parentCode":"220000",
+    "treeNames":"吉林省/吉林市",
+    "areaName":"吉林市",
+    "areaNamePinYin":"JI LIN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"370100",
+    "parentCode":"370000",
+    "treeNames":"山东省/济南市",
+    "areaName":"济南市",
+    "areaNamePinYin":"JI NAN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"370800",
+    "parentCode":"370000",
+    "treeNames":"山东省/济宁市",
+    "areaName":"济宁市",
+    "areaNamePinYin":"JI NING SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"230300",
+    "parentCode":"230000",
+    "treeNames":"黑龙江省/鸡西市",
+    "areaName":"鸡西市",
+    "areaNamePinYin":"JI XI SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"419001",
+    "parentCode":"410000",
+    "treeNames":"河南省/济源市",
+    "areaName":"济源市",
+    "areaNamePinYin":"JI YUAN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"230800",
+    "parentCode":"230000",
+    "treeNames":"黑龙江省/佳木斯市",
+    "areaName":"佳木斯市",
+    "areaNamePinYin":"JIA MU SI SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"330400",
+    "parentCode":"330000",
+    "treeNames":"浙江省/嘉兴市",
+    "areaName":"嘉兴市",
+    "areaNamePinYin":"JIA XING SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"620200",
+    "parentCode":"620000",
+    "treeNames":"甘肃省/嘉峪关市",
+    "areaName":"嘉峪关市",
+    "areaNamePinYin":"JIA YU GUAN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"440700",
+    "parentCode":"440000",
+    "treeNames":"广东省/江门市",
+    "areaName":"江门市",
+    "areaNamePinYin":"JIANG MEN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"410800",
+    "parentCode":"410000",
+    "treeNames":"河南省/焦作市",
+    "areaName":"焦作市",
+    "areaNamePinYin":"JIAO ZUO SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"445200",
+    "parentCode":"440000",
+    "treeNames":"广东省/揭阳市",
+    "areaName":"揭阳市",
+    "areaNamePinYin":"JIE YANG SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"620300",
+    "parentCode":"620000",
+    "treeNames":"甘肃省/金昌市",
+    "areaName":"金昌市",
+    "areaNamePinYin":"JIN CHANG SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"140500",
+    "parentCode":"140000",
+    "treeNames":"山西省/晋城市",
+    "areaName":"晋城市",
+    "areaNamePinYin":"JIN CHENG SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"330700",
+    "parentCode":"330000",
+    "treeNames":"浙江省/金华市",
+    "areaName":"金华市",
+    "areaNamePinYin":"JIN HUA SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"140700",
+    "parentCode":"140000",
+    "treeNames":"山西省/晋中市",
+    "areaName":"晋中市",
+    "areaNamePinYin":"JIN ZHONG SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"210700",
+    "parentCode":"210000",
+    "treeNames":"辽宁省/锦州市",
+    "areaName":"锦州市",
+    "areaNamePinYin":"JIN ZHOU SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"360200",
+    "parentCode":"360000",
+    "treeNames":"江西省/景德镇市",
+    "areaName":"景德镇市",
+    "areaNamePinYin":"JING DE ZHEN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"420800",
+    "parentCode":"420000",
+    "treeNames":"湖北省/荆门市",
+    "areaName":"荆门市",
+    "areaNamePinYin":"JING MEN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"421000",
+    "parentCode":"420000",
+    "treeNames":"湖北省/荆州市",
+    "areaName":"荆州市",
+    "areaNamePinYin":"JING ZHOU SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"360400",
+    "parentCode":"360000",
+    "treeNames":"江西省/九江市",
+    "areaName":"九江市",
+    "areaNamePinYin":"JIU JIANG SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"620900",
+    "parentCode":"620000",
+    "treeNames":"甘肃省/酒泉市",
+    "areaName":"酒泉市",
+    "areaNamePinYin":"JIU QUAN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"653100",
+    "parentCode":"650000",
+    "treeNames":"新疆维吾尔自治区/喀什地区",
+    "areaName":"喀什地区",
+    "areaNamePinYin":"KA SHEN DI QU ",
+    "areaType":2
+  },
+  {
+    "areaCode":"410200",
+    "parentCode":"410000",
+    "treeNames":"河南省/开封市",
+    "areaName":"开封市",
+    "areaNamePinYin":"KAI FENG SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"659008",
+    "parentCode":"650000",
+    "treeNames":"新疆维吾尔自治区/可克达拉市",
+    "areaName":"可克达拉市",
+    "areaNamePinYin":"KE KE DA LA SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"650200",
+    "parentCode":"650000",
+    "treeNames":"新疆维吾尔自治区/克拉玛依市",
+    "areaName":"克拉玛依市",
+    "areaNamePinYin":"KE LA MA YI SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"653000",
+    "parentCode":"650000",
+    "treeNames":"新疆维吾尔自治区/克孜勒苏柯尔克孜自治州",
+    "areaName":"克孜勒苏柯尔克孜自治州",
+    "areaNamePinYin":"KE ZI LE SU KE ER KE ZI ZI ZHI ZHOU ",
+    "areaType":2
+  },
+  {
+    "areaCode":"530100",
+    "parentCode":"530000",
+    "treeNames":"云南省/昆明市",
+    "areaName":"昆明市",
+    "areaNamePinYin":"KUN MING SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"659009",
+    "parentCode":"650000",
+    "treeNames":"新疆维吾尔自治区/昆玉市",
+    "areaName":"昆玉市",
+    "areaNamePinYin":"KUN YU SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"540100",
+    "parentCode":"540000",
+    "treeNames":"西藏自治区/拉萨市",
+    "areaName":"拉萨市",
+    "areaNamePinYin":"LA SA SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"451300",
+    "parentCode":"450000",
+    "treeNames":"广西壮族自治区/来宾市",
+    "areaName":"来宾市",
+    "areaNamePinYin":"LAI BIN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"371200",
+    "parentCode":"370000",
+    "treeNames":"山东省/莱芜市",
+    "areaName":"莱芜市",
+    "areaNamePinYin":"LAI WU SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"620100",
+    "parentCode":"620000",
+    "treeNames":"甘肃省/兰州市",
+    "areaName":"兰州市",
+    "areaNamePinYin":"LAN ZHOU SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"131000",
+    "parentCode":"130000",
+    "treeNames":"河北省/廊坊市",
+    "areaName":"廊坊市",
+    "areaNamePinYin":"LANG FANG SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"469027",
+    "parentCode":"460000",
+    "treeNames":"海南省/乐东黎族自治县",
+    "areaName":"乐东黎族自治县",
+    "areaNamePinYin":"LE DONG LI ZU ZI ZHI XIAN ",
+    "areaType":2
+  },
+  {
+    "areaCode":"511100",
+    "parentCode":"510000",
+    "treeNames":"四川省/乐山市",
+    "areaName":"乐山市",
+    "areaNamePinYin":"LE SHAN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"530700",
+    "parentCode":"530000",
+    "treeNames":"云南省/丽江市",
+    "areaName":"丽江市",
+    "areaNamePinYin":"LI JIANG SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"331100",
+    "parentCode":"330000",
+    "treeNames":"浙江省/丽水市",
+    "areaName":"丽水市",
+    "areaNamePinYin":"LI SHUI SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"320700",
+    "parentCode":"320000",
+    "treeNames":"江苏省/连云港市",
+    "areaName":"连云港市",
+    "areaNamePinYin":"LIAN YUN GANG SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"513400",
+    "parentCode":"510000",
+    "treeNames":"四川省/凉山彝族自治州",
+    "areaName":"凉山彝族自治州",
+    "areaNamePinYin":"LIANG SHAN YI ZU ZI ZHI ZHOU ",
+    "areaType":2
+  },
+  {
+    "areaCode":"371500",
+    "parentCode":"370000",
+    "treeNames":"山东省/聊城市",
+    "areaName":"聊城市",
+    "areaNamePinYin":"LIAO CHENG SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"211000",
+    "parentCode":"210000",
+    "treeNames":"辽宁省/辽阳市",
+    "areaName":"辽阳市",
+    "areaNamePinYin":"LIAO YANG SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"220400",
+    "parentCode":"220000",
+    "treeNames":"吉林省/辽源市",
+    "areaName":"辽源市",
+    "areaNamePinYin":"LIAO YUAN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"530900",
+    "parentCode":"530000",
+    "treeNames":"云南省/临沧市",
+    "areaName":"临沧市",
+    "areaNamePinYin":"LIN CANG SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"141000",
+    "parentCode":"140000",
+    "treeNames":"山西省/临汾市",
+    "areaName":"临汾市",
+    "areaNamePinYin":"LIN FEN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"469024",
+    "parentCode":"460000",
+    "treeNames":"海南省/临高县",
+    "areaName":"临高县",
+    "areaNamePinYin":"LIN GAO XIAN ",
+    "areaType":2
+  },
+  {
+    "areaCode":"622900",
+    "parentCode":"620000",
+    "treeNames":"甘肃省/临夏回族自治州",
+    "areaName":"临夏回族自治州",
+    "areaNamePinYin":"LIN XIA HUI ZU ZI ZHI ZHOU ",
+    "areaType":2
+  },
+  {
+    "areaCode":"371300",
+    "parentCode":"370000",
+    "treeNames":"山东省/临沂市",
+    "areaName":"临沂市",
+    "areaNamePinYin":"LIN YI SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"540400",
+    "parentCode":"540000",
+    "treeNames":"西藏自治区/林芝市",
+    "areaName":"林芝市",
+    "areaNamePinYin":"LIN ZHI SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"469028",
+    "parentCode":"460000",
+    "treeNames":"海南省/陵水黎族自治县",
+    "areaName":"陵水黎族自治县",
+    "areaNamePinYin":"LING SHUI LI ZU ZI ZHI XIAN ",
+    "areaType":2
+  },
+  {
+    "areaCode":"341500",
+    "parentCode":"340000",
+    "treeNames":"安徽省/六安市",
+    "areaName":"六安市",
+    "areaNamePinYin":"LIU AN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"520200",
+    "parentCode":"520000",
+    "treeNames":"贵州省/六盘水市",
+    "areaName":"六盘水市",
+    "areaNamePinYin":"LIU PAN SHUI SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"450200",
+    "parentCode":"450000",
+    "treeNames":"广西壮族自治区/柳州市",
+    "areaName":"柳州市",
+    "areaNamePinYin":"LIU ZHOU SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"621200",
+    "parentCode":"620000",
+    "treeNames":"甘肃省/陇南市",
+    "areaName":"陇南市",
+    "areaNamePinYin":"LONG NAN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"350800",
+    "parentCode":"350000",
+    "treeNames":"福建省/龙岩市",
+    "areaName":"龙岩市",
+    "areaNamePinYin":"LONG YAN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"431300",
+    "parentCode":"430000",
+    "treeNames":"湖南省/娄底市",
+    "areaName":"娄底市",
+    "areaNamePinYin":"LOU DI SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"510500",
+    "parentCode":"510000",
+    "treeNames":"四川省/泸州市",
+    "areaName":"泸州市",
+    "areaNamePinYin":"LU ZHOU SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"411100",
+    "parentCode":"410000",
+    "treeNames":"河南省/漯河市",
+    "areaName":"漯河市",
+    "areaNamePinYin":"LUO HE SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"410300",
+    "parentCode":"410000",
+    "treeNames":"河南省/洛阳市",
+    "areaName":"洛阳市",
+    "areaNamePinYin":"LUO YANG SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"141100",
+    "parentCode":"140000",
+    "treeNames":"山西省/吕梁市",
+    "areaName":"吕梁市",
+    "areaNamePinYin":"LV LIANG SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"340500",
+    "parentCode":"340000",
+    "treeNames":"安徽省/马鞍山市",
+    "areaName":"马鞍山市",
+    "areaNamePinYin":"MA AN SHAN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"440900",
+    "parentCode":"440000",
+    "treeNames":"广东省/茂名市",
+    "areaName":"茂名市",
+    "areaNamePinYin":"MAO MING SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"511400",
+    "parentCode":"510000",
+    "treeNames":"四川省/眉山市",
+    "areaName":"眉山市",
+    "areaNamePinYin":"MEI SHAN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"441400",
+    "parentCode":"440000",
+    "treeNames":"广东省/梅州市",
+    "areaName":"梅州市",
+    "areaNamePinYin":"MEI ZHOU SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"510700",
+    "parentCode":"510000",
+    "treeNames":"四川省/绵阳市",
+    "areaName":"绵阳市",
+    "areaNamePinYin":"MIAN YANG SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"231000",
+    "parentCode":"230000",
+    "treeNames":"黑龙江省/牡丹江市",
+    "areaName":"牡丹江市",
+    "areaNamePinYin":"MU DAN JIANG SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"360100",
+    "parentCode":"360000",
+    "treeNames":"江西省/南昌市",
+    "areaName":"南昌市",
+    "areaNamePinYin":"NAN CHANG SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"511300",
+    "parentCode":"510000",
+    "treeNames":"四川省/南充市",
+    "areaName":"南充市",
+    "areaNamePinYin":"NAN CHONG SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"320100",
+    "parentCode":"320000",
+    "treeNames":"江苏省/南京市",
+    "areaName":"南京市",
+    "areaNamePinYin":"NAN JING SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"450100",
+    "parentCode":"450000",
+    "treeNames":"广西壮族自治区/南宁市",
+    "areaName":"南宁市",
+    "areaNamePinYin":"NAN NING SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"350700",
+    "parentCode":"350000",
+    "treeNames":"福建省/南平市",
+    "areaName":"南平市",
+    "areaNamePinYin":"NAN PING SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"320600",
+    "parentCode":"320000",
+    "treeNames":"江苏省/南通市",
+    "areaName":"南通市",
+    "areaNamePinYin":"NAN TONG SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"411300",
+    "parentCode":"410000",
+    "treeNames":"河南省/南阳市",
+    "areaName":"南阳市",
+    "areaNamePinYin":"NAN YANG SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"511000",
+    "parentCode":"510000",
+    "treeNames":"四川省/内江市",
+    "areaName":"内江市",
+    "areaNamePinYin":"NEI JIANG SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"542400",
+    "parentCode":"540000",
+    "treeNames":"西藏自治区/那曲地区",
+    "areaName":"那曲地区",
+    "areaNamePinYin":"NEI QU DI QU ",
+    "areaType":2
+  },
+  {
+    "areaCode":"330200",
+    "parentCode":"330000",
+    "treeNames":"浙江省/宁波市",
+    "areaName":"宁波市",
+    "areaNamePinYin":"NING BO SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"350900",
+    "parentCode":"350000",
+    "treeNames":"福建省/宁德市",
+    "areaName":"宁德市",
+    "areaNamePinYin":"NING DE SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"533300",
+    "parentCode":"530000",
+    "treeNames":"云南省/怒江傈僳族自治州",
+    "areaName":"怒江傈僳族自治州",
+    "areaNamePinYin":"NU JIANG LI SU ZU ZI ZHI ZHOU ",
+    "areaType":2
+  },
+  {
+    "areaCode":"211100",
+    "parentCode":"210000",
+    "treeNames":"辽宁省/盘锦市",
+    "areaName":"盘锦市",
+    "areaNamePinYin":"PAN JIN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"510400",
+    "parentCode":"510000",
+    "treeNames":"四川省/攀枝花市",
+    "areaName":"攀枝花市",
+    "areaNamePinYin":"PAN ZHI HUA SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"410400",
+    "parentCode":"410000",
+    "treeNames":"河南省/平顶山市",
+    "areaName":"平顶山市",
+    "areaNamePinYin":"PING DING SHAN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"620800",
+    "parentCode":"620000",
+    "treeNames":"甘肃省/平凉市",
+    "areaName":"平凉市",
+    "areaNamePinYin":"PING LIANG SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"360300",
+    "parentCode":"360000",
+    "treeNames":"江西省/萍乡市",
+    "areaName":"萍乡市",
+    "areaNamePinYin":"PING XIANG SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"530800",
+    "parentCode":"530000",
+    "treeNames":"云南省/普洱市",
+    "areaName":"普洱市",
+    "areaNamePinYin":"PU ER SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"350300",
+    "parentCode":"350000",
+    "treeNames":"福建省/莆田市",
+    "areaName":"莆田市",
+    "areaNamePinYin":"PU TIAN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"410900",
+    "parentCode":"410000",
+    "treeNames":"河南省/濮阳市",
+    "areaName":"濮阳市",
+    "areaNamePinYin":"PU YANG SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"230200",
+    "parentCode":"230000",
+    "treeNames":"黑龙江省/齐齐哈尔市",
+    "areaName":"齐齐哈尔市",
+    "areaNamePinYin":"QI QI HA ER SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"230900",
+    "parentCode":"230000",
+    "treeNames":"黑龙江省/七台河市",
+    "areaName":"七台河市",
+    "areaNamePinYin":"QI TAI HE SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"522600",
+    "parentCode":"520000",
+    "treeNames":"贵州省/黔东南苗族侗族自治州",
+    "areaName":"黔东南苗族侗族自治州",
+    "areaNamePinYin":"QIAN DONG NAN MIAO ZU DONG ZU ZI ZHI ZHOU ",
+    "areaType":2
+  },
+  {
+    "areaCode":"429005",
+    "parentCode":"420000",
+    "treeNames":"湖北省/潜江市",
+    "areaName":"潜江市",
+    "areaNamePinYin":"QIAN JIANG SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"522700",
+    "parentCode":"520000",
+    "treeNames":"贵州省/黔南布依族苗族自治州",
+    "areaName":"黔南布依族苗族自治州",
+    "areaNamePinYin":"QIAN NAN BU YI ZU MIAO ZU ZI ZHI ZHOU ",
+    "areaType":2
+  },
+  {
+    "areaCode":"522300",
+    "parentCode":"520000",
+    "treeNames":"贵州省/黔西南布依族苗族自治州",
+    "areaName":"黔西南布依族苗族自治州",
+    "areaNamePinYin":"QIAN XI NAN BU YI ZU MIAO ZU ZI ZHI ZHOU ",
+    "areaType":2
+  },
+  {
+    "areaCode":"130300",
+    "parentCode":"130000",
+    "treeNames":"河北省/秦皇岛市",
+    "areaName":"秦皇岛市",
+    "areaNamePinYin":"QIN HUANG DAO SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"450700",
+    "parentCode":"450000",
+    "treeNames":"广西壮族自治区/钦州市",
+    "areaName":"钦州市",
+    "areaNamePinYin":"QIN ZHOU SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"370200",
+    "parentCode":"370000",
+    "treeNames":"山东省/青岛市",
+    "areaName":"青岛市",
+    "areaNamePinYin":"QING DAO SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"621000",
+    "parentCode":"620000",
+    "treeNames":"甘肃省/庆阳市",
+    "areaName":"庆阳市",
+    "areaNamePinYin":"QING YANG SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"441800",
+    "parentCode":"440000",
+    "treeNames":"广东省/清远市",
+    "areaName":"清远市",
+    "areaNamePinYin":"QING YUAN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"469002",
+    "parentCode":"460000",
+    "treeNames":"海南省/琼海市",
+    "areaName":"琼海市",
+    "areaNamePinYin":"QIONG HAI SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"469030",
+    "parentCode":"460000",
+    "treeNames":"海南省/琼中黎族苗族自治县",
+    "areaName":"琼中黎族苗族自治县",
+    "areaNamePinYin":"QIONG ZHONG LI ZU MIAO ZU ZI ZHI XIAN ",
+    "areaType":2
+  },
+  {
+    "areaCode":"530300",
+    "parentCode":"530000",
+    "treeNames":"云南省/曲靖市",
+    "areaName":"曲靖市",
+    "areaNamePinYin":"QU JING SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"330800",
+    "parentCode":"330000",
+    "treeNames":"浙江省/衢州市",
+    "areaName":"衢州市",
+    "areaNamePinYin":"QU ZHOU SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"350500",
+    "parentCode":"350000",
+    "treeNames":"福建省/泉州市",
+    "areaName":"泉州市",
+    "areaNamePinYin":"QUAN ZHOU SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"540200",
+    "parentCode":"540000",
+    "treeNames":"西藏自治区/日喀则市",
+    "areaName":"日喀则市",
+    "areaNamePinYin":"RI KA ZE SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"371100",
+    "parentCode":"370000",
+    "treeNames":"山东省/日照市",
+    "areaName":"日照市",
+    "areaNamePinYin":"RI ZHAO SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"411200",
+    "parentCode":"410000",
+    "treeNames":"河南省/三门峡市",
+    "areaName":"三门峡市",
+    "areaNamePinYin":"SAN MEN XIA SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"350400",
+    "parentCode":"350000",
+    "treeNames":"福建省/三明市",
+    "areaName":"三明市",
+    "areaNamePinYin":"SAN MING SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"460300",
+    "parentCode":"460000",
+    "treeNames":"海南省/三沙市",
+    "areaName":"三沙市",
+    "areaNamePinYin":"SAN SHA SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"460200",
+    "parentCode":"460000",
+    "treeNames":"海南省/三亚市",
+    "areaName":"三亚市",
+    "areaNamePinYin":"SAN YA SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"350200",
+    "parentCode":"350000",
+    "treeNames":"福建省/厦门市",
+    "areaName":"厦门市",
+    "areaNamePinYin":"SHA MEN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"540500",
+    "parentCode":"540000",
+    "treeNames":"西藏自治区/山南市",
+    "areaName":"山南市",
+    "areaNamePinYin":"SHAN NAN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"440500",
+    "parentCode":"440000",
+    "treeNames":"广东省/汕头市",
+    "areaName":"汕头市",
+    "areaNamePinYin":"SHAN TOU SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"441500",
+    "parentCode":"440000",
+    "treeNames":"广东省/汕尾市",
+    "areaName":"汕尾市",
+    "areaNamePinYin":"SHAN WEI SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"310100",
+    "parentCode":"310000",
+    "treeNames":"上海市/上海城区",
+    "areaName":"上海城区",
+    "areaNamePinYin":"SHANG HAI CHENG QU ",
+    "areaType":2
+  },
+  {
+    "areaCode":"611000",
+    "parentCode":"610000",
+    "treeNames":"陕西省/商洛市",
+    "areaName":"商洛市",
+    "areaNamePinYin":"SHANG LUO SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"411400",
+    "parentCode":"410000",
+    "treeNames":"河南省/商丘市",
+    "areaName":"商丘市",
+    "areaNamePinYin":"SHANG QIU SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"361100",
+    "parentCode":"360000",
+    "treeNames":"江西省/上饶市",
+    "areaName":"上饶市",
+    "areaNamePinYin":"SHANG RAO SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"440200",
+    "parentCode":"440000",
+    "treeNames":"广东省/韶关市",
+    "areaName":"韶关市",
+    "areaNamePinYin":"SHAO GUAN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"330600",
+    "parentCode":"330000",
+    "treeNames":"浙江省/绍兴市",
+    "areaName":"绍兴市",
+    "areaNamePinYin":"SHAO XING SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"430500",
+    "parentCode":"430000",
+    "treeNames":"湖南省/邵阳市",
+    "areaName":"邵阳市",
+    "areaNamePinYin":"SHAO YANG SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"429021",
+    "parentCode":"420000",
+    "treeNames":"湖北省/神农架林区",
+    "areaName":"神农架林区",
+    "areaNamePinYin":"SHEN NONG JIA LIN QU ",
+    "areaType":2
+  },
+  {
+    "areaCode":"210100",
+    "parentCode":"210000",
+    "treeNames":"辽宁省/沈阳市",
+    "areaName":"沈阳市",
+    "areaNamePinYin":"SHEN YANG SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"440300",
+    "parentCode":"440000",
+    "treeNames":"广东省/深圳市",
+    "areaName":"深圳市",
+    "areaNamePinYin":"SHEN ZHEN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"659001",
+    "parentCode":"650000",
+    "treeNames":"新疆维吾尔自治区/石河子市",
+    "areaName":"石河子市",
+    "areaNamePinYin":"SHI HE ZI SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"130100",
+    "parentCode":"130000",
+    "treeNames":"河北省/石家庄市",
+    "areaName":"石家庄市",
+    "areaNamePinYin":"SHI JIA ZHUANG SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"420300",
+    "parentCode":"420000",
+    "treeNames":"湖北省/十堰市",
+    "areaName":"十堰市",
+    "areaNamePinYin":"SHI YAN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"640200",
+    "parentCode":"640000",
+    "treeNames":"宁夏回族自治区/石嘴山市",
+    "areaName":"石嘴山市",
+    "areaNamePinYin":"SHI ZUI SHAN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"659007",
+    "parentCode":"650000",
+    "treeNames":"新疆维吾尔自治区/双河市",
+    "areaName":"双河市",
+    "areaNamePinYin":"SHUANG HE SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"230500",
+    "parentCode":"230000",
+    "treeNames":"黑龙江省/双鸭山市",
+    "areaName":"双鸭山市",
+    "areaNamePinYin":"SHUANG YA SHAN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"140600",
+    "parentCode":"140000",
+    "treeNames":"山西省/朔州市",
+    "areaName":"朔州市",
+    "areaNamePinYin":"SHUO ZHOU SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"220300",
+    "parentCode":"220000",
+    "treeNames":"吉林省/四平市",
+    "areaName":"四平市",
+    "areaNamePinYin":"SI PING SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"220700",
+    "parentCode":"220000",
+    "treeNames":"吉林省/松原市",
+    "areaName":"松原市",
+    "areaNamePinYin":"SONG YUAN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"321300",
+    "parentCode":"320000",
+    "treeNames":"江苏省/宿迁市",
+    "areaName":"宿迁市",
+    "areaNamePinYin":"SU QIAN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"320500",
+    "parentCode":"320000",
+    "treeNames":"江苏省/苏州市",
+    "areaName":"苏州市",
+    "areaNamePinYin":"SU ZHOU SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"341300",
+    "parentCode":"340000",
+    "treeNames":"安徽省/宿州市",
+    "areaName":"宿州市",
+    "areaNamePinYin":"SU ZHOU SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"231200",
+    "parentCode":"230000",
+    "treeNames":"黑龙江省/绥化市",
+    "areaName":"绥化市",
+    "areaNamePinYin":"SUI HUA SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"510900",
+    "parentCode":"510000",
+    "treeNames":"四川省/遂宁市",
+    "areaName":"遂宁市",
+    "areaNamePinYin":"SUI NING SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"421300",
+    "parentCode":"420000",
+    "treeNames":"湖北省/随州市",
+    "areaName":"随州市",
+    "areaNamePinYin":"SUI ZHOU SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"654200",
+    "parentCode":"650000",
+    "treeNames":"新疆维吾尔自治区/塔城地区",
+    "areaName":"塔城地区",
+    "areaNamePinYin":"TA CHENG DI QU ",
+    "areaType":2
+  },
+  {
+    "areaCode":"370900",
+    "parentCode":"370000",
+    "treeNames":"山东省/泰安市",
+    "areaName":"泰安市",
+    "areaNamePinYin":"TAI AN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"140100",
+    "parentCode":"140000",
+    "treeNames":"山西省/太原市",
+    "areaName":"太原市",
+    "areaNamePinYin":"TAI YUAN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"321200",
+    "parentCode":"320000",
+    "treeNames":"江苏省/泰州市",
+    "areaName":"泰州市",
+    "areaNamePinYin":"TAI ZHOU SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"331000",
+    "parentCode":"330000",
+    "treeNames":"浙江省/台州市",
+    "areaName":"台州市",
+    "areaNamePinYin":"TAI ZHOU SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"130200",
+    "parentCode":"130000",
+    "treeNames":"河北省/唐山市",
+    "areaName":"唐山市",
+    "areaNamePinYin":"TANG SHAN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"120100",
+    "parentCode":"120000",
+    "treeNames":"天津市/天津城区",
+    "areaName":"天津城区",
+    "areaNamePinYin":"TIAN JIN CHENG QU ",
+    "areaType":2
+  },
+  {
+    "areaCode":"429006",
+    "parentCode":"420000",
+    "treeNames":"湖北省/天门市",
+    "areaName":"天门市",
+    "areaNamePinYin":"TIAN MEN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"620500",
+    "parentCode":"620000",
+    "treeNames":"甘肃省/天水市",
+    "areaName":"天水市",
+    "areaNamePinYin":"TIAN SHUI SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"211200",
+    "parentCode":"210000",
+    "treeNames":"辽宁省/铁岭市",
+    "areaName":"铁岭市",
+    "areaNamePinYin":"TIE LING SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"659006",
+    "parentCode":"650000",
+    "treeNames":"新疆维吾尔自治区/铁门关市",
+    "areaName":"铁门关市",
+    "areaNamePinYin":"TIE MEN GUAN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"610200",
+    "parentCode":"610000",
+    "treeNames":"陕西省/铜川市",
+    "areaName":"铜川市",
+    "areaNamePinYin":"TONG CHUAN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"220500",
+    "parentCode":"220000",
+    "treeNames":"吉林省/通化市",
+    "areaName":"通化市",
+    "areaNamePinYin":"TONG HUA SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"150500",
+    "parentCode":"150000",
+    "treeNames":"内蒙古自治区/通辽市",
+    "areaName":"通辽市",
+    "areaNamePinYin":"TONG LIAO SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"340700",
+    "parentCode":"340000",
+    "treeNames":"安徽省/铜陵市",
+    "areaName":"铜陵市",
+    "areaNamePinYin":"TONG LING SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"520600",
+    "parentCode":"520000",
+    "treeNames":"贵州省/铜仁市",
+    "areaName":"铜仁市",
+    "areaNamePinYin":"TONG REN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"650400",
+    "parentCode":"650000",
+    "treeNames":"新疆维吾尔自治区/吐鲁番市",
+    "areaName":"吐鲁番市",
+    "areaNamePinYin":"TU LU FAN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"659003",
+    "parentCode":"650000",
+    "treeNames":"新疆维吾尔自治区/图木舒克市",
+    "areaName":"图木舒克市",
+    "areaNamePinYin":"TU MU SHU KE SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"469022",
+    "parentCode":"460000",
+    "treeNames":"海南省/屯昌县",
+    "areaName":"屯昌县",
+    "areaNamePinYin":"TUN CHANG XIAN ",
+    "areaType":2
+  },
+  {
+    "areaCode":"469006",
+    "parentCode":"460000",
+    "treeNames":"海南省/万宁市",
+    "areaName":"万宁市",
+    "areaNamePinYin":"WAN NING SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"370700",
+    "parentCode":"370000",
+    "treeNames":"山东省/潍坊市",
+    "areaName":"潍坊市",
+    "areaNamePinYin":"WEI FANG SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"371000",
+    "parentCode":"370000",
+    "treeNames":"山东省/威海市",
+    "areaName":"威海市",
+    "areaNamePinYin":"WEI HAI SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"610500",
+    "parentCode":"610000",
+    "treeNames":"陕西省/渭南市",
+    "areaName":"渭南市",
+    "areaNamePinYin":"WEI NAN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"469005",
+    "parentCode":"460000",
+    "treeNames":"海南省/文昌市",
+    "areaName":"文昌市",
+    "areaNamePinYin":"WEN CHANG SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"532600",
+    "parentCode":"530000",
+    "treeNames":"云南省/文山壮族苗族自治州",
+    "areaName":"文山壮族苗族自治州",
+    "areaNamePinYin":"WEN SHAN ZHUANG ZU MIAO ZU ZI ZHI ZHOU ",
+    "areaType":2
+  },
+  {
+    "areaCode":"330300",
+    "parentCode":"330000",
+    "treeNames":"浙江省/温州市",
+    "areaName":"温州市",
+    "areaNamePinYin":"WEN ZHOU SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"150300",
+    "parentCode":"150000",
+    "treeNames":"内蒙古自治区/乌海市",
+    "areaName":"乌海市",
+    "areaNamePinYin":"WU HAI SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"420100",
+    "parentCode":"420000",
+    "treeNames":"湖北省/武汉市",
+    "areaName":"武汉市",
+    "areaNamePinYin":"WU HAN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"340200",
+    "parentCode":"340000",
+    "treeNames":"安徽省/芜湖市",
+    "areaName":"芜湖市",
+    "areaNamePinYin":"WU HU SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"659004",
+    "parentCode":"650000",
+    "treeNames":"新疆维吾尔自治区/五家渠市",
+    "areaName":"五家渠市",
+    "areaNamePinYin":"WU JIA QU SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"150900",
+    "parentCode":"150000",
+    "treeNames":"内蒙古自治区/乌兰察布市",
+    "areaName":"乌兰察布市",
+    "areaNamePinYin":"WU LAN CHA BU SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"650100",
+    "parentCode":"650000",
+    "treeNames":"新疆维吾尔自治区/乌鲁木齐市",
+    "areaName":"乌鲁木齐市",
+    "areaNamePinYin":"WU LU MU QI SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"620600",
+    "parentCode":"620000",
+    "treeNames":"甘肃省/武威市",
+    "areaName":"武威市",
+    "areaNamePinYin":"WU WEI SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"320200",
+    "parentCode":"320000",
+    "treeNames":"江苏省/无锡市",
+    "areaName":"无锡市",
+    "areaNamePinYin":"WU XI SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"469001",
+    "parentCode":"460000",
+    "treeNames":"海南省/五指山市",
+    "areaName":"五指山市",
+    "areaNamePinYin":"WU ZHI SHAN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"640300",
+    "parentCode":"640000",
+    "treeNames":"宁夏回族自治区/吴忠市",
+    "areaName":"吴忠市",
+    "areaNamePinYin":"WU ZHONG SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"450400",
+    "parentCode":"450000",
+    "treeNames":"广西壮族自治区/梧州市",
+    "areaName":"梧州市",
+    "areaNamePinYin":"WU ZHOU SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"610100",
+    "parentCode":"610000",
+    "treeNames":"陕西省/西安市",
+    "areaName":"西安市",
+    "areaNamePinYin":"XI AN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"152500",
+    "parentCode":"150000",
+    "treeNames":"内蒙古自治区/锡林郭勒盟",
+    "areaName":"锡林郭勒盟",
+    "areaNamePinYin":"XI LIN GUO LE MENG ",
+    "areaType":2
+  },
+  {
+    "areaCode":"630100",
+    "parentCode":"630000",
+    "treeNames":"青海省/西宁市",
+    "areaName":"西宁市",
+    "areaNamePinYin":"XI NING SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"532800",
+    "parentCode":"530000",
+    "treeNames":"云南省/西双版纳傣族自治州",
+    "areaName":"西双版纳傣族自治州",
+    "areaNamePinYin":"XI SHUANG BAN NA DAI ZU ZI ZHI ZHOU ",
+    "areaType":2
+  },
+  {
+    "areaCode":"421200",
+    "parentCode":"420000",
+    "treeNames":"湖北省/咸宁市",
+    "areaName":"咸宁市",
+    "areaNamePinYin":"XIAN NING SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"429004",
+    "parentCode":"420000",
+    "treeNames":"湖北省/仙桃市",
+    "areaName":"仙桃市",
+    "areaNamePinYin":"XIAN TAO SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"610400",
+    "parentCode":"610000",
+    "treeNames":"陕西省/咸阳市",
+    "areaName":"咸阳市",
+    "areaNamePinYin":"XIAN YANG SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"430300",
+    "parentCode":"430000",
+    "treeNames":"湖南省/湘潭市",
+    "areaName":"湘潭市",
+    "areaNamePinYin":"XIANG TAN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"433100",
+    "parentCode":"430000",
+    "treeNames":"湖南省/湘西土家族苗族自治州",
+    "areaName":"湘西土家族苗族自治州",
+    "areaNamePinYin":"XIANG XI TU JIA ZU MIAO ZU ZI ZHI ZHOU ",
+    "areaType":2
+  },
+  {
+    "areaCode":"420600",
+    "parentCode":"420000",
+    "treeNames":"湖北省/襄阳市",
+    "areaName":"襄阳市",
+    "areaNamePinYin":"XIANG YANG SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"420900",
+    "parentCode":"420000",
+    "treeNames":"湖北省/孝感市",
+    "areaName":"孝感市",
+    "areaNamePinYin":"XIAO GAN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"410700",
+    "parentCode":"410000",
+    "treeNames":"河南省/新乡市",
+    "areaName":"新乡市",
+    "areaNamePinYin":"XIN XIANG SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"411500",
+    "parentCode":"410000",
+    "treeNames":"河南省/信阳市",
+    "areaName":"信阳市",
+    "areaNamePinYin":"XIN YANG SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"360500",
+    "parentCode":"360000",
+    "treeNames":"江西省/新余市",
+    "areaName":"新余市",
+    "areaNamePinYin":"XIN YU SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"140900",
+    "parentCode":"140000",
+    "treeNames":"山西省/忻州市",
+    "areaName":"忻州市",
+    "areaNamePinYin":"XIN ZHOU SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"152200",
+    "parentCode":"150000",
+    "treeNames":"内蒙古自治区/兴安盟",
+    "areaName":"兴安盟",
+    "areaNamePinYin":"XING AN MENG ",
+    "areaType":2
+  },
+  {
+    "areaCode":"130500",
+    "parentCode":"130000",
+    "treeNames":"河北省/邢台市",
+    "areaName":"邢台市",
+    "areaNamePinYin":"XING TAI SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"411000",
+    "parentCode":"410000",
+    "treeNames":"河南省/许昌市",
+    "areaName":"许昌市",
+    "areaNamePinYin":"XU CHANG SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"320300",
+    "parentCode":"320000",
+    "treeNames":"江苏省/徐州市",
+    "areaName":"徐州市",
+    "areaNamePinYin":"XU ZHOU SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"341800",
+    "parentCode":"340000",
+    "treeNames":"安徽省/宣城市",
+    "areaName":"宣城市",
+    "areaNamePinYin":"XUAN CHENG SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"511800",
+    "parentCode":"510000",
+    "treeNames":"四川省/雅安市",
+    "areaName":"雅安市",
+    "areaNamePinYin":"YA AN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"610600",
+    "parentCode":"610000",
+    "treeNames":"陕西省/延安市",
+    "areaName":"延安市",
+    "areaNamePinYin":"YAN AN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"222400",
+    "parentCode":"220000",
+    "treeNames":"吉林省/延边朝鲜族自治州",
+    "areaName":"延边朝鲜族自治州",
+    "areaNamePinYin":"YAN BIAN CHAO XIAN ZU ZI ZHI ZHOU ",
+    "areaType":2
+  },
+  {
+    "areaCode":"320900",
+    "parentCode":"320000",
+    "treeNames":"江苏省/盐城市",
+    "areaName":"盐城市",
+    "areaNamePinYin":"YAN CHENG SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"370600",
+    "parentCode":"370000",
+    "treeNames":"山东省/烟台市",
+    "areaName":"烟台市",
+    "areaNamePinYin":"YAN TAI SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"441700",
+    "parentCode":"440000",
+    "treeNames":"广东省/阳江市",
+    "areaName":"阳江市",
+    "areaNamePinYin":"YANG JIANG SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"140300",
+    "parentCode":"140000",
+    "treeNames":"山西省/阳泉市",
+    "areaName":"阳泉市",
+    "areaNamePinYin":"YANG QUAN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"321000",
+    "parentCode":"320000",
+    "treeNames":"江苏省/扬州市",
+    "areaName":"扬州市",
+    "areaNamePinYin":"YANG ZHOU SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"511500",
+    "parentCode":"510000",
+    "treeNames":"四川省/宜宾市",
+    "areaName":"宜宾市",
+    "areaNamePinYin":"YI BIN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"420500",
+    "parentCode":"420000",
+    "treeNames":"湖北省/宜昌市",
+    "areaName":"宜昌市",
+    "areaNamePinYin":"YI CHANG SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"230700",
+    "parentCode":"230000",
+    "treeNames":"黑龙江省/伊春市",
+    "areaName":"伊春市",
+    "areaNamePinYin":"YI CHUN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"360900",
+    "parentCode":"360000",
+    "treeNames":"江西省/宜春市",
+    "areaName":"宜春市",
+    "areaNamePinYin":"YI CHUN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"654000",
+    "parentCode":"650000",
+    "treeNames":"新疆维吾尔自治区/伊犁哈萨克自治州",
+    "areaName":"伊犁哈萨克自治州",
+    "areaNamePinYin":"YI LI HA SA KE ZI ZHI ZHOU ",
+    "areaType":2
+  },
+  {
+    "areaCode":"430900",
+    "parentCode":"430000",
+    "treeNames":"湖南省/益阳市",
+    "areaName":"益阳市",
+    "areaNamePinYin":"YI YANG SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"640100",
+    "parentCode":"640000",
+    "treeNames":"宁夏回族自治区/银川市",
+    "areaName":"银川市",
+    "areaNamePinYin":"YIN CHUAN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"210800",
+    "parentCode":"210000",
+    "treeNames":"辽宁省/营口市",
+    "areaName":"营口市",
+    "areaNamePinYin":"YING KOU SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"360600",
+    "parentCode":"360000",
+    "treeNames":"江西省/鹰潭市",
+    "areaName":"鹰潭市",
+    "areaNamePinYin":"YING TAN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"431100",
+    "parentCode":"430000",
+    "treeNames":"湖南省/永州市",
+    "areaName":"永州市",
+    "areaNamePinYin":"YONG ZHOU SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"450900",
+    "parentCode":"450000",
+    "treeNames":"广西壮族自治区/玉林市",
+    "areaName":"玉林市",
+    "areaNamePinYin":"YU LIN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"610800",
+    "parentCode":"610000",
+    "treeNames":"陕西省/榆林市",
+    "areaName":"榆林市",
+    "areaNamePinYin":"YU LIN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"632700",
+    "parentCode":"630000",
+    "treeNames":"青海省/玉树藏族自治州",
+    "areaName":"玉树藏族自治州",
+    "areaNamePinYin":"YU SHU ZANG ZU ZI ZHI ZHOU ",
+    "areaType":2
+  },
+  {
+    "areaCode":"530400",
+    "parentCode":"530000",
+    "treeNames":"云南省/玉溪市",
+    "areaName":"玉溪市",
+    "areaNamePinYin":"YU XI SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"430600",
+    "parentCode":"430000",
+    "treeNames":"湖南省/岳阳市",
+    "areaName":"岳阳市",
+    "areaNamePinYin":"YUE YANG SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"140800",
+    "parentCode":"140000",
+    "treeNames":"山西省/运城市",
+    "areaName":"运城市",
+    "areaNamePinYin":"YUN CHENG SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"445300",
+    "parentCode":"440000",
+    "treeNames":"广东省/云浮市",
+    "areaName":"云浮市",
+    "areaNamePinYin":"YUN FU SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"370400",
+    "parentCode":"370000",
+    "treeNames":"山东省/枣庄市",
+    "areaName":"枣庄市",
+    "areaNamePinYin":"ZAO ZHUANG SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"440800",
+    "parentCode":"440000",
+    "treeNames":"广东省/湛江市",
+    "areaName":"湛江市",
+    "areaNamePinYin":"ZHAN JIANG SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"430800",
+    "parentCode":"430000",
+    "treeNames":"湖南省/张家界市",
+    "areaName":"张家界市",
+    "areaNamePinYin":"ZHANG JIA JIE SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"130700",
+    "parentCode":"130000",
+    "treeNames":"河北省/张家口市",
+    "areaName":"张家口市",
+    "areaNamePinYin":"ZHANG JIA KOU SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"620700",
+    "parentCode":"620000",
+    "treeNames":"甘肃省/张掖市",
+    "areaName":"张掖市",
+    "areaNamePinYin":"ZHANG YE SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"350600",
+    "parentCode":"350000",
+    "treeNames":"福建省/漳州市",
+    "areaName":"漳州市",
+    "areaNamePinYin":"ZHANG ZHOU SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"441200",
+    "parentCode":"440000",
+    "treeNames":"广东省/肇庆市",
+    "areaName":"肇庆市",
+    "areaNamePinYin":"ZHAO QING SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"530600",
+    "parentCode":"530000",
+    "treeNames":"云南省/昭通市",
+    "areaName":"昭通市",
+    "areaNamePinYin":"ZHAO TONG SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"321100",
+    "parentCode":"320000",
+    "treeNames":"江苏省/镇江市",
+    "areaName":"镇江市",
+    "areaNamePinYin":"ZHEN JIANG SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"410100",
+    "parentCode":"410000",
+    "treeNames":"河南省/郑州市",
+    "areaName":"郑州市",
+    "areaNamePinYin":"ZHENG ZHOU SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"442000",
+    "parentCode":"440000",
+    "treeNames":"广东省/中山市",
+    "areaName":"中山市",
+    "areaNamePinYin":"ZHONG SHAN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"640500",
+    "parentCode":"640000",
+    "treeNames":"宁夏回族自治区/中卫市",
+    "areaName":"中卫市",
+    "areaNamePinYin":"ZHONG WEI SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"411600",
+    "parentCode":"410000",
+    "treeNames":"河南省/周口市",
+    "areaName":"周口市",
+    "areaNamePinYin":"ZHOU KOU SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"330900",
+    "parentCode":"330000",
+    "treeNames":"浙江省/舟山市",
+    "areaName":"舟山市",
+    "areaNamePinYin":"ZHOU SHAN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"440400",
+    "parentCode":"440000",
+    "treeNames":"广东省/珠海市",
+    "areaName":"珠海市",
+    "areaNamePinYin":"ZHU HAI SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"411700",
+    "parentCode":"410000",
+    "treeNames":"河南省/驻马店市",
+    "areaName":"驻马店市",
+    "areaNamePinYin":"ZHU MA DIAN SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"430200",
+    "parentCode":"430000",
+    "treeNames":"湖南省/株洲市",
+    "areaName":"株洲市",
+    "areaNamePinYin":"ZHU ZHOU SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"370300",
+    "parentCode":"370000",
+    "treeNames":"山东省/淄博市",
+    "areaName":"淄博市",
+    "areaNamePinYin":"ZI BO SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"510300",
+    "parentCode":"510000",
+    "treeNames":"四川省/自贡市",
+    "areaName":"自贡市",
+    "areaNamePinYin":"ZI GONG SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"512000",
+    "parentCode":"510000",
+    "treeNames":"四川省/资阳市",
+    "areaName":"资阳市",
+    "areaNamePinYin":"ZI YANG SHI ",
+    "areaType":2
+  },
+  {
+    "areaCode":"520300",
+    "parentCode":"520000",
+    "treeNames":"贵州省/遵义市",
+    "areaName":"遵义市",
+    "areaNamePinYin":"ZUN YI SHI ",
+    "areaType":2
+  }
+]

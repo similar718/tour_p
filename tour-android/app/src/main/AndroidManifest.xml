@@ -1,0 +1,1194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="cn.xmzt.www">
+
+    <uses-sdk xmlns:tools="http://schemas.android.com/tools"
+        tools:node="merge" />
+
+    <uses-permission
+        android:name="android.permission.READ_LOGS"
+        tools:ignore="ProtectedPermissions" /> <!-- 蓝牙权限 -->
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_PRIVILEGED"
+        tools:ignore="ProtectedPermissions" /> <!-- 允许程序读取通讯录权限 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" /> <!-- 发送粘性广播需要权限 -->
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" /> <!-- 悬浮窗必加权限 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.ACTION_MANAGE_OVERLAY_PERMISSION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 网络权限 -->
+    <uses-permission android:name="android.permission.CAMERA" /> <!-- 摄像头权限 -->
+    <uses-feature android:name="android.hardware.camera.autofocus" /> <!-- 自动聚焦权限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- 写入扩展存储，向扩展卡写入数据，用于写入缓存定位数据 -->
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- 用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" /> <!-- 这个权限用于允许程序在手机屏幕关闭后后台进程仍然运行 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- 控制呼吸灯，振动器等，用于新消息提醒 -->
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.VIBRATE" /> <!-- 震动权限 -->
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /> <!-- 悬浮窗 MIUI上需要 -->
+    <!-- 8.0 系统需要 -->
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" /> <!-- 8.0 系统需要 -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" /> <!-- 语音录制 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" /> <!-- SDK 权限申明, 第三方 APP 接入时，请将 com.netease.nim.demo 替换为自己的包名 -->
+    <uses-permission android:name="android.permission.CALL_PHONE" /> <!-- 和下面的 uses-permission 一起加入到你的 AndroidManifest 文件中。 -->
+    <permission
+        android:name="cn.xmzt.www.permission.RECEIVE_MSG"
+        android:protectionLevel="signature" /> <!-- 接收 SDK 消息广播权限， 第三方 APP 接入时，请将 cn.xmzt.www 替换为自己的包名 -->
+    <uses-permission android:name="cn.xmzt.www.permission.RECEIVE_MSG" /> <!-- 小米推送 -->
+    <permission
+        android:name="cn.xmzt.www.permission.MIPUSH_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="cn.xmzt.www.permission.MIPUSH_RECEIVE" /> <!-- 华为推送 -->
+    <!-- 魅族推送 -->
+    <!-- 兼容flyme5.0以下版本，魅族内部集成pushSDK必填，不然无法收到消息 -->
+    <uses-permission android:name="com.meizu.flyme.push.permission.RECEIVE" />
+
+    <permission
+        android:name="cn.xmzt.www.push.permission.MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="cn.xmzt.www.push.permission.MESSAGE" /> <!-- 兼容flyme3.0配置权限 -->
+    <uses-permission android:name="com.meizu.c2dm.permission.RECEIVE" />
+
+    <permission
+        android:name="cn.xmzt.www.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="cn.xmzt.www.permission.C2D_MESSAGE" /> <!-- oppo推送配置权限 -->
+    <uses-permission android:name="com.coloros.mcs.permission.RECIEVE_MCS_MESSAGE" />
+
+    <application
+        android:name=".base.TourApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/icon_logo"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@drawable/icon_logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.Main"
+        android:value="@string/app_name"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:replace="android:theme">
+        <activity
+            android:name=".main.activity.PermissionHintActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".main.activity.MainActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:hardwareAccelerated="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" /> <!-- 智能组队首页 -->
+        <activity
+            android:name=".smartteam.activity.SmartTeamActivity"
+            android:screenOrientation="portrait" /> <!-- 智能组队的群详情 -->
+        <activity
+            android:name=".smartteam.activity.SmartTeamGroupInfoActivity"
+            android:screenOrientation="portrait" /> <!-- 智能组队群成员列表 -->
+        <activity
+            android:name=".smartteam.activity.SmartTeamGroupMemberListActivity"
+            android:screenOrientation="portrait" /> <!-- 智能组队添加车辆/智能组队修改车辆 -->
+        <activity
+            android:name=".smartteam.activity.SmartTeamAddCarActivity"
+            android:screenOrientation="portrait" /> <!-- 智能组队群车辆列表 -->
+        <activity
+            android:name=".smartteam.activity.SmartTeamGroupCarListActivity"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="android.webkit.WebView.EnableSafeBrowsing"
+            android:value="true" /> <!-- 公用的WebView -->
+        <activity
+            android:name=".base.WebActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" /> <!-- scheme协议Activity -->
+        <activity
+            android:name=".main.activity.SchemeActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Transparent">
+
+            <!--
+            <intent-filter>
+                &lt;!&ndash;协议部分，随便设置&ndash;&gt;
+                <data
+                    android:host="action"
+                    android:scheme="xmzt"/>
+                &lt;!&ndash;下面这几行也必须得设置&ndash;&gt;
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+            -->
+        </activity> <!-- Since JCore2.0.0 Required SDK核心功能 -->
+        <!-- 可配置android:process参数将Service放在其他进程中；android:enabled属性不能是false -->
+        <!-- 这个是自定义Service，要继承极光JCommonService，可以在更多手机平台上使得推送通道保持的更稳定 -->
+        <service
+            android:name=".service.JGService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":pushcore">
+            <intent-filter>
+                <action android:name="cn.jiguang.user.service.action" />
+            </intent-filter>
+        </service> <!-- Required since 3.0.7 -->
+        <!-- 新的 tag/alias 接口结果返回需要开发者配置一个自定的广播 -->
+        <!-- 3.3.0开始所有事件将通过该类回调 -->
+        <!-- 该广播需要继承 JPush 提供的 JPushMessageReceiver 类, 并如下新增一个 Intent-Filter -->
+        <receiver
+            android:name=".receiver.JGReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE" />
+
+                <category android:name="cn.xmzt.www" />
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="cn.xmzt.www.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity
+            android:name=".mine.activity.InformationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mine.activity.SettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mine.activity.AccountSecurityActivity"
+            android:screenOrientation="portrait" /> <!-- 绑定手机号 -->
+        <activity
+            android:name=".mine.activity.BindPhoneActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mine.activity.BindContactActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mine.activity.SettingPayPwdActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mine.activity.CloseAccountActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mine.activity.VerifyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mine.activity.ModifyNicknameActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mine.activity.MyOrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mine.activity.MyCouponActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mine.activity.MyCouponHistoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mine.activity.MyScoreActivity"
+            android:screenOrientation="portrait" /> <!-- 邀请好友 -->
+        <activity
+            android:name=".mine.activity.FriendInviteActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mine.activity.CommonlyTourActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mine.activity.VerificationPhoneActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mine.activity.MyWalletActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mine.activity.MyCollectionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mine.activity.BrowseHistoryActivity"
+            android:screenOrientation="portrait" /> <!-- 私人定制 选择城市 -->
+        <activity
+            android:name=".home.activity.SelectCityActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" /> <!-- 私人定制列表 -->
+        <activity
+            android:name=".home.activity.CustomizeActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" /> <!-- 私人定制详情 -->
+        <activity
+            android:name=".home.activity.CustomizeInfoActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" /> <!-- 添加私人定制 -->
+        <activity
+            android:name=".home.activity.CustomizeAddActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" /> <!-- 添加私人定制成功 -->
+        <activity
+            android:name=".home.activity.CustomizeSucceedActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" /> <!-- 修改私人定制 -->
+        <activity
+            android:name=".home.activity.CustomizeEditActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" /> <!-- 添加私人定制、选择时间段 -->
+        <activity
+            android:name=".home.activity.SelectTimeIntervalActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" /> <!-- 关键字搜索 -->
+        <activity
+            android:name=".route.activity.KeywordSearchActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" /> <!-- 关键字搜索结果页面 -->
+        <activity
+            android:name=".route.activity.RouteSearchResultListActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" /> <!-- 线路详情 -->
+        <activity
+            android:name=".route.activity.RouteDetailActivity1"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" /> <!-- 线路详情 -->
+        <!-- 线路预览 -->
+        <activity
+            android:name=".route.activity.RoutePreviewMapActivity"
+            android:screenOrientation="portrait" /> <!-- 线路时间人数选择 -->
+        <activity
+            android:name=".route.activity.RouteTimePersonsActivity"
+            android:screenOrientation="portrait" /> <!-- 线路填写订单 -->
+        <activity
+            android:name=".route.activity.RouteFillinOrderActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" /> <!-- 线路订单详情 -->
+        <activity
+            android:name=".route.activity.RouteOrderDetailActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" /> <!-- 订单支付选择支付方式 -->
+        <activity
+            android:name=".pay.activity.ChoosePayActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" /> <!-- 订单支付失败页面 -->
+        <activity
+            android:name=".pay.activity.PayFailedActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" /> <!-- 订单支付成功页面 -->
+        <activity
+            android:name=".pay.activity.PaySuccessActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" /> <!-- 线路订单发票信息界面 -->
+        <!-- 引导页 -->
+        <activity
+            android:name=".main.activity.GuideActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".route.activity.InvoiceInfoActivity"
+            android:screenOrientation="portrait" /> <!-- 支付宝配置开始 -->
+        <!--
+15.5.7开始不需要配置
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity>
+        <activity
+            android:name="com.alipay.sdk.app.H5AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity>
+        -->
+        <!-- 支付宝配置结束 -->
+        <!-- 微信支付集成中间Activity -->
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:theme="@style/Theme.Mike" /> <!-- 线路选择出游人界面 -->
+        <activity
+            android:name=".route.activity.SelectVisitorsActivity"
+            android:screenOrientation="portrait" /> <!-- 优惠券领取界面 -->
+        <activity
+            android:name=".route.activity.CouponGetActivity"
+            android:screenOrientation="portrait" /> <!-- 使用优惠券界面 -->
+        <activity
+            android:name=".route.activity.CouponUseActivity"
+            android:screenOrientation="portrait" /> <!-- 线路填写发票 -->
+        <activity
+            android:name=".route.activity.RouteFillinInvoiceActivity"
+            android:screenOrientation="portrait" /> <!-- 选择发票抬头 -->
+        <activity
+            android:name=".route.activity.SelectInvoiceTitleActivity"
+            android:screenOrientation="portrait" /> <!-- 添加发票抬头 -->
+        <activity
+            android:name=".route.activity.AddInvoiceTitleActivity"
+            android:screenOrientation="portrait" /> <!-- 提现 -->
+        <activity
+            android:name=".mine.activity.CashWithdrawalActivity"
+            android:screenOrientation="portrait" /> <!-- 酒店主页界面 -->
+        <activity
+            android:name=".hotel.activity.HotelMainActivity"
+            android:screenOrientation="portrait" /> <!-- 酒店列表界面 -->
+        <activity
+            android:name=".hotel.activity.HotelListActivity"
+            android:screenOrientation="portrait" /> <!-- 酒店浏览历史界面 -->
+        <activity
+            android:name=".hotel.activity.HotelHistoryListActivity"
+            android:screenOrientation="portrait" /> <!-- 酒店搜索界面 -->
+        <activity
+            android:name=".hotel.activity.HotelSearchActivity"
+            android:screenOrientation="portrait" /> <!-- 酒店详情的列表界面 -->
+        <activity
+            android:name=".hotel.activity.HotelDetailsListActivity"
+            android:screenOrientation="portrait" /> <!-- 酒店详情界面 -->
+        <activity
+            android:name=".hotel.activity.HotelDetailsActivity"
+            android:screenOrientation="portrait" /> <!-- 周边热销酒店界面 -->
+        <activity
+            android:name=".hotel.activity.PeripheryHotHotelListActivity"
+            android:screenOrientation="portrait" /> <!-- 酒店信息填写界面 -->
+        <activity
+            android:name=".hotel.activity.HotelInfoWriteActivity"
+            android:screenOrientation="portrait" /> <!-- 酒店订单填写界面 -->
+        <activity
+            android:name=".hotel.activity.HotelOrderActivity"
+            android:screenOrientation="portrait" /> <!-- 开票信息界面 -->
+        <activity
+            android:name=".hotel.activity.MakeInvoiceInfoActivity"
+            android:screenOrientation="portrait" /> <!-- 选择出游人界面 -->
+        <activity
+            android:name=".hotel.activity.SelectTouristsActivity"
+            android:screenOrientation="portrait" /> <!-- 新增出游人界面 -->
+        <activity
+            android:name=".mine.activity.AddTouristsActivity"
+            android:screenOrientation="portrait" /> <!-- 登录界面 -->
+        <activity
+            android:name=".mine.activity.LoginActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mine.activity.VerificationSecurityPhoneActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mine.activity.BindSecurityPhoneActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mine.activity.PhoneSecurityLoseActivity"
+            android:screenOrientation="portrait" /> <!-- 注册界面 -->
+        <activity
+            android:name=".mine.activity.RegisterActivity"
+            android:screenOrientation="portrait" /> <!-- 忘记密码界面 -->
+        <activity
+            android:name=".mine.activity.FindPasswordActivity"
+            android:screenOrientation="portrait" /> <!-- 高德地图服务 -->
+        <service android:name="com.amap.api.location.APSService" />
+
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="48cc672b8329a4793d15fb084f5eb0af" /> <!-- 一键救援 -->
+        <activity
+            android:name=".selfdrivingtools.activity.AKeySOSActivity"
+            android:screenOrientation="portrait" /> <!-- 景区导览带有地图的界面 -->
+        <activity
+            android:name=".selfdrivingtools.activity.ScenicSpotMapActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" /> <!-- 景区导览景区列表界面 -->
+        <activity
+            android:name=".selfdrivingtools.activity.WisdomGuideActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" /> <!-- 景区导览首页 -->
+        <activity
+            android:name=".selfdrivingtools.activity.ElectricGuideActivity"
+            android:screenOrientation="portrait" /> <!-- 景区详请界面 -->
+        <activity
+            android:name=".ticket.activity.SienceAreaDetailActivity"
+            android:screenOrientation="portrait" /> <!-- 门票详请界面 -->
+        <activity
+            android:name=".ticket.activity.TicketDetailActivity"
+            android:screenOrientation="portrait" /> <!-- 特价门票 -->
+        <activity
+            android:name=".ticket.activity.SpecialTicketActivity"
+            android:screenOrientation="portrait" /> <!-- 修改密码 -->
+        <activity
+            android:name=".mine.activity.ChangePassWordActivity"
+            android:screenOrientation="portrait" /> <!-- 设置密码 -->
+        <activity
+            android:name=".mine.activity.SettingPassWordActivity"
+            android:screenOrientation="portrait" /> <!-- 景点搜索界面 -->
+        <activity
+            android:name=".selfdrivingtools.activity.ScenicSpotSearchActivity"
+            android:screenOrientation="portrait" /> <!-- 景点搜索结果界面 -->
+        <activity
+            android:name=".selfdrivingtools.activity.ScenicSpotSearchResultActivity"
+            android:screenOrientation="portrait" />
+
+        <service android:name=".suspension.FloatMonkService" /> <!-- 定位服务 -->
+        <service android:name=".service.LocationService" /> <!-- 景点反馈界面 -->
+        <activity
+            android:name=".selfdrivingtools.activity.ScenicFeedBackActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" /> <!-- 提现账号界面 -->
+        <activity
+            android:name=".mine.activity.CashAccountActivity"
+            android:screenOrientation="portrait" /> <!-- 绑定支付宝 -->
+        <activity
+            android:name=".mine.activity.BindALiPayActivity"
+            android:screenOrientation="portrait" /> <!-- 景区详请界面 -->
+        <activity
+            android:name=".selfdrivingtools.activity.ScenicSpotDetailActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" /> <!-- 退款订单界面 -->
+        <activity
+            android:name=".mine.activity.RefundOrderActivity"
+            android:screenOrientation="portrait" /> <!-- 音频播放服务 -->
+        <service android:name=".service.PlayerService" /> <!-- 微信分享的回调界面 -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" /> <!-- QQ分享的回调界面 -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent100424468" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" /> <!-- 全面屏配置 -->
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.4" /> <!-- 适配华为（huawei）刘海屏 -->
+        <!--
+<meta-data
+            android:name="android.notch_support"
+            android:value="true"/>
+        -->
+        <!-- 适配小米（xiaomi）刘海屏 -->
+        <!--
+<meta-data
+            android:name="notch.config"
+            android:value="portrait|landscape" />
+        -->
+        <!-- 导航页 -->
+        <activity
+            android:name=".main.activity.WelcomeActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:hardwareAccelerated="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/WelcomeEntranceActionBarTheme"
+            android:value="@string/app_name"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- 主界面 -->
+        <!-- 多端登录管理 -->
+        <activity
+            android:name=".nim.im.main.activity.MultiportActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize|stateHidden" /> <!-- 登录界面 -->
+        <!-- 关于 -->
+        <activity
+            android:name=".nim.im.main.activity.AboutActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:value="@string/about"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name=".nim.im.main.activity.SettingsActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".nim.im.main.activity.NoDisturbActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name=".nim.im.contact.activity.AddFriendActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name=".nim.im.contact.activity.UserProfileActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name=".nim.im.contact.activity.UserProfileSettingActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name=".nim.im.contact.activity.UserProfileEditItemActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name=".nim.im.contact.activity.BlackListActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" /> <!-- 文件管理器 -->
+        <activity
+            android:name=".nim.im.file.browser.FileBrowserActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:value="@string/file_browser"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name=".nim.im.main.activity.SystemMessageActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".nim.im.main.activity.CustomNotificationActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".nim.im.session.activity.MessageInfoActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".nim.im.team.activity.AdvancedTeamSearchActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".nim.im.team.activity.AdvancedTeamJoinActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".nim.im.main.activity.TeamListActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" /> <!-- 全局搜索 -->
+        <activity
+            android:name=".nim.im.main.activity.GlobalSearchActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/global_search_bg"
+            android:windowSoftInputMode="stateUnspecified" />
+        <activity
+            android:name=".nim.im.main.activity.GlobalSearchDetailActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".nim.im.main.activity.GlobalSearchDetailActivity2"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" /> <!-- 查看阅后即焚 -->
+        <activity
+            android:name=".nim.im.session.activity.WatchSnapChatPictureActivity"
+            android:configChanges="keyboardHidden"
+            android:theme="@style/AppTheme.NoActionBar" /> <!-- 下载文件 -->
+        <activity
+            android:name=".nim.im.session.activity.FileDownloadActivity"
+            android:configChanges="keyboardHidden"
+            android:theme="@style/AppTheme.NoActionBar" /> <!-- map -->
+        <activity
+            android:name=".nim.im.location.activity.LocationAmapActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:value="@string/location_map" />
+        <activity
+            android:name=".nim.im.location.activity.NavigationAmapActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:value="@string/location_navigate" /> <!-- 消息历史搜索 -->
+        <activity
+            android:name=".nim.im.session.search.SearchMessageActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/global_search_bg"
+            android:windowSoftInputMode="adjustPan|stateUnspecified" /> <!-- 聊天室 -->
+        <activity
+            android:name=".nim.im.chatroom.activity.ChatRoomActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".nim.im.jsbridge.JsBridgeActivity"
+            android:screenOrientation="portrait"
+            android:value="@string/js_bridge"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" /> <!-- 机器人 -->
+        <activity
+            android:name=".nim.im.main.activity.RobotListActivity"
+            android:screenOrientation="portrait" /> <!-- 已读回执 -->
+        <activity
+            android:name=".nim.im.session.activity.SendAckMsgActivity"
+            android:screenOrientation="portrait" /> <!-- 已读回执详情 -->
+        <activity
+            android:name=".nim.im.session.activity.AckMsgInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".nim.im.contact.activity.RobotProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".nim.im.main.activity.PrivatizationConfigActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:value="@string/privatization_config"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name=".nim.im.main.activity.MsgMigrationActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:value="@string/local_db_migration"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" /> <!-- 云信 begin -->
+        <!--
+ APP key, 可以在这里设置，也可以在 SDKOptions 中提供。
+            如果 SDKOptions 中提供了，取 SDKOptions 中的值。
+        -->
+        <meta-data
+            android:name="com.netease.nim.appKey"
+            android:value="d96c81dbb72f59af386b484ad9fc9cc7" /> <!-- 云信后台服务，请使用独立进程。 -->
+        <service
+            android:name="com.netease.nimlib.service.NimService"
+            android:process=":core" /> <!-- 云信后台辅助服务 -->
+        <service
+            android:name="com.netease.nimlib.service.NimService$Aux"
+            android:process=":core" /> <!-- 云信后台辅助服务 -->
+        <service
+            android:name="com.netease.nimlib.job.NIMJobService"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:process=":core" /> <!-- 云信监视系统启动和网络变化的广播接收器，保持和 NimService 同一进程 -->
+        <receiver
+            android:name="com.netease.nimlib.service.NimReceiver"
+            android:exported="false"
+            android:process=":core">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver> <!-- 云信进程间通信 Receiver -->
+        <receiver android:name="com.netease.nimlib.service.ResponseReceiver" /> <!-- 云信进程间通信service -->
+        <service android:name="com.netease.nimlib.service.ResponseService" /> <!-- 云信进程间通信provider -->
+        <!-- android:authorities="{包名}.ipc.provider", 请将com.netease.nim.demo替换为自己的包名 -->
+        <provider
+            android:name="com.netease.nimlib.ipc.NIMContentProvider"
+            android:authorities="cn.xmzt.www.ipc.provider"
+            android:exported="false"
+            android:process=":core" /> <!-- 申明自定义通知的广播接收器，第三方APP集成时，action中的com.netease.nim.demo请替换为自己的包名 -->
+        <!-- 需要权限申明 <uses-permission android:name="com.netease.nim.demo.permission.RECEIVE_MSG"/> -->
+        <receiver
+            android:name=".nim.im.receiver.CustomNotificationReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.xmzt.www.ACTION.RECEIVE_CUSTOM_NOTIFICATION" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="cn.xmzt.www.nim.uikit.support.glide.NIMGlideModule"
+            android:value="GlideModule" /> <!-- 会话窗口 -->
+        <!--
+ UI组件中包含了语音选文字功能，该界面是全屏显示，为了视觉上的美观，该界面主题ActionBar使用Overlay模式。
+             如果开发者不需要该功能或效果，使用普通主题即可。 同时，还需要将message_activity.xml这个layout中的根节点的paddingTop去掉。
+        -->
+        <receiver
+            android:name=".receiver.JGPushReceiver"
+            android:enabled="true">
+            <intent-filter>
+
+                <!-- 以下是要添加的权限 -->
+                <action android:name="cn.jpush.android.intent.REGISTRATION" />
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" />
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" />
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" />
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_CLICK_ACTION" />
+                <action android:name="cn.jpush.android.intent.CONNECTION" />
+
+                <category android:name="cn.xmzt.www" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".intercom.activity.TeamRoomActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" /> <!-- 群聊 -->
+        <activity
+            android:name=".nim.uikit.business.team.activity.NormalTeamInfoActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".nim.uikit.business.team.activity.AdvancedTeamMemberActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".nim.uikit.business.team.activity.AdvancedTeamAnnounceActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".nim.uikit.business.team.activity.AdvancedTeamMemberInfoActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".nim.uikit.business.team.activity.AdvancedTeamNicknameActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".nim.uikit.business.team.activity.AdvancedTeamCreateAnnounceActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".nim.uikit.business.team.activity.TeamPropertySettingActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" /> <!-- 联系人选择器 -->
+        <activity
+            android:name=".nim.uikit.business.contact.selector.activity.ContactSelectActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:value="@string/contact_selector"
+            android:windowSoftInputMode="stateHidden|adjustPan" /> <!-- @ 选择器 -->
+        <activity
+            android:name=".nim.uikit.business.ait.selector.AitContactSelectorActivity"
+            android:screenOrientation="portrait" /> <!-- 照片选择 -->
+        <activity
+            android:name=".nim.uikit.common.media.picker.activity.PickImageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".nim.uikit.common.media.picker.activity.CropImageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".nim.uikit.common.media.picker.activity.PickerAlbumActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".nim.uikit.common.media.picker.activity.PickerAlbumPreviewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".nim.uikit.common.media.picker.activity.PreviewImageFromLocalActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".nim.uikit.common.media.picker.activity.PreviewImageFromCameraActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:value="@string/input_panel_take"
+            android:windowSoftInputMode="stateHidden|adjustResize" /> <!-- 视频 -->
+        <activity
+            android:name=".nim.uikit.business.session.activity.CaptureVideoActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".nim.uikit.business.session.activity.WatchVideoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@style/DarkTheme"
+            android:value="@string/video_play" /> <!-- 查看大图 -->
+        <activity
+            android:name=".nim.uikit.business.session.activity.WatchMessagePictureActivity"
+            android:configChanges="keyboardHidden"
+            android:theme="@style/DarkTheme" />
+        <activity
+            android:name=".nim.uikit.business.session.activity.WatchPicAndVideoMenuActivity"
+            android:configChanges="keyboardHidden"
+            android:theme="@style/DarkTheme" />
+
+        <provider
+            android:name=".nim.uikit.common.media.model.GenericFileProvider"
+            android:authorities="${applicationId}.generic.file.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity
+            android:name=".nim.uikit.common.media.imagepicker.ui.ImageGridActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/LightBaseTheme" />
+        <activity
+            android:name=".nim.uikit.common.media.imagepicker.ui.ImageCropActivity"
+            android:configChanges="orientation|screenSize"
+            android:hardwareAccelerated="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/ImagePickerTheme.BlackStatusBar" />
+        <activity
+            android:name=".nim.uikit.common.media.imagepicker.ui.ImagePreviewActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/ImagePickerTheme.BlackStatusBar" />
+        <activity
+            android:name=".nim.uikit.common.media.imagepicker.ui.ImagePreviewRetakeActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/ImagePickerTheme.BlackStatusBar" />
+        <activity
+            android:name=".nim.uikit.common.media.imagepicker.ui.ImageTakeActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/ImagePickerTheme.BlackStatusBar" />
+        <activity
+            android:name=".nim.uikit.common.media.imagepicker.video.GLVideoActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/VideoTheme" />
+        <activity
+            android:name=".nim.uikit.common.media.imagepicker.video.GLVideoConfirmActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/VideoTheme" />
+        <activity
+            android:name=".nim.uikit.common.media.imagepicker.camera.CaptureActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" /> <!-- 白板 -->
+        <activity
+            android:name=".nim.rtskit.activity.RTSActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" /> <!-- 申明白板会话的广播接收器，第三方APP集成时，action中的com.netease.nim.demo请替换为自己的包名 -->
+        <receiver
+            android:name="com.netease.nimlib.receiver.RTSBroadcastReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.xmzt.www,ACTION.RECEIVE_RTS_NOTIFICATION" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".nim.avchatkit.activity.AVChatActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreenTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" /> <!-- 音视频 -->
+        <activity
+            android:name=".nim.avchatkit.teamavchat.activity.TeamAVChatActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreenTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" /> <!-- NRTC Settings -->
+        <activity
+            android:name=".nim.avchatkit.activity.AVChatSettingsActivity"
+            android:screenOrientation="portrait" /> <!-- 申明本地电话状态（通话状态）的广播接收器，第三方APP集成时音视频模块时，如果需要在App中处理网络通话与本地电话的交互请加上此接收器 -->
+        <!-- 在Demo的示例代码中是在Application进行了网络通话与本地电话的互斥处理 -->
+        <receiver android:name=".nim.avchatkit.receiver.IncomingCallReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PHONE_STATE" />
+            </intent-filter>
+        </receiver> <!-- 小米推送配置 -->
+        <service
+            android:name="com.xiaomi.push.service.XMJobService"
+            android:enabled="true"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:process=":mixpush" />
+        <service
+            android:name="com.xiaomi.push.service.XMPushService"
+            android:enabled="true"
+            android:process=":mixpush" />
+
+        <receiver
+            android:name="com.xiaomi.push.service.receivers.PingReceiver"
+            android:exported="false"
+            android:process=":mixpush">
+            <intent-filter>
+                <action android:name="com.xiaomi.push.PING_TIMER" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.xiaomi.push.service.receivers.NetworkStatusReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.xiaomi.mipush.sdk.PushMessageHandler"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name="com.xiaomi.mipush.sdk.MessageHandleService"
+            android:enabled="true" />
+
+        <receiver
+            android:name="com.netease.nimlib.mixpush.mi.MiPushReceiver"
+            android:exported="true">
+            <intent-filter android:priority="0x7fffffff">
+                <action android:name="com.xiaomi.mipush.RECEIVE_MESSAGE" />
+                <action android:name="com.xiaomi.mipush.MESSAGE_ARRIVED" />
+                <action android:name="com.xiaomi.mipush.ERROR" />
+            </intent-filter>
+        </receiver> <!-- 华为推送配置 -->
+        <!-- meizu -->
+        <receiver android:name="com.netease.nimlib.mixpush.mz.MZPushReceiver">
+            <intent-filter android:priority="0x7fffffff">
+
+                <!-- 接收push消息 -->
+                <action android:name="com.meizu.flyme.push.intent.MESSAGE" />
+                <!-- 接收register消息 -->
+                <action android:name="com.meizu.flyme.push.intent.REGISTER.FEEDBACK" />
+                <!-- 接收unregister消息 -->
+                <action android:name="com.meizu.flyme.push.intent.UNREGISTER.FEEDBACK" />
+                <!-- 兼容低版本Flyme3推送服务配置 -->
+                <action android:name="com.meizu.c2dm.intent.REGISTRATION" />
+                <action android:name="com.meizu.c2dm.intent.RECEIVE" />
+
+                <category android:name="cn.xmzt.www" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="c3b7877640734c92138bf0a8becce1df29155681" /> <!-- Vivo推送配置项 -->
+        <service
+            android:name="com.vivo.push.sdk.service.CommandClientService"
+            android:exported="true" />
+
+        <activity
+            android:name="com.vivo.push.sdk.LinkProxyClientActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <meta-data
+            android:name="com.vivo.push.api_key"
+            android:value="18374205-eb53-428c-bad2-7a75712f6487" />
+        <meta-data
+            android:name="com.vivo.push.app_id"
+            android:value="11425" />
+
+        <receiver android:name="com.netease.nimlib.mixpush.vivo.VivoPushReceiver">
+            <intent-filter>
+
+                <!-- 接收 push 消息 -->
+                <action android:name="com.vivo.pushclient.action.RECEIVE" />
+            </intent-filter>
+        </receiver> <!-- Oppo推送配置项 -->
+        <service
+            android:name="com.netease.nimlib.mixpush.oppo.OppoPushService"
+            android:permission="com.coloros.mcs.permission.SEND_MCS_MESSAGE">
+            <intent-filter>
+                <action android:name="com.coloros.mcs.action.RECEIVE_MCS_MESSAGE" />
+            </intent-filter>
+        </service> <!-- 云信 end -->
+        <!-- 二维码扫描界面 -->
+        <activity
+            android:name=".zxing.activity.CaptureActivity"
+            android:screenOrientation="portrait" /> <!-- 人气必玩界面 -->
+        <activity
+            android:name=".home.activity.PopularityMustPlayActivity"
+            android:screenOrientation="portrait" /> <!-- 精选线路界面 -->
+        <!-- 原手机号丢失或停用界面 -->
+        <activity
+            android:name=".mine.activity.PhoneLoseActivity"
+            android:screenOrientation="portrait" /> <!-- 意见反馈界面 -->
+        <activity
+            android:name=".mine.activity.FeedbackActivity"
+            android:screenOrientation="portrait" /> <!-- 关于我们界面 -->
+        <activity
+            android:name=".mine.activity.AboutUsActivity"
+            android:screenOrientation="portrait" /> <!-- 消息中心界面 -->
+        <activity
+            android:name=".mine.activity.MessageCenterActivity"
+            android:screenOrientation="portrait" /> <!-- 马小秘消息提醒 -->
+        <activity
+            android:name=".mine.activity.HorseSmallMiNotificationsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".home.activity.SelectedLineActivity"
+            android:screenOrientation="portrait" /> <!-- 签到界面 -->
+        <activity
+            android:name=".mine.activity.SignInActivity"
+            android:screenOrientation="portrait" /> <!-- 共享导航 -->
+        <activity
+            android:name=".selfdrivingtools.activity.SharedNavigationMapActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" /> <!-- 共享导航搜索目的地界面 -->
+        <activity
+            android:name=".selfdrivingtools.activity.SharedNavigationSettingDestinationActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" /> <!-- 线路视频播放器 -->
+        <activity
+            android:name=".route.activity.VideoPlayActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/VideoPlayTheme" /> <!-- 线路图片预览器 -->
+        <activity
+            android:name=".route.activity.RoutePhotoViewActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/VideoPlayTheme" /> <!-- 微信登录强绑手机号 -->
+        <activity
+            android:name=".mine.activity.WxBindPhoneActivity"
+            android:screenOrientation="portrait" /> <!-- 导航界面 -->
+        <activity
+            android:name=".selfdrivingtools.activity.SharedNavigationGuideActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".selfdrivingtools.activity.SharedNavigationGuideActivityBackUp"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait" /> <!-- 传入起点终点查看方案 -->
+        <activity
+            android:name=".selfdrivingtools.activity.SharedNavigationGoHereActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".selfdrivingtools.activity.SharedNavigationGoHereActivityBackUp"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait" /> <!-- 高德导航界面 -->
+        <activity
+            android:name="com.amap.api.navi.AmapRouteActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize" /> <!-- 群管理 -->
+        <activity
+            android:name=".intercom.activity.GroupManageActivity"
+            android:screenOrientation="portrait" /> <!-- 群成员列表 -->
+        <activity
+            android:name=".intercom.activity.GroupMemberListActivity"
+            android:screenOrientation="portrait" /> <!-- 群车辆列表 -->
+        <activity
+            android:name=".intercom.activity.GroupCarListActivity"
+            android:screenOrientation="portrait" /> <!-- 群成员管理 -->
+        <activity
+            android:name=".intercom.activity.GroupMemberManageActivity"
+            android:screenOrientation="portrait" /> <!-- 群成员管理移除成员 -->
+        <activity
+            android:name=".intercom.activity.GroupMemberDelActivity"
+            android:screenOrientation="portrait" /> <!-- 群车辆管理 -->
+        <activity
+            android:name=".intercom.activity.GroupCarManageActivity"
+            android:screenOrientation="portrait" /> <!-- 群添加车辆 -->
+        <activity
+            android:name=".intercom.activity.AddCarActivity"
+            android:screenOrientation="portrait" /> <!-- 群添加车辆选择司机 -->
+        <activity
+            android:name=".intercom.activity.SelectDriverActivity"
+            android:screenOrientation="portrait" /> <!-- 群转让车辆 -->
+        <activity
+            android:name=".intercom.activity.TransferVehicleActivity"
+            android:screenOrientation="portrait" /> <!-- 已结束的行程列表 -->
+        <activity
+            android:name=".intercom.activity.SchedulingOverListActivity"
+            android:screenOrientation="portrait" /> <!-- 行程详情 -->
+        <activity
+            android:name=".intercom.activity.SchedulingDetailActivity"
+            android:screenOrientation="portrait" /> <!-- 消息提醒界面 -->
+        <activity
+            android:name=".intercom.activity.MessageRemindActivity"
+            android:screenOrientation="portrait" /> <!-- 群组二维码界面 -->
+        <activity
+            android:name=".intercom.activity.GroupQRcodeActivity"
+            android:screenOrientation="portrait" /> <!-- 群组个人信息界面 -->
+        <activity
+            android:name=".intercom.activity.GroupPersonalInfoActivity"
+            android:screenOrientation="portrait" /> <!-- 设置标签界面 -->
+        <activity
+            android:name=".intercom.activity.SettingTagActivity"
+            android:screenOrientation="portrait" /> <!-- 群资料界面 -->
+        <activity
+            android:name=".intercom.activity.GroupInfoActivity"
+            android:screenOrientation="portrait" /> <!-- 景区图集 -->
+        <activity
+            android:name=".selfdrivingtools.activity.AtlasActivity"
+            android:screenOrientation="portrait" /> <!-- 群信息编辑界面 -->
+        <activity
+            android:name=".intercom.activity.GroupEditorActivity"
+            android:screenOrientation="portrait" /> <!-- 智能组队内的设置目的地和时间 -->
+        <activity
+            android:name=".smartteam.activity.SmartTeamSettingDestinationAndTimeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" /> <!-- 智能组队内的共享导航地图界面 -->
+        <activity
+            android:name=".smartteam.activity.SmartTeamMapActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" /> <!-- 共享导航中的指南界面 -->
+        <activity
+            android:name=".selfdrivingtools.activity.GuideInfoActivity"
+            android:screenOrientation="portrait" /> <!-- 共享导航中的指南界面车辆检查 -->
+        <activity
+            android:name=".selfdrivingtools.activity.CarCheckInfoActivity"
+            android:screenOrientation="portrait" /> <!-- 个人中心常用车辆——添加和编辑车辆信息 -->
+        <activity
+            android:name=".mine.activity.MineAddCarActivity"
+            android:screenOrientation="portrait" /> <!-- 个人中心常用车辆列表 -->
+        <activity
+            android:name=".mine.activity.CommonVehiclesActivity"
+            android:screenOrientation="portrait" /> <!-- 智能组队签到界面 -->
+        <activity
+            android:name=".smartteam.activity.TripSignInActivity"
+            android:screenOrientation="portrait" /> <!-- 智能组队签到列表界面 -->
+        <activity
+            android:name=".smartteam.activity.TripSignInListActivity"
+            android:screenOrientation="portrait" />
+        <!-- 离线包管理 -->
+        <activity android:name=".selfdrivingtools.activity.OfflineFileManagerActivity"
+            android:screenOrientation="portrait"/>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="cn.xmzt.www.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>
