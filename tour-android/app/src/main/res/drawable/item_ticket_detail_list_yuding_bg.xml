@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 圆角 -->
+    <corners android:radius="@dimen/size_12"/>
+    <padding
+        android:top="@dimen/size_1"
+        android:left="@dimen/size_16"
+        android:right="@dimen/size_16"
+        android:bottom="@dimen/size_1"
+        />
+    <!-- 渐变色 -->
+    <gradient
+        android:startColor="@color/color_FF_C5_5F"
+        android:endColor="@color/color_FF_83_1E"></gradient>
+</shape>

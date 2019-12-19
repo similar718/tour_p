@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 圆角 -->
+    <corners android:radius="@dimen/size_4"/>
+    <!-- 填充颜色 -->
+    <solid android:color="@color/color_FC_E3_BD"/>
+    <padding
+        android:top="@dimen/size_3"
+        android:left="@dimen/dp_6"
+        android:right="@dimen/dp_6"
+        android:bottom="@dimen/size_3"
+        />
+</shape>
