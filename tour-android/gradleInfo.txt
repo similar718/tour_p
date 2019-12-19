@@ -1,0 +1,426 @@
+
+
++--- com.android.support.test:runner:1.0.2
+|    +--- com.android.support:support-annotations:27.1.1 -> 28.0.0
+|    +--- com.android.support.test:monitor:1.0.2
+|    |    \--- com.android.support:support-annotations:27.1.1 -> 28.0.0
+|    +--- junit:junit:4.12
+|    |    \--- org.hamcrest:hamcrest-core:1.3
+|    \--- net.sf.kxml:kxml2:2.3.0
++--- com.android.support.test.espresso:espresso-core:3.0.2
+|    +--- com.android.support.test:runner:1.0.2 (*)
+|    +--- com.android.support.test.espresso:espresso-idling-resource:3.0.2
+|    +--- com.squareup:javawriter:2.1.1
+|    +--- javax.inject:javax.inject:1
+|    +--- org.hamcrest:hamcrest-library:1.3
+|    |    \--- org.hamcrest:hamcrest-core:1.3
+|    +--- org.hamcrest:hamcrest-integration:1.3
+|    |    \--- org.hamcrest:hamcrest-library:1.3 (*)
+|    \--- com.google.code.findbugs:jsr305:2.0.1
++--- :alipaySdk-15.6.5-20190718211148
++--- com.android.databinding:baseLibrary:3.4.2
++--- com.android.databinding:library:3.4.2
+|    +--- android.arch.lifecycle:runtime:1.0.3 -> 1.1.1
+|    |    +--- android.arch.lifecycle:common:1.1.1
+|    |    |    \--- com.android.support:support-annotations:26.1.0 -> 28.0.0
+|    |    +--- android.arch.core:common:1.1.1
+|    |    |    \--- com.android.support:support-annotations:26.1.0 -> 28.0.0
+|    |    \--- com.android.support:support-annotations:26.1.0 -> 28.0.0
+|    +--- com.android.support:support-core-utils:26.1.0 -> 28.0.0
+|    |    +--- com.android.support:support-annotations:28.0.0
+|    |    +--- com.android.support:support-compat:28.0.0
+|    |    |    +--- com.android.support:support-annotations:28.0.0
+|    |    |    +--- com.android.support:collections:28.0.0
+|    |    |    |    \--- com.android.support:support-annotations:28.0.0
+|    |    |    +--- android.arch.lifecycle:runtime:1.1.1 (*)
+|    |    |    \--- com.android.support:versionedparcelable:28.0.0
+|    |    |         +--- com.android.support:support-annotations:28.0.0
+|    |    |         \--- com.android.support:collections:28.0.0 (*)
+|    |    +--- com.android.support:documentfile:28.0.0
+|    |    |    \--- com.android.support:support-annotations:28.0.0
+|    |    +--- com.android.support:loader:28.0.0
+|    |    |    +--- com.android.support:support-annotations:28.0.0
+|    |    |    +--- com.android.support:support-compat:28.0.0 (*)
+|    |    |    +--- android.arch.lifecycle:livedata:1.1.1
+|    |    |    |    +--- android.arch.core:runtime:1.1.1
+|    |    |    |    |    +--- com.android.support:support-annotations:26.1.0 -> 28.0.0
+|    |    |    |    |    \--- android.arch.core:common:1.1.1 (*)
+|    |    |    |    +--- android.arch.lifecycle:livedata-core:1.1.1
+|    |    |    |    |    +--- android.arch.lifecycle:common:1.1.1 (*)
+|    |    |    |    |    +--- android.arch.core:common:1.1.1 (*)
+|    |    |    |    |    \--- android.arch.core:runtime:1.1.1 (*)
+|    |    |    |    \--- android.arch.core:common:1.1.1 (*)
+|    |    |    \--- android.arch.lifecycle:viewmodel:1.1.1
+|    |    |         \--- com.android.support:support-annotations:26.1.0 -> 28.0.0
+|    |    +--- com.android.support:localbroadcastmanager:28.0.0
+|    |    |    \--- com.android.support:support-annotations:28.0.0
+|    |    \--- com.android.support:print:28.0.0
+|    |         \--- com.android.support:support-annotations:28.0.0
+|    \--- com.android.databinding:baseLibrary:3.4.2
+
++--- com.android.databinding:adapters:3.4.2
+|    +--- com.android.databinding:baseLibrary:3.4.2
+|    \--- com.android.databinding:library:3.4.2 (*)
+
++--- com.android.support:multidex-instrumentation:1.0.2
+|    \--- com.android.support:multidex:1.0.2
+
++--- com.android.databinding:baseLibrary:{strictly 3.4.2} -> 3.4.2 (c)
++--- com.android.databinding:library:{strictly 3.4.2} -> 3.4.2 (c)
+
+
++--- android.arch.lifecycle:runtime:{strictly 1.1.1} -> 1.1.1 (c)
++--- android.arch.lifecycle:common:{strictly 1.1.1} -> 1.1.1 (c)
++--- com.android.support:support-annotations:{strictly 28.0.0} -> 28.0.0 (c)
++--- android.arch.core:common:{strictly 1.1.1} -> 1.1.1 (c)
++--- com.android.support:support-core-utils:{strictly 28.0.0} -> 28.0.0 (c)
++--- com.android.support:support-compat:{strictly 28.0.0} -> 28.0.0 (c)
++--- com.android.support:collections:{strictly 28.0.0} -> 28.0.0 (c)
++--- com.android.support:versionedparcelable:{strictly 28.0.0} -> 28.0.0 (c)
++--- com.android.support:documentfile:{strictly 28.0.0} -> 28.0.0 (c)
++--- com.android.support:loader:{strictly 28.0.0} -> 28.0.0 (c)
++--- android.arch.lifecycle:livedata:{strictly 1.1.1} -> 1.1.1 (c)
++--- android.arch.core:runtime:{strictly 1.1.1} -> 1.1.1 (c)
++--- android.arch.lifecycle:livedata-core:{strictly 1.1.1} -> 1.1.1 (c)
++--- android.arch.lifecycle:viewmodel:{strictly 1.1.1} -> 1.1.1 (c)
++--- com.android.support:localbroadcastmanager:{strictly 28.0.0} -> 28.0.0 (c)
++--- com.android.support:print:{strictly 28.0.0} -> 28.0.0 (c)
++--- com.android.databinding:adapters:{strictly 3.4.2} -> 3.4.2 (c)
++--- com.android.support:multidex:{strictly 1.0.2} -> 1.0.2 (c)
++--- com.android.support:appcompat-v7:{strictly 28.0.0} -> 28.0.0 (c)
++--- com.android.support:cursoradapter:{strictly 28.0.0} -> 28.0.0 (c)
++--- com.android.support:support-fragment:{strictly 28.0.0} -> 28.0.0 (c)
++--- com.android.support:support-core-ui:{strictly 28.0.0} -> 28.0.0 (c)
++--- com.android.support:customview:{strictly 28.0.0} -> 28.0.0 (c)
++--- com.android.support:viewpager:{strictly 28.0.0} -> 28.0.0 (c)
++--- com.android.support:coordinatorlayout:{strictly 28.0.0} -> 28.0.0 (c)
++--- com.android.support:drawerlayout:{strictly 28.0.0} -> 28.0.0 (c)
++--- com.android.support:slidingpanelayout:{strictly 28.0.0} -> 28.0.0 (c)
++--- com.android.support:interpolator:{strictly 28.0.0} -> 28.0.0 (c)
++--- com.android.support:swiperefreshlayout:{strictly 28.0.0} -> 28.0.0 (c)
++--- com.android.support:asynclayoutinflater:{strictly 28.0.0} -> 28.0.0 (c)
++--- com.android.support:support-vector-drawable:{strictly 28.0.0} -> 28.0.0 (c)
++--- com.android.support:animated-vector-drawable:{strictly 28.0.0} -> 28.0.0 (c)
++--- com.android.support.constraint:constraint-layout:{strictly 1.1.3} -> 1.1.3 (c)
++--- com.android.support.constraint:constraint-layout-solver:{strictly 1.1.3} -> 1.1.3 (c)
++--- com.squareup.okhttp3:logging-interceptor:{strictly 3.11.0} -> 3.11.0 (c)
++--- com.squareup.okhttp3:okhttp:{strictly 3.11.0} -> 3.11.0 (c)
++--- com.squareup.okio:okio:{strictly 1.14.0} -> 1.14.0 (c)
++--- io.reactivex.rxjava2:rxjava:{strictly 2.2.2} -> 2.2.2 (c)
++--- org.reactivestreams:reactive-streams:{strictly 1.0.2} -> 1.0.2 (c)
++--- io.reactivex.rxjava2:rxandroid:{strictly 2.1.0} -> 2.1.0 (c)
++--- com.squareup.retrofit2:retrofit:{strictly 2.4.0} -> 2.4.0 (c)
++--- com.squareup.retrofit2:converter-gson:{strictly 2.4.0} -> 2.4.0 (c)
++--- com.google.code.gson:gson:{strictly 2.8.2} -> 2.8.2 (c)
++--- com.squareup.retrofit2:adapter-rxjava2:{strictly 2.4.0} -> 2.4.0 (c)
++--- com.jakewharton:butterknife:{strictly 8.8.1} -> 8.8.1 (c)
++--- com.jakewharton:butterknife-annotations:{strictly 8.8.1} -> 8.8.1 (c)
++--- com.android.support:design:{strictly 28.0.0} -> 28.0.0 (c)
++--- com.android.support:transition:{strictly 28.0.0} -> 28.0.0 (c)
++--- com.android.support:cardview-v7:{strictly 28.0.0} -> 28.0.0 (c)
++--- com.android.support:recyclerview-v7:{strictly 28.0.0} -> 28.0.0 (c)
++--- com.android.support:support-v4:{strictly 28.0.0} -> 28.0.0 (c)
++--- com.android.support:support-media-compat:{strictly 28.0.0} -> 28.0.0 (c)
++--- com.youth.banner:banner:{strictly 1.4.10} -> 1.4.10 (c)
++--- com.github.crossoverone:StatusBarUtil:{strictly 1.3.3} -> 1.3.3 (c)
++--- com.contrarywind:Android-PickerView:{strictly 4.1.8} -> 4.1.8 (c)
++--- com.contrarywind:wheelview:{strictly 4.0.9} -> 4.0.9 (c)
++--- com.github.wseemann:FFmpegMediaMetadataRetriever:{strictly 1.0.14} -> 1.0.14 (c)
++--- com.facebook.fresco:fresco:{strictly 1.10.0} -> 1.10.0 (c)
++--- com.facebook.fresco:fbcore:{strictly 1.10.0} -> 1.10.0 (c)
++--- com.facebook.fresco:drawee:{strictly 1.10.0} -> 1.10.0 (c)
++--- com.facebook.fresco:imagepipeline:{strictly 1.10.0} -> 1.10.0 (c)
++--- com.facebook.fresco:imagepipeline-base:{strictly 1.10.0} -> 1.10.0 (c)
++--- com.facebook.soloader:soloader:{strictly 0.5.0} -> 0.5.0 (c)
++--- com.parse.bolts:bolts-tasks:{strictly 1.4.0} -> 1.4.0 (c)
++--- com.xiaozhiguang.library:TagTextView:{strictly 1.0.0} -> 1.0.0 (c)
++--- com.blankj:utilcode:{strictly 1.23.8} -> 1.23.8 (c)
++--- com.scwang.smartrefresh:SmartRefreshLayout:{strictly 1.1.0-alpha-32} -> 1.1.0-alpha-32 (c)
++--- com.scwang.smartrefresh:SmartRefreshHeader:{strictly 1.1.0-alpha-32} -> 1.1.0-alpha-32 (c)
++--- com.github.bumptech.glide:glide:{strictly 4.8.0} -> 4.8.0 (c)
++--- com.github.bumptech.glide:gifdecoder:{strictly 4.8.0} -> 4.8.0 (c)
++--- com.github.bumptech.glide:disklrucache:{strictly 4.8.0} -> 4.8.0 (c)
++--- com.github.bumptech.glide:annotations:{strictly 4.8.0} -> 4.8.0 (c)
++--- jp.wasabeef:glide-transformations:{strictly 4.0.1} -> 4.0.1 (c)
++--- android.arch.persistence.room:runtime:{strictly 1.1.1} -> 1.1.1 (c)
++--- android.arch.persistence.room:common:{strictly 1.1.1} -> 1.1.1 (c)
++--- android.arch.persistence:db-framework:{strictly 1.1.1} -> 1.1.1 (c)
++--- android.arch.persistence:db:{strictly 1.1.1} -> 1.1.1 (c)
++--- android.arch.persistence.room:rxjava2:{strictly 1.1.1} -> 1.1.1 (c)
++--- org.greenrobot:eventbus:{strictly 3.1.1} -> 3.1.1 (c)
++--- com.alibaba:fastjson:{strictly 1.2.57} -> 1.2.57 (c)
++--- net.sf.trove4j:core:{strictly 3.1.0} -> 3.1.0 (c)
++--- com.github.Jay-Goo:RangeSeekBar:{strictly v3.0.0} -> v3.0.0 (c)
++--- me.yokeyword:fragmentation-core:{strictly 1.3.6} -> 1.3.6 (c)
++--- com.daimajia.easing:library:{strictly 2.0} -> 2.0 (c)
++--- com.daimajia.androidanimations:library:{strictly 2.2} -> 2.2 (c)
++--- com.tencent.mm.opensdk:wechat-sdk-android-without-mta:{strictly 5.4.3} -> 5.4.3 (c)
++--- com.shuyu:GSYVideoPlayer:{strictly 6.0.3} -> 6.0.3 (c)
++--- com.shuyu:gsyVideoPlayer-java:{strictly 6.0.3} -> 6.0.3 (c)
++--- tv.danmaku.ijk.media:ijkplayer-java:{strictly 0.8.8} -> 0.8.8 (c)
++--- tv.danmaku.ijk.media:ijkplayer-exo:{strictly 0.8.8} -> 0.8.8 (c)
++--- com.google.android.exoplayer:exoplayer:{strictly 2.9.3} -> 2.9.3 (c)
++--- com.google.android.exoplayer:exoplayer-core:{strictly 2.9.3} -> 2.9.3 (c)
++--- com.google.android.exoplayer:exoplayer-dash:{strictly 2.9.3} -> 2.9.3 (c)
++--- com.google.android.exoplayer:exoplayer-hls:{strictly 2.9.3} -> 2.9.3 (c)
++--- com.google.android.exoplayer:exoplayer-smoothstreaming:{strictly 2.9.3} -> 2.9.3 (c)
++--- com.google.android.exoplayer:exoplayer-ui:{strictly 2.9.3} -> 2.9.3 (c)
++--- com.andkulikov:transitionseverywhere:{strictly 1.7.0} -> 1.7.0 (c)
++--- com.shuyu:gsyVideoPlayer-base:{strictly 6.0.3} -> 6.0.3 (c)
++--- com.shuyu:gsyvideoplayer-androidvideocache:{strictly 6.0.3} -> 6.0.3 (c)
++--- com.shuyu:GSYVideoPlayer-exo2:{strictly 6.0.3} -> 6.0.3 (c)
++--- com.google.android.exoplayer:extension-rtmp:{strictly 2.9.3} -> 2.9.3 (c)
++--- net.butterflytv.utils:rtmp-client:{strictly 3.0.1} -> 3.0.1 (c)
++--- com.shuyu:gsyVideoPlayer-armv5:{strictly 6.0.3} -> 6.0.3 (c)
++--- com.shuyu:gsyVideoPlayer-armv7a:{strictly 6.0.3} -> 6.0.3 (c)
++--- com.shuyu:gsyVideoPlayer-arm64:{strictly 6.0.3} -> 6.0.3 (c)
++--- com.shuyu:gsyVideoPlayer-x64:{strictly 6.0.3} -> 6.0.3 (c)
++--- com.shuyu:gsyVideoPlayer-x86:{strictly 6.0.3} -> 6.0.3 (c)
++--- com.netease.nimlib:jsbridge:{strictly 1.3.1} -> 1.3.1 (c)
++--- android.arch.lifecycle:extensions:{strictly 1.1.1} -> 1.1.1 (c)
++--- me.everything:overscroll-decor-android:{strictly 1.0.4} -> 1.0.4 (c)
++--- me.leolin:ShortcutBadger:{strictly 1.1.17} -> 1.1.17 (c)
++--- com.chensl.rotatephotoview:rotatephotoview:{strictly 1.0.5} -> 1.0.5 (c)
++--- org.adw.library:discrete-seekbar:{strictly 1.0.1} -> 1.0.1 (c)
++--- com.meizu.flyme.internet:push-internal:{strictly 3.6.7} -> 3.6.7 (c)
++--- com.zhy:base-adapter:{strictly 2.0.0} -> 2.0.0 (c)
++--- org.ar:rtmax_kit:{strictly 3.0.6} -> 3.0.6 (c)
++--- org.ar:ar_common:{strictly 3.0.2} -> 3.0.2 (c)
++--- com.google.zxing:core:{strictly 3.3.0} -> 3.3.0 (c)
++--- com.yinglan.scrolllayout:scrolllayout:{strictly 1.0.2} -> 1.0.2 (c)
+
+
+
+
+
+
+
+
+
+
+
++--- com.android.support:appcompat-v7:28.0.0
+|    +--- com.android.support:support-annotations:28.0.0
+|    +--- com.android.support:support-compat:28.0.0 (*)
+|    +--- com.android.support:collections:28.0.0 (*)
+|    +--- com.android.support:cursoradapter:28.0.0
+|    |    \--- com.android.support:support-annotations:28.0.0
+|    +--- com.android.support:support-core-utils:28.0.0 (*)
+|    +--- com.android.support:support-fragment:28.0.0
+|    |    +--- com.android.support:support-compat:28.0.0 (*)
+|    |    +--- com.android.support:support-core-ui:28.0.0
+|    |    |    +--- com.android.support:support-annotations:28.0.0
+|    |    |    +--- com.android.support:support-compat:28.0.0 (*)
+|    |    |    +--- com.android.support:support-core-utils:28.0.0 (*)
+|    |    |    +--- com.android.support:customview:28.0.0
+|    |    |    |    +--- com.android.support:support-annotations:28.0.0
+|    |    |    |    \--- com.android.support:support-compat:28.0.0 (*)
+|    |    |    +--- com.android.support:viewpager:28.0.0
+|    |    |    |    +--- com.android.support:support-annotations:28.0.0
+|    |    |    |    +--- com.android.support:support-compat:28.0.0 (*)
+|    |    |    |    \--- com.android.support:customview:28.0.0 (*)
+|    |    |    +--- com.android.support:coordinatorlayout:28.0.0
+|    |    |    |    +--- com.android.support:support-annotations:28.0.0
+|    |    |    |    +--- com.android.support:support-compat:28.0.0 (*)
+|    |    |    |    \--- com.android.support:customview:28.0.0 (*)
+|    |    |    +--- com.android.support:drawerlayout:28.0.0
+|    |    |    |    +--- com.android.support:support-annotations:28.0.0
+|    |    |    |    +--- com.android.support:support-compat:28.0.0 (*)
+|    |    |    |    \--- com.android.support:customview:28.0.0 (*)
+|    |    |    +--- com.android.support:slidingpanelayout:28.0.0
+|    |    |    |    +--- com.android.support:support-annotations:28.0.0
+|    |    |    |    +--- com.android.support:support-compat:28.0.0 (*)
+|    |    |    |    \--- com.android.support:customview:28.0.0 (*)
+|    |    |    +--- com.android.support:interpolator:28.0.0
+|    |    |    |    \--- com.android.support:support-annotations:28.0.0
+|    |    |    +--- com.android.support:swiperefreshlayout:28.0.0
+|    |    |    |    +--- com.android.support:support-annotations:28.0.0
+|    |    |    |    +--- com.android.support:support-compat:28.0.0 (*)
+|    |    |    |    \--- com.android.support:interpolator:28.0.0 (*)
+|    |    |    +--- com.android.support:asynclayoutinflater:28.0.0
+|    |    |    |    +--- com.android.support:support-annotations:28.0.0
+|    |    |    |    \--- com.android.support:support-compat:28.0.0 (*)
+|    |    |    \--- com.android.support:cursoradapter:28.0.0 (*)
+|    |    +--- com.android.support:support-core-utils:28.0.0 (*)
+|    |    +--- com.android.support:support-annotations:28.0.0
+|    |    +--- com.android.support:loader:28.0.0 (*)
+|    |    \--- android.arch.lifecycle:viewmodel:1.1.1 (*)
+|    +--- com.android.support:support-vector-drawable:28.0.0
+|    |    +--- com.android.support:support-annotations:28.0.0
+|    |    \--- com.android.support:support-compat:28.0.0 (*)
+|    \--- com.android.support:animated-vector-drawable:28.0.0
+|         +--- com.android.support:support-vector-drawable:28.0.0 (*)
+|         \--- com.android.support:support-core-ui:28.0.0 (*)
++--- com.android.support.constraint:constraint-layout:1.1.3
+|    \--- com.android.support.constraint:constraint-layout-solver:1.1.3
++--- com.android.support:support-annotations:27.1.1 -> 28.0.0
++--- com.squareup.okhttp3:logging-interceptor:3.11.0
+|    \--- com.squareup.okhttp3:okhttp:3.11.0
+|         \--- com.squareup.okio:okio:1.14.0
++--- io.reactivex.rxjava2:rxjava:2.2.2
+|    \--- org.reactivestreams:reactive-streams:1.0.2
++--- io.reactivex.rxjava2:rxandroid:2.1.0
+|    \--- io.reactivex.rxjava2:rxjava:2.2.0 -> 2.2.2 (*)
++--- com.squareup.retrofit2:retrofit:2.4.0
+|    \--- com.squareup.okhttp3:okhttp:3.10.0 -> 3.11.0 (*)
++--- com.squareup.retrofit2:converter-gson:2.4.0
+|    +--- com.squareup.retrofit2:retrofit:2.4.0 (*)
+|    \--- com.google.code.gson:gson:2.8.2
++--- com.squareup.retrofit2:adapter-rxjava2:2.4.0
+|    +--- com.squareup.retrofit2:retrofit:2.4.0 (*)
+|    \--- io.reactivex.rxjava2:rxjava:2.0.0 -> 2.2.2 (*)
++--- com.jakewharton:butterknife:8.8.1
+|    +--- com.jakewharton:butterknife-annotations:8.8.1
+|    |    \--- com.android.support:support-annotations:25.3.0 -> 28.0.0
+|    +--- com.android.support:support-annotations:25.3.0 -> 28.0.0
+|    \--- com.android.support:support-compat:25.3.0 -> 28.0.0 (*)
++--- com.android.support:design:28.0.0
+|    +--- com.android.support:support-annotations:28.0.0
+|    +--- com.android.support:support-compat:28.0.0 (*)
+|    +--- com.android.support:support-core-ui:28.0.0 (*)
+|    +--- com.android.support:support-core-utils:28.0.0 (*)
+|    +--- com.android.support:support-fragment:28.0.0 (*)
+|    +--- com.android.support:transition:28.0.0
+|    |    +--- com.android.support:support-annotations:28.0.0
+|    |    \--- com.android.support:support-compat:28.0.0 (*)
+|    +--- com.android.support:appcompat-v7:28.0.0 (*)
+|    +--- com.android.support:cardview-v7:28.0.0
+|    |    \--- com.android.support:support-annotations:28.0.0
+|    \--- com.android.support:recyclerview-v7:28.0.0
+|         +--- com.android.support:support-annotations:28.0.0
+|         +--- com.android.support:support-compat:28.0.0 (*)
+|         \--- com.android.support:support-core-ui:28.0.0 (*)
++--- com.android.support:support-v4:28.0.0
+|    +--- com.android.support:support-compat:28.0.0 (*)
+|    +--- com.android.support:support-media-compat:28.0.0
+|    |    +--- com.android.support:support-annotations:28.0.0
+|    |    +--- com.android.support:support-compat:28.0.0 (*)
+|    |    \--- com.android.support:versionedparcelable:28.0.0 (*)
+|    +--- com.android.support:support-core-utils:28.0.0 (*)
+|    +--- com.android.support:support-core-ui:28.0.0 (*)
+|    \--- com.android.support:support-fragment:28.0.0 (*)
++--- com.youth.banner:banner:1.4.10
++--- com.github.crossoverone:StatusBarUtil:1.3.3
+|    \--- com.android.support:appcompat-v7:25.3.0 -> 28.0.0 (*)
++--- com.contrarywind:Android-PickerView:4.1.8
+|    +--- com.contrarywind:wheelview:4.0.9
+|    |    \--- com.android.support:support-annotations:28.0.0
+|    \--- com.android.support:support-annotations:28.0.0
++--- com.github.wseemann:FFmpegMediaMetadataRetriever:1.0.14
++--- com.facebook.fresco:fresco:1.10.0
+|    +--- com.facebook.fresco:fbcore:1.10.0
+|    +--- com.facebook.fresco:drawee:1.10.0
+|    |    +--- com.facebook.fresco:fbcore:1.10.0
+|    |    \--- com.facebook.fresco:imagepipeline:1.10.0
+|    |         +--- com.facebook.fresco:imagepipeline-base:1.10.0
+|    |         |    +--- com.facebook.soloader:soloader:0.5.0
+|    |         |    +--- com.parse.bolts:bolts-tasks:1.4.0
+|    |         |    \--- com.facebook.fresco:fbcore:1.10.0
+|    |         +--- com.facebook.soloader:soloader:0.5.0
+|    |         +--- com.parse.bolts:bolts-tasks:1.4.0
+|    |         \--- com.facebook.fresco:fbcore:1.10.0
+|    +--- com.facebook.fresco:imagepipeline:1.10.0 (*)
+|    \--- com.facebook.soloader:soloader:0.5.0
++--- com.xiaozhiguang.library:TagTextView:1.0.0
++--- com.blankj:utilcode:1.23.8
+|    \--- com.google.code.gson:gson:2.8.2
++--- com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-32
++--- com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-32
++--- com.github.bumptech.glide:glide:4.8.0
+|    +--- com.github.bumptech.glide:gifdecoder:4.8.0
+|    |    \--- com.android.support:support-annotations:27.1.1 -> 28.0.0
+|    +--- com.github.bumptech.glide:disklrucache:4.8.0
+|    +--- com.github.bumptech.glide:annotations:4.8.0
+|    \--- com.android.support:support-fragment:27.1.1 -> 28.0.0 (*)
++--- jp.wasabeef:glide-transformations:4.0.1
+|    \--- com.github.bumptech.glide:glide:4.8.0 (*)
++--- android.arch.persistence.room:runtime:1.1.1
+|    +--- android.arch.persistence.room:common:1.1.1
+|    |    \--- com.android.support:support-annotations:26.1.0 -> 28.0.0
+|    +--- android.arch.persistence:db-framework:1.1.1
+|    |    +--- com.android.support:support-annotations:26.1.0 -> 28.0.0
+|    |    \--- android.arch.persistence:db:1.1.1
+|    |         \--- com.android.support:support-annotations:26.1.0 -> 28.0.0
+|    +--- android.arch.persistence:db:1.1.1 (*)
+|    +--- android.arch.core:runtime:1.1.1 (*)
+|    \--- com.android.support:support-core-utils:26.1.0 -> 28.0.0 (*)
++--- android.arch.persistence.room:rxjava2:1.1.1
+|    +--- io.reactivex.rxjava2:rxjava:2.0.6 -> 2.2.2 (*)
+|    +--- android.arch.persistence.room:common:1.1.1 (*)
+|    +--- android.arch.persistence.room:runtime:1.1.1 (*)
+|    +--- android.arch.core:runtime:1.1.1 (*)
+|    \--- com.android.support:support-core-utils:26.1.0 -> 28.0.0 (*)
++--- org.greenrobot:eventbus:3.1.1
++--- com.alibaba:fastjson:1.2.57
+|    \--- net.sf.trove4j:core:3.1.0
++--- com.github.Jay-Goo:RangeSeekBar:v3.0.0
+|    \--- com.android.support:appcompat-v7:28.0.0 (*)
++--- me.yokeyword:fragmentation-core:1.3.6
++--- com.daimajia.easing:library:2.0
++--- com.daimajia.androidanimations:library:2.2
++--- com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+ -> 5.4.3
++--- com.shuyu:GSYVideoPlayer:6.0.3
+|    +--- com.shuyu:gsyVideoPlayer-java:6.0.3
+|    |    +--- tv.danmaku.ijk.media:ijkplayer-java:0.8.8
+|    |    +--- tv.danmaku.ijk.media:ijkplayer-exo:0.8.8
+|    |    |    +--- com.google.android.exoplayer:exoplayer:r1.5.11 -> 2.9.3
+|    |    |    |    +--- com.google.android.exoplayer:exoplayer-core:2.9.3
+|    |    |    |    |    \--- com.android.support:support-annotations:27.1.1 -> 28.0.0
+|    |    |    |    +--- com.google.android.exoplayer:exoplayer-dash:2.9.3
+|    |    |    |    |    +--- com.google.android.exoplayer:exoplayer-core:2.9.3 (*)
+|    |    |    |    |    \--- com.android.support:support-annotations:27.1.1 -> 28.0.0
+|    |    |    |    +--- com.google.android.exoplayer:exoplayer-hls:2.9.3
+|    |    |    |    |    +--- com.android.support:support-annotations:27.1.1 -> 28.0.0
+|    |    |    |    |    \--- com.google.android.exoplayer:exoplayer-core:2.9.3 (*)
+|    |    |    |    +--- com.google.android.exoplayer:exoplayer-smoothstreaming:2.9.3
+|    |    |    |    |    +--- com.google.android.exoplayer:exoplayer-core:2.9.3 (*)
+|    |    |    |    |    \--- com.android.support:support-annotations:27.1.1 -> 28.0.0
+|    |    |    |    \--- com.google.android.exoplayer:exoplayer-ui:2.9.3
+|    |    |    |         +--- com.google.android.exoplayer:exoplayer-core:2.9.3 (*)
+|    |    |    |         +--- com.android.support:support-media-compat:27.1.1 -> 28.0.0 (*)
+|    |    |    |         \--- com.android.support:support-annotations:27.1.1 -> 28.0.0
+|    |    |    \--- tv.danmaku.ijk.media:ijkplayer-java:0.8.8
+|    |    +--- com.andkulikov:transitionseverywhere:1.7.0
+|    |    |    \--- com.android.support:support-v4:22.2.1 -> 28.0.0 (*)
+|    |    +--- com.shuyu:gsyVideoPlayer-base:6.0.3
+|    |    |    \--- tv.danmaku.ijk.media:ijkplayer-java:0.8.8
+|    |    +--- com.shuyu:gsyvideoplayer-androidvideocache:6.0.3
+|    |    \--- com.android.support:appcompat-v7:27.1.1 -> 28.0.0 (*)
+|    +--- com.shuyu:GSYVideoPlayer-exo2:6.0.3
+|    |    +--- com.google.android.exoplayer:exoplayer:2.9.3 (*)
+|    |    +--- com.google.android.exoplayer:extension-rtmp:2.9.3
+|    |    |    +--- com.google.android.exoplayer:exoplayer-core:2.9.3 (*)
+|    |    |    +--- net.butterflytv.utils:rtmp-client:3.0.1
+|    |    |    \--- com.android.support:support-annotations:27.1.1 -> 28.0.0
+|    |    \--- com.shuyu:gsyVideoPlayer-base:6.0.3 (*)
+|    +--- com.shuyu:gsyVideoPlayer-armv5:6.0.3
+|    +--- com.shuyu:gsyVideoPlayer-armv7a:6.0.3
+|    +--- com.shuyu:gsyVideoPlayer-arm64:6.0.3
+|    +--- com.shuyu:gsyVideoPlayer-x64:6.0.3
+|    \--- com.shuyu:gsyVideoPlayer-x86:6.0.3
++--- com.netease.nimlib:jsbridge:1.3.1
++--- android.arch.lifecycle:extensions:1.1.1
+|    +--- android.arch.lifecycle:runtime:1.1.1 (*)
+|    +--- android.arch.core:common:1.1.1 (*)
+|    +--- android.arch.core:runtime:1.1.1 (*)
+|    +--- com.android.support:support-fragment:26.1.0 -> 28.0.0 (*)
+|    +--- android.arch.lifecycle:common:1.1.1 (*)
+|    +--- android.arch.lifecycle:livedata:1.1.1 (*)
+|    \--- android.arch.lifecycle:viewmodel:1.1.1 (*)
++--- me.everything:overscroll-decor-android:1.0.4
+|    \--- com.android.support:recyclerview-v7:23.3.0 -> 28.0.0 (*)
++--- me.leolin:ShortcutBadger:1.1.17
++--- com.chensl.rotatephotoview:rotatephotoview:1.0.5
+|    \--- com.android.support:support-v4:23.0.1 -> 28.0.0 (*)
++--- org.adw.library:discrete-seekbar:1.0.1
+|    \--- com.android.support:support-v4:22.1.1 -> 28.0.0 (*)
++--- com.meizu.flyme.internet:push-internal:3.6.7
++--- com.zhy:base-adapter:2.0.0
+|    \--- com.android.support:recyclerview-v7:23.2.0 -> 28.0.0 (*)
++--- org.ar:rtmax_kit:3.0.6
+|    +--- com.android.support:appcompat-v7:26+ -> 28.0.0 (*)
+|    \--- org.ar:ar_common:3.0.2
+|         \--- com.android.support:support-core-utils:25.3.1 -> 28.0.0 (*)
++--- com.google.zxing:core:3.3.0
+\--- com.yinglan.scrolllayout:scrolllayout:1.0.2
+     \--- com.android.support:recyclerview-v7:24.0.0 -> 28.0.0 (*)
