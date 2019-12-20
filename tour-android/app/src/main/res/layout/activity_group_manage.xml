@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="activity"
+            type="cn.xmzt.www.intercom.activity.GroupManageActivity" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_F4_F4_F4"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@color/color_FF_FF_FF">
+
+            <ImageView android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:onClick="@{activity::onClick}"
+                android:layout_centerVertical="true"
+
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/icon_new_back"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="群管理"
+                android:textColor="@color/color_33_33_33"
+                android:textSize="17sp" />
+
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1_px"
+            android:background="@color/color_line"/>
+        <TextView android:id="@+id/tv_member"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{activity::onClick}"
+            android:paddingLeft="@dimen/dp_12"
+            android:paddingRight="@dimen/dp_16"
+            android:background="@color/white"
+            android:minHeight="@dimen/dp_54"
+            android:gravity="center_vertical"
+            android:drawableRight="@drawable/back_gray_right"
+            android:textColor="@color/color_33_33_33"
+            android:textSize="16sp"
+            android:text="管理群成员"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1_px"
+            android:background="@color/color_line"/>
+        <TextView android:id="@+id/tv_car"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{activity::onClick}"
+            android:paddingLeft="@dimen/dp_12"
+            android:paddingRight="@dimen/dp_16"
+            android:background="@color/white"
+            android:minHeight="@dimen/dp_54"
+            android:gravity="center_vertical"
+            android:textColor="@color/color_33_33_33"
+            android:textSize="16sp"
+            android:drawableRight="@drawable/back_gray_right"
+            android:text="管理群车辆"/>
+    </LinearLayout>
+</layout>

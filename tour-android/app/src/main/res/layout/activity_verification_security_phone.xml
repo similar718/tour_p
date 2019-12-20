@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="model"
+            type="cn.xmzt.www.mine.model.VerificationSecurityPhoneViewModel" />
+    </data>
+
+    <LinearLayout
+        android:background="@color/color_F4_F4_F4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/title_rl"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/title_back_iv"
+                android:layout_width="wrap_content"
+                android:layout_centerVertical="true"
+                android:onClick="@{model::onClick}"
+
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/icon_new_back"/>
+
+            <TextView
+                android:id="@+id/title_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="验证原安全手机号"
+                android:textColor="@color/title_color"
+                android:textSize="17sp" />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingLeft="12dp">
+
+            <TextView
+                android:id="@+id/phone_text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="手机号"
+                android:textColor="@color/color_33_33_33"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_phone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="36dp"
+                android:background="@color/white"
+                android:hint="请输入手机号"
+                android:inputType="number"
+                android:maxLength="11"
+                android:onTextChanged="@{model::onPhoneChanged}"
+                android:singleLine="true"
+                android:textColor="@color/color_33_33_33"
+                android:textColorHint="@color/color_99_99_99"
+                android:textSize="14sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="1dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="验证码"
+                android:textColor="@color/color_33_33_33"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_code"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="36dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:hint="请输入验证码"
+                android:inputType="number"
+                android:maxLength="6"
+                android:onTextChanged="@{model::onCodeChanged}"
+                android:singleLine="true"
+                android:textColorHint="@color/color_99_99_99"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/get_verification_code_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:enabled="@{model.isGetCode?true:false}"
+                android:onClick="@{model::onClick}"
+                android:text="获取验证码"
+                android:textColor="@{model.isGetCode?@color/color_49_BE_FF:@color/color_88_49_BE_FF}"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@{model.isCode &amp;&amp;model.isGetCode?@drawable/bottom_bg:@drawable/bottom_bg_no}"
+            android:enabled="@{model.isCode &amp;&amp;model.isGetCode?true:false}"
+            android:gravity="center"
+            android:onClick="@{model::onClick}"
+            android:text="下一步"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="-12dp"
+            android:drawablePadding="6dp"
+            android:drawableRight="@drawable/verification_bg"
+            android:onClick="@{model::onClick}"
+            android:paddingLeft="12dp"
+            android:text="原安全手机号丢失或者停用"
+            android:textColor="@color/color_49_BE_FF"
+            android:textSize="14sp" />
+    </LinearLayout>
+</layout>

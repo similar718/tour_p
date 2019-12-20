@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="activity"
+            type="cn.xmzt.www.pay.activity.PaySuccessActivity" />
+    </data>
+    <LinearLayout android:id="@+id/rootLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_44"
+            android:gravity="center"
+            android:text="订单支付"
+            android:textColor="@color/color_33_33_33"
+            android:textSize="18sp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:drawablePadding="@dimen/dp_42"
+            android:drawableTop="@drawable/icon_pay_success"
+            android:layout_marginTop="@dimen/dp_51"
+            android:textStyle="bold"
+            android:text="支付成功"
+            android:textColor="@color/color_33_33_33"
+            android:textSize="17sp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/dp_45"
+            android:layout_marginRight="@dimen/dp_45"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="您的预约订单已提交，待客服进行资源确认，将在1小时内处理回复您，确认结果将会以短信方式通知您，谢谢！如需帮助请致电400-666-1235"
+            android:textColor="@color/color_99_99_99"
+            android:textSize="12sp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/dp_60">
+            <TextView android:id="@+id/tv_back_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{activity::onClick}"
+                android:background="@drawable/shape_blue_border_radius_100"
+                android:minWidth="@dimen/dp_110"
+                android:minHeight="@dimen/dp_36"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="返回首页"
+                android:textColor="@color/color_24A4FF"
+                android:textSize="16sp" />
+            <TextView android:id="@+id/tv_order_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{activity::onClick}"
+                android:background="@drawable/shape_btn_radius_100"
+                android:minWidth="@dimen/dp_110"
+                android:minHeight="@dimen/dp_36"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/dp_60"
+                android:layout_marginLeft="36dp"
+                android:padding="5dp"
+                android:text="订单详情"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>
+

@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="295dp"
+            android:layout_height="380dp"
+            android:background="@drawable/home_dialog_bg">
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="18dp"
+                android:text="每日签到"
+                android:textColor="@color/color_FF_FF_FF"
+                android:textSize="36sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="2dp"
+                android:text="签到多多 奖励多多"
+                android:textColor="@color/color_FF_FF_FF"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="207dp"
+                android:layout_below="@+id/tv2"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="18dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/dialog_sign_bg_8"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/ll1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="67dp"
+                        android:background="@drawable/no_sign_bg"
+                        android:orientation="vertical"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@+id/ll2">
+
+                        <TextView
+                            android:id="@+id/tv_day1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:paddingTop="2dp"
+                            android:text="第1天"
+                            android:textColor="@color/color_FF_FF_FF"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/tv_value1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:paddingBottom="3dp"
+                            android:text="+100"
+                            android:textColor="@color/color_FF_FF_FF" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/ll2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="67dp"
+                        android:background="@drawable/yes_sign_bg"
+                        android:orientation="vertical"
+                        app:layout_constraintLeft_toRightOf="@+id/ll1"
+                        app:layout_constraintRight_toLeftOf="@+id/ll3">
+
+                        <TextView
+                            android:id="@+id/tv_day2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:paddingTop="2dp"
+                            android:text="第1天"
+                            android:textColor="@color/color_FF_FF_FF"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/tv_value2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:paddingBottom="3dp"
+                            android:text="+100"
+                            android:textColor="@color/color_FF_FF_FF" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/ll3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="67dp"
+                        android:background="@drawable/yes_sign_bg"
+                        android:orientation="vertical"
+                        app:layout_constraintLeft_toRightOf="@+id/ll2"
+                        app:layout_constraintRight_toLeftOf="@+id/ll4">
+
+                        <TextView
+                            android:id="@+id/tv_day3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:paddingTop="2dp"
+                            android:text="第1天"
+                            android:textColor="@color/color_FF_FF_FF"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/tv_value3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:paddingBottom="3dp"
+                            android:text="+100"
+                            android:textColor="@color/color_FF_FF_FF" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/ll4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="67dp"
+                        android:background="@drawable/yes_sign_bg"
+                        android:orientation="vertical"
+                        app:layout_constraintLeft_toRightOf="@+id/ll3"
+                        app:layout_constraintRight_toRightOf="parent">
+
+                        <TextView
+                            android:id="@+id/tv_day4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:paddingTop="2dp"
+                            android:text="第1天"
+                            android:textColor="@color/color_FF_FF_FF"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/tv_value4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:paddingBottom="3dp"
+                            android:text="+100"
+                            android:textColor="@color/color_FF_FF_FF" />
+                    </RelativeLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/ll5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="67dp"
+                        android:layout_marginLeft="20dp"
+                        android:background="@drawable/yes_sign_bg"
+                        android:orientation="vertical"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@+id/ll6">
+
+                        <TextView
+                            android:id="@+id/tv_day5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:paddingTop="2dp"
+                            android:text="第1天"
+                            android:textColor="@color/color_FF_FF_FF"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/tv_value5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:paddingBottom="3dp"
+                            android:text="+100"
+                            android:textColor="@color/color_FF_FF_FF" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/ll6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="67dp"
+                        android:background="@drawable/yes_sign_bg"
+                        android:orientation="vertical"
+                        app:layout_constraintLeft_toRightOf="@+id/ll5"
+                        app:layout_constraintRight_toLeftOf="@+id/ll7">
+
+                        <TextView
+                            android:id="@+id/tv_day6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:paddingTop="2dp"
+                            android:text="第1天"
+                            android:textColor="@color/color_FF_FF_FF"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/tv_value6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:paddingBottom="3dp"
+                            android:text="+100"
+                            android:textColor="@color/color_FF_FF_FF" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/ll7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="67dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/yes_sign_bg"
+                        android:orientation="vertical"
+                        app:layout_constraintLeft_toRightOf="@+id/ll6"
+                        app:layout_constraintRight_toRightOf="parent">
+
+                        <TextView
+                            android:id="@+id/tv_day7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:paddingTop="2dp"
+                            android:text="第1天"
+                            android:textColor="@color/color_FF_FF_FF"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/tv_value7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:paddingBottom="3dp"
+                            android:text="+100"
+                            android:textColor="@color/color_FF_FF_FF" />
+                    </RelativeLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:background="#33ffffff" />
+
+                    <TextView
+                        android:id="@+id/tv_days"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="你已连续签到1天"
+                        android:textColor="@color/color_FF_FF_FF"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:background="#33ffffff" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_sign"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="13dp"
+                android:background="@drawable/shape_yes_sign_home"
+                android:gravity="center"
+                android:paddingBottom="5dp"
+                android:paddingLeft="31dp"
+                android:paddingRight="31dp"
+                android:paddingTop="5dp"
+                android:text="立即签到"
+                android:textColor="@color/color_FF_FF_FF"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_dismiss"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="19dp"
+            android:src="@drawable/home_dialog_delete" />
+    </LinearLayout>
+</LinearLayout>

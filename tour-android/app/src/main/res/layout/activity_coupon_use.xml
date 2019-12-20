@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="activity"
+            type="cn.xmzt.www.route.activity.CouponUseActivity" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_F4_F4_F4"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@color/color_FF_FF_FF">
+
+            <ImageView android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:onClick="@{activity::onClick}"
+                android:layout_centerVertical="true"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/icon_new_back"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="使用优惠券"
+                android:textColor="@color/color_33_33_33"
+                android:textSize="17sp" />
+
+        </RelativeLayout>
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/refreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            app:srlEnableOverScrollDrag="false"
+            app:srlEnablePureScrollMode="false"
+            app:srlPrimaryColor="@color/color_F4_F4_F4">
+            <com.scwang.smartrefresh.layout.header.ClassicsHeader
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/color_F4_F4_F4">
+
+                <cn.xmzt.www.view.AutofitRecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:overScrollMode="never"/>
+
+                <TextView android:id="@+id/tv_no_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="30dp"
+                    android:drawablePadding="30dp"
+                    android:lineSpacingExtra="10dp"
+                    android:visibility="gone"
+                    android:drawableTop="@drawable/icon_no_data_coupon"
+                    android:gravity="center"
+                    android:paddingLeft="57dp"
+                    android:paddingRight="57dp"
+                    android:text="亲，暂时无优惠券可领取!"
+                    android:textColor="@color/color_99_99_99"
+                    android:textSize="14sp" />
+            </FrameLayout>
+            <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_F4_F4_F4"/>
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+        <TextView
+            android:id="@+id/tv_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/bottom_bg"
+            android:gravity="center"
+            android:onClick="@{activity::onClick}"
+            android:text="确定"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+    </LinearLayout>
+</layout>

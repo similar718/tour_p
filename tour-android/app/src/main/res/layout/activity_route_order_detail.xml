@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="activity"
+            type="cn.xmzt.www.route.activity.RouteOrderDetailActivity" />
+    </data>
+
+    <RelativeLayout android:id="@+id/rootLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="false">
+        <View android:id="@+id/v_line"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginBottom="48dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/color_line"/>
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_48"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:visibility="gone"
+            android:background="@color/white"
+            android:gravity="center"
+            android:onClick="@{activity::onClick}"
+            android:paddingLeft="28dp"
+            android:paddingRight="28dp"
+            android:text="取消订单"
+            android:textColor="@color/color_66_66_66"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/tv_refund"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_48"
+            android:layout_alignParentBottom="true"
+            android:background="@color/blue"
+            android:gravity="center"
+            android:onClick="@{activity::onClick}"
+            android:visibility="gone"
+            android:text="退款"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/tv_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_48"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:visibility="visible"
+            android:background="@color/white"
+            android:gravity="center"
+            android:onClick="@{activity::onClick}"
+            android:paddingLeft="28dp"
+            android:paddingRight="28dp"
+            android:text="删除订单"
+            android:textColor="@color/color_66_66_66"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/tv_reserve"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_48"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@+id/tv_delete"
+            android:visibility="visible"
+            android:background="@color/blue"
+            android:gravity="center"
+            android:onClick="@{activity::onClick}"
+            android:text="再次预定"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/payLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_48"
+            android:onClick="@{activity::onClick}"
+            android:background="#FF9600"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@+id/tv_cancel"
+            android:visibility="gone">
+            <TextView android:id="@+id/tv_jxzf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/tv_remain_time"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:text="继续支付" />
+            <TextView
+                android:id="@+id/tv_remain_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBaseline_toBaselineOf="@+id/tv_jxzf"
+                app:layout_constraintLeft_toRightOf="@+id/tv_jxzf"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginLeft="5dp"
+                tools:text="剩余支付时间00:02:40"
+                android:textColor="@color/white"
+                android:textSize="10sp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <cn.xmzt.www.view.AutofitRecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/v_line"
+            android:background="#F4F4F4"
+            android:overScrollMode="never"/>
+        <FrameLayout
+            android:id="@+id/titleBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#0049BEFF">
+            <RelativeLayout android:id="@+id/titleLayout"
+                android:layout_width="match_parent"
+                android:layout_marginTop="24dp"
+                android:layout_height="44dp"
+                android:layout_gravity="bottom">
+                <ImageView
+                    android:id="@+id/iv_back"
+                    android:layout_width="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:onClick="@{activity::onClick}"
+
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/icon_new_back_white"/>
+
+                <TextView
+                    android:id="@+id/title_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="68dp"
+                    android:text="订单详情"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+        </FrameLayout>
+        <View android:id="@+id/popup_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/dp_136"/>
+    </RelativeLayout>
+</layout>

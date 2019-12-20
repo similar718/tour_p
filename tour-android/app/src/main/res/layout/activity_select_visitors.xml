@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="activity"
+            type="cn.xmzt.www.route.activity.SelectVisitorsActivity" />
+
+        <variable
+            name="vm"
+            type="cn.xmzt.www.route.vm.SelectVisitorsViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_F4_F4_F4"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@color/color_FF_FF_FF">
+
+            <ImageView android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:onClick="@{activity::onClick}"
+                android:layout_centerVertical="true"
+
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/icon_new_back"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="选择出游人"
+                android:textColor="@color/color_33_33_33"
+                android:textSize="17sp" />
+
+        </RelativeLayout>
+
+        <LinearLayout android:id="@+id/selectLayout"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:background="@color/color_FC_E5_CB"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="已选择:  "
+                android:textColor="@color/color_33_33_33"
+                android:textSize="12sp" />
+
+            <TextView android:id="@+id/tv_select"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/color_00_BC_FF"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/ "
+                android:textColor="@color/color_33_33_33"
+                android:textSize="12sp" />
+
+            <TextView android:id="@+id/tv_all_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:textColor="@color/color_33_33_33"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="出游人"
+                android:textColor="@color/color_33_33_33"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_add_tourists"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"
+            android:background="@drawable/shape_white_radius_4"
+            android:onClick="@{activity::onClick}">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:drawableLeft="@drawable/icon_select_tourists_add"
+                android:drawablePadding="3dp"
+                android:text="新增出游人"
+                android:textColor="@color/color_49_BE_FF" />
+        </RelativeLayout>
+        <TextView android:id="@+id/tv_no_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:drawablePadding="30dp"
+            android:lineSpacingExtra="10dp"
+            android:drawableTop="@drawable/select_tourists_no_data"
+            android:gravity="center"
+            android:paddingLeft="57dp"
+            android:paddingRight="57dp"
+            android:text="亲，您还没有常用取票人\n请点击上方的“新增常用取票人”进行添加吧"
+            android:textColor="@color/color_99_99_99"
+            android:textSize="14sp" />
+        <cn.xmzt.www.view.AutofitRecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:layout_weight="1" />
+
+        <TextView android:id="@+id/tv_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:onClick="@{activity::onClick}"
+            android:background="@color/color_49_BE_FF"
+            android:gravity="center"
+            tools:text="您需选择2位出游人"
+            android:textColor="@color/color_FF_FF_FF"
+            android:textSize="16sp" />
+    </LinearLayout>
+</layout>

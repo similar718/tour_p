@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="activity"
+            type="cn.xmzt.www.hotel.activity.HotelOrderActivity" />
+
+        <variable
+            name="model"
+            type="cn.xmzt.www.hotel.model.HotelOrderViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/rl_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_F4_F4_F4">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/hotel_order_top_bg" />
+
+        <RelativeLayout
+            android:id="@+id/rl_title"
+            android:layout_width="match_parent"
+            android:layout_height="44dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingLeft="20dp"
+                android:src="@drawable/back_white" />
+
+            <TextView
+                style="@style/TextSize14sp"
+                android:layout_centerInParent="true"
+                android:text="订单号7644323532"
+                android:textColor="@color/color_FF_FF_FF" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:id="@+id/sv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/rl_bottom"
+            android:layout_below="@+id/rl_title">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                android:paddingTop="25dp">
+
+                <LinearLayout
+                    android:id="@+id/ll_status_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="9dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="待支付"
+                        android:textColor="@color/color_FF_FF_FF"
+                        android:textSize="21sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="¥"
+                        android:textColor="@color/color_FF_FF_FF"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:text="168"
+                        android:textColor="@color/color_FF_FF_FF"
+                        android:textSize="22sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_cost_details"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:onClick="@{activity::onClick}"
+                        android:src="@drawable/hotel_order_info" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ll_status_price"
+                    android:layout_marginTop="6dp"
+                    android:paddingLeft="20dp"
+                    android:text="订单将为您保留30分钟，请尽快支付"
+                    android:textColor="@color/color_FF_FF_FF"
+                    android:textSize="12sp" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="73dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="18dp"
+                    android:background="@drawable/shape_white_radius_4">
+
+                    <TextView
+                        android:id="@+id/tv_line"
+                        android:layout_width="4dp"
+                        android:layout_height="41dp"
+                        android:background="@color/color_ff9600"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@+id/iv_right"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/tv_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="6dp"
+                            android:padding="2dp"
+                            android:text="北京二十一世纪饭店"
+                            android:textColor="@color/color_33_33_33"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tv_address"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="6dp"
+                            android:drawableLeft="@drawable/hotel_order_icon_address"
+                            android:drawablePadding="2dp"
+                            android:padding="2dp"
+                            android:text="亮马桥路40号"
+                            android:textColor="@color/color_99_99_99"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/iv_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="16dp"
+                        android:src="@drawable/hotel_order_right"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/shape_white_radius_4"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="54dp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="订单信息"
+                        android:textColor="@color/color_33_33_33"
+                        android:textSize="16sp" />
+
+                    <TextView style="@style/DivisionLine" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="17dp">
+
+                        <TextView
+                            android:id="@+id/tv_in_day"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:text="5月28日(周二)"
+                            android:textColor="@color/color_33_33_33"
+                            android:textSize="14sp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/left_line"
+                            android:layout_width="8dp"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="7dp"
+                            android:background="@color/color_33_33_33"
+                            app:layout_constraintBottom_toBottomOf="@+id/tv_in_day"
+                            app:layout_constraintLeft_toRightOf="@+id/tv_in_day"
+                            app:layout_constraintTop_toTopOf="@+id/tv_in_day" />
+
+                        <TextView
+                            android:id="@+id/tv_number_day"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/shape_hotel_stroke_1_radius_7"
+                            android:paddingLeft="6dp"
+                            android:paddingRight="6dp"
+                            android:text="1晚"
+                            android:textColor="@color/color_33_33_33"
+                            android:textSize="11sp"
+                            app:layout_constraintBottom_toBottomOf="@+id/left_line"
+                            app:layout_constraintLeft_toRightOf="@+id/left_line"
+                            app:layout_constraintTop_toTopOf="@+id/left_line" />
+
+                        <TextView
+                            android:id="@+id/right_line"
+                            android:layout_width="8dp"
+                            android:layout_height="1dp"
+                            android:background="@color/color_33_33_33"
+                            app:layout_constraintBottom_toBottomOf="@+id/tv_number_day"
+                            app:layout_constraintLeft_toRightOf="@+id/tv_number_day"
+                            app:layout_constraintTop_toTopOf="@+id/tv_number_day" />
+
+                        <TextView
+                            android:id="@+id/tv_out_day"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="7dp"
+                            android:text="5月28日(周二)"
+                            android:textColor="@color/color_33_33_33"
+                            android:textSize="14sp"
+                            app:layout_constraintBottom_toBottomOf="@+id/right_line"
+                            app:layout_constraintLeft_toRightOf="@+id/right_line"
+                            app:layout_constraintTop_toTopOf="@+id/right_line" />
+
+                        <TextView
+                            android:id="@+id/tv_in_time"
+                            style="@style/TextSize14sp"
+                            android:layout_marginTop="2dp"
+                            android:text="14:00后"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_in_day" />
+
+                        <TextView
+                            android:id="@+id/tv_out_time"
+                            style="@style/TextSize14sp"
+                            android:layout_marginTop="2dp"
+                            android:text="12:00前"
+                            app:layout_constraintLeft_toLeftOf="@+id/tv_out_day"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_out_day" />
+
+                        <TextView
+                            android:id="@+id/tv_in_or_out_explain"
+                            style="@style/TextSize14sp"
+                            android:layout_marginTop="2dp"
+                            android:text="如需提前入住/推迟退房可直接联系酒店客服"
+                            android:textColor="@color/color_66_66_66"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_in_time" />
+
+                        <TextView
+                            android:id="@+id/tv_room_number"
+                            style="@style/TextSize14sp"
+                            android:layout_marginTop="16dp"
+                            android:text="2间 高级大床间"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_in_or_out_explain" />
+
+                        <TextView
+                            android:id="@+id/tv_room_explain"
+                            style="@style/TextSize14sp"
+                            android:layout_marginTop="2dp"
+                            android:text="大床 | 可住2人 | 25㎡ | 全部房间有线宽带免费 "
+                            android:textColor="@color/color_66_66_66"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_room_number" />
+
+                        <TextView
+                            android:id="@+id/tv_room_details"
+                            style="@style/TextSize14sp"
+                            android:layout_marginTop="2dp"
+                            android:text="房型详情"
+                            android:textColor="@color/color_24A4FF"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_room_explain" />
+
+                        <TextView
+                            android:id="@+id/tv_room_set_meal"
+                            style="@style/TextSize14sp"
+                            android:layout_marginTop="16dp"
+                            android:text="房含套餐"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_room_details" />
+
+                        <TextView
+                            android:id="@+id/tv_set_meal_details"
+                            style="@style/TextSize14sp"
+                            android:layout_marginTop="2dp"
+                            android:text="05-28 无餐食 | 05-29 无餐食 | 05-30 无餐食 | 05-31 无餐食 | 06-01 无餐食 | 06-02 无餐食…"
+                            android:textColor="@color/color_66_66_66"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_room_set_meal" />
+
+                        <TextView
+                            android:id="@+id/tv_see_foot"
+                            style="@style/TextSize14sp"
+                            android:layout_marginTop="2dp"
+                            android:paddingBottom="16dp"
+                            android:text="查看周边美食"
+                            android:textColor="@color/color_24A4FF"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_set_meal_details" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/shape_white_radius_4"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="54dp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="个人信息"
+                        android:textColor="@color/color_33_33_33"
+                        android:textSize="16sp" />
+
+                    <TextView style="@style/DivisionLine" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="17dp">
+
+                        <TextView
+                            android:id="@+id/tv_info_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:text="林桂英，汤普森"
+                            android:textColor="@color/color_33_33_33"
+                            android:textSize="14sp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tv_info_explain"
+                            style="@style/TextSize14sp"
+                            android:layout_marginTop="2dp"
+                            android:text="入住请携带本人有效证件"
+                            android:textColor="@color/color_66_66_66"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_info_name" />
+
+                        <TextView
+                            style="@style/TextSize14sp"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginTop="2dp"
+                            android:text="儿童及加床政策/酒店提示"
+                            android:textColor="@color/color_63_C4_FA"
+                            app:layout_constraintLeft_toRightOf="@+id/tv_info_explain"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_info_name" />
+
+                        <TextView
+                            android:id="@+id/tv_contact_information"
+                            style="@style/TextSize14sp"
+                            android:layout_marginTop="16dp"
+                            android:paddingBottom="16dp"
+                            android:text="联系方式"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_info_explain" />
+
+                        <TextView
+                            style="@style/TextSize14sp"
+                            android:layout_marginLeft="20dp"
+                            android:text="18609856496"
+                            android:textColor="@color/color_66_66_66"
+                            app:layout_constraintLeft_toRightOf="@+id/tv_contact_information"
+                            app:layout_constraintTop_toTopOf="@+id/tv_contact_information" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/shape_white_radius_4"
+                    android:orientation="horizontal"
+                    android:paddingBottom="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingTop="16dp">
+
+                    <TextView
+                        style="@style/TextSize14sp"
+                        android:layout_gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="发票信息" />
+                    <!-- 不开票显示 -->
+                    <TextView
+                        android:id="@+id/tv_no_draw_bill"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="未开具"
+                        android:textColor="@color/color_66_66_66"
+                        android:textSize="14sp"
+                        android:visibility="gone" />
+
+                    <!-- 开票显示 -->
+                    <LinearLayout
+                        android:id="@+id/ll_draw_bill"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="20dp"
+                        android:layout_weight="1"
+                        android:onClick="@{activity::onClick}"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/TextSize14sp"
+                                android:text="已发送 | 电子发票" />
+
+                            <TextView
+                                style="@style/TextSize14sp"
+                                android:layout_marginTop="2dp"
+                                android:text="18609856496@163.com" />
+
+                            <TextView
+                                android:id="@+id/tv_again_bill"
+                                style="@style/TextSize14sp"
+                                android:layout_marginTop="2dp"
+                                android:onClick="@{activity::onClick}"
+                                android:text="重发电子发票"
+                                android:textColor="@color/color_24A4FF" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:src="@drawable/right_arrow" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <RelativeLayout
+            android:id="@+id/rl_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:layout_alignParentBottom="true">
+            <!-- 带出行订单展示的底部 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/color_24A4FF"
+                android:gravity="center"
+                android:text="退款"
+                android:textColor="@color/color_FF_FF_FF"
+                android:textSize="16sp" />
+            <!-- 已完成订单展示的底部 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/color_24A4FF"
+                android:gravity="center"
+                android:text="再次预定"
+                android:textColor="@color/color_FF_FF_FF"
+                android:textSize="16sp" />
+            <!-- 待支付订单展示的底部 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/color_ff9600"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="继续支付"
+                        android:textColor="@color/color_FF_FF_FF"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="4dp"
+                        android:text="剩余支付时间00:02:40"
+                        android:textColor="@color/color_FF_FF_FF"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/color_FF_FF_FF"
+                    android:gravity="center"
+                    android:text="取消订单"
+                    android:textColor="@color/color_66_66_66"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</layout>

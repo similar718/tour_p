@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="activity"
+            type="cn.xmzt.www.smartteam.activity.SmartTeamActivity" />
+    </data>
+    <RelativeLayout android:id="@+id/rootLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_smart_team"
+        android:fitsSystemWindows="false"
+        android:orientation="vertical">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0"
+            android:layout_alignParentBottom="true"/>
+        <RelativeLayout android:id="@+id/titleLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_44"
+            android:background="@color/color_00ffffff"
+            android:layout_marginTop="@dimen/dp_24">
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/dp_20"
+                android:paddingRight="@dimen/dp_20"
+                android:layout_centerVertical="true"
+                android:src="@drawable/icon_new_back"
+                android:onClick="@{activity::onClick}"/>
+            <TextView android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="智能组队"
+                android:textColor="@color/color_33_33_33"
+                android:textSize="17sp"/>
+        </RelativeLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/titleLayout">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/anim_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_413"
+                    app:lottie_rawRes="@raw/smart_seam_anim_data"
+                    app:lottie_loop="true"
+                    app:lottie_autoPlay="true" />
+
+                <TextView android:id="@+id/tv_team_builder"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_44"
+                    android:onClick="@{activity::onClick}"
+                    android:layout_marginLeft="@dimen/dp_35"
+                    android:layout_marginRight="@dimen/dp_35"
+                    android:background="@drawable/confirm_pressed_shape"
+                    android:gravity="center"
+                    android:text="智能组队"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"/>
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_team"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_44"
+                    android:layout_marginLeft="@dimen/dp_35"
+                    android:layout_marginRight="@dimen/dp_35"
+                    android:focusable="false"
+                    android:onClick="@{activity::onClick}"
+                    android:maxLength="6"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:layout_marginBottom="@dimen/dp_32"
+                    android:inputType="number"
+                    android:background="@drawable/border_gray_shape"
+                    android:hint="输入口令，加入队伍"
+                    android:textColorHint="@color/color_99_99_99"
+                    android:gravity="center"
+                    android:textColor="@color/color_33_33_33"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+        <RelativeLayout android:id="@+id/no_anim_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_413"
+            android:layout_below="@+id/titleLayout"
+            android:visibility="gone">
+            <TextView android:id="@+id/tv_znzd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_46"
+                android:textColor="#385C80"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:text="智能组队"/>
+            <TextView android:id="@+id/tv_yydj"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/tv_znzd"
+                android:layout_marginTop="@dimen/dp_10"
+                android:drawableLeft="@drawable/dot_yellow_white"
+                android:drawablePadding="@dimen/dp_6"
+                android:textColor="#FF385C80"
+                android:textSize="16sp"
+                android:text="语音对讲"/>
+            <TextView android:id="@+id/tv_wzgx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/tv_znzd"
+                android:layout_toRightOf="@+id/tv_yydj"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginLeft="@dimen/dp_14"
+                android:drawableLeft="@drawable/dot_yellow_white"
+                android:drawablePadding="@dimen/dp_6"
+                android:textColor="#FF385C80"
+                android:textSize="16sp"
+                android:text="位置共享"/>
+            <TextView android:id="@+id/tv_szjjd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/tv_znzd"
+                android:layout_toLeftOf="@+id/tv_yydj"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_14"
+                android:drawableLeft="@drawable/dot_yellow_white"
+                android:drawablePadding="@dimen/dp_6"
+                android:textColor="#FF385C80"
+                android:textSize="16sp"
+                android:text="设置集结点"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+</layout>
+

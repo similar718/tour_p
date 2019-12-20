@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="activity"
+            type="cn.xmzt.www.route.activity.InvoiceInfoActivity" />
+        <variable
+            name="vm"
+            type="cn.xmzt.www.route.vm.InvoiceInfoViewModel" />
+        <variable
+            name="orderInvoiceInfo"
+            type="cn.xmzt.www.route.bean.OrderInvoiceInfo" />
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F4F4F4"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@color/color_FF_FF_FF">
+
+            <ImageView android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:onClick="@{activity::onClick}"
+                android:layout_centerVertical="true"
+
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/icon_new_back"/>
+            <TextView android:id="@+id/tv_del"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{activity::onClick}"
+                android:visibility="invisible"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:text="删除"
+                android:textColor="@color/color_66_66_66"
+                android:textSize="14sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:layout_toRightOf="@+id/iv_back"
+                android:layout_toLeftOf="@+id/tv_del"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="发票信息"
+                android:textColor="@color/color_33_33_33"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1_px"
+            android:background="@color/color_line"/>
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical">
+                <LinearLayout android:id="@+id/layout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="开票方"
+                        android:ems="4"
+                        android:textColor="@color/color_99_99_99"
+                        android:textSize="14sp"/>
+                    <TextView android:id="@+id/tv_kpf"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        tools:text="公司"
+                        android:text="@{orderInvoiceInfo.drawer}"
+                        android:textColor="@color/color_33_33_33"
+                        android:textSize="14sp"/>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/layout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center_vertical"
+                    android:background="@color/white">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="发票类型"
+                        android:ems="4"
+                        android:textColor="@color/color_99_99_99"
+                        android:textSize="14sp"/>
+                    <TextView android:id="@+id/tv_invoice_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        tools:text="电子发票"
+                        android:text="@{vm.openInvoice==0?vm.typeInvoice1:vm.typeInvoice2}"
+                        android:textColor="@color/color_33_33_33"
+                        android:textSize="14sp"/>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/layout3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center_vertical"
+                    android:background="@color/white">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="发票明细"
+                        android:ems="4"
+                        android:textColor="@color/color_99_99_99"
+                        android:textSize="14sp"/>
+                    <TextView android:id="@+id/tv_invoice_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        tools:text="代订住宿费"
+                        android:text="@{orderInvoiceInfo.item}"
+                        android:textColor="@color/color_33_33_33"
+                        android:textSize="14sp"/>
+                </LinearLayout>
+                <RelativeLayout android:id="@+id/layout4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/white">
+                    <TextView android:id="@+id/tv_invoice_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="发票抬头"
+                        android:ems="4"
+                        android:textColor="@color/color_99_99_99"
+                        android:textSize="14sp"/>
+                    <TextView android:id="@+id/tv_invoice_title_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/tv_invoice_title"
+                        android:layout_marginLeft="20dp"
+                        tools:text="代订住宿费"
+                        android:text="@{orderInvoiceInfo.titleName}"
+                        android:textColor="@color/color_33_33_33"
+                        android:textSize="14sp"/>
+                    <TextView android:id="@+id/tv_duty_num"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_invoice_title_name"
+                        android:layout_toRightOf="@+id/tv_invoice_title"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="3dp"
+                        tools:text="税号：947522333333"
+                        android:text="@{orderInvoiceInfo.dutyParagraphStr}"
+                        android:textColor="@color/color_99_99_99"
+                        android:textSize="14sp"/>
+                </RelativeLayout>
+                <LinearLayout android:id="@+id/layout5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:gravity="center_vertical"
+                    android:background="@color/white">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="接收邮箱"
+                        android:ems="4"
+                        android:textColor="@color/color_99_99_99"
+                        android:textSize="14sp"/>
+                    <TextView android:id="@+id/tv_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        tools:text="332789594@qq.com"
+                        android:text="@{orderInvoiceInfo.receiveEmail}"
+                        android:textColor="@color/color_33_33_33"
+                        android:textSize="14sp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</layout>

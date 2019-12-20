@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="model"
+            type="cn.xmzt.www.ticket.model.SienceAreaDetailViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_F4_F4_F4"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@color/color_FF_FF_FF">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/icon_new_back"/>
+
+            <TextView
+                style="@style/TextSize14sp"
+                android:layout_centerInParent="true"
+                android:text="东江湖风景区"
+                android:textSize="@dimen/text_size_17" />
+        </RelativeLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tl"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_44"
+            android:layout_marginTop="@dimen/dp_1"
+            android:background="@color/color_FF_FF_FF"
+            android:textSize="14sp"
+            app:tabIndicatorColor="@color/color_49_BE_FF"
+            app:tabIndicatorHeight="@dimen/dp_2"
+            app:tabMode="fixed"
+            app:tabSelectedTextColor="@color/color_33_33_33"
+            app:tabTextColor="@color/color_66_66_66" />
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_10"
+                android:background="@drawable/shape_hotel_bac"
+                android:orientation="vertical">
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>

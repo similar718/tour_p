@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="activity"
+            type="cn.xmzt.www.intercom.activity.AddCarActivity" />
+        <variable
+            name="vm"
+            type="cn.xmzt.www.intercom.vm.AddCarViewModel" />
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F4F4F4"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@color/color_FF_FF_FF">
+
+            <ImageView android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/icon_new_back"
+                android:onClick="@{activity::onClick}"
+                android:layout_centerVertical="true" />
+            <TextView android:id="@+id/tv_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{activity::onClick}"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:text="保存"
+                android:textColor="@color/color_24A4FF"
+                android:textSize="14sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="添加车辆"
+                android:textColor="@color/color_33_33_33"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/color_line"/>
+                <LinearLayout
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:id="@+id/layout5"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_54"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:gravity="center_vertical"
+                    android:background="@color/white">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="*"
+                        android:textColor="#FF3C3C"
+                        android:textSize="16sp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="车牌号"
+                        android:textColor="@color/color_33_33_33"
+                        android:textSize="16sp"/>
+                    <EditText android:id="@+id/et_carID"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:focusable="true"
+                        android:maxLength="8"
+                        android:focusableInTouchMode="true"
+                        android:afterTextChanged="@{vm::carIDAfterTextChanged}"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:gravity="right|center_vertical"
+                        android:lines="1"
+                        android:hint="请输入车牌号"
+                        android:textColorHint="@color/color_999999"
+                        android:textColor="@color/color_66_66_66"
+                        android:textSize="14sp"/>
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/color_line"/>
+                <LinearLayout android:id="@+id/layout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_54"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:onClick="@{activity::onClick}"
+                    android:gravity="center_vertical"
+                    android:background="@color/white">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="选择司机"
+                        android:textColor="@color/color_33_33_33"
+                        android:textSize="14sp"/>
+                    <TextView android:id="@+id/tv_driver"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="20dp"
+                        android:gravity="right|center_vertical"
+                        android:drawablePadding="@dimen/dp_5"
+                        android:drawableRight="@drawable/back_gray_right"
+                        tools:text="小王"
+                        android:textColor="@color/color_66_66_66"
+                        android:textSize="14sp"/>
+                </LinearLayout>
+            </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#CED0DC"
+                android:layout_alignParentBottom="true">
+                <cn.xmzt.www.view.CarKeyboardView
+                    android:id="@+id/keyboard_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:background="#CED0DC"
+                    android:keyBackground="@drawable/selector_key"
+                    android:keyTextColor="#333333"
+                    android:shadowRadius="0.0"
+                    android:shadowColor="#CED0DC"
+                    android:keyTextSize="17sp"
+                    android:labelTextSize="17sp" />
+            </FrameLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</layout>

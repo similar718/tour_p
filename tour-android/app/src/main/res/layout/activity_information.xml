@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="model"
+            type="cn.xmzt.www.mine.model.InformationViewModel" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/ll_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/title_rl"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/title_back_iv"
+                android:layout_width="wrap_content"
+                android:layout_centerVertical="true"
+                android:onClick="@{model::onClick}"
+
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/icon_new_back"/>
+
+            <TextView
+                android:id="@+id/title_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="基本信息"
+                android:textColor="@color/color_33_33_33"
+                android:textSize="17sp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/avatar_rl"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/color_FF_FF_FF"
+            android:onClick="@{model::onClick}"
+            android:paddingEnd="30dp"
+            android:paddingStart="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="头像 "
+                android:textColor="@color/color_33_33_33"
+                android:textSize="17sp" />
+
+            <cn.xmzt.www.view.RoundImageView
+                android:id="@+id/iv_avatar"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/iv_photo_right"
+                android:adjustViewBounds="true"
+                app:imageUrl="@{model.headUrl}" />
+
+            <ImageView
+                android:id="@+id/iv_photo_right"
+                android:layout_width="@dimen/mine_arrow_width"
+                android:layout_height="@dimen/mine_arrow_height"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/arrow" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/nickname_ll"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/white"
+            android:orientation="horizontal"
+            android:paddingEnd="30dp"
+            android:paddingStart="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="昵称"
+                android:textColor="@color/color_33_33_33"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/nickname_tv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical|end"
+                android:onClick="@{model::onClick}"
+                android:paddingEnd="10dp"
+                android:text="@{model.name}"
+                android:textColor="@color/color_99_99_99"
+                android:textSize="@dimen/mine_tv_text_size" />
+
+            <ImageView
+                android:layout_width="@dimen/mine_arrow_width"
+                android:layout_height="@dimen/mine_arrow_height"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/arrow" />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/color_line"/>
+        <LinearLayout
+            android:id="@+id/gender_ll"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:onClick="@{model::onClick}"
+            android:orientation="horizontal"
+            android:paddingEnd="30dp"
+            android:paddingStart="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="性别"
+                android:textColor="@color/color_33_33_33"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/gender_tv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical|end"
+                android:paddingEnd="10dp"
+                android:textColor="@color/color_99_99_99"
+                android:textSize="@dimen/mine_tv_text_size" />
+
+            <ImageView
+                android:layout_width="@dimen/mine_arrow_width"
+                android:layout_height="@dimen/mine_arrow_height"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/arrow" />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/color_line"/>
+        <LinearLayout
+            android:id="@+id/age_ll"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:onClick="@{model::onClick}"
+            android:orientation="horizontal"
+            android:paddingEnd="30dp"
+            android:paddingStart="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="年龄"
+                android:textColor="@color/color_33_33_33"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/age_tv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical|end"
+                android:paddingEnd="10dp"
+                android:text='@{""+model.age}'
+                android:textColor="@color/color_99_99_99"
+                android:textSize="@dimen/mine_tv_text_size" />
+
+            <ImageView
+                android:layout_width="@dimen/mine_arrow_width"
+                android:layout_height="@dimen/mine_arrow_height"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/arrow" />
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/color_line"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:orientation="horizontal"
+            android:paddingEnd="30dp"
+            android:paddingStart="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="ID"
+                android:textColor="@color/color_33_33_33"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/id_tv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical|end"
+                android:text='@{""+model.id}'
+                android:textColor="@color/color_DA_DA_DA"
+                android:textSize="@dimen/mine_tv_text_size" />
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/color_line"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:orientation="horizontal"
+            android:paddingEnd="30dp"
+            android:paddingStart="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="会员等级"
+                android:textColor="@color/color_33_33_33"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/level_tv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical|end"
+                android:text=""
+                android:textColor="@color/color_DA_DA_DA"
+                android:textSize="@dimen/mine_tv_text_size" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</layout>

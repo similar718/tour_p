@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="activity"
+            type="cn.xmzt.www.intercom.activity.SchedulingDetailActivity" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_F4_F4_F4"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@color/color_FF_FF_FF">
+
+            <ImageView android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{activity::onClick}"
+                android:layout_centerVertical="true"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:src="@drawable/back_gray" />
+            <ImageView android:id="@+id/iv_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{activity::onClick}"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingLeft="10dp"
+                android:paddingRight="15dp"
+                android:src="@drawable/icon_share_gray_route" />
+            <TextView android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/iv_back"
+                android:layout_toLeftOf="@+id/iv_share"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="行程详情"
+                android:textColor="@color/color_33_33_33"
+                android:textSize="17sp" />
+        </RelativeLayout>
+        <cn.xmzt.www.view.AutofitRecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/color_line"/>
+        <LinearLayout android:id="@+id/bottomLayout"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/white">
+            <TextView android:id="@+id/tv_route_detail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="@{activity::onClick}"
+                android:background="@color/white"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:textColor="@color/color_66_66_66"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:layout_weight="1"
+                android:text="查看线路详情"/>
+            <TextView android:id="@+id/tv_group"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="@{activity::onClick}"
+                android:background="#FF9E3F"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="进入行程"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

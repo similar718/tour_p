@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="item"
+            type="cn.xmzt.www.home.bean.CityBean"/>
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/itemLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dp_20"
+            android:paddingRight="@dimen/dp_30"
+            android:gravity="center_vertical"
+            android:background="@color/white">
+            <ImageView android:id="@+id/iv_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_check_yx"/>
+            <TextView android:id="@+id/tv_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                tools:text="深圳"
+                android:text="@{item.areaName}"
+                android:textColor="@color/color_66_66_66" />
+        </LinearLayout>
+        <View android:id="@+id/v_line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1_px"
+            android:background="@color/color_line"/>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="model"
+            type="cn.xmzt.www.mine.model.BindContactViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/title_rl"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/title_back_iv"
+                android:layout_width="wrap_content"
+                android:layout_centerVertical="true"
+                android:onClick="@{model::onClick}"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/icon_new_back"/>
+
+            <TextView
+                android:id="@+id/title_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="绑定社交账号"
+                android:textColor="@color/title_color"
+                android:textSize="17sp" />
+
+        </RelativeLayout>
+
+        <!-- 微信 -->
+        <LinearLayout
+            android:id="@+id/wechat_binding_ll"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mine_layout_height"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/white"
+            android:orientation="horizontal"
+            android:paddingEnd="@dimen/mine_layout_padding_right"
+            android:paddingStart="@dimen/mine_layout_padding_left">
+
+            <ImageView
+                android:layout_width="@dimen/size_30"
+                android:layout_height="@dimen/size_30"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/weixin_1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/mine_tv_margin_left"
+                android:gravity="center_vertical"
+                android:text="微信"
+                android:textColor="@color/title_color"
+                android:textSize="@dimen/text_size_16" />
+
+            <TextView
+                android:id="@+id/wechat_binding"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/mine_tv_margin_left"
+                android:layout_marginRight="@dimen/mine_tv_margin_left"
+                android:layout_weight="1"
+                android:gravity="center_vertical|right"
+                android:text="去绑定"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/mine_tv_text_size" />
+
+            <ImageView
+                android:id="@+id/wechat_arrow"
+                android:layout_width="@dimen/mine_arrow_width"
+                android:layout_height="@dimen/mine_arrow_height"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/arrow" />
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

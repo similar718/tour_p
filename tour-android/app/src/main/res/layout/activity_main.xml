@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="activity"
+            type="cn.xmzt.www.main.activity.MainActivity" />
+    </data>
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="false">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="48dp"
+            android:layout_alignParentBottom="true"/>
+        <FrameLayout android:id="@+id/fragmentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/dp_48"/>
+        <!--<com.jm.selfdriving.view.CanScrollViewPager
+            android:id="@+id/mViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/dp_48"/>-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bottomLayout"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:paddingLeft="@dimen/dp_1"
+            android:paddingRight="@dimen/dp_1"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/icon_easynavigation_background">
+            <LinearLayout android:id="@+id/tabLayout1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:onClick="@{activity::onClick}"
+                android:clickable="true"
+                android:gravity="center_horizontal"
+                app:layout_constraintHorizontal_bias="1"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/tabLayout2"
+                android:paddingTop="@dimen/dp_2"
+                android:paddingBottom="@dimen/dp_2"
+                android:orientation="vertical">
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/iv_tab_home"
+                    android:layout_width="@dimen/dp_25"
+                    android:layout_height="@dimen/dp_25"
+                    app:lottie_rawRes="@raw/home_data"/>
+                <TextView android:id="@+id/tv_tab_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_3"
+                    android:includeFontPadding="false"
+                    android:textSize="10sp"
+                    android:textColor="#40BAFF"
+                    android:text="首页"/>
+
+            </LinearLayout>
+            <LinearLayout android:id="@+id/tabLayout2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:onClick="@{activity::onClick}"
+                android:clickable="true"
+                android:gravity="center_horizontal"
+                app:layout_constraintHorizontal_bias="1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/tabLayout3"
+                app:layout_constraintLeft_toRightOf="@+id/tabLayout1"
+                android:paddingTop="@dimen/dp_2"
+                android:paddingBottom="@dimen/dp_2"
+                android:orientation="vertical">
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/iv_tab_route"
+                    android:layout_width="@dimen/dp_25"
+                    android:layout_height="@dimen/dp_25"
+                    app:lottie_rawRes="@raw/route_data" />
+                <TextView android:id="@+id/tv_tab_route"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_3"
+                    android:includeFontPadding="false"
+                    android:textSize="10sp"
+                    android:textColor="#666666"
+                    android:text="线路"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/tabLayout3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:onClick="@{activity::onClick}"
+                android:clickable="true"
+                android:gravity="center_horizontal"
+                app:layout_constraintHorizontal_bias="1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/tabLayout4"
+                app:layout_constraintLeft_toRightOf="@+id/tabLayout2"
+                android:paddingTop="@dimen/dp_2"
+                android:paddingBottom="@dimen/dp_2"
+                android:orientation="vertical">
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/iv_tab_self_driving"
+                    android:layout_width="@dimen/dp_42"
+                    android:layout_height="@dimen/dp_42"
+                    android:src="@drawable/ic_main_tabbar_electric_guide"
+                    app:lottie_rawRes="@raw/tool_data" />
+                <TextView android:id="@+id/tv_tab_self_driving"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_3"
+                    android:includeFontPadding="false"
+                    android:textSize="10sp"
+                    android:textColor="#666666"
+                    android:text="自驾工具"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/tabLayout4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:onClick="@{activity::onClick}"
+                android:clickable="true"
+                android:gravity="center_horizontal"
+                app:layout_constraintHorizontal_bias="1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/tabLayout5"
+                app:layout_constraintLeft_toRightOf="@+id/tabLayout3"
+                android:paddingTop="@dimen/dp_2"
+                android:paddingBottom="@dimen/dp_2"
+                android:orientation="vertical">
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/iv_tab_xc"
+                    android:layout_width="@dimen/dp_25"
+                    android:layout_height="@dimen/dp_25"
+                    app:lottie_rawRes="@raw/xc_data"/>
+                <TextView android:id="@+id/tv_tab_xc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_3"
+                    android:includeFontPadding="false"
+                    android:textSize="10sp"
+                    android:textColor="#666666"
+                    android:text="行程"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/tabLayout5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:onClick="@{activity::onClick}"
+                android:clickable="true"
+                android:gravity="center_horizontal"
+                app:layout_constraintHorizontal_bias="1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/tabLayout4"
+                android:paddingTop="@dimen/dp_2"
+                android:paddingBottom="@dimen/dp_2"
+                android:orientation="vertical">
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/iv_tab_user"
+                    android:layout_width="@dimen/dp_25"
+                    android:layout_height="@dimen/dp_25"
+                    app:lottie_rawRes="@raw/user_data"/>
+                <TextView android:id="@+id/tv_tab_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_3"
+                    android:includeFontPadding="false"
+                    android:textSize="10sp"
+                    android:textColor="#666666"
+                    android:text="我的"/>
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </RelativeLayout>
+</layout>

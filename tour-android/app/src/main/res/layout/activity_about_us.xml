@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/about_us_bg">
+
+    <RelativeLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="44dp">
+
+        <ImageView
+            android:id="@+id/title_back_iv"
+            android:layout_width="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/icon_new_back"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/title_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="关于我们"
+            android:textColor="@color/title_color"
+            android:textSize="17sp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_line"
+        android:layout_height="0.5dp"
+        style="@style/DivisionLine"
+        android:layout_below="@+id/title_layout" />
+
+    <ImageView
+        android:id="@+id/iv_log"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_below="@+id/tv_line"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="65dp"/>
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_log"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:text="版本V1.0.6"
+        android:textColor="@color/color_33_33_33"
+        android:textSize="14sp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/tv">
+        <TextView
+            android:id="@+id/tv_version_update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_version_update"
+            android:paddingLeft="@dimen/dp_21"
+            android:paddingRight="@dimen/dp_21"
+            android:paddingTop="@dimen/dp_6"
+            android:paddingBottom="@dimen/dp_6"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:text="版本更新"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv"
+            android:layout_marginTop="@dimen/dp_48"
+            android:paddingLeft="35dp"
+            android:paddingRight="38dp"
+            android:text="小马在途app是由小马在途科技有限公司倾力打造的一个专注于国内自驾旅游的服务平台。利用自身强大的资源整合能力，为用户提供专业定制路线，酒店，景区，以及旅途中必备的专业自驾工具如智能出行，智慧景区，实时对讲等服务。"
+            android:textColor="@color/color_33_33_33"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="20dp"
+        android:text="copyright © 2019小马在途xmzt.cn版本所有"
+        android:textColor="#929199"
+        android:textSize="12sp" />
+</RelativeLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+    </data>
+    <RelativeLayout android:id="@+id/itemLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_white_radius_4"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="@dimen/dp_10"
+        android:paddingBottom="@dimen/dp_10"
+        android:layout_marginLeft="@dimen/dp_7"
+        android:layout_marginRight="@dimen/dp_7"
+        android:layout_marginBottom="10dp">
+        <ImageView android:id="@+id/iv_icon"
+            android:layout_width="@dimen/dp_48"
+            android:layout_height="@dimen/dp_48"
+            android:layout_marginRight="@dimen/dp_12"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_akey_sos_xcld"/>
+        <ImageView android:id="@+id/iv_photo"
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_30"
+            android:layout_marginLeft="@dimen/dp_12"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/icon_sos_phone_blue"/>
+        <TextView android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/iv_icon"
+            android:layout_toLeftOf="@+id/iv_photo"
+            android:textStyle="bold"
+            android:lines="1"
+            android:ellipsize="end"
+            android:text="行程领队"
+            android:textColor="@color/color_33_33_33"
+            android:textSize="17sp"/>
+        <TextView android:id="@+id/tv_des"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/iv_icon"
+            android:layout_toLeftOf="@+id/iv_photo"
+            android:layout_below="@+id/tv_name"
+            android:layout_marginTop="@dimen/dp_2"
+            android:lines="1"
+            android:ellipsize="end"
+            android:text="紧急情况，一键救援"
+            android:textColor="@color/color_99_99_99"
+            android:textSize="14sp"/>
+    </RelativeLayout>
+</layout>

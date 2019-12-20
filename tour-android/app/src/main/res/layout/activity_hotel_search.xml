@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="activity"
+            type="cn.xmzt.www.hotel.activity.HotelSearchActivity" />
+        
+        <variable
+            name="model"
+            type="cn.xmzt.www.hotel.model.HotelSearchViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_F4_F4_F4"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@color/color_FF_FF_FF"
+            android:paddingLeft="16dp"
+            android:paddingRight="10dp">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="8dp"
+                android:layout_height="18dp"
+                android:layout_gravity="center_vertical"
+                android:onClick="@{activity::onClick}"
+                android:src="@drawable/back_black" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="7dp"
+                android:layout_marginLeft="19dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="7dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_hotel_list_search"
+                android:gravity="center">
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:drawableLeft="@drawable/icon_search"
+                    android:gravity="center_vertical"
+                    android:hint="请输入景区/城市"
+                    android:paddingLeft="15dp"
+                    android:textColor="@color/color_99_99_99"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/iv_search_delete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:onClick="@{model::onClick}"
+                    android:src="@drawable/icon_hotel_list_delete" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_hotel_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:onClick="@{model::onClick}"
+                android:src="@drawable/hotel_search" />
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="@{model.isSearch?View.GONE:View.VISIBLE}">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/color_FF_FF_FF"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawableLeft="@drawable/icon_hotel_time"
+                            android:drawablePadding="6dp"
+                            android:paddingBottom="14dp"
+                            android:paddingTop="14dp"
+                            android:text="历史记录"
+                            android:textColor="@color/color_33_33_33"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:padding="10dp"
+                            android:src="@drawable/icon_hotel_search_delete" />
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/color_FF_FF_FF"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawableLeft="@drawable/icon_hotel_search_scenic_spot"
+                            android:drawablePadding="6dp"
+                            android:paddingBottom="14dp"
+                            android:paddingTop="14dp"
+                            android:text="景点/景区 "
+                            android:textColor="@color/color_33_33_33"
+                            android:textSize="14sp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="3dp"
+                                android:gravity="center"
+                                android:text="展开"
+                                android:textColor="@color/color_99_99_99"
+                                android:textSize="12sp" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/icon_hotel_search_more" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/color_FF_FF_FF"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawableLeft="@drawable/icon_hotel_search_brand"
+                            android:drawablePadding="6dp"
+                            android:paddingBottom="14dp"
+                            android:paddingTop="14dp"
+                            android:text="酒店品牌"
+                            android:textColor="@color/color_33_33_33"
+                            android:textSize="14sp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="3dp"
+                                android:gravity="center"
+                                android:text="收起"
+                                android:textColor="@color/color_99_99_99"
+                                android:textSize="12sp" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/icon_hotel_search_top" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_search_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_FF_FF_FF"
+            android:visibility="@{model.isSearch?View.VISIBLE:View.GONE}" />
+    </LinearLayout>
+
+
+</layout>

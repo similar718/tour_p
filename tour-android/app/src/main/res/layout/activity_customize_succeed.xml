@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="activity"
+            type="cn.xmzt.www.home.activity.CustomizeSucceedActivity" />
+    </data>
+    <LinearLayout android:id="@+id/rootLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@color/color_FF_FF_FF">
+            <ImageView android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:onClick="@{activity::onClick}"
+                android:layout_centerVertical="true"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/icon_new_back"/>
+            <TextView android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:layout_toRightOf="@+id/iv_back"
+                android:layout_toLeftOf="@+id/tv_del"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="提交成功"
+                android:textColor="@color/color_33_33_33"
+                android:textSize="18sp" />
+        </RelativeLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:drawablePadding="@dimen/dp_26"
+            android:drawableTop="@drawable/icon_customize_succeed"
+            android:layout_marginTop="@dimen/dp_51"
+            android:text="定制需求提交成功"
+            android:textColor="@color/color_33_33_33"
+            android:textSize="17sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginLeft="@dimen/dp_30"
+            android:layout_marginRight="@dimen/dp_20"
+            android:maxEms="15"
+            android:letterSpacing="0.2"
+            android:lineSpacingExtra="@dimen/dp_4"
+            android:text="我们将会给您安排专属行程管家，给您设计2-3套出行方案，行程管家为了更精确了解您的需求，可能会给您来电，请保持电话畅通，如有需要，请联系客服4006661235"
+            android:textColor="@color/color_99_99_99"
+            android:textSize="14sp" />
+    </LinearLayout>
+</layout>
+

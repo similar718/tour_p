@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="model"
+            type="cn.xmzt.www.mine.model.MyWalletViewModel" />
+
+        <variable
+            name="view"
+            type="android.view.View" />
+
+        <variable
+            name="adapter"
+            type="android.widget.BaseAdapter" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/title_rl"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/title_back_iv"
+                android:layout_width="wrap_content"
+                android:layout_centerVertical="true"
+                android:onClick="@{model::onClick}"
+
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/icon_new_back"/>
+
+            <TextView
+                android:id="@+id/title_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="我的钱包"
+                android:textColor="@color/title_color"
+                android:textSize="17sp" />
+
+        </RelativeLayout>
+
+        <!-- 内容 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <!-- 我的余额 -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="129dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/my_wallet_money_bg">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/size_20"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="余额"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/money_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text='@{""+model.balanceNumber}'
+                        android:textColor="@color/white"
+                        android:textSize="30dp" />
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/cash_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="60dp"
+                    android:onClick="@{model::onClick}"
+                    android:layout_marginRight="@dimen/size_20"
+                    android:background="@drawable/cash_out_shape"
+                    android:paddingBottom="@dimen/size_3"
+                    android:paddingLeft="@dimen/size_20"
+                    android:paddingRight="@dimen/size_20"
+                    android:paddingTop="@dimen/size_3"
+                    android:text="提现"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_14" />
+
+            </RelativeLayout>
+
+            <!-- 分类字段 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_50"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <!-- 全部 -->
+                <RelativeLayout
+                    android:id="@+id/all_rl"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:onClick="@{model::onClick}">
+
+                    <TextView
+                        android:id="@+id/all_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@string/moa_all"
+                        android:textColor="@color/title_color"
+                        android:textSize="@dimen/text_size_14"/>
+
+                    <View
+                        android:id="@+id/all_v"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/size_2"
+                        android:layout_alignLeft="@+id/all_tv"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignRight="@+id/all_tv"
+                        android:background="@color/blue"
+                        android:visibility="@{model.type==0?view.VISIBLE:view.GONE}" />
+
+                </RelativeLayout>
+
+                <!-- 收入 -->
+                <RelativeLayout
+                    android:id="@+id/income_rl"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:onClick="@{model::onClick}">
+
+                    <TextView
+                        android:id="@+id/income_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="收入"
+                        android:textColor="@color/title_color"
+                        android:textSize="@dimen/text_size_14" />
+
+                    <View
+                        android:id="@+id/income_v"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/size_2"
+                        android:layout_alignLeft="@+id/income_tv"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignRight="@+id/income_tv"
+                        android:background="@color/blue"
+                        android:visibility="@{model.type==1?view.VISIBLE:view.GONE}" />
+
+                </RelativeLayout>
+
+                <!-- 支出 -->
+                <RelativeLayout
+                    android:id="@+id/expend_rl"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:onClick="@{model::onClick}">
+
+                    <TextView
+                        android:id="@+id/expend_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="支出"
+                        android:textColor="@color/title_color"
+                        android:textSize="@dimen/text_size_14" />
+
+                    <View
+                        android:id="@+id/expend_v"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/size_2"
+                        android:layout_alignLeft="@+id/expend_tv"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignRight="@+id/expend_tv"
+                        android:background="@color/blue"
+                        android:visibility="@{model.type==2?view.VISIBLE:view.GONE}" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_1"
+                android:background="@color/color_F4_F4_F4" />
+
+            <com.scwang.smartrefresh.layout.SmartRefreshLayout
+                android:id="@+id/refresh_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                <ListView
+                    android:id="@+id/lv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:scrollbars="none"
+                    app:adapter="@{adapter}" />
+                <TextView
+                    android:id="@+id/tv_no_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="56dp"
+                    android:drawablePadding="36dp"
+                    android:drawableTop="@drawable/no_wallet"
+                    android:gravity="center"
+                    android:textColor="@color/color_99_99_99"
+                    android:textSize="14sp"
+                    android:text="亲，您的记录暂时为空哦~"
+                    android:visibility="gone" />
+                </RelativeLayout>
+            </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

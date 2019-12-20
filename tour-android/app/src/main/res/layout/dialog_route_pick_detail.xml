@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/dialog_route_pick_detail_bg">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:text="费用明细"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/text_size_16" />
+
+            <ImageView
+                android:id="@+id/iv_cancel"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:padding="10dp"
+                android:src="@drawable/hotel_room_details_delete" />
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/color_e5e5e5" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+            <TextView android:id="@+id/tv_jbfy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="16dp"
+                tools:text="￥98888"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/text_size_16" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/tv_jbfy"
+                android:layout_marginRight="10dp"
+                android:text="基本费用"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/text_size_16"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+            <TextView android:id="@+id/tv_crPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="16dp"
+                tools:text="¥359/人  x2"
+                android:textColor="@color/color_99_99_99"
+                android:textSize="@dimen/text_size_16" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/tv_crPrice"
+                android:layout_marginRight="10dp"
+                android:text="成人"
+                android:textColor="@color/color_99_99_99"
+                android:textSize="@dimen/text_size_16"/>
+        </RelativeLayout>
+        <RelativeLayout android:id="@+id/xhLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+            <TextView android:id="@+id/tv_xhPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="16dp"
+                tools:text="¥359/人  x2"
+                android:textColor="@color/color_99_99_99"
+                android:textSize="@dimen/text_size_16" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/tv_xhPrice"
+                android:layout_marginRight="10dp"
+                android:text="儿童"
+                android:textColor="@color/color_99_99_99"
+                android:textSize="@dimen/text_size_16"/>
+        </RelativeLayout>
+        <View android:id="@+id/cpLineView"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/color_e5e5e5" />
+        <RelativeLayout android:id="@+id/cpLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+            <TextView android:id="@+id/tv_kxcpPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="16dp"
+                tools:text="¥359"
+                android:textColor="@color/color_33_33_33"
+                android:textSize="@dimen/text_size_16" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/tv_kxcpPrice"
+                android:layout_marginRight="10dp"
+                android:text="可选产品"
+                android:textColor="@color/color_33_33_33"
+                android:textSize="@dimen/text_size_16"/>
+        </RelativeLayout>
+        <RelativeLayout android:id="@+id/fangLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+            <TextView android:id="@+id/tv_fangPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="16dp"
+                tools:text="¥359/人  x2"
+                android:textColor="@color/color_99_99_99"
+                android:textSize="@dimen/text_size_16" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/tv_fangPrice"
+                android:layout_marginRight="10dp"
+                android:text="单房差"
+                android:textColor="@color/color_99_99_99"
+                android:textSize="@dimen/text_size_16"/>
+        </RelativeLayout>
+        <RelativeLayout android:id="@+id/bxLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+            <TextView android:id="@+id/tv_bxPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="16dp"
+                tools:text="¥359/人  x2"
+                android:textColor="@color/color_99_99_99"
+                android:textSize="@dimen/text_size_16" />
+            <TextView android:id="@+id/tv_bx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/tv_bxPrice"
+                android:layout_marginRight="10dp"
+                android:text="旅游意外保险"
+                android:textColor="@color/color_99_99_99"
+                android:textSize="@dimen/text_size_16"/>
+        </RelativeLayout>
+        <RelativeLayout android:id="@+id/bigAgeBXLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+            <TextView android:id="@+id/tv_bigAgeBXPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="16dp"
+                tools:text="¥359/人  x2"
+                android:textColor="@color/color_99_99_99"
+                android:textSize="@dimen/text_size_16" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/tv_bigAgeBXPrice"
+                android:layout_marginRight="10dp">
+                <TextView android:id="@+id/tv_bigAgeBX"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/tv_bigAge"
+                    android:text="旅游意外保险"
+                    android:textColor="@color/color_99_99_99"
+                    android:textSize="@dimen/text_size_16"/>
+                <TextView android:id="@+id/tv_bigAge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toRightOf="@+id/tv_bigAgeBX"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:text="(75周岁以上)"
+                    android:textColor="@color/color_99_99_99"
+                    android:textSize="@dimen/text_size_12"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </RelativeLayout>
+        <View android:id="@+id/v_yhqLine"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:visibility="gone"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/color_e5e5e5" />
+        <RelativeLayout android:id="@+id/tv_yhqLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginTop="16dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+            <TextView android:id="@+id/tv_yhqPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="16dp"
+                tools:text="-¥359"
+                android:textColor="@color/color_33_33_33"
+                android:textSize="@dimen/text_size_16" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/tv_yhqPrice"
+                android:layout_marginRight="10dp"
+                android:text="优惠券"
+                android:textColor="@color/color_33_33_33"
+                android:textSize="@dimen/text_size_16"/>
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="16dp"
+            android:background="@color/color_e5e5e5" />
+        <RelativeLayout android:id="@+id/bottomLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_48"
+            android:background="@color/white"
+            android:layout_alignParentBottom="true">
+            <TextView android:id="@+id/tv_reserve"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:paddingLeft="28dp"
+                android:paddingRight="28dp"
+                android:background="@drawable/route_reserve_bg_shape"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:text="立即预订"/>
+            <TextView android:id="@+id/tv_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:drawablePadding="5dp"
+                android:drawableRight="@drawable/icon_route_time_persons_detail_down"
+                android:layout_toLeftOf="@+id/tv_reserve"
+                android:paddingRight="@dimen/dp_18"
+                android:paddingLeft="@dimen/dp_10"
+                android:textSize="12sp"
+                android:text="明细"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/tv_detail"
+                android:layout_marginLeft="16dp">
+                <TextView android:id="@+id/tv_amount_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:textColor="@color/color_33_33_33"
+                    android:text="总额："/>
+                <TextView android:id="@+id/tv_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textColor="#FF6000"
+                    android:text="¥"/>
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    app:autoSizeMaxTextSize="22sp"
+                    app:autoSizeMinTextSize="14sp"
+                    app:autoSizeTextType="uniform"
+                    android:maxLines="1"
+                    android:textSize="22sp"
+                    android:textColor="#FF6000"
+                    tools:text="9078"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</layout>

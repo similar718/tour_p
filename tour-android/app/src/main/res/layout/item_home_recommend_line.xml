@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/size_5">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="@dimen/size_162"
+        android:layout_height="@dimen/size_185"
+        android:background="@color/color_F3_F3_F3">
+
+        <ImageView
+            android:id="@+id/iv_icon"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_96"
+            android:scaleType="fitXY"
+            android:src="@drawable/hotel_info_write_bg"
+            app:layout_constraintBottom_toTopOf="@+id/tv_name"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_7"
+            android:layout_marginLeft="@dimen/size_7"
+            android:layout_marginTop="@dimen/size_7"
+            android:layout_marginEnd="@dimen/size_7"
+            android:layout_marginRight="@dimen/size_7"
+            android:lines="2"
+            android:text="安化茶马古道，带你走进原乡原味"
+            android:textColor="@color/color_000000"
+            android:textSize="@dimen/text_size_14"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_icon" />
+
+        <TextView
+            android:id="@+id/tv_price_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_7"
+            android:layout_marginLeft="@dimen/size_7"
+            android:layout_marginBottom="@dimen/size_7"
+            android:text="￥"
+            android:textColor="@color/color_FF_60_00"
+            android:textSize="@dimen/text_size_11"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="399"
+            android:textColor="@color/color_FF_60_00"
+            android:textSize="@dimen/text_size_20"
+            android:textStyle="bold"
+            android:layout_marginBottom="@dimen/size_4"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/tv_price_unit" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="起"
+            android:textColor="@color/color_99_99_99"
+            android:textSize="@dimen/text_size_11"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_price_unit"
+            app:layout_constraintLeft_toRightOf="@+id/tv_price" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/size_10"
+            android:layout_marginRight="@dimen/size_12"
+            android:layout_marginBottom="@dimen/size_12"
+            android:text="96.8%满意"
+            android:textColor="@color/color_99_99_99"
+            android:textSize="@dimen/text_size_11"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

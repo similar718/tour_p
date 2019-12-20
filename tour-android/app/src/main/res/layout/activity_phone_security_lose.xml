@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="activity"
+            type="cn.xmzt.www.mine.activity.PhoneSecurityLoseActivity" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_F4_F4_F4"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/title_rl"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:onClick="@{activity::onClick}"
+                android:id="@+id/title_back_iv"
+                android:layout_width="wrap_content"
+                android:layout_centerVertical="true"
+
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/icon_new_back"/>
+
+            <TextView
+                android:id="@+id/title_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="原安全手机号丢失或停用"
+                android:textColor="@color/title_color"
+                android:textSize="17sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="如您原来的安全手机号丢失或停用，请联系客服400-666-1235。为了您的账户安全，致电客服前请准备好一下资料，以便验证您的身份：\n1、提供最近一笔订单的出游人信息(姓名、手机号)； \n2、提供订单交易的微信交易流水或支付宝交易流水； (需提供截图) \n3、提供原绑定手机号。" />
+    </LinearLayout>
+</layout>

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="model"
+            type="cn.xmzt.www.mine.model.MyCouponViewModel" />
+
+        <variable
+            name="myCouponBean"
+            type="cn.xmzt.www.mine.bean.MyCouponBean" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/coupon_bg_white_left_c"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/leftLayout"
+                android:layout_width="128dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/coupon_bg_orange_left_c"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingBottom="14dp"
+                android:paddingLeft="14dp"
+                android:paddingRight="22dp"
+                android:paddingTop="14dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/cny_unit"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:maxLines="1"
+                        android:textColor="@color/white"
+                        android:textSize="40sp"
+                        app:autoSizeMaxTextSize="40sp"
+                        app:autoSizeMinTextSize="18sp"
+                        app:autoSizeTextType="uniform" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_usable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_gravity="center"
+                android:id="@+id/rightLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp">
+
+                <ImageView
+                    android:id="@+id/iv_received"
+                    android:layout_width="59dp"
+                    android:layout_height="46dp"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/coupon_received_icon"
+                    android:visibility="visible" />
+
+                <cn.xmzt.www.view.labeltext.LabelTextView
+                    android:lines="2"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="5dp"
+                    android:textColor="@color/color_33_33_33"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:labelFillColor="true"
+                    app:labelMargin="10dp"
+                    app:labelPaddingHorizontal="10dp"
+                    app:labelPaddingVertical="3dp"
+                    app:labelStrokeColor="@color/color_24A4FF"
+                    app:labelStrokeRadius="8dp"
+                    app:labelStrokeWidth="1dp"
+                    app:labelTextColor="#FFFFFF"
+                    app:labelTextSize="10sp"/>
+
+                <TextView
+                    android:id="@+id/tv_get"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/tv_title"
+                    android:background="@drawable/border_blue_shape"
+                    android:ellipsize="end"
+                    android:paddingBottom="4dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="4dp"
+                    android:text="立即使用"
+                    android:textColor="@color/color_24A4FF"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/tv_start_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_title"
+                    android:ellipsize="end"
+                    android:paddingBottom="4dp"
+                    android:paddingTop="4dp"
+                    android:textColor="#999999"
+                    android:textSize="10sp"/>
+                <TextView
+                    android:id="@+id/tv_end_time"
+                    android:layout_toRightOf="@+id/tv_start_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_title"
+                    android:ellipsize="end"
+                    android:paddingBottom="4dp"
+                    android:paddingTop="4dp"
+                    android:textColor="#999999"
+                    android:textSize="10sp"/>
+                <TextView
+                    android:id="@+id/line"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/tv_start_time"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/line_dashed_shape_bg" />
+
+                <TextView
+                    android:id="@+id/tv_xq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/line"
+                    android:layout_marginBottom="7dp"
+                    android:layout_marginTop="7dp"
+                    android:text="详细信息"
+                    android:textColor="#666666"
+                    android:textSize="11sp" />
+
+                <ImageView
+                    android:id="@+id/iv_down_up"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/line"
+                    android:layout_marginTop="2dp"
+                    android:padding="7dp"
+                    android:src="@drawable/icon_c_up_down_selector" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_remark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="0.5dp"
+            android:background="@drawable/route_list_item_bg_bottom_c_shape"
+            android:padding="10dp"
+            android:textColor="#666666"
+            android:textSize="12sp"
+            android:visibility="gone" />
+    </LinearLayout>
+</layout>

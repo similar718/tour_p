@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="activity"
+            type="cn.xmzt.www.intercom.activity.TeamRoomActivity" />
+
+        <import type="android.view.View" />
+
+        <variable
+            name="model"
+            type="cn.xmzt.www.intercom.vm.TeamRoomViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@color/color_FF_FF_FF">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_centerVertical="true"
+                android:onClick="@{model::onClick}"
+                android:paddingLeft="20dp"
+                android:paddingRight="15dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/icon_new_back"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/iv_back"
+                android:layout_toLeftOf="@+id/iv_group_info"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_title_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxWidth="@dimen/dp_200"
+                    android:singleLine="true"
+                    tools:text="群昵称"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/text_size_17" />
+
+                <TextView
+                    android:id="@+id/tv_title_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    tools:text="(28)"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/text_size_17"/>
+
+                <ImageView
+                    android:id="@+id/iv_forbidden_bell"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_9"
+                    android:layout_marginLeft="@dimen/dp_9"
+                    android:src="@drawable/ic_chat_forbidden_bell"
+                    android:visibility="gone" />
+
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_group_info"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:onClick="@{model::onClick}"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:src="@drawable/ic_chat_top_group_info" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/color_F4_F4_F4" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_F4_F4_F4"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/message_activity_list_view_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/ll_bottom_message">
+
+                <cn.xmzt.www.nim.uikit.business.session.helper.MsgBkImageView
+                    android:id="@+id/message_activity_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:id="@+id/team_notify_bar_panel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/messageListView"
+                        style="@style/recycler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_prompt_position"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_46"
+                    android:background="@drawable/shape_rectangle_gradient_blue"
+                    android:onClick="@{model::onClick}"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/iv_position"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/dp_10"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:src="@drawable/ic_chat_position" />
+
+                    <TextView
+                        android:id="@+id/tv_prompt_position"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/dp_40"
+                        android:layout_marginLeft="@dimen/dp_40"
+                        android:text="正在共享位置"
+                        android:textColor="@color/color_FF_FF_FF"
+                        android:textSize="@dimen/text_size_14" />
+
+                    <ImageView
+                        android:id="@+id/iv_goto_position"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:onClick="@{model::onClick}"
+                        android:paddingLeft="@dimen/dp_18"
+                        android:paddingRight="@dimen/dp_18"
+                        android:src="@drawable/ic_chat_arrow_right_white" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_prompt_broadcast"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_46"
+                    android:background="@drawable/shape_rectangle_gradient_blue"
+                    android:onClick="@{model::onClick}"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_prompt_broadcast"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/dp_40"
+                        android:layout_marginLeft="@dimen/dp_40"
+                        android:text="群主/领队已开启广播模式，成员暂不能发言"
+                        android:textColor="@color/color_FF_FF_FF"
+                        android:textSize="@dimen/text_size_14" />
+
+                    <ImageView
+                        android:id="@+id/iv_cancel_broadcast"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:onClick="@{model::onClick}"
+                        android:paddingStart="@dimen/dp_18"
+                        android:paddingLeft="@dimen/dp_18"
+                        android:paddingEnd="@dimen/dp_18"
+                        android:paddingRight="@dimen/dp_18"
+                        android:src="@drawable/ic_chat_cancel_white" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_prompt_team"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_46"
+                    android:background="@drawable/shape_rectangle_gradient_blue"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_prompt_team"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="该群组不存在"
+                        android:textColor="@color/color_FF_FF_FF"
+                        android:textSize="@dimen/text_size_14" />
+
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/btn_new_msg"
+                    android:layout_width="@dimen/dp_113"
+                    android:layout_height="@dimen/dp_37"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="@dimen/dp_60"
+                    android:background="@drawable/ic_chat_new_msg_bg"
+                    android:drawableStart="@drawable/ic_chat_new_msg_arrow_up"
+                    android:onClick="@{model::onClick}"
+                    android:paddingStart="@dimen/dp_20"
+                    android:paddingEnd="@dimen/dp_5"
+                    android:text="9条新消息"
+                    android:textColor="@color/color_49_BE_FF"
+                    android:textSize="@dimen/text_size_14"
+                    android:visibility="invisible" />
+            </FrameLayout>
+
+            <ImageView
+                android:id="@+id/btn_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_chat_location_navigation"
+                android:onClick="@{model::onClick}"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/dp_214"
+                android:layout_marginRight="@dimen/dp_m_5"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:id="@+id/ll_bottom_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/shape_rectangle_gray_shadow"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_bottom_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_118">
+
+                    <EditText
+                        android:id="@+id/et_bottom_input_message"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_44"
+                        android:layout_marginStart="@dimen/dp_10"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginTop="@dimen/dp_11"
+                        android:layout_marginEnd="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/dp_10"
+                        android:autoLink="web|email|phone"
+                        android:background="@drawable/shape_rectangle_white_radius_25"
+                        android:gravity="center_vertical"
+                        android:hint="请输入消息..."
+                        android:maxHeight="72dip"
+                        android:maxLines="4"
+                        android:paddingStart="@dimen/dp_22"
+                        android:paddingLeft="@dimen/dp_22"
+                        android:paddingEnd="@dimen/dp_22"
+                        android:paddingRight="@dimen/dp_22"
+                        android:textColor="@color/color_333333"
+                        android:textColorHint="@color/color_999999"
+                        android:textCursorDrawable="@null"
+                        android:textSize="@dimen/text_size_17"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <Button
+                        android:id="@+id/iv_bottom_audio_record"
+                        android:layout_width="@dimen/dp_72"
+                        android:layout_height="@dimen/dp_72"
+                        android:layout_marginTop="@dimen/dp_32"
+                        android:background="@drawable/style_btn_audio_record"
+                        android:visibility="invisible"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <ImageView
+                        android:id="@+id/iv_bottom_photo"
+                        android:layout_width="@dimen/dp_50"
+                        android:layout_height="@dimen/dp_50"
+                        android:contentDescription="@string/empty"
+                        android:onClick="@{model::onClick}"
+                        android:scaleType="center"
+                        android:src="@drawable/ic_chat_bottom_photo"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@+id/iv_bottom_position" />
+
+                    <ImageView
+                        android:id="@+id/iv_bottom_position"
+                        android:layout_width="@dimen/dp_50"
+                        android:layout_height="@dimen/dp_50"
+                        android:contentDescription="@string/empty"
+                        android:onClick="@{model::onClick}"
+                        android:scaleType="center"
+                        android:src="@drawable/ic_chat_bottom_position"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@+id/iv_bottom_photo"
+                        app:layout_constraintRight_toLeftOf="@+id/iv_bottom_voice" />
+
+                    <ImageView
+                        android:id="@+id/iv_bottom_voice"
+                        android:layout_width="@dimen/dp_50"
+                        android:layout_height="@dimen/dp_50"
+                        android:contentDescription="@string/empty"
+                        android:onClick="@{model::onClick}"
+                        android:scaleType="center"
+                        android:src="@drawable/ic_chat_bottom_voice"
+                        android:visibility="invisible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@+id/iv_bottom_position"
+                        app:layout_constraintRight_toLeftOf="@+id/iv_bottom_emoticon" />
+
+                    <ImageView
+                        android:id="@+id/iv_bottom_emoticon"
+                        android:layout_width="@dimen/dp_50"
+                        android:layout_height="@dimen/dp_50"
+                        android:contentDescription="@string/empty"
+                        android:onClick="@{model::onClick}"
+                        android:scaleType="center"
+                        android:src="@drawable/ic_chat_bottom_emoticon"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@+id/iv_bottom_voice"
+                        app:layout_constraintRight_toLeftOf="@+id/iv_bottom_plus" />
+
+                    <ImageView
+                        android:id="@+id/iv_bottom_plus"
+                        android:layout_width="@dimen/dp_50"
+                        android:layout_height="@dimen/dp_50"
+                        android:contentDescription="@string/empty"
+                        android:onClick="@{model::onClick}"
+                        android:scaleType="center"
+                        android:src="@drawable/ic_chat_bottom_plus"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@+id/iv_bottom_emoticon"
+                        app:layout_constraintRight_toRightOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/iv_bottom_cross"
+                        android:layout_width="@dimen/dp_50"
+                        android:layout_height="@dimen/dp_50"
+                        android:contentDescription="@string/empty"
+                        android:onClick="@{model::onClick}"
+                        android:scaleType="center"
+                        android:src="@drawable/ic_chat_bottom_cross"
+                        android:visibility="invisible"
+                        app:layout_constraintBottom_toBottomOf="@+id/iv_bottom_plus"
+                        app:layout_constraintLeft_toLeftOf="@+id/iv_bottom_plus"
+                        app:layout_constraintRight_toRightOf="@+id/iv_bottom_plus" />
+
+                    <TextView
+                        android:id="@+id/tv_bottom_send"
+                        android:layout_width="@dimen/dp_56"
+                        android:layout_height="@dimen/dp_28"
+                        android:layout_marginTop="@dimen/dp_18"
+                        android:layout_marginEnd="@dimen/dp_19"
+                        android:layout_marginRight="@dimen/dp_19"
+                        android:background="@drawable/shape_rectangle_blue_radius_14"
+                        android:contentDescription="@string/empty"
+                        android:gravity="center"
+                        android:onClick="@{model::onClick}"
+                        android:text="@string/btn_send"
+                        android:textColor="@color/color_FF_FF_FF"
+                        android:textSize="@dimen/text_size_14"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <cn.xmzt.www.nim.uikit.business.session.emoji.EmoticonPickerView
+                    android:id="@+id/emoticon_picker_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+</layout>

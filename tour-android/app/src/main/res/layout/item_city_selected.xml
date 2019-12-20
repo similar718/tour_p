@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="item"
+            type="cn.xmzt.www.home.bean.CityBean"/>
+    </data>
+    <RelativeLayout
+        android:id="@+id/itemLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/color_24A4FF"
+        android:layout_marginLeft="@dimen/dp_7"
+        android:layout_marginRight="@dimen/dp_7">
+        <TextView android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="@dimen/dp_50"
+            android:minHeight="@dimen/dp_30"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:background="@drawable/shape_border_white_radius_4"
+            android:paddingTop="@dimen/dp_4"
+            android:paddingBottom="@dimen/dp_4"
+            android:paddingLeft="@dimen/dp_9"
+            android:paddingRight="@dimen/dp_9"
+            tools:text="出发地"
+            android:text="@{item.areaName}"
+            android:textSize="12sp"
+            android:textColor="@color/white" />
+        <ImageView android:id="@+id/iv_del"
+            android:layout_width="@dimen/dp_16"
+            android:layout_height="@dimen/dp_16"
+            android:layout_alignTop="@+id/tv_name"
+            android:layout_toRightOf="@+id/tv_name"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="-8dp"
+            android:src="@drawable/icon_del_blue"/>
+    </RelativeLayout>
+</layout>

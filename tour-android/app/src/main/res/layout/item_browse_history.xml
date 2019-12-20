@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:textSize="12sp"
+        android:id="@+id/tv_date"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="2019-7-29 14:05:05" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_check"
+            android:layout_width="wrap_content"
+            android:layout_height="110dp">
+
+            <ImageView
+                android:id="@+id/iv_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:src="@drawable/scenic_spot_map_item_route_line_right_icon" />
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/shape_hotel_bac"
+            android:paddingRight="15dp">
+
+
+            <ImageView
+                android:id="@+id/iv_hotel_image"
+                android:layout_width="110dp"
+                android:layout_height="90dp"
+                android:layout_marginLeft="10dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/hotel1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_type"
+                android:layout_width="40dp"
+                android:layout_height="21dp"
+                android:gravity="center"
+                android:textColor="@color/color_FF_FF_FF"
+                android:textSize="11sp"
+                app:layout_constraintLeft_toLeftOf="@+id/iv_hotel_image"
+                app:layout_constraintTop_toTopOf="@+id/iv_hotel_image" />
+
+            <ImageView
+                android:id="@+id/iv_collection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_collection"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_start"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_hotel_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:maxLines="3"
+                android:text="深圳东部华侨城瀑布酒店"
+                android:textColor="@color/color_33_33_33"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toRightOf="@+id/iv_hotel_image"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/iv_hotel_image" />
+
+
+            <TextView
+                android:id="@+id/tv_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" ￥ "
+                android:textColor="@color/color_FF_60_00"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_hotel_image"
+                app:layout_constraintLeft_toLeftOf="@+id/tv_hotel_name" />
+
+            <TextView
+                android:id="@+id/tv_hotel_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="3dp"
+                android:text="699"
+                android:textColor="@color/color_FF_60_00"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_hotel_image"
+                app:layout_constraintLeft_toRightOf="@+id/tv_start" />
+
+            <TextView
+                android:id="@+id/tv_end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="起"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_hotel_image"
+                app:layout_constraintLeft_toRightOf="@+id/tv_hotel_price" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</LinearLayout>

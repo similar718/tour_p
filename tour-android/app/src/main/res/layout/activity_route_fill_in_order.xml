@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="activity"
+            type="cn.xmzt.www.route.activity.RouteFillinOrderActivity" />
+
+        <variable
+            name="adapter"
+            type="cn.xmzt.www.route.adapter.RouteFillinOrderAdapter" />
+
+        <variable
+            name="vm"
+            type="cn.xmzt.www.route.vm.RouteFillinOrderViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout android:id="@+id/titleLayout"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_centerVertical="true"
+                android:onClick="@{activity::onClick}"
+
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/icon_new_back"/>
+
+            <TextView
+                android:id="@+id/title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="68dp"
+                android:text="填写订单"
+                android:textColor="@color/title_color"
+                android:textSize="18sp" />
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@+id/titleLayout"
+            android:background="@color/color_line"/>
+        <RelativeLayout
+            android:id="@+id/bottomLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/color_line" />
+
+            <TextView
+                android:id="@+id/tv_reserve"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/route_reserve_bg_shape"
+                android:onClick="@{activity::onClick}"
+                android:paddingLeft="28dp"
+                android:paddingTop="13dp"
+                android:paddingRight="28dp"
+                android:paddingBottom="13dp"
+                android:textStyle="bold"
+                android:text="立即预订"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignTop="@+id/tv_reserve"
+                android:layout_alignBottom="@+id/tv_reserve"
+                android:paddingRight="18dp"
+                android:layout_toLeftOf="@+id/tv_reserve"
+                android:drawableRight="@drawable/icon_route_time_persons_detail"
+                android:drawablePadding="5dp"
+                android:gravity="center_vertical"
+                android:onClick="@{activity::onClick}"
+                android:text="明细"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:layout_toLeftOf="@+id/tv_detail">
+
+                <TextView
+                    android:id="@+id/tv_amount_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="总额："
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="¥"
+                    android:textColor="#FF6000"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FF6000"
+                    android:textSize="22sp"
+                    tools:text="9078" />
+            </LinearLayout>
+        </RelativeLayout>
+        <cn.xmzt.www.view.AutofitRecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/titleLayout"
+            android:layout_above="@+id/bottomLayout"
+            android:background="#F4F4F4"
+            android:overScrollMode="never"
+            app:adapter="@{adapter}"/>
+        <FrameLayout android:id="@+id/keyboardLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#CED0DC"
+            android:layout_alignParentBottom="true">
+            <cn.xmzt.www.view.CarKeyboardView
+                android:id="@+id/keyboard_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:background="#CED0DC"
+                android:keyBackground="@drawable/selector_key"
+                android:keyTextColor="#333333"
+                android:shadowRadius="0.0"
+                android:shadowColor="#CED0DC"
+                android:keyTextSize="17sp"
+                android:labelTextSize="17sp" />
+        </FrameLayout>
+    </RelativeLayout>
+</layout>

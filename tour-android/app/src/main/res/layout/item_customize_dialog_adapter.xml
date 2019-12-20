@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="item"
+            type="cn.xmzt.www.home.bean.CustomizeLiveDialogBean"/>
+        <import type="android.view.View" />
+    </data>
+    <RelativeLayout
+        android:id="@+id/itemLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_FF_FF_FF">
+        <RelativeLayout
+            android:id="@+id/rl_no_leader"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/tv_line_1"
+            android:layout_height="@dimen/dp_46">
+            <TextView
+                android:id="@+id/tv_no_leader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{item.title}"
+                android:textSize="@dimen/dp_16"
+                android:textColor="@{item.select ? @color/color_24A4FF : @color/color_999999}"
+                android:layout_centerVertical="true"
+                />
+            <ImageView
+                android:id="@+id/iv_no_leader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/dialog_customize_leader_type_choice"
+                android:padding="@dimen/dp_10"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:visibility="@{item.select ? View.VISIBLE : View.GONE}"
+                />
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/tv_line_2"
+            android:background="@color/color_f4f4f4"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1_px"
+            android:layout_below="@+id/rl_no_leader"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:layout_marginRight="@dimen/dp_7"
+            />
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="model"
+            type="cn.xmzt.www.mine.model.AccountSecurityViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/title_rl"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/title_back_iv"
+                android:layout_width="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/icon_new_back"
+                android:layout_centerVertical="true"
+                android:onClick="@{model::onClick}"/>
+
+            <TextView
+                android:id="@+id/title_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="账号与安全"
+                android:textColor="@color/title_color"
+                android:textSize="17sp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/bind_phone_rl"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mine_layout_height"
+            android:layout_marginTop="15dp"
+            android:background="@color/white"
+            android:onClick="@{model::onClick}"
+            android:orientation="horizontal"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="绑定手机号"
+                android:textColor="@color/title_color"
+                android:textSize="@dimen/text_size_16" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical|end"
+                android:paddingEnd="10dp"
+                android:text='@{model.bindPhone?@string/go_change:@string/go_bind}'
+                android:textColor="@color/gray"
+                android:textSize="@dimen/mine_tv_text_size" />
+
+            <ImageView
+                android:layout_width="@dimen/mine_arrow_width"
+                android:layout_height="@dimen/mine_arrow_height"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/arrow" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_1"
+            android:background="@color/gray_1"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/bind_contact_rl"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mine_layout_height"
+            android:background="@color/white"
+            android:onClick="@{model::onClick}"
+            android:orientation="horizontal"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="绑定社交账号"
+                android:textColor="@color/title_color"
+                android:textSize="@dimen/text_size_16" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical|end"
+                android:paddingEnd="10dp"
+                android:text='@{model.bindWechat?@string/go_change:@string/go_bind}'
+                android:textColor="@color/gray"
+                android:textSize="@dimen/mine_tv_text_size" />
+
+            <ImageView
+                android:layout_width="@dimen/mine_arrow_width"
+                android:layout_height="@dimen/mine_arrow_height"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/arrow" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/modification_login_pwd_rl"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mine_layout_height"
+            android:layout_marginTop="15dp"
+            android:background="@color/white"
+            android:onClick="@{model::onClick}"
+            android:orientation="horizontal"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp">
+
+            <TextView
+                android:id="@+id/tv_login_password"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="修改登录密码"
+                android:textColor="@color/title_color"
+                android:textSize="@dimen/text_size_16" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical|end"
+                android:paddingEnd="10dp"
+                android:text='@{model.setLoginPsw?@string/go_change:@string/go_setting}'
+                android:textColor="@color/gray"
+                android:textSize="@dimen/mine_tv_text_size" />
+
+            <ImageView
+                android:layout_width="@dimen/mine_arrow_width"
+                android:layout_height="@dimen/mine_arrow_height"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/arrow" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_1" />
+
+        <LinearLayout
+            android:id="@+id/modification_pay_pwd_rl"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mine_layout_height"
+            android:background="@color/white"
+            android:onClick="@{model::onClick}"
+            android:orientation="horizontal"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp">
+
+            <TextView
+                android:id="@+id/tv_pay_password"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="设置支付密码"
+                android:textColor="@color/title_color"
+                android:textSize="@dimen/text_size_16" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical|end"
+                android:paddingEnd="10dp"
+                android:text='@{model.setPayPsw?@string/go_change:@string/go_setting}'
+                android:textColor="@color/gray"
+                android:textSize="@dimen/mine_tv_text_size" />
+
+            <ImageView
+                android:layout_width="@dimen/mine_arrow_width"
+                android:layout_height="@dimen/mine_arrow_height"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/arrow" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/close_account_rl"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mine_layout_height"
+            android:layout_marginTop="15dp"
+            android:background="@color/white"
+            android:onClick="@{model::onClick}"
+            android:orientation="horizontal"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="永久注销账号"
+                android:textColor="@color/title_color"
+                android:textSize="@dimen/text_size_16" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical|end"
+                android:paddingEnd="10dp"
+                android:text="注销后无法恢复,请谨慎操作"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/mine_tv_text_size" />
+
+            <ImageView
+                android:layout_width="@dimen/mine_arrow_width"
+                android:layout_height="@dimen/mine_arrow_height"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/arrow" />
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

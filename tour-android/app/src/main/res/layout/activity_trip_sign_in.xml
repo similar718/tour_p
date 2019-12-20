@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="activity"
+            type="cn.xmzt.www.smartteam.activity.TripSignInActivity" />
+        <variable
+            name="viewModel"
+            type="cn.xmzt.www.smartteam.vm.TripSignInViewModel" />
+    </data>
+    <RelativeLayout android:id="@+id/rootLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:fitsSystemWindows="false">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0"
+            android:layout_alignParentBottom="true"
+            />
+        <!-- 顶部背景 -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_296"
+            android:background="@drawable/trip_sign_in_top_bg"/>
+
+        <!-- 顶部返回和文字 -->
+        <RelativeLayout
+            android:id="@+id/rl_top_c"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_44">
+            <ImageView
+                android:id="@+id/back_iv"
+                android:layout_width="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:onClick="@{activity::onClick}"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/icon_new_back_white"/>
+            <TextView
+                android:id="@+id/tv_top_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="集结点签到"
+                android:textSize="@dimen/text_size_17"
+                android:textColor="@color/color_FF_FF_FF"
+                android:layout_centerInParent="true"
+                android:maxWidth="@dimen/dp_260"
+                android:singleLine="true"
+                android:ellipsize="end"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_center"
+            android:layout_width="@dimen/dp_74"
+            android:layout_height="@dimen/dp_74"
+            android:layout_marginTop="@dimen/dp_90"
+            android:layout_centerHorizontal="true">
+            <ImageView
+                android:id="@+id/iv_sign_in_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/trip_signin_normal_advance_icon"
+                android:layout_centerInParent="true"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_top_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_center"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_16">
+            <TextView
+                android:id="@+id/tv_sign_in_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="@dimen/text_size_14"
+                android:textStyle="bold"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/dp_26"
+                android:textColor="@color/color_FF_FF_FF"/>
+            <TextView
+                android:id="@+id/tv_sign_in_status_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_sign_in_status"
+                android:layout_marginTop="@dimen/dp_m_23"
+                android:text="距离集结点 2.2km"
+                android:drawableLeft="@drawable/trip_sign_in_distance_father_icon"
+                android:textSize="@dimen/text_size_12"
+                android:drawablePadding="@dimen/dp_6"
+                android:visibility="gone"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:textColor="@color/color_FF_FF_FF_50"/>
+
+            <ImageView
+                android:id="@+id/iv_sign_in_refresh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/trip_sign_in_refresh_icon"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone"
+                android:onClick="@{activity::onClick}"
+                android:layout_below="@+id/tv_sign_in_status_distance"
+                android:padding="@dimen/dp_7"
+                android:layout_marginBottom="@dimen/dp_10"
+                />
+
+        </RelativeLayout>
+        <!-- 底部内容背景 -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rl_top_content"
+            android:background="@drawable/trip_sign_in_content_bg">
+            <!-- 签到状态圆圈 -->
+            <RelativeLayout
+                android:id="@+id/rl_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_58">
+
+                <ImageView
+                    android:id="@+id/iv_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/trip_sign_in_normal_bg"
+                    />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/lav_anim"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_alignTop="@+id/iv_status"
+                    android:layout_alignBottom="@+id/iv_status"
+                    android:layout_alignLeft="@+id/iv_status"
+                    android:layout_alignRight="@+id/iv_status"
+                    android:visibility="invisible"
+                    app:lottie_rawRes="@raw/sign_in_data_blue"
+                    app:lottie_loop="true"
+                    app:lottie_autoPlay="true" />
+
+                <!-- 签到状态内容 -->
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_time_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textStyle="bold"
+                        android:textColor="@color/color_24A4FF"
+                        android:textSize="@dimen/text_size_14"
+                        android:layout_centerHorizontal="true"
+                        />
+                    <TextView
+                        android:id="@+id/tv_time_detail_hint"
+                        android:layout_below="@+id/tv_time_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_4"
+                        android:text=""
+                        android:textColor="@color/color_24A4FF_50"
+                        android:textSize="@dimen/text_size_14"
+                        android:layout_centerHorizontal="true"
+                        />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <!-- 签到按钮 -->
+            <ImageView
+                android:id="@+id/iv_sign_in_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{activity::onClick}"
+                android:src="@drawable/trip_sign_in_immediately_no_btn"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/rl_status"
+                android:layout_marginTop="@dimen/dp_24"
+                />
+
+            <TextView
+                android:id="@+id/tv_bottom_hint_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/dp_40"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/color_999999"
+                android:textSize="@dimen/text_size_12"
+                android:text="签到仅记录时间和位置"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+</layout>
+

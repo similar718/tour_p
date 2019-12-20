@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+    </data>
+    <FrameLayout
+        android:id="@+id/itemLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/dp_7"
+        android:layout_marginRight="@dimen/dp_7"
+        android:layout_marginBottom="@dimen/dp_14"
+        android:minWidth="@dimen/dp_77"
+        android:minHeight="@dimen/dp_35"
+        android:background="@drawable/shape_border_blue_radius_4">
+        <TextView android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="3dp"
+            tools:text="出发地"
+            android:textSize="12sp"
+            android:textColor="@color/filter_text_selector" />
+        <ImageView android:id="@+id/iv_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:visibility="gone"
+            android:src="@drawable/icon_checked_filter"/>
+    </FrameLayout>
+</layout>

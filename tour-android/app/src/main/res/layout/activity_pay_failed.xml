@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="activity"
+            type="cn.xmzt.www.pay.activity.PayFailedActivity" />
+    </data>
+    <LinearLayout android:id="@+id/rootLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:gravity="center"
+            android:background="@color/white"
+            android:text="订单支付"
+            android:textColor="@color/color_33_33_33"
+            android:textSize="18sp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:drawablePadding="@dimen/dp_29"
+            android:drawableTop="@drawable/icon_pay_failed"
+            android:layout_marginTop="@dimen/dp_51"
+            android:text="支付失败"
+            android:textColor="@color/color_33_33_33"
+            android:textSize="17sp" />
+        <TextView android:id="@+id/tv_retry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{activity::onClick}"
+            android:background="@drawable/shape_blue_border_radius_100"
+            android:minWidth="@dimen/dp_110"
+            android:minHeight="@dimen/dp_36"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/dp_60"
+            android:padding="5dp"
+            android:text="点击重试"
+            android:textColor="@color/color_24A4FF"
+            android:textSize="17sp" />
+    </LinearLayout>
+</layout>
+

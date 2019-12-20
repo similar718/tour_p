@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="activity"
+            type="cn.xmzt.www.selfdrivingtools.activity.ScenicSpotMapActivity" />
+
+        <variable
+            name="model"
+            type="cn.xmzt.www.selfdrivingtools.viewmodel.ScenicSpotMapViewModel" />
+
+        <variable
+            name="item"
+            type="cn.xmzt.www.selfdrivingtools.bean.ScenicSpotGuideBean" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <!-- 顶部标题栏 -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:background="@color/color_FF_FF_FF">
+
+            <ImageView
+                android:id="@+id/scenic_back_iv"
+                android:layout_width="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:onClick="@{activity::onClick}"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/icon_new_back" />
+
+            <TextView
+                android:id="@+id/top_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text=""
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/size_17" />
+
+            <ImageView
+                android:id="@+id/scenic_right_add_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:onClick="@{activity::onClick}"
+                android:paddingLeft="@dimen/dp_20"
+                android:paddingRight="@dimen/size_20"
+                android:src="@drawable/scenic_spot_map_right_add_icon" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/line_tv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1_px"
+            android:background="@color/color_e5e5e5" />
+        <!-- 类型 -->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_53"
+            android:background="@color/color_FF_FF_FF">
+
+            <RelativeLayout
+                android:id="@+id/rl_all_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:onClick="@{activity::onClick}"
+                android:paddingLeft="@dimen/size_20"
+                android:paddingRight="@dimen/size_20">
+
+                <ImageView
+                    android:id="@+id/iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/scenic_spot_map_all_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/iv"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/size_3"
+                    android:text="全部"
+                    android:textColor="@color/color_999999"
+                    android:textSize="@dimen/text_size_12" />
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_type_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/rl_all_type" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.amap.api.maps.MapView
+                android:id="@+id/mv_map"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:id="@+id/iv_mine_location"
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="@dimen/dp_46"
+                android:paddingLeft="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_80"
+                android:onClick="@{activity::onClick}"
+                android:src="@drawable/scenic_spot_map_mine_icon"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/rl_left_automatic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_mine_location"
+                android:paddingLeft="@dimen/size_10"
+                android:layout_marginTop="@dimen/dp_6"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="@dimen/dp_40"
+                    android:layout_height="@dimen/dp_46"
+                    android:background="@drawable/scenic_spot_map_automatic_bg">
+
+                    <Switch
+                        android:id="@+id/switch_automatic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/size_5"
+                        android:thumb="@drawable/switch_ios_thumb"
+                        android:track="@drawable/switch_ios_track_selector" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="@dimen/size_4"
+                        android:text="自动"
+                        android:textColor="@color/color_FF_FF_FF"
+                        android:textSize="@dimen/text_size_11" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_left_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_left_automatic"
+                android:paddingLeft="@dimen/size_10"
+                android:layout_marginTop="@dimen/dp_6"
+                android:onClick="@{activity::onClick}"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="@dimen/dp_40"
+                    android:layout_height="@dimen/dp_46"
+                    android:background="@drawable/scenic_spot_map_automatic_bg">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/scenic_spot_group_left_icon"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/dp_4"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_group_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="@dimen/size_4"
+                        android:paddingLeft="@dimen/dp_2"
+                        android:paddingRight="@dimen/dp_2"
+                        android:singleLine="true"
+                        android:text="开启"
+                        android:textColor="@color/color_FF_FF_FF"
+                        android:textSize="@dimen/text_size_11" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/iv_right_center_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/dp_m_10"
+                android:layout_marginTop="@dimen/dp_91"
+                android:onClick="@{activity::onClick}"
+                android:src="@drawable/scenic_spot_map_right_center_icon"
+                android:visibility="gone" />
+<!--
+            <RelativeLayout
+                android:id="@+id/rl_sl_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="@{activity::onClick}">-->
+
+                <com.yinglan.scrolllayout.ScrollLayout
+                    android:id="@+id/rl_bottom_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:allowHorizontalScroll="true"
+                    app:exitOffset="150dp"
+                    app:isSupportExit="true"
+                    app:maxOffset="400dp"
+                    app:minOffset="10dp"
+                    android:visibility="gone"
+                    app:mode="exit">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <RelativeLayout
+                            android:id="@+id/rl_b"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/dialog_route_pick_detail_bg"
+                            android:visibility="visible">
+
+                            <LinearLayout
+                                android:id="@+id/itemLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+                                <!-- 列表顶部显示问题 -->
+                                <RelativeLayout
+                                    android:id="@+id/item_map_scenic_spot_top_rl"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:onClick="@{activity::onClick}">
+
+                                    <TextView
+                                        android:id="@+id/tv_scenic_spot_num"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_marginBottom="@dimen/size_10"
+                                        android:drawableTop="@drawable/scenic_spot_bottom_to_t"
+                                        android:layout_marginTop="@dimen/size_10"
+                                        android:text='@{"全部景点("+item.explainPointCount+")"}'
+                                        android:textColor="@color/color_333333"
+                                        android:textSize="@dimen/text_size_14" />
+
+                                    <ImageView
+                                        android:id="@+id/item_map_scenic_spot_offline_iv"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentRight="true"
+                                        android:onClick="@{activity::onClick}"
+                                        android:paddingBottom="@dimen/size_11"
+                                        android:paddingLeft="@dimen/dp_10"
+                                        android:paddingRight="@dimen/size_10"
+                                        android:layout_centerVertical="true"
+                                        android:paddingTop="@dimen/size_12"
+                                        android:src="@drawable/scenic_spot_map_item_offline_icon" />
+
+                                    <TextView
+                                        android:id="@+id/item_map_scenic_spot_search_top_tv"
+                                        android:layout_width="@dimen/dp_41"
+                                        android:layout_height="@dimen/size_17"
+                                        android:layout_marginLeft="@dimen/size_20"
+                                        android:layout_marginTop="@dimen/size_14"
+                                        android:drawableLeft="@drawable/scenic_spot_map_item_search_top_icon"
+                                        android:drawablePadding="@dimen/size_3"
+                                        android:text="搜索"
+                                        android:textColor="@color/color_999999"
+                                        android:textSize="@dimen/text_size_12"
+                                        android:visibility="gone" />
+                                </RelativeLayout>
+                                <!-- 中间位置的时候显示的搜索框 -->
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/dp_1_px"
+                                    android:background="@color/color_e5e5e5" />
+
+                                <RelativeLayout
+                                    android:id="@+id/item_map_scenic_spot_search_rl"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/size_45"
+                                    android:onClick="@{activity::onClick}"
+                                    android:visibility="visible">
+                                    <!-- 搜索 -->
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/size_35"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="@dimen/size_12"
+                                        android:layout_marginRight="@dimen/size_8"
+                                        android:layout_marginTop="@dimen/size_6"
+                                        android:layout_toLeftOf="@+id/city_rl"
+                                        android:layout_toRightOf="@+id/title_back_iv"
+                                        android:background="@drawable/search_bg_shape">
+
+                                        <ImageView
+                                            android:id="@+id/search_iv"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerVertical="true"
+                                            android:layout_marginLeft="@dimen/size_10"
+                                            android:src="@drawable/search" />
+
+                                        <EditText
+                                            android:id="@+id/et_search"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_centerVertical="true"
+                                            android:layout_marginLeft="@dimen/size_10"
+                                            android:layout_toLeftOf="@+id/delete_iv"
+                                            android:layout_toRightOf="@+id/search_iv"
+                                            android:background="@null"
+                                            android:hint="请输入景点名称"
+                                            android:imeOptions="actionSearch"
+                                            android:singleLine="true"
+                                            android:textColor="@color/title_color"
+                                            android:textSize="@dimen/text_size_12" />
+
+                                        <ImageView
+                                            android:id="@+id/delete_iv"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerVertical="true"
+                                            android:layout_alignParentRight="true"
+                                            android:onClick="@{activity::onClick}"
+                                            android:paddingRight="@dimen/dp_10"
+                                            android:src="@drawable/login_delete"/>
+                                    </RelativeLayout>
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/dp_1_px"
+                                        android:background="@color/color_e5e5e5"
+                                        android:layout_alignParentBottom="true"/>
+                                </RelativeLayout>
+                                <TextView
+                                    android:id="@+id/tv_empty"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/dp_100"
+                                    android:text="未搜索到相关内容"
+                                    android:textColor="@color/color_333333"
+                                    android:textSize="@dimen/text_size_16"
+                                    android:onClick="@{activity::onClick}"
+                                    android:gravity="center"
+                                    android:visibility="gone"
+                                    />
+                                <com.yinglan.scrolllayout.content.ContentRecyclerView
+                                    android:id="@+id/rv_spot_list"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/color_FF_FF_FF"
+                                    android:paddingBottom="@dimen/dp_105"
+                                    android:paddingTop="@dimen/dp_10"
+                                    android:paddingRight="@dimen/dp_5"
+                                    android:paddingLeft="@dimen/dp_5"/>
+                            </LinearLayout>
+
+                            <com.yinglan.scrolllayout.content.ContentRecyclerView
+                                android:paddingBottom="15dp"
+                                android:id="@+id/rv_bottom_list_line"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/dialog_route_pick_detail_bg"
+                                android:visibility="gone" />
+
+                            <com.yinglan.scrolllayout.content.ContentRecyclerView
+                                android:paddingBottom="15dp"
+                                android:id="@+id/rv_bottom_list_other"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/dialog_route_pick_detail_bg"
+                                android:visibility="gone" />
+
+                        </RelativeLayout>
+                        <!-- 底部上滑查看更多结果 -->
+                        <TextView
+                            android:id="@+id/tv_list_more"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_50"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/dialog_route_pick_detail_bg"
+                            android:drawablePadding="@dimen/dp_0"
+                            android:drawableTop="@drawable/scenic_spot_bottom_to_t"
+                            android:gravity="center"
+                            android:onClick="@{activity::onClick}"
+                            android:paddingBottom="@dimen/dp_8"
+                            android:paddingTop="@dimen/size_10"
+                            android:text="上滑查看更多结果"
+                            android:textColor="@color/color_333333"
+                            android:textSize="@dimen/text_size_16"
+                            android:visibility="visible" />
+                        <TextView
+                            android:id="@+id/tv_list_more_line"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_5"
+                            android:background="@drawable/gray_gradient_top"
+                            android:layout_below="@+id/tv_list_more"
+                            />
+                    </RelativeLayout>
+                </com.yinglan.scrolllayout.ScrollLayout>
+            <!--</RelativeLayout>-->
+
+            <RelativeLayout
+                android:id="@+id/rl_voice_start_play_show"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_32"
+                android:onClick="@{activity::onClick}"
+                android:background="@color/color_CC333333"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/play_show_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp_20"
+                    android:background="@drawable/scenic_spot_play_show_anim" />
+
+                <TextView
+                    android:id="@+id/tv_voice_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp_16"
+                    android:layout_toRightOf="@+id/play_show_iv"
+                    android:text="正在为您播放“东江湖风景区”语音导游"
+                    android:textColor="@color/color_24A4FF"
+                    android:textSize="@dimen/text_size_12" />
+
+                <ImageView
+                    android:id="@+id/play_show_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:onClick="@{activity::onClick}"
+                    android:paddingLeft="@dimen/dp_20"
+                    android:paddingRight="@dimen/dp_20"
+                    android:src="@drawable/map_voice_cancel" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</layout>

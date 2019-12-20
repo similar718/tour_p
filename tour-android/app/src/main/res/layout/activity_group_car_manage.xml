@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="activity"
+            type="cn.xmzt.www.intercom.activity.GroupCarManageActivity" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_F4_F4_F4"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@color/color_FF_FF_FF">
+
+            <ImageView android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:onClick="@{activity::onClick}"
+                android:layout_centerVertical="true"
+
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/icon_new_back"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="群车辆列表"
+                android:textColor="@color/color_33_33_33"
+                android:textSize="17sp" />
+            <FrameLayout android:id="@+id/editLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/dp_44"
+                android:onClick="@{activity::onClick}"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true">
+                <ImageView android:id="@+id/iv_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingLeft="@dimen/dp_15"
+                    android:paddingRight="@dimen/dp_20"
+                    android:src="@drawable/icon_menu_dot" />
+            </FrameLayout>
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/color_line"/>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_F4_F4_F4"
+            android:layout_weight="1">
+            <cn.xmzt.www.view.AutofitRecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/dp_3"
+                android:paddingRight="@dimen/dp_3"
+                android:overScrollMode="never"/>
+
+            <TextView android:id="@+id/tv_no_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:drawablePadding="30dp"
+                android:lineSpacingExtra="10dp"
+                android:visibility="gone"
+                android:drawableTop="@drawable/select_tourists_no_data"
+                android:gravity="center"
+                android:paddingLeft="57dp"
+                android:paddingRight="57dp"
+                android:text="亲，暂无群车辆数据!"
+                android:textColor="@color/color_99_99_99"
+                android:textSize="14sp" />
+        </FrameLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/color_line"/>
+        <LinearLayout android:id="@+id/bottomLayout"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:visibility="gone"
+            android:background="@color/white">
+            <LinearLayout android:id="@+id/all_CheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:onClick="@{activity::onClick}"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+                <ImageView android:id="@+id/iv_CheckBox"
+                    android:layout_width="@dimen/dp_18"
+                    android:layout_height="@dimen/dp_18"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:src="@drawable/checkbox_yx_selector1"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:textSize="16sp"
+                    android:textColor="@color/color_66_66_66"
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:text="全选"/>
+            </LinearLayout>
+            <TextView android:id="@+id/tv_remove"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:onClick="@{activity::onClick}"
+                android:background="#FF3C3C"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="移除"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

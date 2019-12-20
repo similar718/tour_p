@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="activity"
+            type="cn.xmzt.www.route.activity.RouteSearchResultListActivity" />
+
+        <variable
+            name="vm"
+            type="cn.xmzt.www.route.vm.RouteViewModel" />
+        <variable
+            name="adapter"
+            type="cn.xmzt.www.route.adapter.RouteAdapter" />
+    </data>
+
+    <LinearLayout
+        android:background="@color/color_F4_F4_F4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@color/color_FF_FF_FF"
+            android:paddingRight="10dp">
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:onClick="@{activity::onClick}"
+
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/icon_new_back"/>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="7dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="7dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_hotel_list_search"
+                android:gravity="center">
+                <EditText android:id="@+id/et_search"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:inputType="text"
+                    android:imeOptions="actionSearch"
+                    android:maxLines="1"
+                    android:afterTextChanged="@{activity::keywordAfterTextChanged}"
+                    android:drawableLeft="@drawable/icon_search"
+                    android:gravity="center_vertical"
+                    android:hint="线路"
+                    android:paddingLeft="15dp"
+                    android:textColorHint="@color/color_99_99_99"
+                    android:textColor="@color/color_33_33_33"
+                    android:textSize="14sp" />
+                <ImageView
+                    android:id="@+id/iv_search_delete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:onClick="@{activity::onClick}"
+                    android:src="@drawable/icon_del_gray" />
+            </LinearLayout>
+            <ImageView
+                android:id="@+id/iv_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:onClick="@{activity::onClick}"
+                android:src="@drawable/hotel_search" />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/color_line"/>
+        <!-- 综合排序、日期天数、出发/目的地、筛选 -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_ll"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_40"
+            android:paddingLeft="16dp"
+            android:paddingRight="10dp"
+            android:background="@color/white">
+
+            <RelativeLayout
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:id="@+id/sort_rl"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:onClick="@{activity::onClick}">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true">
+
+                    <TextView android:id="@+id/tv_sort_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="综合排序"
+                        android:textSize="@dimen/text_size_14"
+                        android:textColor="@color/title_color"/>
+
+                    <ImageView
+                        android:id="@+id/sort_iv"
+                        android:layout_width="@dimen/size_10"
+                        android:layout_height="@dimen/size_10"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/size_5"
+                        android:src="@drawable/down_arrow"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                app:layout_constraintLeft_toRightOf="@+id/sort_rl"
+                app:layout_constraintRight_toLeftOf="@+id/address_rl"
+                android:id="@+id/data_rl"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:onClick="@{activity::onClick}">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true">
+
+                    <TextView android:id="@+id/tv_date_days"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="日期天数"
+                        android:textSize="@dimen/text_size_14"
+                        android:textColor="@color/title_color"/>
+
+                    <ImageView android:id="@+id/iv_date_days"
+                        android:layout_width="@dimen/size_10"
+                        android:layout_height="@dimen/size_10"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/size_5"
+                        android:src="@drawable/down_arrow"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                app:layout_constraintLeft_toRightOf="@+id/data_rl"
+                app:layout_constraintRight_toLeftOf="@+id/select_rl"
+                android:id="@+id/address_rl"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="@{activity::onClick}">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true">
+
+                    <TextView android:id="@+id/tv_cfd_mdd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="出发/目的地"
+                        android:textSize="@dimen/text_size_14"
+                        android:textColor="@color/title_color"/>
+
+                    <ImageView android:id="@+id/iv_cfd_mdd"
+                        android:layout_width="@dimen/size_10"
+                        android:layout_height="@dimen/size_10"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/size_5"
+                        android:src="@drawable/down_arrow"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                app:layout_constraintRight_toRightOf="parent"
+                android:id="@+id/select_rl"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:onClick="@{activity::onClick}">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="筛选"
+                        android:textSize="@dimen/text_size_14"
+                        android:textColor="@color/title_color"/>
+
+                    <ImageView
+                        android:layout_width="@dimen/size_10"
+                        android:layout_height="@dimen/size_10"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/size_5"
+                        android:src="@drawable/down_arrow"/>
+
+                </LinearLayout>
+            </RelativeLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/refreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srlEnableOverScrollDrag="false"
+            app:srlEnablePureScrollMode="false"
+            android:layout_marginTop="10dp"
+            app:srlPrimaryColor="@color/color_F4_F4_F4">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/color_F4_F4_F4">
+
+                <cn.xmzt.www.view.AutofitRecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:overScrollMode="never"
+                    app:adapter="@{adapter}" />
+
+                <TextView
+                    android:id="@+id/tv_no_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="50dp"
+                    android:drawableTop="@drawable/empty"
+                    android:drawablePadding="10dp"
+                    android:gravity="center"
+                    android:text="暂无数据"
+                    android:textColor="@color/color_99_99_99"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+    </LinearLayout>
+</layout>

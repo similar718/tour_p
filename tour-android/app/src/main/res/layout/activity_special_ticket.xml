@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="activity"
+            type="cn.xmzt.www.ticket.activity.SpecialTicketActivity" />
+        <variable
+            name="model"
+            type="cn.xmzt.www.ticket.model.SpecialTicketViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_F4_F4_F4"
+        android:orientation="vertical">
+
+        <!--  标题 -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/size_10"
+            android:paddingBottom="@dimen/size_10"
+            android:background="@color/white">
+
+
+            <ImageView
+                android:id="@+id/title_back_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size_20"
+                android:layout_centerVertical="true"
+                android:src="@drawable/icon_new_back"/>
+
+
+            <!-- 城市 -->
+            <LinearLayout
+                android:id="@+id/city_rl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/size_10">
+
+
+                <TextView
+                    android:id="@+id/city_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="城市"
+                    android:textSize="@dimen/text_size_14"
+                    android:textColor="@color/title_color"
+                    android:layout_gravity="center_vertical"/>
+
+
+                <ImageView
+                    android:id="@+id/down_arrow_iv"
+                    android:layout_width="@dimen/size_10"
+                    android:layout_height="@dimen/size_10"
+                    android:layout_marginLeft="@dimen/size_2"
+                    android:src="@drawable/down_arrow_2"
+                    android:layout_gravity="center_vertical"/>
+            </LinearLayout>
+
+            <!-- 搜索 -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_35"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/title_back_iv"
+                android:layout_marginLeft="@dimen/size_20"
+                android:layout_toLeftOf="@+id/city_rl"
+                android:layout_marginRight="@dimen/size_20"
+                android:background="@drawable/search_bg_shape">
+
+
+                <ImageView
+                    android:id="@+id/search_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/size_10"
+                    android:src="@drawable/search"/>
+
+
+                <ImageView
+                    android:id="@+id/delete_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/size_5"
+                    android:src="@drawable/delete_1"/>
+
+                <!--<EditText-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="经典门票名称/主题"
+                    android:textColor="@color/title_color"
+                    android:textSize="@dimen/text_size_12"
+                    android:layout_toLeftOf="@+id/delete_iv"
+                    android:layout_toRightOf="@+id/search_iv"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/size_10"
+                    android:background="@null"/>
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <!-- Banner -->
+                <com.youth.banner.Banner
+                    android:id="@+id/banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_140"
+                    android:layout_margin="@dimen/dp_10" />
+
+               <!-- 列表数据 -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_ticket_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    />
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</layout>

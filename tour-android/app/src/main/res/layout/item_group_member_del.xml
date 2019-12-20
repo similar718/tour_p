@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="item"
+            type="cn.xmzt.www.intercom.bean.GroupMemberBean"/>
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <View android:id="@+id/v_line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1_px"
+            android:background="@color/color_line"/>
+        <RelativeLayout android:id="@+id/itemLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_10">
+            <ImageView android:id="@+id/iv_icon"
+                android:layout_width="@dimen/dp_38"
+                android:layout_height="@dimen/dp_38"
+                android:layout_marginRight="@dimen/dp_14"
+                android:layout_centerVertical="true"
+                app:imgCircleUrl="@{item.image}"
+                android:src="@drawable/icon_head_default"/>
+            <FrameLayout android:id="@+id/editLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true">
+                <ImageView android:id="@+id/iv_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_12"
+                    android:src="@drawable/icon_check_yx_duigou"/>
+            </FrameLayout>
+            <TextView android:id="@+id/tv_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:minWidth="@dimen/dp_40"
+                android:minHeight="@dimen/dp_18"
+                android:paddingLeft="@dimen/dp_8"
+                android:paddingRight="@dimen/dp_8"
+                android:paddingTop="@dimen/dp_2"
+                android:paddingBottom="@dimen/dp_2"
+                android:gravity="center"
+                tools:background="@drawable/shape_blue_radius_2"
+                android:background="@{item.isOnLine==true?@drawable/shape_blue_radius_2:@drawable/shape_gray_99_radius_2}"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/iv_icon"
+                android:lines="1"
+                tools:text="在线"
+                android:text="@{item.onLineStr}"
+                android:textColor="@color/white"
+                android:textSize="12sp"/>
+            <TextView android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_8"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/tv_label"
+                android:layout_toLeftOf="@+id/editLayout"
+                android:lines="1"
+                android:ellipsize="end"
+                tools:text="王子岳"
+                android:text="@{item.nickname}"
+                android:textColor="@color/color_33_33_33"
+                android:textSize="16sp"/>
+        </RelativeLayout>
+    </LinearLayout>
+</layout>

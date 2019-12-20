@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="activity"
+            type="cn.xmzt.www.pay.activity.ChoosePayActivity" />
+        <variable
+            name="orderUnpaid"
+            type="cn.xmzt.www.pay.bean.OrderUnpaid" />
+        <variable
+            name="vm"
+            type="cn.xmzt.www.pay.vm.ChoosePayViewModel" />
+    </data>
+
+    <LinearLayout android:id="@+id/rootLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <FrameLayout
+            android:id="@+id/titleBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+            <RelativeLayout android:id="@+id/titleLayout"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_gravity="bottom">
+                <ImageView
+                    android:id="@+id/iv_back"
+                    android:layout_width="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:onClick="@{activity::onClick}"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/icon_new_back"/>
+
+                <TextView
+                    android:id="@+id/title_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="68dp"
+                    android:text="订单支付"
+                    android:textColor="@color/color_33_33_33"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+        </FrameLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1_px"
+            android:background="@color/color_line"
+            android:layout_marginBottom="@dimen/dp_10"/>
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp">
+                    <TextView android:id="@+id/tv_zxzf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:text="在线支付"
+                        android:textStyle="bold"
+                        android:textColor="@color/color_33_33_33"
+                        android:textSize="21sp" />
+                    <TextView android:id="@+id/tv_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        tools:text="99"
+                        android:text="@{orderUnpaid.orderAmountFormat}"
+                        android:textColor="@color/color_FF6000"
+                        android:textSize="21sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintRight_toLeftOf="@+id/tv_amount"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/tv_amount"
+                        android:text="@string/cny_unit"
+                        android:textColor="@color/color_FF6000"
+                        android:textSize="14sp" />
+
+                    <TextView android:id="@+id/tv_sysj"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_zxzf"
+                        android:layout_marginTop="10dp"
+                        android:ems="6"
+                        android:text="剩余支付时间"
+                        android:textColor="@color/color_33_33_33"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_remain_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:drawableLeft="@drawable/icon_clock"
+                        android:drawablePadding="@dimen/dp_5"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/color_FF6000"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@+id/tv_sysj"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_zxzf"
+                        tools:text="29:59:36"
+                        android:text="@{orderUnpaid.remainTime}"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_1_px"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/color_line"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="6"
+                        android:text="订单号"
+                        android:textColor="@color/color_99_99_99"
+                        android:textSize="14sp" />
+                    <TextView android:id="@+id/tv_order_code"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/color_33_33_33"
+                        android:textSize="14sp"
+                        tools:text="8656546453"
+                        android:text="@{orderUnpaid.orderId}"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:paddingTop="10dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="6"
+                        android:text="产品名称"
+                        android:textColor="@color/color_99_99_99"
+                        android:textSize="14sp" />
+                    <TextView android:id="@+id/tv_product_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/color_33_33_33"
+                        android:textSize="14sp"
+                        tools:text="主展厅+儿童乐园+虫现江湖 - 成人票 "
+                        android:text="@{orderUnpaid.orderName}"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:paddingTop="10dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="6"
+                        android:text="游玩时间"
+                        android:textColor="@color/color_99_99_99"
+                        android:textSize="14sp" />
+                    <TextView android:id="@+id/tv_yw_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/color_33_33_33"
+                        android:textSize="14sp"
+                        tools:text="2019-06-20"
+                        android:text="@{orderUnpaid.departDate}"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="16dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="6"
+                        android:text="订单金额"
+                        android:textColor="@color/color_99_99_99"
+                        android:textSize="14sp" />
+                    <TextView android:id="@+id/tv_order_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/color_33_33_33"
+                        android:textSize="14sp"
+                        tools:text="¥99(在线支付)"
+                        android:text="@{orderUnpaid.cny+orderUnpaid.orderAmountFormat+orderUnpaid.onlinePay}"/>
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@color/color_f4f4f4"/>
+                <LinearLayout android:id="@+id/wechat_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{vm::onClick}"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="16dp"
+                    android:gravity="center_vertical"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:drawableLeft="@drawable/icon_pay_wechat"
+                        android:drawablePadding="@dimen/dp_16"
+                        android:text="微信支付"
+                        android:textColor="@color/color_33_33_33"
+                        android:textSize="14sp" />
+                    <ImageView android:id="@+id/iv_check_wechat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|center_vertical"
+                        tools:src="@drawable/icon_coupon_check_un"
+                        android:src="@{vm.typeSelected==1?@drawable/icon_coupon_check:@drawable/icon_coupon_check_un}"/>
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_1_px"
+                    android:background="@color/color_line"/>
+                <LinearLayout android:id="@+id/alipay_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{vm::onClick}"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="16dp"
+                    android:gravity="center_vertical"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:drawableLeft="@drawable/icon_pay_alipay"
+                        android:drawablePadding="@dimen/dp_16"
+                        android:text="支付宝"
+                        android:textColor="@color/color_33_33_33"
+                        android:textSize="14sp" />
+                    <ImageView android:id="@+id/iv_check_alipay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|center_vertical"
+                        tools:src="@drawable/checkbox_yx_selector"
+                        android:src="@{vm.typeSelected==2?@drawable/icon_coupon_check:@drawable/icon_coupon_check_un}"/>
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_1_px"
+                    android:background="@color/color_line"/>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/confirmLayout"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:onClick="@{activity::onClick}"
+            android:background="@drawable/shape_gradient_yellow"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp">
+            <TextView android:id="@+id/tv_confirm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/tv_unit"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                android:text="确认支付"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+            <TextView android:id="@+id/tv_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toRightOf="@+id/tv_confirm"
+                app:layout_constraintRight_toLeftOf="@+id/tv_confirm_amount"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_confirm_amount"
+                android:layout_marginLeft="@dimen/dp_4"
+                android:text="@string/cny_unit"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+            <TextView android:id="@+id/tv_confirm_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/tv_unit"
+                android:layout_marginLeft="@dimen/dp_1"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                tools:text="99"
+                android:text="@{orderUnpaid.orderAmountFormat}"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</layout>
+

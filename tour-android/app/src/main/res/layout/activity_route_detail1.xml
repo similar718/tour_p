@@ -1,0 +1,739 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="vm"
+            type="cn.xmzt.www.route.vm.RouteDetailViewModel" />
+        <variable
+            name="routeDetail"
+            type="cn.xmzt.www.route.bean.RouteDetailPage" />
+        <variable
+            name="personCount"
+            type="cn.xmzt.www.route.bean.PersonCountBean" />
+        <variable
+            name="activity"
+            type="cn.xmzt.www.route.activity.RouteDetailActivity1" />
+        <variable
+            name="adapter"
+            type="cn.xmzt.www.route.adapter.RouteDetailAdapter" />
+    </data>
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="cn.xmzt.www.view.behavior.AppBarLayoutBehavior"
+            app:elevation="0dp">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="-6dp"
+                    android:background="@color/color_F4_F4_F4">
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <com.youth.banner.Banner
+                            android:id="@+id/banner"
+                            android:layout_width="match_parent"
+                            android:layout_height="209dp"/>
+                        <TextView android:id="@+id/tv_line_type"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:minHeight="@dimen/dp_2"
+                            android:minWidth="@dimen/dp_64"
+                            android:maxWidth="@dimen/dp_80"
+                            android:paddingLeft="@dimen/dp_10"
+                            android:paddingRight="@dimen/dp_10"
+                            android:paddingTop="@dimen/dp_2"
+                            android:paddingBottom="@dimen/dp_2"
+                            android:layout_marginLeft="@dimen/dp_10"
+                            android:text="@{routeDetail.lineTypeName}"
+                            android:visibility="@{routeDetail.lineType>0?View.VISIBLE:View.GONE}"
+                            android:layout_gravity="bottom"
+                            android:layout_marginBottom="@dimen/dp_60"
+                            android:background="@drawable/shape_line_type_bg"
+                            android:gravity="center"
+                            android:textSize="11sp"
+                            android:textColor="@color/white"
+                            tools:text="自由出行"/>
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="67dp"
+                        android:background="@drawable/route_bar_bg"
+                        android:paddingTop="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:layout_marginTop="-67dp"
+                        android:orientation="horizontal">
+                        <TextView android:id="@+id/tvBrowseCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/icon_route_browse_count"
+                            android:drawablePadding="5dp"
+                            android:textSize="14sp"
+                            android:textColor="#FFFFFF"
+                            android:text="@{routeDetail.viewsStr}"/>
+                        <TextView android:id="@+id/tvSCCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="13dp"
+                            android:drawableLeft="@drawable/icon_route_sc_count"
+                            android:drawablePadding="5dp"
+                            android:textSize="14sp"
+                            android:textColor="#FFFFFF"
+                            android:text="@{routeDetail.collectionStr}"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="12dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/shape_white_radius_t8_b4"
+                        android:layout_marginTop="-29dp">
+                        <cn.xmzt.www.view.labeltext.LabelTextView
+                            android:id="@+id/tvLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:minHeight="@dimen/dp_22"
+                            android:lineSpacingExtra="@dimen/dp_5"
+                            android:textColor="#333333"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:gravity="center_vertical"
+                            app:labelText="超值抢购"
+                            app:originalText="@{routeDetail.lineName}"
+                            app:labelFillColor="true"
+                            app:labelStrokeRadius="4dp"
+                            app:labelPaddingHorizontal="8dp"
+                            app:labelPaddingVertical="6dp"
+                            app:labelStrokeColor="#FCE3BD"
+                            app:labelStrokeWidth="1dp"
+                            app:labelTextColor="#FCB64C"
+                            app:labelTextSize="12sp" />
+                        <TextView
+                            android:id="@+id/tv_provider"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/shape_f5fbff_radius_4"
+                            android:layout_below="@+id/des_tv"
+                            android:layout_marginTop="@dimen/dp_5"
+                            android:paddingLeft="@dimen/dp_6"
+                            android:paddingRight="@dimen/dp_6"
+                            android:paddingTop="@dimen/dp_2"
+                            android:paddingBottom="@dimen/dp_2"
+                            android:text="@{routeDetail.officeNames}"
+                            tools:text="由天天自驾旅行社提供服务"
+                            android:textColor="#9AA2A7"
+                            android:textSize="@dimen/text_size_12"
+                            android:singleLine="true"
+                            android:ellipsize="end"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="14dp"
+                                android:textSize="12sp"
+                                android:textColor="#FF6000"
+                                android:text="@string/cny_unit"/>
+                            <TextView android:id="@+id/tvCRPrice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="20sp"
+                                android:textColor="#FF6000"
+                                android:textStyle="bold"
+                                android:text="@{routeDetail.cost.jcrPriceStr}"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="12sp"
+                                android:textColor="#999999"
+                                android:text="起/成人"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="14dp"
+                                android:textSize="12sp"
+                                android:textColor="#FF6000"
+                                android:text="@string/cny_unit"/>
+                            <TextView android:id="@+id/tvERTPrice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="20sp"
+                                android:textColor="#FF6000"
+                                android:textStyle="bold"
+                                android:text="@{routeDetail.cost.jxhPriceStr}"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="12sp"
+                                android:textColor="#999999"
+                                android:text="起/儿童"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:orientation="horizontal">
+                            <TextView android:id="@+id/tvCFD"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableLeft="@drawable/icon_route_addr"
+                                android:drawablePadding="3dp"
+                                android:textSize="14sp"
+                                android:textColor="#999999"
+                                android:text="@{routeDetail.cfd+routeDetail.departArea.areaName}"/>
+                            <TextView android:id="@+id/tvLD"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:minHeight="@dimen/dp_20"
+                                android:minWidth="@dimen/dp_48"
+                                android:gravity="center"
+                                android:paddingLeft="6dp"
+                                android:paddingRight="6dp"
+                                android:paddingTop="3dp"
+                                android:paddingBottom="3dp"
+                                android:background="@drawable/shape_tag_1"
+                                android:layout_marginLeft="18dp"
+                                android:textSize="12sp"
+                                android:textColor="#FF9600"
+                                tools:text="无领队"
+                                android:text="@{routeDetail.isTacticsStr}"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingLeft="12dp"
+                        android:paddingRight="12dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/shape_white_radius_4"
+                        android:layout_marginTop="10dp">
+                        <RelativeLayout android:id="@+id/fwbzLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:onClick="@{activity::onClick}"
+                            android:paddingTop="14dp"
+                            android:paddingBottom="14dp">
+                            <TextView android:id="@+id/tv_fwbz_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="16sp"
+                                android:textColor="#333333"
+                                android:text="服务保障"/>
+                            <TextView android:id="@+id/tv_fwbz"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/tv_fwbz_name"
+                                android:drawableRight="@drawable/icon_hotel_more"
+                                android:paddingLeft="32dp"
+                                android:drawablePadding="5dp"
+                                android:singleLine="true"
+                                android:textSize="14sp"
+                                android:textColor="#999999"
+                                android:text="入住保证，实地踩线"/>
+                        </RelativeLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1px"
+                            android:background="@color/color_line"/>
+                        <RelativeLayout android:id="@+id/previewLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:onClick="@{activity::onClick}"
+                            android:paddingTop="14dp"
+                            android:paddingBottom="14dp">
+                            <TextView android:id="@+id/tv_preview_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="16sp"
+                                android:textColor="#333333"
+                                android:text="线路预览"/>
+                            <TextView android:id="@+id/tv_preview"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/tv_preview_name"
+                                android:drawableRight="@drawable/icon_hotel_more"
+                                android:paddingLeft="32dp"
+                                android:drawablePadding="5dp"
+                                android:singleLine="true"
+                                android:textSize="14sp"
+                                android:textColor="#999999"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingLeft="12dp"
+                        android:paddingRight="12dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/shape_white_radius_4"
+                        android:layout_marginTop="10dp">
+                        <RelativeLayout android:id="@+id/xzsjrqLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:minHeight="50dp"
+                            android:onClick="@{activity::onClick}"
+                            android:paddingTop="14dp"
+                            android:paddingBottom="14dp">
+                            <TextView android:id="@+id/tv_xzsj_rq_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:textSize="16sp"
+                                android:textColor="#333333"
+                                android:text="选择出发时间与人群"/>
+                            <TextView android:id="@+id/tv_xzsj_rq"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/tv_xzsj_rq_name"
+                                android:drawableRight="@drawable/icon_hotel_more"
+                                android:paddingLeft="32dp"
+                                android:drawablePadding="5dp"
+                                android:singleLine="true"
+                                android:textSize="14sp"
+                                android:textColor="#999999"/>
+                        </RelativeLayout>
+                        <LinearLayout android:id="@+id/sjrqLayout"
+                            android:orientation="vertical"
+                            android:visibility="@{personCount.time==null?View.GONE:View.VISIBLE}"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="14dp">
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1px"
+                                android:background="@color/color_line"/>
+                            <LinearLayout android:id="@+id/sjLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginTop="14dp">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="12sp"
+                                    android:textColor="#666666"
+                                    android:text="出游时间:"/>
+                                <TextView android:id="@+id/tv_sjd"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:textSize="12sp"
+                                    android:textColor="#666666"
+                                    tools:text="6月5-7月30日"/>
+                            </LinearLayout>
+                            <RelativeLayout android:id="@+id/rqLayout1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="@{personCount.crCount>0?View.VISIBLE:View.GONE}"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="17dp">
+                                <TextView android:id="@+id/tv_cyrq_name1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="12sp"
+                                    android:textColor="#666666"
+                                    android:text="出游人群:"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toRightOf="@+id/tv_cyrq_name1"
+                                    android:layout_marginLeft="10dp"
+                                    android:textSize="12sp"
+                                    android:textColor="#666666"
+                                    android:text="成年(12岁以上)"/>
+                                <TextView android:id="@+id/tv_rq12_count"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toRightOf="@+id/tv_cyrq_name1"
+                                    android:gravity="right"
+                                    android:textSize="12sp"
+                                    android:textColor="#666666"
+                                    android:text="@{personCount.crCount+personCount.unit}"
+                                    tools:text="5份"/>
+                            </RelativeLayout>
+                            <RelativeLayout android:id="@+id/rqLayout2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="@{personCount.xhCount>0?View.VISIBLE:View.GONE}"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="17dp">
+                                <TextView android:id="@+id/tv_cyrq_name2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:visibility="invisible"
+                                    android:textSize="12sp"
+                                    android:textColor="#666666"
+                                    android:text="出游人群:"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toRightOf="@+id/tv_cyrq_name2"
+                                    android:layout_marginLeft="10dp"
+                                    android:textSize="12sp"
+                                    android:textColor="#666666"
+                                    android:text="儿童(0-11岁)"/>
+                                <TextView android:id="@+id/tv_rq11_count"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toRightOf="@+id/tv_cyrq_name2"
+                                    android:gravity="right"
+                                    android:textSize="12sp"
+                                    android:textColor="#666666"
+                                    android:text="@{personCount.xhCount+personCount.unit}"
+                                    tools:text="5份"/>
+                            </RelativeLayout>
+                            <RelativeLayout android:id="@+id/rqLayout3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="@{personCount.fangCount>0?View.VISIBLE:View.GONE}"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="17dp">
+                                <TextView android:id="@+id/tv_cyrq_name3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:visibility="invisible"
+                                    android:textSize="12sp"
+                                    android:textColor="#666666"
+                                    android:text="出游人群:"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toRightOf="@+id/tv_cyrq_name3"
+                                    android:layout_marginLeft="10dp"
+                                    android:textSize="12sp"
+                                    android:textColor="#666666"
+                                    android:text="单房差)"/>
+                                <TextView android:id="@+id/tv_dfc_count"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toRightOf="@+id/tv_cyrq_name3"
+                                    android:gravity="right"
+                                    android:textSize="12sp"
+                                    android:textColor="#666666"
+                                    tools:text="5份"
+                                    android:text="@{personCount.fangCount+personCount.unit}"/>
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"/>
+                    <RelativeLayout android:id="@+id/lqLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="50dp"
+                        android:onClick="@{activity::onClick}"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/shape_white_radius_4"
+                        android:paddingLeft="12dp"
+                        android:paddingRight="12dp"
+                        android:paddingTop="14dp"
+                        android:paddingBottom="14dp">
+                        <TextView android:id="@+id/tv_lq_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:textSize="16sp"
+                            android:textColor="#333333"
+                            android:text="领券"/>
+                        <TextView android:id="@+id/tv_lq"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/tv_lq_name"
+                            android:drawableRight="@drawable/icon_hotel_more"
+                            android:paddingLeft="32dp"
+                            android:drawablePadding="5dp"
+                            android:singleLine="true"
+                            android:textSize="14sp"
+                            android:textColor="#999999"/>
+                    </RelativeLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="18dp"/>
+                </LinearLayout>
+                <!--标题 -->
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_44"
+                    app:contentInsetStart="0dp"
+                    android:gravity="bottom"
+                    app:layout_collapseMode="pin">
+                    <RelativeLayout
+                        android:id="@+id/layoutToolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        app:layout_collapseMode="pin">
+                        <ImageView
+                            android:id="@+id/ivBack"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:scaleType="centerInside"
+                            android:layout_centerVertical="true"
+                            android:onClick="@{activity::onClick}"
+                            android:src="@drawable/back_bac"
+                            android:layout_marginLeft="10dp"/>
+
+                        <ImageView
+                            android:id="@+id/ivShare"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:onClick="@{activity::onClick}"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/icon_share_gray_white"
+                            android:layout_marginRight="10dp"/>
+                        <ImageView
+                            android:id="@+id/ivCollection"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:onClick="@{activity::onClick}"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/ivShare"
+                            tools:src="@drawable/icon_sc_orange_route"
+                            android:src="@{vm.isCollection==0?@drawable/icon_sc_gray_white:(vm.isCollection==1?@drawable/icon_sc_gray_orange:(vm.isCollection==2?@drawable/icon_sc_gray_route:@drawable/icon_sc_orange_route))}"
+                            android:layout_marginRight="10dp"/>
+                        <TextView android:id="@+id/tvTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_centerVertical="true"
+                            android:singleLine="true"
+                            android:textSize="16sp"
+                            android:textColor="@color/color_33_33_33"
+                            tools:text="成都集合3日炒成"
+                            android:layout_toLeftOf="@+id/ivCollection"
+                            android:layout_toRightOf="@+id/ivBack"/>
+                    </RelativeLayout>
+                </androidx.appcompat.widget.Toolbar>
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+
+        </com.google.android.material.appbar.AppBarLayout>
+        <LinearLayout android:id="@+id/listLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="48dp"
+            android:orientation="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_ll"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_42"
+                android:paddingLeft="26dp"
+                android:paddingRight="26dp"
+                android:background="@color/white"
+                android:elevation="0dp">
+
+                <RelativeLayout
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:id="@+id/layout1"
+                    android:onClick="@{activity::onClick}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+                    <TextView android:id="@+id/tvTab1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="产品特色"
+                        android:textSize="@dimen/text_size_14"
+                        android:textColor="@color/color_33_33_33" />
+                    <View
+                        android:id="@+id/ivCPTS"
+                        android:layout_width="30dp"
+                        android:layout_height="2dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="bottom"
+                        android:visibility="@{vm.selected==1?View.VISIBLE:View.GONE}"
+                        android:background="@color/color_24A4FF"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    app:layout_constraintLeft_toRightOf="@+id/layout1"
+                    app:layout_constraintRight_toLeftOf="@+id/layout3"
+                    android:id="@+id/layout2"
+                    android:onClick="@{activity::onClick}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+                    <TextView android:id="@+id/tvTab2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="行程"
+                        android:textSize="@dimen/text_size_14"
+                        android:textColor="@color/color_33_33_33" />
+                    <View
+                        android:id="@+id/ivXC"
+                        android:layout_width="30dp"
+                        android:layout_height="2dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="bottom"
+                        android:visibility="@{vm.selected==2?View.VISIBLE:View.GONE}"
+                        android:background="@color/color_24A4FF"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    app:layout_constraintLeft_toRightOf="@+id/layout2"
+                    app:layout_constraintRight_toLeftOf="@+id/layout4"
+                    android:id="@+id/layout3"
+                    android:onClick="@{activity::onClick}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                    <TextView android:id="@+id/tvTab3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="费用"
+                        android:textSize="@dimen/text_size_14"
+                        android:textColor="@color/color_33_33_33" />
+                    <View
+                        android:id="@+id/ivFY"
+                        android:layout_width="30dp"
+                        android:layout_height="2dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="bottom"
+                        android:visibility="@{vm.selected==3?View.VISIBLE:View.GONE}"
+                        android:background="@color/color_24A4FF"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:id="@+id/layout4"
+                    android:onClick="@{activity::onClick}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <TextView android:id="@+id/tvTab4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="须知"
+                        android:textSize="@dimen/text_size_14"
+                        android:textColor="@color/color_33_33_33" />
+                    <View
+                        android:id="@+id/ivXZ"
+                        android:layout_width="30dp"
+                        android:layout_height="2dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="bottom"
+                        android:visibility="@{vm.selected==4?View.VISIBLE:View.GONE}"
+                        android:background="@color/color_24A4FF"/>
+                </RelativeLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/color_line"/>
+            <cn.xmzt.www.view.AutofitRecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:overScrollMode="never"
+                app:adapter="@{adapter}" />
+        </LinearLayout>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout android:id="@+id/bottomLayout"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:layout_gravity="bottom">
+                <FrameLayout android:id="@+id/tvBackTop"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{activity::onClick}"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="2dp"
+                        android:drawablePadding="3dp"
+                        android:drawableTop="@drawable/icon_route_back_top"
+                        android:textColor="@color/color_99_99_99"
+                        android:textSize="11sp"
+                        android:text="返回顶部" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/color_line"/>
+                </FrameLayout>
+                <FrameLayout android:id="@+id/tvKF"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{activity::onClick}"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginLeft="@dimen/dp_30"
+                        android:drawablePadding="3dp"
+                        android:drawableTop="@drawable/icon_route_kf"
+                        android:textColor="@color/color_99_99_99"
+                        android:textSize="11sp"
+                        android:text="客服" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/color_line"/>
+                </FrameLayout>
+                <TextView android:id="@+id/tvReserve"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:onClick="@{activity::onClick}"
+                    android:background="#FF9600"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textSize="17sp"
+                    android:textColor="@color/white"
+                    android:text="立即预定" />
+            </LinearLayout>
+        </FrameLayout>
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

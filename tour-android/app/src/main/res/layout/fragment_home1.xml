@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="fragment"
+            type="cn.xmzt.www.home.fragment.HomeFragment" />
+    </data>
+
+    <RelativeLayout android:id="@+id/rootLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_alignParentBottom="true"/>
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/refreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_F4_F4_F4"
+            app:srlEnableOverScrollDrag="false"
+            app:srlEnablePureScrollMode="false"
+            app:srlPrimaryColor="#24A4FF">
+            <cn.xmzt.www.view.refresh.MyHeaderView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#24A4FF"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <cn.xmzt.www.view.AutofitRecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:overScrollMode="never" />
+                <FrameLayout android:id="@+id/titleBarLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:id="@+id/titleLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_48"
+                        android:paddingLeft="@dimen/dp_16"
+                        android:paddingRight="@dimen/dp_16"
+                        android:layout_marginTop="@dimen/dp_25">
+                        <TextView
+                            android:id="@+id/tv_qr_code"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_centerVertical="true"
+                            android:onClick="@{fragment::onClick}"
+                            android:drawablePadding="@dimen/dp_2"
+                            android:drawableTop="@drawable/ic_home_qrcode_2"
+                            android:text="扫一扫"
+                            android:textSize="10sp"
+                            android:textColor="@color/white"/>
+                        <FrameLayout android:id="@+id/tv_msg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dp_33"
+                            android:onClick="@{fragment::onClick}"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true">
+                            <com.airbnb.lottie.LottieAnimationView
+                                android:layout_width="@dimen/dp_39"
+                                android:layout_height="@dimen/dp_33"
+                                android:layout_alignParentBottom="true"
+                                app:lottie_rawRes="@raw/maxiaoni_icon"
+                                app:lottie_loop="true"
+                                app:lottie_autoPlay="true" />
+                            <TextView
+                                android:id="@+id/tv_msg_num"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:minWidth="@dimen/dp_13"
+                                android:minHeight="@dimen/dp_13"
+                                android:layout_gravity="right"
+                                android:gravity="center"
+                                android:layout_alignRight="@+id/iv2"
+                                android:background="@drawable/dot_red_100"
+                                android:text="99"
+                                android:textColor="@color/color_FF_FF_FF"
+                                android:textSize="9sp"
+                                android:visibility="visible" />
+                        </FrameLayout>
+                        <TextView android:id="@+id/tv_home_search"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_33"
+                            android:layout_centerVertical="true"
+                            android:onClick="@{fragment::onClick}"
+                            android:layout_toRightOf="@+id/tv_qr_code"
+                            android:layout_toLeftOf="@+id/tv_msg"
+                            android:layout_marginLeft="@dimen/dp_10"
+                            android:layout_marginRight="@dimen/dp_12"
+                            android:background="@drawable/shape_rectangle_white_radius_33"
+                            android:drawableLeft="@drawable/icon_search"
+                            android:drawablePadding="@dimen/size_3"
+                            android:gravity="center_vertical"
+                            android:hint="请搜索线路"
+                            android:paddingLeft="@dimen/size_15"
+                            android:paddingRight="@dimen/size_15"
+                            android:textColor="@color/color_99_99_99"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+                </FrameLayout>
+            </RelativeLayout>
+            <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#00000000"/>
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+    </RelativeLayout>
+</layout>
