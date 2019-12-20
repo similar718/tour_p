@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent">
+
+    <RelativeLayout
+        android:id="@+id/rl_all_info"
+        android:layout_width="@dimen/dp_184"
+        android:layout_height="@dimen/dp_94"
+        android:paddingLeft="@dimen/dp_22"
+        android:paddingTop="@dimen/dp_38"
+        android:paddingRight="@dimen/dp_22"
+        android:paddingBottom="@dimen/dp_10"
+        android:background="@drawable/marker_other_top_center">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/tv_marker_click_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:ellipsize="middle"
+                android:text="茅岩kajsdhfiashdnf等景点"
+                android:textSize="@dimen/text_size_14"
+                android:textColor="@color/color_333333"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:id="@+id/tv_marker_click_position"
+                android:layout_width="wrap_content"
+                android:maxWidth="@dimen/dp_140"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:layout_below="@+id/tv_marker_click_title"
+                android:layout_alignLeft="@+id/tv_marker_click_title"
+                android:ellipsize="middle"
+                android:layout_marginTop="@dimen/dp_3"
+                android:layout_centerHorizontal="true"
+                android:text="距离1.4km"
+                android:textSize="@dimen/text_size_11"
+                android:textColor="@color/color_999999"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

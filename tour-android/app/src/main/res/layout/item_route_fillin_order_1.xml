@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="item"
+            type="cn.xmzt.www.route.bean.RoutePage.ItemsBean"/>
+
+    </data>
+
+    <RelativeLayout android:id="@+id/itemLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/size_10"
+        android:paddingRight="@dimen/size_10"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/route_list_item_bg_shape">
+        <ImageView android:id="@+id/imgView"
+            android:layout_width="98dp"
+            android:layout_height="98dp"
+            android:layout_marginRight="8dp"
+            app:imgCUrl="@{item.photoUrl}"
+            android:src="@drawable/icon_default"/>
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{item.lineName}"
+            tools:text="成都集合15日稻城-西藏自驾游：G8川藏线-稻城亚丁-羊湖-拉萨-茶卡成都集合15日稻城-羊湖-拉萨-茶卡成都集合15日稻城-羊湖-拉萨-茶卡成都集合15日稻城"
+            android:layout_toRightOf="@+id/imgView"
+            android:layout_alignTop="@+id/imgView"
+            android:textColor="@color/title_color"
+            android:textSize="@dimen/text_size_14"
+            android:maxLines="3"
+            android:ellipsize="end"/>
+        <TextView
+            android:id="@+id/date_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/imgView"
+            android:layout_alignBottom="@+id/imgView"
+            android:text="@{item.departTimes}"
+            tools:text="出发日期：2019-06-27"
+            android:textColor="#FF9600"
+            android:textSize="@dimen/text_size_12"
+            android:singleLine="true"
+            android:ellipsize="end"/>
+    </RelativeLayout>
+</layout>

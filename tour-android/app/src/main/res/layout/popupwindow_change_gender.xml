@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_white_radius_4"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_gender_male"
+                android:layout_width="match_parent"
+                android:layout_height="57dp"
+                android:gravity="center"
+                android:text="男"
+                android:textColor="@color/color_49_BE_FF"
+                android:textSize="17sp" />
+
+            <TextView style="@style/DivisionLine" />
+
+            <TextView
+                android:id="@+id/tv_gender_female"
+                android:layout_width="match_parent"
+                android:layout_height="57dp"
+                android:gravity="center"
+                android:text="女"
+                android:textColor="@color/color_49_BE_FF"
+                android:textSize="17sp" />
+
+            <TextView style="@style/DivisionLine" />
+
+            <TextView
+                android:id="@+id/tv_gender_secrecy"
+                android:layout_width="match_parent"
+                android:layout_height="57dp"
+                android:gravity="center"
+                android:text="保密"
+                android:textColor="@color/color_49_BE_FF"
+                android:textSize="17sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_gender_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_white_radius_4"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/color_49_BE_FF"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</LinearLayout>

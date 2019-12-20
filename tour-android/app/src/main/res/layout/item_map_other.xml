@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="item"
+            type="cn.xmzt.www.selfdrivingtools.bean.ScenicSpotGuideBean.ScenicServicePointListBean.PointListBean"/>
+        <import type="android.view.View" />
+    </data>
+    <RelativeLayout android:id="@+id/itemLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_70"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/dp_19"
+        android:paddingRight="@dimen/size_21"
+        android:background="@color/color_FF_FF_FF">
+
+        <ImageView
+            android:id="@+id/item_map_other_iv"
+            android:layout_width="@dimen/size_14"
+            android:layout_height="@dimen/size_14"
+            android:src="@drawable/scenic_spot_map_other_left_icon"
+            android:layout_marginTop="@dimen/size_22"
+            android:layout_marginLeft="@dimen/size_19"
+            />
+
+        <TextView
+            android:id="@+id/item_map_other_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{item.name}"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/text_size_14"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/size_20"
+            android:layout_toRightOf="@+id/item_map_other_iv"
+            android:layout_marginLeft="@dimen/size_4"
+            />
+
+
+        <TextView
+            android:id="@+id/item_map_other_location_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text='@{"距离"+item.distanceFormat}'
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/text_size_12"
+            android:layout_marginTop="@dimen/size_1"
+            android:layout_below="@+id/item_map_other_title_tv"
+            android:layout_alignLeft="@+id/item_map_other_title_tv"
+            android:drawablePadding="@dimen/size_3"
+            android:drawableLeft="@drawable/wisdom_guide_address_icon"
+            />
+
+        <ImageView
+            android:id="@+id/iv_right"
+            android:layout_width="@dimen/size_16"
+            android:layout_height="@dimen/size_16"
+            android:src="@drawable/scenic_spot_map_item_route_line_right_icon"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:visibility="@{item.is_Checked ? View.VISIBLE : View.GONE}"
+            />
+    </RelativeLayout>
+</layout>

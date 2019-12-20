@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <import type="android.view.View" />
+        <import type="android.graphics.drawable.Drawable"/>
+        <variable
+            name="item"
+            type="cn.xmzt.www.selfdrivingtools.bean.ScenicFeedBackTypeBean.ChildrenBean" />
+    </data>
+    <RelativeLayout
+        android:id="@+id/item_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_15"
+            >
+            <ImageView
+                android:id="@+id/iv_1"
+                android:layout_width="@dimen/dp_17"
+                android:layout_height="@dimen/dp_17"
+                android:layout_centerVertical="true"
+                android:src="@{item.is_Checked ? @drawable/scenic_feed_back_selected : @drawable/scenic_feed_back_select}"
+                />
+            <TextView
+                android:id="@+id/tv_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/back_gray"
+                android:layout_toRightOf="@+id/iv_1"
+                android:layout_marginLeft="@dimen/dp_8"
+                android:text="@{item.des}"
+                android:textSize="@dimen/text_size_14"
+                android:textColor="@color/color_333333"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+</layout>

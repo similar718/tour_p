@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+    </data>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout android:id="@+id/rootLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dp_122"
+            android:orientation="vertical"
+            android:background="@drawable/dialog_route_pick_detail_bg">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:text="费用明细"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/text_size_16" />
+                <FrameLayout android:id="@+id/cancelLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/hotel_room_details_delete" />
+                </FrameLayout>
+
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1_px"
+                android:background="@color/color_e5e5e5" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp">
+                <LinearLayout android:id="@+id/jbfyLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" ¥ "
+                        android:textColor="@color/color_FF_60_00"
+                        android:textSize="10sp" />
+                    <TextView android:id="@+id/tv_jbfy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        tools:text="98888"
+                        android:textColor="@color/color_FF_60_00"
+                        android:textSize="@dimen/text_size_18" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/jbfyLayout"
+                    android:layout_marginRight="10dp"
+                    android:textStyle="bold"
+                    android:text="基本费用"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/text_size_16"/>
+            </RelativeLayout>
+            <RelativeLayout android:id="@+id/crLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp">
+                <TextView android:id="@+id/tv_crPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="16dp"
+                    tools:text="¥359/人  x2"
+                    android:textColor="@color/color_99_99_99"
+                    android:textSize="@dimen/text_size_14" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/tv_crPrice"
+                    android:layout_marginRight="10dp"
+                    android:text="成人"
+                    android:textColor="@color/color_99_99_99"
+                    android:textSize="@dimen/text_size_14"/>
+            </RelativeLayout>
+            <RelativeLayout android:id="@+id/xhLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp">
+                <TextView android:id="@+id/tv_xhPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="16dp"
+                    tools:text="¥359/人  x2"
+                    android:textColor="@color/color_99_99_99"
+                    android:textSize="@dimen/text_size_14" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/tv_xhPrice"
+                    android:layout_marginRight="10dp"
+                    android:text="儿童"
+                    android:textColor="@color/color_99_99_99"
+                    android:textSize="@dimen/text_size_14"/>
+            </RelativeLayout>
+            <RelativeLayout android:id="@+id/kxcpLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp">
+                <LinearLayout android:id="@+id/kxcpPriceLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" ¥ "
+                        android:textColor="@color/color_FF_60_00"
+                        android:textSize="10sp" />
+                    <TextView android:id="@+id/tv_kxcpPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        tools:text="359"
+                        android:textColor="@color/color_FF_60_00"
+                        android:textSize="@dimen/text_size_18" />
+                </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/kxcpPriceLayout"
+                    android:layout_marginRight="10dp"
+                    android:textStyle="bold"
+                    android:text="可选产品"
+                    android:textColor="@color/color_33_33_33"
+                    android:textSize="@dimen/text_size_16"/>
+            </RelativeLayout>
+            <RelativeLayout android:id="@+id/dfcLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp">
+                <TextView android:id="@+id/tv_fangPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="16dp"
+                    tools:text="¥359/人  x2"
+                    android:textColor="@color/color_99_99_99"
+                    android:textSize="@dimen/text_size_14" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/tv_fangPrice"
+                    android:layout_marginRight="10dp"
+                    android:text="单房差"
+                    android:textColor="@color/color_99_99_99"
+                    android:textSize="@dimen/text_size_14"/>
+            </RelativeLayout>
+            <RelativeLayout android:id="@+id/bxLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp">
+                <TextView android:id="@+id/tv_bxPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="16dp"
+                    tools:text="¥359/人  x2"
+                    android:textColor="@color/color_99_99_99"
+                    android:textSize="@dimen/text_size_16" />
+                <TextView android:id="@+id/tv_bx"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/tv_bxPrice"
+                    android:layout_marginRight="10dp"
+                    android:text="旅游意外保险"
+                    android:textColor="@color/color_99_99_99"
+                    android:textSize="@dimen/text_size_16"/>
+            </RelativeLayout>
+            <RelativeLayout android:id="@+id/bigAgeBXLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp">
+                <TextView android:id="@+id/tv_bigAgeBXPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="16dp"
+                    tools:text="¥359/人  x2"
+                    android:textColor="@color/color_99_99_99"
+                    android:textSize="@dimen/text_size_16" />
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/tv_bigAgeBXPrice"
+                    android:layout_marginRight="10dp">
+                    <TextView android:id="@+id/tv_bigAgeBX"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@+id/tv_bigAge"
+                        android:text="旅游意外保险"
+                        android:textColor="@color/color_99_99_99"
+                        android:textSize="@dimen/text_size_16"/>
+                    <TextView android:id="@+id/tv_bigAge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintLeft_toRightOf="@+id/tv_bigAgeBX"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginLeft="@dimen/dp_5"
+                        android:text="(75周岁以上)"
+                        android:textColor="@color/color_99_99_99"
+                        android:textSize="@dimen/text_size_12"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </RelativeLayout>
+            <RelativeLayout android:id="@+id/yhqLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp">
+                <LinearLayout android:id="@+id/yhqPriceLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" - ¥ "
+                        android:textColor="@color/color_FF_60_00"
+                        android:textSize="10sp" />
+                    <TextView android:id="@+id/tv_yhqPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        tools:text="359"
+                        android:textColor="@color/color_FF_60_00"
+                        android:textSize="@dimen/text_size_18" />
+                </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/yhqPriceLayout"
+                    android:layout_marginRight="10dp"
+                    android:textStyle="bold"
+                    android:text="优惠券"
+                    android:textColor="@color/color_33_33_33"
+                    android:textSize="@dimen/text_size_16"/>
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="9dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:textStyle="bold"
+                    android:text="共计:"
+                    android:textColor="@color/color_33_33_33"
+                    android:textSize="@dimen/text_size_16" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" ¥ "
+                    android:textColor="@color/color_FF_60_00"
+                    android:textSize="10sp" />
+
+                <TextView android:id="@+id/tvAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="9808"
+                    android:textColor="@color/color_FF_60_00"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</layout>

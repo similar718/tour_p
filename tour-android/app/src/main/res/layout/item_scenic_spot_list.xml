@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+    </data>
+    <RelativeLayout
+        android:id="@+id/itemLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:background="@color/color_FF_FF_FF">
+        <TextView
+            android:id="@+id/tv_address_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hello_world"
+            android:layout_centerInParent="true"
+            android:textColor="@color/color_33_33_33"
+            android:textSize="@dimen/text_size_16"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1_px"
+            android:background="@color/color_e5e5e5"
+            android:layout_alignParentBottom="true"
+            />
+    </RelativeLayout>
+</layout>

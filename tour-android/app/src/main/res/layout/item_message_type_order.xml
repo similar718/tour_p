@@ -1,0 +1,100 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+
+        <variable
+            name="item"
+            type="cn.xmzt.www.mine.bean.MessageBean" />
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/dp_23"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/shape_time_bg_radius_100"
+            android:layout_marginTop="@dimen/dp_13"
+            android:paddingLeft="@dimen/dp_9"
+            android:paddingRight="@dimen/dp_9"
+            android:paddingTop="@dimen/dp_4"
+            android:paddingBottom="@dimen/dp_4"
+            tools:text="19/06/29"
+            android:text="@{item.gmtCreateDate}"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+        <LinearLayout android:id="@+id/itemLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/dp_131"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:background="@drawable/shape_white_radius_8"
+            android:orientation="vertical">
+
+            <TextView android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/dp_38"
+                android:layout_marginTop="@dimen/dp_4"
+                android:paddingTop="@dimen/dp_8"
+                android:paddingBottom="@dimen/dp_8"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:gravity="center_vertical"
+                tools:text="您的订单未支付"
+                android:text="@{item.title}"
+                android:textColor="@color/color_33_33_33"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1_px"
+                android:background="@color/color_E5_E5_E5" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <ImageView android:id="@+id/iv_img"
+                    android:layout_width="68dp"
+                    android:layout_height="68dp"
+                    android:layout_gravity="center"
+                    android:scaleType="fitXY"
+                    app:imgCUrl="@{item.listPic}"
+                    tools:src="@drawable/hotel1" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dp">
+
+                    <TextView android:id="@+id/tvContent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/color_33_33_33"
+                        android:lineSpacingExtra="5dp"
+                        android:lines="2"
+                        tools:text="珠海长隆2天1晚-豪华自助游包 三餐...订单还未付款！"
+                        android:text="@{item.content}"
+                        android:textSize="14sp" />
+
+                    <TextView android:id="@+id/tv_View"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="7dp"
+                        android:text="点击查看订单"
+                        android:textColor="@color/color_99_99_99"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

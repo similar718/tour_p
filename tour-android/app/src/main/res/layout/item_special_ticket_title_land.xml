@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:layout_marginBottom="@dimen/dp_16">
+    <ImageView
+        android:id="@+id/special_ticket_title_iv"
+        android:layout_width="@dimen/dp_45"
+        android:layout_height="@dimen/dp_45"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/special_ticket_seng"
+        />
+    <TextView
+        android:id="@+id/special_ticket_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/special_ticket_title_iv"
+        android:text="森林公园"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/text_size_12"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/dp_6"
+        />
+</RelativeLayout>

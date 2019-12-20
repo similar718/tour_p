@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="item"
+            type="cn.xmzt.www.route.bean.RouteOrderDetailBean.Common"/>
+
+    </data>
+
+    <RelativeLayout android:id="@+id/itemLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/size_10"
+        android:paddingRight="@dimen/size_10"
+        android:paddingTop="14dp"
+        android:paddingBottom="14dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/route_list_item_bg_bottom_c_shape">
+        <ImageView android:id="@+id/imgView"
+            android:layout_width="98dp"
+            android:layout_height="98dp"
+            android:layout_marginRight="8dp"
+            app:imgCUrl="@{item.photoUrl}"
+            android:src="@drawable/icon_default"/>
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{item.productName}"
+            android:lineSpacingExtra="2dp"
+            tools:text="成都集合15日稻城-西藏自驾游卡成都集合15日稻城"
+            android:layout_toRightOf="@+id/imgView"
+            android:layout_alignTop="@+id/imgView"
+            android:textColor="@color/title_color"
+            android:textSize="@dimen/text_size_14"
+            android:lines="3"
+            android:ellipsize="end"/>
+        <TextView
+            android:id="@+id/tv_ydTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/imgView"
+            android:layout_below="@+id/title_tv"
+            android:layout_marginTop="4dp"
+            android:text="@{item.orderCreateTimeStr}"
+            tools:text="预定日期：2019-06-11"
+            android:textColor="@color/color_66_66_66"
+            android:textSize="@dimen/text_size_12"
+            android:singleLine="true"
+            android:ellipsize="end"/>
+        <TextView
+            android:id="@+id/tv_departTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/imgView"
+            android:layout_below="@+id/tv_ydTime"
+            android:layout_marginTop="2dp"
+            android:text="@{item.departDateStr}"
+            tools:text="出发日期：2019-06-27"
+            android:textColor="#FF9600"
+            android:textSize="@dimen/text_size_12"
+            android:singleLine="true"
+            android:ellipsize="end"/>
+    </RelativeLayout>
+</layout>

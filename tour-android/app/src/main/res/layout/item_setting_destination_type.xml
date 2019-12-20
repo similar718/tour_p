@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="item"
+            type="cn.xmzt.www.selfdrivingtools.bean.SettingDestinationTypeInfo"/>
+        <import type="android.view.View" />
+    </data>
+    <RelativeLayout android:id="@+id/itemLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_42">
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{item.content}"
+            android:textSize="@dimen/text_size_14"
+            android:textStyle="bold"
+            android:textColor="@{item.is_Checked ? @color/color_333333 : @color/color_999999}"
+            android:layout_centerInParent="true"
+            />
+        <TextView
+            android:layout_width="@dimen/dp_32"
+            android:layout_height="@dimen/dp_2"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@color/color_49_BE_FF"
+            android:visibility="@{item.is_Checked ? View.VISIBLE : View.INVISIBLE}"
+            />
+    </RelativeLayout>
+</layout>

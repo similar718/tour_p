@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+    </data>
+    <LinearLayout android:id="@+id/itemLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+        <LinearLayout android:id="@+id/no_data_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_no_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_21"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:drawablePadding="@dimen/dp_20"
+                android:drawableTop="@drawable/icon_no_data_xc"
+                android:textSize="16sp"
+                android:textColor="@color/color_66_66_66"
+                android:text="暂无可安排的行程"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_6"
+                android:layout_gravity="center_horizontal"
+                android:textSize="14sp"
+                android:textColor="@color/color_99_99_99"
+                android:text="可以去发现新路线，也可瞧瞧推荐的行程哦！"/>
+            <TextView android:id="@+id/tv_new_route"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_32"
+                android:background="@drawable/shape_btn_radius_100"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="发现新线路"
+                android:textSize="16sp"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+        <TextView android:id="@+id/tv_finished_xc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_6"
+            android:layout_marginBottom="@dimen/dp_20"
+            android:padding="@dimen/dp_10"
+            android:layout_gravity="center_horizontal"
+            android:textSize="16sp"
+            android:textColor="@color/color_24A4FF"
+            android:text="已结束的行程"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/color_line"/>
+        <LinearLayout android:id="@+id/routeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_10"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_10"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tv_line_route"
+                android:layout_width="@dimen/dp_2"
+                android:layout_height="@dimen/dp_15"
+                android:layout_marginStart="@dimen/dp_10"
+                android:background="@color/color_49_BE_FF" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_8"
+                android:text="推荐线路"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/text_size_16" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

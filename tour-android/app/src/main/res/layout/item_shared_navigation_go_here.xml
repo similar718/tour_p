@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="item"
+            type="cn.xmzt.www.selfdrivingtools.bean.SharedNavigationGoHereBean"/>
+    </data>
+    <RelativeLayout
+        android:id="@+id/item_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/tv_right_line"
+            android:layout_width="@dimen/dp_1"
+            android:layout_height="@dimen/dp_54"
+            android:background="@color/color_e5e5e5"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            />
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_8"
+            >
+            <TextView
+                android:id="@+id/tv_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="时间最短"
+                android:textColor="@{item.is_checked ? @color/color_49_BE_FF : @color/color_333333}"
+                android:textSize="@dimen/text_size_12"
+                />
+            <TextView
+                android:id="@+id/tv_2"
+                android:layout_below="@+id/tv_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="56分钟"
+                android:textSize="@dimen/text_size_16"
+                android:textColor="@{item.is_checked ? @color/color_49_BE_FF : @color/color_333333}"
+                android:layout_marginTop="@dimen/dp_4"
+                />
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_2"
+                android:layout_marginTop="@dimen/dp_4">
+
+                <TextView
+                    android:id="@+id/tv_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="66公里"
+                    android:textColor="@{item.is_checked ? @color/color_49_BE_FF : @color/color_333333}"
+                    android:textSize="@dimen/text_size_12"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tv_3"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp_3"
+                    android:text="￥105"
+                    android:textColor="@{item.is_checked ? @color/color_49_BE_FF : @color/color_333333}"
+                    android:textSize="@dimen/text_size_10"
+                    />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/route_list_item_bg_shape"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:layout_toLeftOf="@+id/iv_icon"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="优惠"
+            android:textColor="@color/color_33_33_33"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:ellipsize="end"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/color_line"/>
+        <LinearLayout android:id="@+id/yhqLayout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/route_text_r_2_shape"
+                android:padding="1dp"
+                android:text="券"
+                android:textColor="#FF9600"
+                android:textSize="14sp"/>
+            <TextView android:id="@+id/tv_coupon_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                tools:text="-¥45"
+                android:textColor="#FF9600"
+                android:textSize="14sp"/>
+            <TextView android:id="@+id/tv_tv_coupon_usable_count"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:gravity="right"
+                android:hint="无可用优惠券"
+                android:textColorHint="@color/color_99_99_99"
+                android:drawablePadding="5dp"
+                android:drawableRight="@drawable/hotel_order_right"
+                android:textColor="@color/color_99_99_99"
+                android:textSize="14sp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</layout>

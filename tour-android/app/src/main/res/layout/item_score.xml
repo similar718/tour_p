@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="userScoreDetailsBean"
+            type="cn.xmzt.www.mine.bean.UserScoreDetailsBean" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/size_10"
+            android:layout_marginRight="@dimen/size_10"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:id="@+id/content_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/size_15"
+                android:layout_marginTop="@dimen/size_15">
+
+                <TextView
+                    android:id="@+id/score_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text='@{userScoreDetailsBean.inNum>0?"+"+userScoreDetailsBean.inNum:"-"+userScoreDetailsBean.outNum}'
+                    android:textColor="@{userScoreDetailsBean.inNum>0?@color/orange:@color/color_33_33_33}"
+                    android:textSize="@dimen/text_size_22" />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/size_10"
+                    android:layout_toLeftOf="@+id/money_tv"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/description_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:text="@{userScoreDetailsBean.tradeRemake}"
+                        android:textColor="@color/title_color"
+                        android:textSize="@dimen/text_size_14" />
+
+                    <TextView
+                        android:id="@+id/data_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/size_5"
+                        android:text="@{userScoreDetailsBean.gmtCreate}"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/text_size_12" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="item"
+            type="cn.xmzt.www.intercom.bean.TourTripBean"/>
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_15"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/iv_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_10"
+            android:scaleType="centerCrop"
+            android:src="@drawable/checkbox_yx_selector1" />
+        <RelativeLayout
+            android:id="@+id/cl_travel_info"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_185"
+            android:layout_marginLeft="@dimen/dp_13"
+            android:layout_marginRight="@dimen/dp_13"
+            android:background="@drawable/shape_white_radius_8">
+            <ImageView
+                android:id="@+id/iv_photo"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_185"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:scaleType="centerCrop"
+                app:imgCRadius8Url="@{item.photoUrl}"
+                android:src="@drawable/icon_default" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_185"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:scaleType="centerCrop"
+                android:background="@drawable/bg_xc_item_shadow" />
+
+            <TextView
+                android:id="@+id/tv_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/shape_bottom_gray_radius_8"
+                android:gravity="center"
+                android:layout_marginRight="@dimen/dp_10"
+                android:paddingLeft="@dimen/dp_4"
+                android:paddingRight="@dimen/dp_4"
+                android:paddingTop="@dimen/dp_5"
+                android:paddingBottom="@dimen/dp_5"
+                android:lineSpacingExtra="3dp"
+                android:lines="2"
+                android:text="已出行"
+                android:textColor="@color/color_FF_FF_FF"
+                android:textSize="@dimen/text_size_12" />
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/tv_status"
+                android:layout_marginTop="@dimen/dp_16"
+                android:layout_marginRight="@dimen/dp_30"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:singleLine="true"
+                tools:text="海南环岛自驾攻略 | 海南6日游"
+                android:text="@{item.lineName}"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="20sp" />
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_below="@+id/tv_title"
+                android:layout_marginTop="@dimen/dp_6"
+                android:lines="1"
+                android:singleLine="true"
+                android:text="@{item.startEndDate}"
+                tools:text="19.08.12—19.08.26"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_12" />
+            <TextView
+                android:id="@+id/tv_departure_site"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="@dimen/dp_68"
+                android:minHeight="@dimen/dp_18"
+                android:paddingTop="@dimen/dp_2"
+                android:paddingBottom="@dimen/dp_2"
+                android:paddingLeft="@dimen/dp_4"
+                android:paddingRight="@dimen/dp_4"
+                android:background="@drawable/shape_white_radius_4"
+                android:layout_below="@+id/tv_date"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_6"
+                android:singleLine="true"
+                android:ellipsize="end"
+                tools:text="出发地：广州"
+                android:text="@{item.departSiteStr}"
+                android:textColor="#000000"
+                android:textSize="10sp"/>
+            <FrameLayout android:id="@+id/group_enter_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp_10"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true">
+                <TextView
+                    android:id="@+id/tv_group_enter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="@dimen/dp_92"
+                    android:minHeight="@dimen/dp_30"
+                    android:layout_marginRight="@dimen/dp_1"
+                    android:background="@drawable/shape_yellow1_radius_100"
+                    android:drawablePadding="@dimen/dp_2"
+                    android:drawableLeft="@drawable/ic_travel_group_enter1"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/dp_10"
+                    android:paddingRight="@dimen/dp_10"
+                    android:paddingTop="@dimen/dp_6"
+                    android:paddingBottom="@dimen/dp_6"
+                    android:text="进入行程群"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/text_size_12" />
+                <ImageView
+                    android:id="@+id/iv_voice_playback"
+                    android:layout_width="@dimen/dp_92"
+                    android:layout_height="@dimen/dp_30"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:scaleType="center"
+                    android:visibility="invisible"
+                    android:src="@drawable/ic_travel_voice_playback" />
+                <ImageView
+                    android:id="@+id/iv_unread_msg"
+                    android:layout_width="@dimen/dp_8"
+                    android:layout_height="@dimen/dp_8"
+                    android:src="@drawable/icon_red_dot_jrxcqun"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_gravity="right"/>
+            </FrameLayout>
+            <LinearLayout android:id="@+id/creator_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginRight="@dimen/dp_10"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:paddingTop="@dimen/dp_6"
+                android:paddingBottom="@dimen/dp_6"
+                android:gravity="center_vertical"
+                android:layout_toLeftOf="@+id/group_enter_layout"
+                android:layout_alignParentBottom="true">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="由"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_12" />
+                <TextView
+                    android:id="@+id/tv_creator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxWidth="@dimen/dp_60"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:text="官方"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_12" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="创建"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_12" />
+
+            </LinearLayout>
+            <TextView android:id="@+id/tv_line_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/creator_layout"
+                android:minHeight="@dimen/dp_2"
+                android:minWidth="@dimen/dp_56"
+                android:maxWidth="@dimen/dp_80"
+                android:paddingLeft="@dimen/dp_6"
+                android:paddingRight="@dimen/dp_6"
+                android:paddingTop="@dimen/dp_2"
+                android:paddingBottom="@dimen/dp_2"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:background="@drawable/shape_line_type_xc_bg"
+                android:gravity="center"
+                android:textSize="11sp"
+                android:textColor="@color/color_24A4FF"
+                tools:text="自由出行"/>
+        </RelativeLayout>
+    </LinearLayout>
+</layout>

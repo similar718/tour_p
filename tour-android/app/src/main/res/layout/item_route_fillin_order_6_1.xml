@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/route_list_item_bg_shape"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:layout_toLeftOf="@+id/iv_icon"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="保险"
+            android:textColor="@color/color_33_33_33"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:ellipsize="end"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/color_line"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_12"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_10"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <TextView android:id="@+id/tv_insurance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="旅游意外保险"
+                android:textColor="@color/color_33_33_33"
+                android:textSize="14sp"/>
+            <TextView android:id="@+id/tv_insurance_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:gravity="right"
+                tools:text="¥20/份"
+                android:textColor="#FF6000"
+                android:textSize="14sp"/>
+            <ImageView android:id="@+id/iv_check_insurance"
+                android:layout_width="@dimen/dp_28"
+                android:layout_height="@dimen/dp_28"
+                android:padding="@dimen/dp_6"
+                android:src="@drawable/icon_check_yx_un"/>
+        </LinearLayout>
+        <TextView android:id="@+id/tv_insurance_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_12"
+            android:layout_marginBottom="@dimen/dp_16"
+            android:drawablePadding="@dimen/dp_3"
+            android:drawableLeft="@drawable/icon_route_tip"
+            tools:text="若出行人中有75周岁以上客人，保险费为以上价格的1.5倍！"
+            android:textColor="@color/color_99_99_99"
+            android:textSize="10sp"/>
+    </LinearLayout>
+
+</layout>

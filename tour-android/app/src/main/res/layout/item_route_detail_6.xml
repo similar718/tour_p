@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+    </data>
+    <LinearLayout android:id="@+id/itemLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="20dp"
+        android:background="@color/white">
+        <LinearLayout android:id="@+id/xzLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="自驾须知请查看"
+                android:textColor="#333333"
+                android:textSize="14sp"/>
+            <TextView android:id="@+id/xzTV1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="《自驾注意事项说明》"
+                android:textColor="@color/color_24A4FF"
+                android:textSize="14sp"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/xzLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_8"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="退改规则请查看"
+                android:textColor="#333333"
+                android:textSize="14sp"/>
+            <TextView android:id="@+id/xzTV2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="《线路退改规则说明》"
+                android:textColor="@color/color_24A4FF"
+                android:textSize="14sp"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/xzLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_8"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="安全须知请查看"
+                android:textColor="#333333"
+                android:textSize="14sp"/>
+            <TextView android:id="@+id/xzTV3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="《安全须知》"
+                android:textColor="@color/color_24A4FF"
+                android:textSize="14sp"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <import type="android.view.View" />
+    </data>
+    <RelativeLayout
+        android:id="@+id/item_layout"
+        android:layout_width="@dimen/dp_94"
+        android:layout_height="wrap_content"
+        android:background="@color/color_FF_FF_FF">
+        <!-- 头像 -->
+        <RelativeLayout
+            android:id="@+id/rl_head_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginRight="@dimen/dp_20">
+
+            <cn.xmzt.www.view.RoundImageView
+                android:layout_width="@dimen/dp_54"
+                android:layout_height="@dimen/dp_54"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/smart_team_bottom_checked_bg"
+                android:id="@+id/iv_head_img_item_bg"
+                android:visibility="invisible"
+                />
+            <ImageView
+                android:id="@+id/iv_head_img_item"
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="@dimen/dp_50"
+                android:src="@drawable/shared_navigation_person_list_head_img"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="@dimen/dp_2"
+                />
+        </RelativeLayout>
+        <!-- 类型显示 -->
+        <TextView
+            android:id="@+id/tv_type_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="领队"
+            android:textSize="@dimen/text_size_10"
+            android:textColor="@color/color_FF_FF_FF"
+            android:background="@drawable/marker_shared_navigation_map_captain_leander_info_bg"
+            android:layout_alignRight="@+id/rl_head_top"
+            android:layout_marginRight="@dimen/dp_m_13"
+            android:layout_marginTop="@dimen/dp_5"
+            />
+        <!-- 昵称 -->
+        <TextView
+            android:id="@+id/tv_nick_name_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_6"
+            android:layout_below="@+id/rl_head_top"
+            android:layout_centerHorizontal="true"
+            android:maxWidth="@dimen/dp_90"
+            android:text="134****1206"
+            android:textSize="@dimen/text_size_12"
+            android:textColor="@color/color_333333"
+            android:textStyle="bold"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:gravity="center"
+            />
+
+        <ImageView
+            android:id="@+id/iv_add_car"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/smart_team_my_add_car_info_icon"
+            android:layout_below="@+id/tv_nick_name_item"
+            android:paddingTop="@dimen/dp_6"
+            android:paddingBottom="@dimen/dp_6"
+            android:visibility="gone"
+            />
+
+        <!-- 车辆信息 -->
+        <TextView
+            android:id="@+id/tv_type_content_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/activity_shared_navigation_map_car_info_bg"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:maxWidth="@dimen/dp_80"
+            android:text="粤ZF0238"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/text_size_11"
+            android:textStyle="bold"
+            android:layout_below="@+id/tv_nick_name_item"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/dp_3"
+            />
+        <!-- 距离 -->
+        <TextView
+            android:id="@+id/iv_distance_item_car"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="距离2km"
+            android:maxWidth="@dimen/dp_72"
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/text_size_11"
+            android:layout_below="@+id/tv_type_content_item"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_5"
+            android:layout_marginBottom="@dimen/dp_7"
+            android:visibility="gone"
+            android:ellipsize="end"
+            android:singleLine="true"
+            />
+    </RelativeLayout>
+</layout>

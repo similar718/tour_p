@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="item"
+            type="cn.xmzt.www.route.bean.CarForm"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="5"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="车牌号"
+                android:textColor="@color/color_33_33_33"
+                android:textSize="14sp"/>
+            <TextView android:id="@+id/et_carNum"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:hint="请填写车牌号"
+                android:text="@{item.carNumber}"
+                android:paddingLeft="10dp"
+                android:textSize="14sp"
+                android:maxLength="8"
+                android:singleLine="true"
+                android:gravity="center_vertical"
+                android:textColor="@color/color_33_33_33"
+                android:textColorHint="@color/color_99_99_99"
+                android:background="@color/white"/>
+            <!--<EditText android:id="@+id/et_carNum"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:hint="请填写车牌号"
+                android:text="@{item.carNumber}"
+                android:paddingLeft="10dp"
+                android:textSize="14sp"
+                android:maxLength="8"
+                android:singleLine="true"
+                android:textColor="@color/color_33_33_33"
+                android:textColorHint="@color/color_99_99_99"
+                android:background="@color/white"/>-->
+            <ImageView android:id="@+id/iv_del"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:src="@drawable/icon_route_delete"/>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:visibility="gone"
+            android:background="@color/color_line" />
+        <LinearLayout android:id="@+id/car_type_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:visibility="gone"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="5"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="号码类型"
+                android:textColor="@color/color_33_33_33"
+                android:textSize="14sp"/>
+
+            <TextView android:id="@+id/tv_car_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="1"
+                tools:text="普通车牌"
+                android:text="@{item.numberTypeName}"
+                android:textColor="@color/color_33_33_33"
+                android:textSize="14sp"/>
+            <ImageView
+                android:layout_width="@dimen/dp_10"
+                android:layout_height="@dimen/dp_10"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:src="@drawable/icon_pop_down"/>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/color_line" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="5"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="备注说明"
+                android:textColor="@color/color_33_33_33"
+                android:textSize="14sp"/>
+            <EditText android:id="@+id/et_remark"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:hint="50个汉字以内"
+                android:text="@{item.remark}"
+                android:paddingLeft="10dp"
+                android:textSize="14sp"
+                android:textColor="@color/color_33_33_33"
+                android:textColorHint="@color/color_99_99_99"
+                android:background="@color/white"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</layout>

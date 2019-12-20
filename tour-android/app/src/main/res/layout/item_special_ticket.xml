@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/dp_10"
+    android:layout_marginRight="@dimen/dp_10"
+    android:layout_marginTop="@dimen/dp_10"
+    android:background="@drawable/item_special_ticket_bg">
+    <!-- title -->
+    <RelativeLayout
+        android:id="@+id/title_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/item_special_ticket_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="人气必玩"
+            android:textColor="@color/color_333333"
+            android:textStyle="bold"
+            android:textSize="@dimen/size_21"
+            />
+        <RelativeLayout
+            android:id="@+id/item_special_ticket_right_more_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp_10"
+            >
+            <TextView
+                android:id="@+id/item_special_ticket_right_more_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_14"
+                android:textColor="@color/color_ff9600"
+                android:text="长沙全部景点"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/special_ticket_right_more_icon"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/item_special_ticket_right_more_tv"
+                android:layout_marginLeft="@dimen/size_4"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+    <!-- 列表内容 -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_ticket_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title_rl"
+        android:layout_marginTop="@dimen/dp_10"/>
+</RelativeLayout>

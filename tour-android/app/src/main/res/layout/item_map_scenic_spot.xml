@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="item"
+            type="cn.xmzt.www.selfdrivingtools.bean.ScenicSpotGuideBean"/>
+
+        <import type="android.view.View" />
+
+        <variable name="topTitle" type="String" />
+    </data>
+    <LinearLayout android:id="@+id/itemLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <!-- 列表顶部显示问题 -->
+        <RelativeLayout
+            android:id="@+id/item_map_scenic_spot_top_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text='@{"全部景点("+item.explainPointCount+")"}'
+                android:textSize="@dimen/text_size_14"
+                android:textColor="@color/color_333333"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/size_10"
+                android:layout_marginBottom="@dimen/size_10"
+                />
+            <ImageView
+                android:id="@+id/item_map_scenic_spot_offline_iv"
+                android:layout_width="@dimen/dp_41"
+                android:layout_height="@dimen/size_17"
+                android:src="@drawable/scenic_spot_map_item_offline_icon"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="@dimen/size_11"
+                android:layout_marginRight="@dimen/size_10"
+                android:layout_marginTop="@dimen/size_12"
+                />
+            <TextView
+                android:id="@+id/item_map_scenic_spot_search_top_tv"
+                android:text="搜索"
+                android:textColor="@color/color_999999"
+                android:textSize="@dimen/text_size_12"
+                android:layout_width="@dimen/dp_41"
+                android:layout_height="@dimen/size_17"
+                android:layout_marginLeft="@dimen/size_20"
+                android:layout_marginTop="@dimen/size_14"
+                android:drawablePadding="@dimen/size_3"
+                android:visibility="gone"
+                android:drawableLeft="@drawable/scenic_spot_map_item_search_top_icon"
+                />
+        </RelativeLayout>
+        <!-- 中间位置的时候显示的搜索框 -->
+        <RelativeLayout
+            android:id="@+id/item_map_scenic_spot_search_rl"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_45">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1_px"
+                android:background="@color/color_e5e5e5"
+                />
+            <!-- 搜索 -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_35"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/title_back_iv"
+                android:layout_toLeftOf="@+id/city_rl"
+                android:background="@drawable/search_bg_shape"
+                android:layout_marginTop="@dimen/size_6"
+                android:layout_marginLeft="@dimen/size_12"
+                android:layout_marginRight="@dimen/size_8"
+                >
+
+                <ImageView
+                    android:id="@+id/search_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/size_10"
+                    android:src="@drawable/search"/>
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="经典门票名称/主题"
+                    android:textColor="@color/title_color"
+                    android:textSize="@dimen/text_size_12"
+                    android:layout_toLeftOf="@+id/delete_iv"
+                    android:layout_toRightOf="@+id/search_iv"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/size_10"
+                    android:background="@null"/>
+            </RelativeLayout>
+        </RelativeLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_spot_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_F2F3F4"
+            android:paddingLeft="@dimen/size_10"
+            />
+    </LinearLayout>
+</layout>

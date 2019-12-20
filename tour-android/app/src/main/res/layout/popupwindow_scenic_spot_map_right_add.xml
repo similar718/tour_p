@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/scenic_spot_map_right_add_pop_bg"
+        >
+        <TextView android:id="@+id/pop_scenic_spot_map_right_add_images_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/scenic_spot_map_right_add_images_icon"
+            android:text="图集"
+            android:textSize="@dimen/size_16"
+            android:textColor="@color/color_FF_FF_FF"
+            android:layout_marginTop="@dimen/dp_28"
+            android:layout_marginLeft="@dimen/dp_30"
+            android:drawablePadding="@dimen/size_10"
+            android:layout_marginBottom="@dimen/dp_10"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1_px"
+            android:background="@color/color_666666"
+            android:layout_marginRight="@dimen/dp_11"
+            android:layout_marginLeft="@dimen/dp_30"
+            />
+        <TextView android:id="@+id/pop_scenic_spot_map_right_add_share_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/scenic_spot_map_right_add_share_icon"
+            android:text="分享"
+            android:textSize="@dimen/size_16"
+            android:textColor="@color/color_FF_FF_FF"
+            android:drawablePadding="@dimen/size_10"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:layout_marginLeft="@dimen/dp_30"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1_px"
+            android:background="@color/color_666666"
+            android:layout_marginRight="@dimen/dp_11"
+            android:layout_marginLeft="@dimen/dp_30"
+            />
+        <TextView android:id="@+id/pop_scenic_spot_map_right_add_feedback_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/scenic_spot_map_right_add_feedback_icon"
+            android:text="反馈"
+            android:textSize="@dimen/size_16"
+            android:textColor="@color/color_FF_FF_FF"
+            android:drawablePadding="@dimen/size_10"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:layout_marginLeft="@dimen/dp_30"
+            />
+    </LinearLayout>
+</RelativeLayout>

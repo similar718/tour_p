@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="item"
+            type="cn.xmzt.www.route.bean.OrderInvoiceInfo"/>
+    </data>
+    <RelativeLayout android:id="@+id/itemLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:paddingTop="16dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:background="@drawable/route_list_item_bg_shape">
+        <TextView android:id="@+id/tv_fp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:ems="5"
+            android:text="发票"
+            android:textColor="@color/color_33_33_33"
+            android:textSize="16sp"/>
+        <ImageView android:id="@+id/iv_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/hotel_order_right"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_toRightOf="@+id/tv_fp"
+            android:layout_toLeftOf="@+id/iv_arrow"
+            android:orientation="vertical">
+
+            <TextView android:id="@+id/tv_fpzt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                tools:text="已发送 | 电子发票"
+                android:text="@{item.sendStatusName}"
+                android:textColor="@color/color_33_33_33"
+                android:textSize="14sp"/>
+            <TextView android:id="@+id/tv_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                tools:text="332789594@qq.com"
+                android:text="@{item.receiveEmail}"
+                android:textColor="@color/color_99_99_99"
+                android:textSize="12sp"/>
+            <TextView android:id="@+id/tv_send_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="16dp"
+                android:textStyle="bold"
+                android:text="重发电子发票"
+                android:textColor="@color/color_24A4FF"
+                android:textSize="14sp"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+</layout>

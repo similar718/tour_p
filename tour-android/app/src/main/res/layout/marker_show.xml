@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/tv_marker_show"
+        android:layout_width="wrap_content"
+        android:maxWidth="@dimen/dp_100"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:ellipsize="middle"
+        android:background="@drawable/item_ticket_detail_top_bg"
+        android:paddingLeft="@dimen/dp_6"
+        android:paddingRight="@dimen/dp_6"
+        android:paddingTop="@dimen/size_1"
+        android:paddingBottom="@dimen/size_1"
+        android:layout_centerHorizontal="true"
+        android:text="茅岩kajsdhfiashdnf等景点"
+        />
+    <ImageView
+        android:id="@+id/iv_marker_show"
+        android:layout_below="@+id/tv_marker_show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/map_marker_scenic_spot_icon"
+        android:layout_marginTop="@dimen/size_3"
+        android:layout_centerHorizontal="true"
+        />
+</RelativeLayout>

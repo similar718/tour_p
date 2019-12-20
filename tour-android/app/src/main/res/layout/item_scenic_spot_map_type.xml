@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/dp_53"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:id="@+id/rl_all_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:paddingLeft="@dimen/size_20"
+        android:paddingRight="@dimen/size_20"
+        >
+        <ImageView
+            android:id="@+id/iv_type_icon"
+            android:layout_width="@dimen/size_24"
+            android:layout_height="@dimen/size_24"
+            android:src="@drawable/scenic_spot_map_all_icon"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/size_5"
+            />
+        <TextView
+            android:id="@+id/tv_type_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="全部"
+            android:textSize="@dimen/text_size_12"
+            android:textColor="@color/color_999999"
+            android:layout_below="@+id/iv_type_icon"
+            android:layout_marginTop="@dimen/size_3"
+            android:layout_centerHorizontal="true"
+            />
+
+        <TextView
+            android:id="@+id/tv_type_bottom_line"
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_2"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:background="@color/color_24A4FF"
+            />
+
+    </RelativeLayout>
+</LinearLayout>

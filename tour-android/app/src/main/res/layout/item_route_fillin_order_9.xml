@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+        <ImageView android:id="@+id/iv_protocol"
+            android:layout_width="@dimen/dp_18"
+            android:layout_height="@dimen/dp_18"
+            android:src="@drawable/checkbox_yx_selector1"/>
+        <LinearLayout android:id="@+id/xyLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/iv_protocol"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:text="我已同意"
+                android:textColor="#999999"
+                android:textSize="12sp"/>
+            <TextView android:id="@+id/tv_tgzc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_6"
+                android:text="《退改政策》"
+                android:textColor="@color/color_24A4FF"
+                android:textSize="12sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:text="以及以下"
+                android:textColor="#999999"
+                android:textSize="12sp"/>
+            <TextView android:id="@+id/tv_htxy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_6"
+                android:text="《合同/协议》"
+                android:textColor="@color/color_24A4FF"
+                android:textSize="12sp"/>
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/iv_protocol"
+            android:layout_below="@+id/xyLayout"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="7dp"
+            android:layout_marginBottom="20dp"
+            android:text="协议将在资源确认且支付后生效。自驾游品质保证，请放心预定！\n扣款说明：自驾游会根据您的付款方式进行订单全款扣除和预授权限定，如订单不确认将解除预授权或全额退款至您的支付账户。订单是否生效以自驾游最终通知为准。"
+            android:textColor="#999999"
+            android:textSize="12sp"/>
+    </RelativeLayout>
+
+</layout>

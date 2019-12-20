@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_FF_FF_FF"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_receive"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="20dp">
+
+        <TextView
+            android:id="@+id/tv_receive"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:text="最近领取"
+            android:textColor="@color/color_49_BE_FF"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/iv_receive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/icon_hotel_sort_select" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_height="0.5dp"
+        style="@style/DivisionLine" />
+
+    <LinearLayout
+        android:id="@+id/ll_expire"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="20dp">
+
+        <TextView
+            android:id="@+id/tv_expire"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:text="最近到期"
+            android:textColor="@color/color_666666"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/iv_expire"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/icon_hotel_sort_select" />
+    </LinearLayout>
+</LinearLayout>

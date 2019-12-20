@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <import type="android.view.View" />
+    </data>
+        <RelativeLayout
+            android:id="@+id/item_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_80">
+
+            <ImageView
+                android:id="@+id/iv_head_img"
+                android:layout_width="@dimen/dp_38"
+                android:layout_height="@dimen/dp_38"
+                android:src="@drawable/icon_head_default"
+                android:layout_centerVertical="true"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/iv_head_img"
+                android:layout_marginLeft="@dimen/dp_12"
+                android:layout_toLeftOf="@+id/tv_status"
+                android:layout_marginRight="@dimen/dp_5"
+                android:layout_centerVertical="true">
+                <TextView
+                    android:id="@+id/tv_name_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/text_size_16"
+                    android:textColor="@color/color_333333"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:text="张子丹"/>
+                <TextView
+                    android:id="@+id/tv_user_status_content"
+                    android:layout_below="@+id/tv_name_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size_12"
+                    android:textColor="@color/color_999999"
+                    android:layout_marginTop="@dimen/dp_1"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:text="已迟到12分钟"/>
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/iv_call"
+                android:layout_width="@dimen/dp_30"
+                android:layout_height="@dimen/dp_30"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/trip_signin_list_call_icon"/>
+
+            <TextView
+                android:id="@+id/tv_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="待签到"
+                android:textColor="@color/color_ff9600"
+                android:textSize="@dimen/text_size_14"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/iv_call"
+                android:layout_marginRight="@dimen/dp_26"
+                />
+
+            <TextView
+                android:id="@+id/tv_line"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1_px"
+                android:background="@color/color_e5e5e5"
+                android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+</layout>

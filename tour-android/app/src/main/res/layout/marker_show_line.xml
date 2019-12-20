@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/line_tv"
+    android:layout_width="@dimen/dp_20"
+    android:layout_height="@dimen/dp_20"
+    android:background="@drawable/marker_show_line_bg"
+    android:textColor="@color/color_FF_FF_FF"
+    android:text="5"
+    android:textSize="@dimen/text_size_13"
+    android:gravity="center"
+    />

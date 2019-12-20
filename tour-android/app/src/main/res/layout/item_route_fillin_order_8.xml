@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="item"
+            type="cn.xmzt.www.route.bean.OrderInvoiceForm"/>
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/route_list_item_bg_shape">
+        <LinearLayout android:id="@+id/fpLayout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="1dp"
+                android:text="发票"
+                android:textColor="@color/color_33_33_33"
+                android:textSize="16sp"/>
+            <TextView android:id="@+id/tv_fp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:gravity="right"
+                android:hint="不需要"
+                android:text="@{item.itemTitle}"
+                android:textColorHint="@color/color_99_99_99"
+                android:drawablePadding="5dp"
+                android:drawableRight="@drawable/hotel_order_right"
+                android:textColor="@color/color_33_33_33"
+                android:textSize="14sp"/>
+        </LinearLayout>
+    </FrameLayout>
+
+</layout>

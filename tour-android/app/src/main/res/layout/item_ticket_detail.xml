@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="@dimen/size_10"
+    android:background="@drawable/item_ticket_detail_top_bg">
+    <!-- title -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/size_15"
+        android:layout_marginRight="@dimen/size_12"
+        android:layout_marginTop="@dimen/dp_18"
+        >
+        <ImageView
+            android:id="@+id/item_ticket_detail_list_title_iv"
+            android:layout_width="@dimen/dp_18"
+            android:layout_height="@dimen/dp_18"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ticket_detail_recommand_icon"
+            />
+        <TextView
+            android:id="@+id/item_ticket_detail_list_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="推荐"
+            android:textColor="@color/color_333333"
+            android:textStyle="bold"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/size_18"
+            android:layout_toRightOf="@+id/item_ticket_detail_list_title_iv"
+            android:layout_marginLeft="@dimen/dp_15"
+            />
+    </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1_px"
+        android:background="@color/color_e5e5e5"
+        android:layout_marginTop="@dimen/text_size_19"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_ticket_detail_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top_rl"
+        android:layout_marginLeft="@dimen/dp_12"
+        android:layout_marginRight="@dimen/dp_12"
+        />
+</LinearLayout>

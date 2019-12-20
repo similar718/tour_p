@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <FrameLayout
+            android:id="@+id/add_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/shape_white_radius_4">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:layout_marginBottom="13dp"
+                android:layout_gravity="center_horizontal"
+                android:drawableLeft="@drawable/icon_select_tourists_add"
+                android:drawablePadding="3dp"
+                android:text="新增抬头"
+                android:textColor="@color/color_49_BE_FF" />
+        </FrameLayout>
+
+        <TextView android:id="@+id/tv_no_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:drawablePadding="30dp"
+            android:lineSpacingExtra="10dp"
+            android:drawableTop="@drawable/select_tourists_no_data"
+            android:gravity="center"
+            android:paddingLeft="57dp"
+            android:paddingRight="57dp"
+            android:text="亲，您还没有添加发票抬头\n请点击上方的“新增抬头”进行添加吧"
+            android:textColor="@color/color_99_99_99"
+            android:textSize="14sp" />
+    </LinearLayout>
+</layout>

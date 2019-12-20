@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="item"
+            type="cn.xmzt.www.home.bean.SelectDateTime"/>
+    </data>
+
+    <FrameLayout android:id="@+id/itemLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white">
+        <LinearLayout android:id="@+id/itemLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="58dp"
+            android:paddingTop="7dp"
+            android:paddingBottom="7dp"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@drawable/time_selector"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="儿童节"
+                android:text="@{item.label}"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:maxLines="1"
+                android:ellipsize="end"/>
+            <TextView
+                android:id="@+id/tv_date_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="22"
+                android:text="@{item.dateDays}"
+                android:textColor="@color/color_33_33_33"
+                android:textSize="16sp"
+                android:maxLines="1"
+                android:ellipsize="end"/>
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:text="9"
+                android:textColor="@color/white"
+                android:textSize="9sp"
+                android:maxLines="1"
+                android:ellipsize="end"/>
+        </LinearLayout>
+    </FrameLayout>
+</layout>

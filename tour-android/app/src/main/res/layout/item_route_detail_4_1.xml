@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="item"
+            type="cn.xmzt.www.route.bean.RouteDetailPage.DayLineTrip"/>
+
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+        <LinearLayout android:id="@+id/timeLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tvTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="0dp"
+                android:includeFontPadding="false"
+                android:gravity="center"
+                android:text="@{item.dayNumStr}"
+                android:textStyle="bold"
+                android:textColor="#333333"
+                android:textSize="20sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="0dp"
+                android:includeFontPadding="false"
+                android:gravity="center"
+                android:text="DAY"
+                android:textColor="#999999"
+                android:textSize="11sp" />
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/dotImg1"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:gravity="center"
+            android:scaleType="centerInside"
+            android:layout_toRightOf="@+id/timeLayout"
+            android:layout_marginLeft="7dp"
+            android:layout_gravity="center"
+            android:src="@drawable/icon_route_xc_1" />
+        <TextView
+            android:id="@+id/tvTitle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/dotImg1"
+            android:minHeight="@dimen/dp_40"
+            android:minLines="1"
+            android:paddingLeft="8dp"
+            android:paddingBottom="@dimen/dp_8"
+            android:textStyle="bold"
+            android:textColor="@color/color_33_33_33"
+            android:textSize="@dimen/size_16"
+            android:text="@{item.title}"
+            tools:text="株洲 - 一日游" />
+
+        <TextView
+            android:id="@+id/tvContent1"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_16"
+            android:paddingBottom="16dp"
+            android:layout_toRightOf="@+id/dotImg1"
+            android:layout_marginLeft="-11dp"
+            android:layout_below="@+id/dotImg1"
+            android:layout_alignBottom="@+id/tvTitle1"
+            android:background="@drawable/bg_time_line"
+            android:paddingLeft="18dp"
+            android:textColor="@color/color_33_33_33"
+            android:textSize="@dimen/size_14"/>
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shape_white_radius_4"
+        android:paddingBottom="10dp">
+
+        <ImageView
+            android:id="@+id/iv_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/icon_order_hotel"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:text="门票"
+            android:textColor="@color/color_66_66_66"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_icon"
+            app:layout_constraintLeft_toRightOf="@+id/iv_icon"
+            app:layout_constraintTop_toTopOf="@+id/iv_icon" />
+
+        <TextView
+            android:id="@+id/tv_order_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:text="待支付"
+            android:textColor="#FF0C0C"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_icon"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/iv_icon" />
+
+        <TextView
+            android:id="@+id/tv_order_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingRight="40dp"
+            android:paddingTop="12dp"
+            android:maxLines="2"
+            android:text="深圳世界之窗成人票（刷身份证直接入园）"
+            android:textColor="@color/color_33_33_33"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="@+id/iv_icon"
+            app:layout_constraintRight_toLeftOf="@+id/tv_order_type"
+            app:layout_constraintTop_toBottomOf="@+id/iv_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="￥"
+            android:textColor="@color/color_66_66_66"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_order_price"
+            app:layout_constraintRight_toLeftOf="@+id/tv_order_price" />
+
+        <TextView
+            android:id="@+id/tv_order_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="210"
+            android:textColor="@color/color_66_66_66"
+            android:textSize="17sp"
+            app:layout_constraintRight_toRightOf="@+id/tv_order_type"
+            app:layout_constraintTop_toBottomOf="@+id/tv_order_type" />
+
+        <TextView
+            android:id="@+id/tv_refund"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="退款中"
+            android:textColor="@color/color_49_BE_FF"
+            app:layout_constraintRight_toRightOf="@+id/tv_order_type"
+            app:layout_constraintTop_toBottomOf="@+id/tv_address" />
+
+        <TextView
+            android:id="@+id/tv_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="3dp"
+            android:text="宝安大道4004号 旭生大厦附楼"
+            android:textColor="@color/color_99_99_99"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="@+id/iv_icon"
+            app:layout_constraintTop_toBottomOf="@+id/tv_order_name" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:paddingBottom="15dp"
+            android:paddingTop="3dp"
+            android:text="2019-05-29当日"
+            android:textColor="@color/color_99_99_99"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="@+id/iv_icon"
+            app:layout_constraintTop_toBottomOf="@+id/tv_address" />
+
+        <TextView
+            android:id="@+id/line"
+            android:layout_height="0.5dp"
+            style="@style/DivisionLine"
+            app:layout_constraintTop_toBottomOf="@+id/tv_date" />
+
+        <TextView
+            android:id="@+id/tv_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_yellow_radius_100"
+            android:gravity="center"
+            android:paddingBottom="6dp"
+            android:paddingLeft="11dp"
+            android:paddingRight="11dp"
+            android:paddingTop="6dp"
+            android:text="立即支付"
+            android:textColor="@color/color_FF_FF_FF"
+            android:textSize="13sp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/line" />
+
+        <TextView
+            android:id="@+id/tv_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_gray_radius_100_s_1"
+            android:gravity="center"
+            android:paddingBottom="6dp"
+            android:paddingLeft="11dp"
+            android:paddingRight="11dp"
+            android:paddingTop="6dp"
+            android:text="取消"
+            android:textColor="@color/color_66_66_66"
+            android:textSize="13sp"
+            app:layout_constraintRight_toLeftOf="@+id/tv_right"
+            app:layout_constraintTop_toBottomOf="@+id/line" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+    </data>
+
+    <LinearLayout android:id="@+id/itemLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/size_10"
+        android:paddingRight="@dimen/size_10"
+        android:paddingTop="@dimen/dp_5"
+        android:paddingBottom="@dimen/dp_5"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_10"
+            android:background="@drawable/route_list_item_bg_shape"
+            android:orientation="horizontal">
+
+            <FrameLayout android:id="@+id/photoLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView android:id="@+id/iv_photo"
+                    android:layout_width="@dimen/dp_110"
+                    android:layout_height="@dimen/dp_115"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/icon_default"/>
+                <TextView android:id="@+id/tv_line_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="@dimen/dp_2"
+                    android:minWidth="@dimen/dp_68"
+                    android:maxWidth="@dimen/dp_80"
+                    android:padding="@dimen/dp_2"
+                    android:background="@drawable/line_type_bg"
+                    android:gravity="center"
+                    android:textSize="11sp"
+                    android:textColor="@color/white"
+                    tools:text="自由出行"/>
+            </FrameLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_115"
+                android:layout_marginLeft="@dimen/dp_10">
+
+                <TextView
+                    android:id="@+id/title_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="[深圳-呼和浩特]端午游豪华自驾..."
+                    android:textColor="@color/color_33_33_33"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/text_size_14"
+                    android:singleLine="true"
+                    android:ellipsize="end"/>
+
+
+                <TextView
+                    android:id="@+id/des_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size_4"
+                    android:layout_below="@+id/title_tv"
+                    tools:text="自由行渠道热门度假型酒店合辑！亚龙湾，海棠湾，三亚湾等热门区域..."
+                    android:textColor="@color/color_66_66_66"
+                    android:textSize="@dimen/text_size_12"
+                    android:maxLines="2"
+                    android:ellipsize="end"/>
+                <TextView
+                    android:id="@+id/tv_provider"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_f5fbff_radius_4"
+                    android:layout_below="@+id/des_tv"
+                    android:layout_marginTop="@dimen/dp_3"
+                    android:paddingLeft="@dimen/dp_6"
+                    android:paddingRight="@dimen/dp_6"
+                    android:paddingTop="@dimen/dp_2"
+                    android:paddingBottom="@dimen/dp_2"
+                    tools:text="由天天自驾旅行社提供服务"
+                    android:textColor="#9AA2A7"
+                    android:textSize="@dimen/text_size_12"
+                    android:singleLine="true"
+                    android:ellipsize="end"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/common_monetary_unit"
+                        android:textColor="@color/green_2"
+                        android:textSize="@dimen/text_size_12"/>
+
+                    <TextView android:id="@+id/price_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="62999"
+                        android:textColor="@color/green_2"
+                        android:textSize="@dimen/text_size_20"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="起/份"
+                        android:layout_marginLeft="@dimen/dp_2"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/text_size_12"/>
+                    <TextView
+                        android:id="@+id/date_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/des_tv"
+                        android:layout_marginLeft="@dimen/dp_20"
+                        tools:text="2019-05-31出发"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/text_size_12"
+                        android:singleLine="true"
+                        android:ellipsize="end"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

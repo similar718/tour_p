@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="item"
+            type="cn.xmzt.www.route.bean.RouteDetailPage.CostBean"/>
+
+    </data>
+
+    <LinearLayout android:id="@+id/itemLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+        <LinearLayout android:id="@+id/layout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="@dimen/dp_8"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="成人"
+                android:textColor="@color/title_color"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_size_14"
+                android:singleLine="true"
+                android:ellipsize="end"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cny_unit"
+                    android:textColor="@color/green_2"
+                    android:textSize="12sp"/>
+                <TextView android:id="@+id/price_tv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="998"
+                    android:textStyle="bold"
+                    android:text="@{item.crPriceStr}"
+                    android:textColor="@color/green_2"
+                    android:textSize="@dimen/text_size_20"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="/人"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_size_12"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/layout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="@dimen/dp_8"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="儿童"
+                android:textColor="@color/title_color"
+                android:textSize="@dimen/text_size_14"
+                android:singleLine="true"
+                android:ellipsize="end"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cny_unit"
+                    android:textColor="@color/green_2"
+                    android:textSize="12sp"/>
+                <TextView android:id="@+id/price_tv2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="998"
+                    android:textStyle="bold"
+                    android:text="@{item.xhPriceStr}"
+                    android:textColor="@color/green_2"
+                    android:textSize="@dimen/text_size_20"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="/人"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_size_12"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/layout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="@dimen/dp_8"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="单房差"
+                android:textStyle="bold"
+                android:textColor="@color/title_color"
+                android:textSize="@dimen/text_size_14"
+                android:singleLine="true"
+                android:ellipsize="end"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cny_unit"
+                    android:textColor="@color/green_2"
+                    android:textSize="12sp"/>
+                <TextView android:id="@+id/price_tv3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="998"
+                    android:textStyle="bold"
+                    android:text="@{item.fangPriceStr}"
+                    android:textColor="@color/green_2"
+                    android:textSize="@dimen/text_size_20"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="/人"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_size_12"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/layout4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="@dimen/dp_8"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="拼车费"
+                android:textStyle="bold"
+                android:textColor="@color/title_color"
+                android:textSize="@dimen/text_size_14"
+                android:singleLine="true"
+                android:ellipsize="end"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cny_unit"
+                    android:textColor="@color/green_2"
+                    android:textSize="12sp"/>
+                <TextView android:id="@+id/price_tv4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="998"
+                    android:textStyle="bold"
+                    android:text="@{item.carPriceStr}"
+                    android:textColor="@color/green_2"
+                    android:textSize="@dimen/text_size_20"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="/人"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_size_12"/>
+            </LinearLayout>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_12"/>
+        <LinearLayout android:id="@+id/layout5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="16dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:orientation="horizontal"
+            android:background="#F4F4F4">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="费用包含"
+                android:textColor="@color/color_33_33_33"
+                android:textSize="@dimen/text_size_14"
+                android:singleLine="true"
+                android:ellipsize="end"/>
+            <TextView android:id="@+id/tvCostContain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/color_66_66_66"
+                android:textSize="@dimen/text_size_14"
+                tools:text="1.景区门票费用\n2.交通费\n3.等等等"
+                android:text="@{item.costContain}" />
+
+        </LinearLayout>
+        <LinearLayout android:id="@+id/layout6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="16dp"
+            android:paddingBottom="20dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:orientation="horizontal"
+            android:background="#F4F4F4">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="费用不含"
+                android:textColor="@color/color_33_33_33"
+                android:textSize="@dimen/text_size_14"
+                android:singleLine="true"
+                android:ellipsize="end"/>
+            <TextView android:id="@+id/tvCostNoContain"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_66_66_66"
+                android:textSize="@dimen/text_size_14"
+                tools:text="1.景区门票费用\n2.交通费\n3.等等等"
+                android:text="@{item.costNocontain}" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="item"
+            type="cn.xmzt.www.selfdrivingtools.bean.ScenicSpotGuideBean.ScenicLineListBean"/>
+        <import type="android.view.View" />
+    </data>
+    <RelativeLayout android:id="@+id/itemLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_70"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/dp_20"
+        android:paddingRight="@dimen/size_30"
+        android:background="@color/color_FF_FF_FF">
+        <ImageView
+            android:id="@+id/iv"
+            android:layout_width="@dimen/size_14"
+            android:layout_height="@dimen/size_14"
+            android:src="@drawable/scenic_spot_map_item_route_line_left_icon"
+            android:layout_marginTop="@dimen/dp_23"
+            />
+        <TextView
+            android:id="@+id/tv_content_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:text="@{item.title}"
+            android:textStyle="bold"
+            android:textColor="@color/color_333333"
+            android:layout_toRightOf="@+id/iv"
+            android:layout_marginLeft="@dimen/size_3"
+            android:textSize="@dimen/size_14"
+            />
+        <TextView
+            android:id="@+id/tv_content_line_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_content_line"
+            android:layout_alignLeft="@+id/tv_content_line"
+            android:layout_marginTop="@dimen/dp_1"
+            android:text="10个景点"
+            android:textSize="@dimen/text_size_12"
+            android:textColor="@color/color_999999"
+            />
+
+        <ImageView
+            android:id="@+id/iv_right"
+            android:layout_width="@dimen/size_16"
+            android:layout_height="@dimen/size_16"
+            android:src="@drawable/scenic_spot_map_item_route_line_right_icon"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:visibility="@{item.is_Checked ? View.VISIBLE : View.GONE}"
+            />
+    </RelativeLayout>
+</layout>

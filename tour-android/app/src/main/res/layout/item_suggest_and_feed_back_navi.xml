@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="item"
+            type="cn.xmzt.www.selfdrivingtools.bean.SuggestAndFeedBackNaviBean" />
+    </data>
+    <RelativeLayout
+        android:id="@+id/item_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            >
+            <ImageView
+                android:id="@+id/iv_1"
+                android:layout_width="@dimen/dp_30"
+                android:layout_height="@dimen/dp_30"
+                android:layout_centerHorizontal="true"
+                />
+            <TextView
+                android:id="@+id/tv_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/back_gray"
+                android:layout_below="@+id/iv_1"
+                android:layout_marginTop="@dimen/dp_2"
+                android:text="@{item.titel}"
+                android:textSize="@dimen/text_size_12"
+                android:textColor="@color/color_333333"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:id="@+id/bottom_tv_1"
+                android:layout_width="@dimen/dp_30"
+                android:layout_height="@dimen/dp_2"
+                android:background="@color/color_49_BE_FF"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_9"
+                android:layout_below="@id/tv_1"
+                android:visibility="@{item.is_Checked ? View.VISIBLE : View.INVISIBLE}"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+</layout>

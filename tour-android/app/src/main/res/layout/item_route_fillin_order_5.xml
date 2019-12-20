@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+    </data>
+
+    <LinearLayout android:id="@+id/addCarInfoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/route_list_item_bg_bottom_c_shape"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+        <TextView android:id="@+id/tvAddCar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="添加更多车辆信息"
+            android:drawablePadding="4dp"
+            android:drawableLeft="@drawable/icon_route_add_car_info"
+            android:textColor="@color/color_24A4FF"
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+</layout>

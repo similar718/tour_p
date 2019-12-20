@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+    </data>
+    <RelativeLayout android:id="@+id/itemLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:background="@drawable/route_list_item_bg_shape">
+        <TextView android:id="@+id/tv_fp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:ems="5"
+            android:text="发票"
+            android:textColor="@color/color_33_33_33"
+            android:textSize="16sp"/>
+        <ImageView android:id="@+id/iv_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/hotel_order_right"/>
+        <TextView android:id="@+id/tvNoInvoice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tv_fp"
+            android:layout_toLeftOf="@+id/iv_arrow"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:gravity="right"
+            android:text="不需要"
+            android:textColor="@color/color_66_66_66"
+            android:textSize="14sp"/>
+    </RelativeLayout>
+
+</layout>

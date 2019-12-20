@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/dp_90"
+    android:layout_height="@dimen/dp_90"
+    android:orientation="vertical"
+    android:background="@drawable/maker_show_my_location_bg">
+    <cn.xmzt.www.view.RoundImageView
+        android:id="@+id/iv_marker_avter"
+        android:layout_width="@dimen/dp_29"
+        android:layout_height="@dimen/dp_29"
+        android:src="@drawable/icon_order_pay"
+        android:layout_centerInParent="true"
+        android:padding="@dimen/dp_2"
+        android:background="@drawable/maker_show_my_location_bg_white"
+        />
+</RelativeLayout>

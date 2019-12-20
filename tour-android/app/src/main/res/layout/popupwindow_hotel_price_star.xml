@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_FF_FF_FF"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/TextSize14sp"
+            android:paddingLeft="15dp"
+            android:paddingTop="10dp"
+            android:text="价格" />
+
+        <com.jaygoo.widget.RangeSeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
+            android:paddingBottom="2dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            app:rsb_gravity="bottom"
+            app:rsb_mode="range"
+            app:rsb_progress_color="@color/color_49_BE_FF"
+            app:rsb_step_auto_bonding="true"
+            app:rsb_step_color="@color/color_66_66_66"
+            app:rsb_step_height="0.01dp"
+            app:rsb_step_width="5dp"
+            app:rsb_steps="7"
+            app:rsb_thumb_drawable="@drawable/seek_bar_thumb"
+            app:rsb_tick_mark_gravity="center"
+            app:rsb_tick_mark_layout_gravity="bottom"
+            app:rsb_tick_mark_mode="other"
+            app:rsb_tick_mark_text_array="@array/markArray4"
+            app:rsb_tick_mark_text_color="@color/color_33_33_33"
+            app:rsb_tick_mark_text_margin="20dp"
+            app:rsb_tick_mark_text_size="10sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="9dp"
+            android:paddingRight="9dp" />
+
+        <TextView
+            style="@style/TextSize14sp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="15dp"
+            android:paddingTop="20dp"
+            android:text="星级" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_star"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="9dp"
+            android:paddingRight="9dp" />
+
+        <TextView
+            style="@style/DivisionLine"
+            android:layout_marginTop="36dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="重置"
+                android:textColor="@color/color_66_66_66"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/color_49_BE_FF"
+                android:gravity="center"
+                android:text="确定"
+                android:textColor="@color/color_FF_FF_FF"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

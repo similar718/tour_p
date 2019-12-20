@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="item"
+            type="cn.xmzt.www.route.bean.RouteDetailCategory"/>
+
+    </data>
+
+    <LinearLayout android:id="@+id/itemLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white">
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="16dp"
+            tools:hint="@string/app_name"
+            android:drawablePadding="4dp"
+            android:text="@{item.name}"
+            android:textColor="@color/color_33_33_33"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_size_18"
+            android:maxLines="1"
+            android:ellipsize="end"/>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="item"
+            type="cn.xmzt.www.selfdrivingtools.bean.SharedNavigationMapRightInfo"/>
+        <import type="android.view.View" />
+    </data>
+        <RelativeLayout
+            android:id="@+id/item_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_FF_FF_FF">
+            <!-- 我的 -->
+            <ImageView
+                android:id="@+id/iv_head_img_item"
+                android:layout_width="@dimen/dp_38"
+                android:layout_height="@dimen/dp_38"
+                android:layout_marginTop="@dimen/dp_22"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:src="@drawable/shared_navigation_person_list_head_img"/>
+
+            <RelativeLayout
+                android:id="@+id/rl_left"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_12"
+                android:layout_toRightOf="@+id/iv_head_img_item"
+                android:layout_alignTop="@+id/iv_head_img_item"
+                >
+                <RelativeLayout
+                    android:id="@+id/rl_c"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:id="@+id/rl_nickname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/tv_nick_name_item"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dp_38"
+                            android:text="司机:Asher"
+                            android:singleLine="true"
+                            android:ellipsize="end"
+                            android:maxWidth="@dimen/dp_90"
+                            android:textSize="@dimen/text_size_14"
+                            android:textStyle="bold"
+                            android:visibility="gone"
+                            android:gravity="center"
+                            android:textColor="@color/color_333333" />
+                        <TextView
+                            android:id="@+id/tv_nick_name_item_car"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="司机:Asher"
+                            android:singleLine="true"
+                            android:ellipsize="end"
+                            android:maxWidth="@dimen/dp_200"
+                            android:textSize="@dimen/text_size_14"
+                            android:textStyle="bold"
+                            android:visibility="visible"
+                            android:textColor="@color/color_333333" />
+
+                    </RelativeLayout>
+                    <TextView
+                        android:id="@+id/tv_type_item"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_6"
+                        android:text="领队"
+                        android:textSize="@dimen/text_size_11"
+                        android:textColor="@color/color_FF_FF_FF"
+                        android:background="@drawable/activity_shared_navigation_map_captain_info_bg"
+                        android:layout_toRightOf="@+id/rl_nickname"
+                        android:layout_centerVertical="true"
+                        />
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/tv_type_content_item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/activity_shared_navigation_map_car_info_bg"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="粤ZF0238"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/text_size_12"
+                    android:textStyle="bold"
+                    android:layout_below="@+id/rl_c"
+                    />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/iv_distance_item"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_38"
+                android:gravity="center"
+                android:text="距离2km"
+                android:textColor="@color/color_999999"
+                android:textSize="@dimen/text_size_12"
+                android:visibility="gone"
+                android:layout_marginLeft="@dimen/dp_12"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/dp_22"
+                />
+
+            <TextView
+                android:id="@+id/iv_distance_item_car"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="距离2km"
+                android:textColor="@color/color_999999"
+                android:textSize="@dimen/text_size_12"
+                android:layout_alignBottom="@+id/iv_head_img_item"
+                android:layout_marginLeft="@dimen/dp_12"
+                android:layout_alignParentRight="true"
+                />
+        </RelativeLayout>
+</layout>
