@@ -20,7 +20,7 @@ import cn.xmzt.www.R;
 import cn.xmzt.www.home.activity.CustomizeEditActivity;
 import cn.xmzt.www.home.activity.PopularityMustPlayActivity;
 import cn.xmzt.www.mine.activity.MessageCenterActivity;
-import cn.xmzt.www.mine.activity.SignInActivity;
+import cn.xmzt.www.mine.activity.SignInActivity1;
 import cn.xmzt.www.nim.uikit.common.media.imagepicker.view.SystemBarTintManager;
 import cn.xmzt.www.route.activity.RouteDetailActivity1;
 import cn.xmzt.www.route.activity.RouteOrderDetailActivity;
@@ -56,7 +56,7 @@ public abstract class TourBaseActivity<VM extends BaseViewModel, DB extends View
 //        PushAgent.getInstance(this).onAppStart();
         if (this instanceof RouteDetailActivity1 || this instanceof RouteOrderDetailActivity
                 || this instanceof ScenicSpotDetailActivity || this instanceof PopularityMustPlayActivity
-                || this instanceof SignInActivity||this instanceof MessageCenterActivity || this instanceof CustomizeEditActivity
+                || this instanceof SignInActivity1||this instanceof MessageCenterActivity || this instanceof CustomizeEditActivity
                 || this instanceof TripSignInActivity || this instanceof TripSignInListActivity) {
 
         } else {

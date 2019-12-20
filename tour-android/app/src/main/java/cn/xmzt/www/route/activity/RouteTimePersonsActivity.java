@@ -224,7 +224,7 @@ public class RouteTimePersonsActivity extends TourBaseActivity<RouteTimePersonsV
                 showPickDetailDialog();
                 break;
             case R.id.tv_reserve:
-                //立即预定
+                //立即预订
                 if(!TextUtils.isEmpty(adapter.mPersonCountBean.getTime())){
                     toRouteFillinOrderActivity();
                 }else {

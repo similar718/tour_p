@@ -33,7 +33,7 @@ import cn.xmzt.www.mine.activity.MyScoreActivity;
 import cn.xmzt.www.mine.activity.MyWalletActivity;
 import cn.xmzt.www.mine.activity.RefundOrderActivity;
 import cn.xmzt.www.mine.activity.SettingActivity;
-import cn.xmzt.www.mine.activity.SignInActivity;
+import cn.xmzt.www.mine.activity.SignInActivity1;
 import cn.xmzt.www.mine.bean.UserInfoBean;
 import cn.xmzt.www.mine.event.OrderTypeEvent;
 import cn.xmzt.www.mine.fragment.MineFragment;
@@ -192,7 +192,7 @@ public class MineViewModel extends BaseViewModel {
                 if (NetWorkUtils.isNetConnected(mineFragment.getActivity())) {
                     if (bean != null) {
                         if (bean.isSign()) {
-                            startActivity(SignInActivity.class);
+                            startActivity(SignInActivity1.class);
                         } else {
                             goSignIn();
                         }

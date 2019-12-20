@@ -220,45 +220,6 @@ public class TeamRoomViewModel extends BaseViewModel implements ModuleProxy, Vie
                 });
     }
 
-    /**
-     *  获取当前广播开关
-     */
-    private void getTalkbackGroupBroadcast(){
-        ApiService mService = ApiRepertory.getInstance().getApiService();
-        Observable mObservable = mService.getTalkbackGroupBroadcast(SPUtils.getToken(), groupId);
-        mObservable.compose(ComposeUtil.compose(mView))
-                .subscribeWith(new CommonDisposableObserver<BaseDataBean<Object>>(mView) {
-                    @Override
-                    public void onNext(BaseDataBean<Object> body) {
-                        if(body.isSuccess()){
-                            if (body.getRel() == null){
-                                // 暂定为 当前没有广播
-                                isBroadcast = false;
-                                // 收到没有广播通知发送
-                                TalkManage.getInstance().closeBroadcastListen();
-                            } else {
-                                if (body.getRel() instanceof String){
-                                    String id = (String) body.getRel();
-                                    if (id.equals(Preferences.getUserAccount())){
-                                        // 说明是自己在开启了广播
-                                        // 目前退出聊天就自动关闭广播
-                                    } else {
-                                        isBroadcast = true;
-                                        TalkManage.getInstance().openBroadcastListen();
-                                    }
-                                }
-                            }
-                        }
-                    }
-
-                    @Override
-                    public void onError(Throwable throwable) {
-                        super.onError(throwable);
-                    }
-                });
-
-    }
-
     public void back(){
         EventBus.getDefault().post(new BackMapAndChatStatusEvent(groupId,1)); // finishing掉地图界面
         activity.onBackPressed();

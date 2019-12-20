@@ -28,17 +28,22 @@ import java.util.Map;
 
 import cn.xmzt.www.anyrtc.SoundPlayUtils;
 import cn.xmzt.www.base.TourApplication;
+import cn.xmzt.www.bean.BaseDataBean;
 import cn.xmzt.www.helper.UserHelper;
 import cn.xmzt.www.http.ApiRepertory;
+import cn.xmzt.www.http.ApiService;
 import cn.xmzt.www.intercom.actions.BroadcastAction;
 import cn.xmzt.www.intercom.bean.UserBasicInfoBean;
 import cn.xmzt.www.intercom.cache.TeamMessageAudioCacheManager;
 import cn.xmzt.www.intercom.event.AnyRtcStatusEvent;
+import cn.xmzt.www.intercom.preference.Preferences;
 import cn.xmzt.www.popup.IntercomSwitchGroupListPopupWindow;
+import cn.xmzt.www.rxjava2.CommonDisposableObserver;
 import cn.xmzt.www.rxjava2.ComposeUtil;
 import cn.xmzt.www.utils.PermissionUtil;
 import cn.xmzt.www.utils.SPUtils;
 import cn.xmzt.www.utils.ToastUtils;
+import io.reactivex.Observable;
 
 /**
  * 说话控制中心
@@ -90,17 +95,60 @@ public class TalkManage {
          */
         NIMClient.getService(MsgServiceObserve.class).observeReceiveMessage(receiveMessageObserver, true);
     }
+    /**
+     *  获取当前广播开关
+     */
+    private void getTalkbackGroupBroadcast(){
+        if (TextUtils.isEmpty(MsgExtensionType.groupId)) {
+            return;
+        }
+        ApiService mService = ApiRepertory.getInstance().getApiService();
+        Observable mObservable = mService.getTalkbackGroupBroadcast(SPUtils.getToken(), MsgExtensionType.groupId);
+        mObservable.compose(ComposeUtil.compose())
+                .subscribeWith(new CommonDisposableObserver<BaseDataBean<Object>>() {
+                    @Override
+                    public void onNext(BaseDataBean<Object> body) {
+                        if(body.isSuccess()){
+                            if (body.getRel() == null){
+                                // 暂定为 当前没有广播
+                                isBroadcast = false;
+                                // 收到没有广播通知发送
+                                TalkManage.getInstance().closeBroadcastListen();
+                            } else {
+                                if (body.getRel() instanceof String){
+                                    String id = (String) body.getRel();
+                                    if (id.equals(Preferences.getUserAccount())){
+                                        // 说明是自己在开启了广播
+                                        // 目前退出聊天就自动关闭广播
+                                    } else {
+                                        isBroadcast = true;
+                                        TalkManage.getInstance().openBroadcastListen();
+                                    }
+                                }
+                            }
+                            if(TalkManage.isMeBroadcast){
+                                FloatIntercomManage.getInstance().setCanTalk(true);
+                            }else {
+                                FloatIntercomManage.getInstance().setCanTalk(!TalkManage.isBroadcast);
+                            }
 
+                        }
+                    }
+                });
+
+    }
     // 入群后,初始化加入或切换对讲组
     public void joinOrSwitchIntercomGroup(String groupId) {
         if (TextUtils.isEmpty(MsgExtensionType.groupId)) {
             MsgExtensionType.groupId = groupId;
+            getTalkbackGroupBroadcast();
             // 加入对讲组
             AnyRtcMaxManage.getInstance().joinIntercomGroup();
         } else {
             if (!MsgExtensionType.groupId.equals(groupId)){
                 TalkManage.isJoinarSuccess = true;//重新加入对讲组
                 MsgExtensionType.groupId = groupId;
+                getTalkbackGroupBroadcast();
                 // 切换对讲组
                 AnyRtcMaxManage.getInstance().switchIntercomGroup();
             }
@@ -114,6 +162,7 @@ public class TalkManage {
     // 切换对讲组
     public void switchIntercomGroup() {
         Logging.d(TAG, "对讲事件: 已加入对讲组,则切换对讲组");
+        getTalkbackGroupBroadcast();
         // 切换对讲组
         AnyRtcMaxManage.getInstance().switchIntercomGroup();
     }
@@ -346,7 +395,7 @@ public class TalkManage {
         isBroadcast = true;
         isBroadcastSpeaking = false;
         // 向服务端发送还在开启广播通知状态
-        postTalkbackGroupBroadcast(false);
+        postTalkbackGroupBroadcast(true);
         // 先关闭计时器
         cancelTimerBroadcast();
         // 再重启倒计时器
@@ -463,9 +512,16 @@ public class TalkManage {
      *  广播发起和结束发送给后台
      *  30s调一次，40s后自动清除
      */
-    @SuppressLint("CheckResult")
     private void postTalkbackGroupBroadcast(boolean on){
-        ApiRepertory.getInstance().getApiService().postTalkbackGroupBroadcast(SPUtils.getToken(), MsgExtensionType.groupId, on).compose(ComposeUtil.compose());
+        ApiService mService = ApiRepertory.getInstance().getApiService();
+        Observable mObservable = mService.postTalkbackGroupBroadcast(SPUtils.getToken(), MsgExtensionType.groupId, on);
+        mObservable.compose(ComposeUtil.compose())
+                .subscribeWith(new CommonDisposableObserver<BaseDataBean<Object>>() {
+                    @Override
+                    public void onNext(BaseDataBean<Object> body) {
+
+                    }
+                });
     }
 
     private void sendMessageTipBroadcast(boolean on) {
@@ -614,20 +670,26 @@ public class TalkManage {
                     Map<String, Object> val = message.getRemoteExtension();
                     String type = (String) val.get(MsgExtensionType.Extension_Type);
                     String groupId = (String) val.get(MsgExtensionType.Extension_GroupId);
-                    // 判断type是否对讲录音
-                    if (type.equals(MsgExtensionType.Extension_Type_101)&&groupId.equals(MsgExtensionType.groupId)){
-                        // 将未读标识去掉,更新数据库
-                        message.setStatus(MsgStatusEnum.read);
-                        NIMClient.getService(MsgService.class).updateIMMessageStatus(message);
+                    if(groupId==null){
+                        groupId=  message.getSessionId();
                     }
-                    if (type.equals(MsgExtensionType.Extension_Type_301)){
-                        //接收到广播消息
-                        openBroadcastListen();
+                    if (groupId!=null&&groupId.equals(MsgExtensionType.groupId)){
+                        // 判断type是否对讲录音
+                        if (type.equals(MsgExtensionType.Extension_Type_101)){
+                            // 将未读标识去掉,更新数据库
+                            message.setStatus(MsgStatusEnum.read);
+                            NIMClient.getService(MsgService.class).updateIMMessageStatus(message);
+                        }
+                        if (type.equals(MsgExtensionType.Extension_Type_301)){
+                            //接收到广播消息
+                            openBroadcastListen();
+                        }
+                        if (type.equals(MsgExtensionType.Extension_Type_302)){
+                            //接收到结束广播消息
+                            closeBroadcastListen();
+                        }
                     }
-                    if (type.equals(MsgExtensionType.Extension_Type_302)){
-                        //接收到结束广播消息
-                        closeBroadcastListen();
-                    }
+
                 }
             }
         }

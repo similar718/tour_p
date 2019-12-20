@@ -240,12 +240,27 @@ public class RegisterViewModel extends BaseViewModel {
             case R.id.iv_wechat://微信
                 UMShareAPI.get(activity).getPlatformInfo(activity, SHARE_MEDIA.WEIXIN, authListener);
                 break;
-            case R.id.tv_register_agreement:
+            case R.id.tv_xy_1:{
                 Intent intent = new Intent(activity, WebActivity.class);
-                intent.putExtra("title", "用户注册协议");
+                intent.putExtra("title", "服务协议");
                 intent.putExtra("url", Constants.getXzUrl(12));
                 activity.startActivity(intent);
                 break;
+            }
+            case R.id.tv_xy_2: {
+                Intent intent = new Intent(activity, WebActivity.class);
+                intent.putExtra("title", "免责声明");
+                intent.putExtra("url", Constants.getXzUrl(13));
+                activity.startActivity(intent);
+                break;
+            }
+            case R.id.tv_xy_3: {
+                Intent intent = new Intent(activity, WebActivity.class);
+                intent.putExtra("title", "隐私政策");
+                intent.putExtra("url", Constants.getXzUrl(14));
+                activity.startActivity(intent);
+                break;
+            }
             case R.id.get_verification_code_tv://获取验证码
                 ApiRepertory.getInstance().getApiService().getVerificationCode(activity.dataBinding.accountEt.getText().toString())
                         .subscribeOn(Schedulers.io())

@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-
     <data>
-
         <variable
             name="model"
             type="cn.xmzt.www.mine.model.SignInViewModel" />
@@ -11,398 +9,45 @@
     <RelativeLayout
         android:fitsSystemWindows="false"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="#F4F9FA">
         <View
             android:layout_alignParentBottom="true"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_marginBottom="48dp"/>
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
+        <cn.xmzt.www.view.AutofitRecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"/>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#70C3FF">
             <RelativeLayout
+                android:id="@+id/title_layout"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/sign_in_bg"
-                android:orientation="vertical">
-
-                <RelativeLayout
-                    android:id="@+id/title_layout"
-                    android:layout_width="match_parent"
-                    android:layout_height="44dp">
-
-                    <ImageView
-                        android:id="@+id/title_back_iv"
-                        android:layout_width="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:onClick="@{model::onClick}"
-
-                        android:paddingLeft="20dp"
-                        android:paddingRight="20dp"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/icon_new_back_white"/>
-
-                    <TextView
-                        android:id="@+id/title_name_tv"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerInParent="true"
-                        android:text="今日签到"
-                        android:textColor="@color/color_FF_FF_FF"
-                        android:textSize="17sp" />
-
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/title_layout"
-                    android:layout_marginTop="36dp">
-
-                    <TextView
-                        android:id="@+id/tv"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerHorizontal="true"
-                        android:text="你已连续签到"
-                        android:textColor="@color/color_FF_FF_FF"
-                        android:textSize="16sp" />
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/tv"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="10dp"
-                        android:gravity="center"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:id="@+id/tv_left"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/shape_signin_bg"
-                            android:paddingLeft="4dp"
-                            android:paddingRight="4dp"
-                            android:text="0"
-                            android:textColor="@color/color_FA_5E_61"
-                            android:textSize="24sp" />
-
-                        <TextView
-                            android:id="@+id/tv_right"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="6dp"
-                            android:background="@drawable/shape_signin_bg"
-                            android:paddingLeft="4dp"
-                            android:paddingRight="4dp"
-                            android:text="0"
-                            android:textColor="@color/color_FA_5E_61"
-                            android:textSize="24sp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginLeft="4dp"
-                            android:gravity="center"
-                            android:text="天"
-                            android:textColor="@color/color_FF_FF_FF"
-                            android:textSize="16sp" />
-                    </LinearLayout>
-
-                    <TextView
-                        android:id="@+id/tv_rule"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentRight="true"
-                        android:drawableTop="@drawable/icon_signin_rule"
-                        android:onClick="@{model::onClick}"
-                        android:paddingRight="17dp"
-                        android:text="奖励规则"
-                        android:textColor="@color/color_33_33_33"
-                        android:textSize="12sp" />
-
-
-                </RelativeLayout>
-
-                <TextView
-                    android:id="@+id/tv_integral"
+                android:layout_height="44dp"
+                android:layout_marginTop="@dimen/dp_25">
+                <ImageView
+                    android:id="@+id/title_back_iv"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_above="@+id/tv_sign"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginBottom="3dp"
-                    android:background="@drawable/shape_sign_in"
-                    android:paddingBottom="2dp"
-                    android:paddingLeft="17dp"
-                    android:paddingRight="17dp"
-                    android:paddingTop="2dp"
-                    android:text="今日还没签到"
-                    android:textColor="@color/color_FF_FF_FF"
-                    android:textSize="14sp" />
-
-                <TextView
-                    android:id="@+id/tv_sign"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_above="@+id/tv_top"
-                    android:layout_marginBottom="20dp"
-                    android:layout_marginLeft="60dp"
-                    android:layout_marginRight="60dp"
-                    android:background="@drawable/shape_sign"
-                    android:gravity="center"
+                    android:layout_centerVertical="true"
                     android:onClick="@{model::onClick}"
-                    android:text="签到"
-                    android:textColor="@color/color_FF_FF_FF"
-                    android:textSize="20sp" />
-
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rv"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginBottom="18dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="20dp"
-                    android:background="@drawable/bg_signin_bottom"
-                    android:padding="10dp" />
-
-                <LinearLayout
-                    android:id="@+id/ll"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_above="@+id/rv"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginBottom="-10dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="20dp"
-                    android:background="@drawable/bg_sign_reward"
-                    android:orientation="horizontal">
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <RelativeLayout
-                            android:id="@+id/rl1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="15dp"
-                            android:background="@drawable/bg_sign_item"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintLeft_toLeftOf="parent"
-                            app:layout_constraintRight_toRightOf="parent"
-                            app:layout_constraintTop_toTopOf="parent">
-
-                            <ImageView
-                                android:id="@+id/iv1"
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
-                                android:layout_centerInParent="true" />
-                        </RelativeLayout>
-
-                        <TextView
-                            android:id="@+id/tv_probability_1"
-                            android:layout_width="22dp"
-                            android:layout_height="22dp"
-                            android:layout_marginBottom="60dp"
-                            app:layout_constraintBottom_toBottomOf="@+id/rl1"
-                            android:background="@drawable/shape_sign_probability"
-                            android:gravity="center"
-                            android:text="99%"
-                            android:textColor="@color/color_FF_FF_FF"
-                            android:textSize="9sp"
-                            app:layout_constraintRight_toRightOf="parent"/>
-
-                        <TextView
-                            android:id="@+id/tv1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@+id/rl1"
-                            android:textColor="@color/color_66_66_66"
-                            android:textSize="12sp"
-                            app:layout_constraintLeft_toLeftOf="@+id/rl1"
-                            app:layout_constraintRight_toRightOf="@+id/rl1"
-                            app:layout_constraintTop_toBottomOf="@+id/rl1" />
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <RelativeLayout
-                            android:id="@+id/rl2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="15dp"
-                            android:background="@drawable/bg_sign_item"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintLeft_toLeftOf="parent"
-                            app:layout_constraintRight_toRightOf="parent"
-                            app:layout_constraintTop_toTopOf="parent">
-
-                            <ImageView
-                                android:id="@+id/iv2"
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
-                                android:layout_centerInParent="true" />
-                        </RelativeLayout>
-
-                        <TextView
-                            android:id="@+id/tv_probability_2"
-                            android:layout_width="22dp"
-                            android:layout_height="22dp"
-                            android:background="@drawable/shape_sign_probability"
-                            android:gravity="center"
-                            android:text="99%"
-                            android:textColor="@color/color_FF_FF_FF"
-                            android:textSize="9sp"
-                            app:layout_constraintRight_toRightOf="parent"
-                            android:layout_marginBottom="60dp"
-                            app:layout_constraintBottom_toBottomOf="@+id/rl2" />
-
-                        <TextView
-                            android:id="@+id/tv2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@+id/rl2"
-                            android:textColor="@color/color_66_66_66"
-                            android:textSize="12sp"
-                            app:layout_constraintLeft_toLeftOf="@+id/rl2"
-                            app:layout_constraintRight_toRightOf="@+id/rl2"
-                            app:layout_constraintTop_toBottomOf="@+id/rl2" />
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <RelativeLayout
-                            android:id="@+id/rl3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="15dp"
-                            android:background="@drawable/bg_sign_item"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintLeft_toLeftOf="parent"
-                            app:layout_constraintRight_toRightOf="parent"
-                            app:layout_constraintTop_toTopOf="parent">
-
-                            <ImageView
-                                android:id="@+id/iv3"
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
-                                android:layout_centerInParent="true" />
-                        </RelativeLayout>
-
-                        <TextView
-                            android:id="@+id/tv_probability_3"
-                            android:layout_width="22dp"
-                            android:layout_height="22dp"
-                            android:background="@drawable/shape_sign_probability"
-                            android:gravity="center"
-                            android:text="99%"
-                            android:textColor="@color/color_FF_FF_FF"
-                            android:textSize="9sp"
-                            app:layout_constraintRight_toRightOf="parent"
-                            android:layout_marginBottom="60dp"
-                            app:layout_constraintBottom_toBottomOf="@+id/rl3" />
-
-                        <TextView
-                            android:id="@+id/tv3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@+id/rl3"
-                            android:textColor="@color/color_66_66_66"
-                            android:textSize="12sp"
-                            app:layout_constraintLeft_toLeftOf="@+id/rl3"
-                            app:layout_constraintRight_toRightOf="@+id/rl3"
-                            app:layout_constraintTop_toBottomOf="@+id/rl3" />
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <RelativeLayout
-                            android:id="@+id/rl4"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="15dp"
-                            android:background="@drawable/bg_sign_item"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintLeft_toLeftOf="parent"
-                            app:layout_constraintRight_toRightOf="parent"
-                            app:layout_constraintTop_toTopOf="parent">
-
-                            <ImageView
-                                android:id="@+id/iv4"
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
-                                android:layout_centerInParent="true" />
-                        </RelativeLayout>
-
-                        <TextView
-                            android:id="@+id/tv_probability_4"
-                            android:layout_width="22dp"
-                            android:layout_height="22dp"
-                            android:background="@drawable/shape_sign_probability"
-                            android:gravity="center"
-                            android:text="99%"
-                            android:textColor="@color/color_FF_FF_FF"
-                            android:textSize="9sp"
-                            app:layout_constraintRight_toRightOf="parent"
-                            android:layout_marginBottom="60dp"
-                            app:layout_constraintBottom_toBottomOf="@+id/rl4" />
-
-                        <TextView
-                            android:id="@+id/tv4"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@+id/rl4"
-                            android:textColor="@color/color_66_66_66"
-                            android:textSize="12sp"
-                            app:layout_constraintLeft_toLeftOf="@+id/rl4"
-                            app:layout_constraintRight_toRightOf="@+id/rl4"
-                            app:layout_constraintTop_toBottomOf="@+id/rl4" />
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                </LinearLayout>
-
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/icon_new_back_white"/>
                 <TextView
-                    android:id="@+id/tv_top"
+                    android:id="@+id/title_name_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_above="@+id/ll"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginBottom="-15dp"
-                    android:background="@drawable/bg_sign_reward_top"
-                    android:gravity="center"
-                    android:text="连续签到30天抽以下大奖"
+                    android:layout_centerInParent="true"
+                    android:text="今日签到"
                     android:textColor="@color/color_FF_FF_FF"
-                    android:textSize="16sp" />
+                    android:textSize="17sp" />
             </RelativeLayout>
-        </LinearLayout>
-    </ScrollView>
+        </FrameLayout>
     </RelativeLayout>
 </layout>

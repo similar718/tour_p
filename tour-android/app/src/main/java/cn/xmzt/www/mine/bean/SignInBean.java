@@ -99,7 +99,7 @@ public class SignInBean {
         return sign;
     }
 
-    public class SignListEntity {
+    public static class SignListEntity {
         /**
          * gainIntegral : 100
          * id : 50
@@ -154,7 +154,7 @@ public class SignInBean {
         }
     }
 
-    public class WeekSignListEntity {
+    public static class WeekSignListEntity {
         /**
          * gainIntegral : 110
          * id : 117
@@ -209,7 +209,7 @@ public class SignInBean {
         }
     }
 
-    public class AwardsEntity {
+    public static class AwardsEntity {
         /**
          * awardProb : 33
          * id : 1

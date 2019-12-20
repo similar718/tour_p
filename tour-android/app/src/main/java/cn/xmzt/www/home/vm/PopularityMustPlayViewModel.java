@@ -59,11 +59,11 @@ public class PopularityMustPlayViewModel extends BaseViewModel {
     public void setBean(PopularityBean bean) {
         this.bean = bean;
         if (bean.getType() == 1) {
-            activity.dataBinding.titleNameTv.setText(bean.getCityname() + "出发");
-            activity.dataBinding.tvDel.setText("热门目的地");
-        } else {
-            activity.dataBinding.titleNameTv.setText(bean.getCityname() + "落地");
             activity.dataBinding.tvDel.setText("热门出发地");
+            activity.dataBinding.tvSubDel.setText("从这里出发开始奇妙自驾游之路");
+        } else {
+            activity.dataBinding.tvDel.setText("热门目的地");
+            activity.dataBinding.tvSubDel.setText("大家都爱去的那些城市");
         }
         getPopularityList();
     }

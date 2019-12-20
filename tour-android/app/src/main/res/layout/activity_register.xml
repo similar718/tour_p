@@ -56,15 +56,15 @@
                 android:layout_width="78dp"
                 android:layout_height="78dp"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="20dp"
                 android:src="@drawable/icon_head_default"/>
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/dp_45"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="20dp"
                 android:orientation="horizontal">
 
 
@@ -81,7 +81,7 @@
                 <EditText
                     android:id="@+id/account_et"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_centerVertical="true"
                     android:layout_toLeftOf="@+id/account_delete_iv"
                     android:background="@null"
@@ -101,16 +101,15 @@
                 android:layout_height="@dimen/dp_1_px"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
-                android:layout_marginTop="8dp"
                 android:background="@color/color_E5_E5_E5" />
 
             <!-- 密码 -->
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/dp_45"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
-                android:layout_marginTop="35dp">
+                android:layout_marginTop="10dp">
 
 
                 <TextView
@@ -129,7 +128,7 @@
                 <EditText
                     android:id="@+id/verification_code_et"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_centerVertical="true"
                     android:layout_toLeftOf="@+id/get_verification_code_tv"
                     android:background="@null"
@@ -148,15 +147,14 @@
                 android:layout_height="@dimen/dp_1_px"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
-                android:layout_marginTop="8dp"
                 android:background="@color/color_E5_E5_E5" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/dp_45"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
-                android:layout_marginTop="35dp"
+                android:layout_marginTop="10dp"
                 android:orientation="horizontal">
 
 
@@ -172,7 +170,7 @@
                 <EditText
                     android:id="@+id/password_et"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_centerVertical="true"
                     android:layout_toLeftOf="@+id/password_delete_iv"
                     android:background="@null"
@@ -193,7 +191,6 @@
                 android:layout_height="@dimen/dp_1_px"
                 android:layout_marginLeft="@dimen/size_25"
                 android:layout_marginRight="@dimen/size_25"
-                android:layout_marginTop="@dimen/size_10"
                 android:background="@color/gray_1" />
 
             <!-- 同意协议并注册 -->
@@ -202,7 +199,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="20dp"
                 android:background="@{model.isCode &amp;&amp;model.isPsw &amp;&amp;model.isGetCode?@drawable/bottom_bg:@drawable/bottom_bg_no}"
                 android:enabled="@{model.isCode &amp;&amp;model.isPsw &amp;&amp;model.isGetCode?true:false}"
                 android:gravity="center"
@@ -213,7 +210,6 @@
 
 
             <RelativeLayout android:id="@+id/tv_register_agreement"
-                android:onClick="@{model::onClick}"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
@@ -229,17 +225,31 @@
                     android:textSize="14sp" />
 
                 <TextView
+                    android:id="@+id/tv_xy_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="@{model::onClick}"
                     android:layout_toRightOf="@+id/text"
                     android:text="@string/ra_text_1"
                     android:textColor="@color/color_49_BE_FF"
                     android:textSize="14sp" />
                 <TextView
+                    android:id="@+id/tv_xy_2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="@{model::onClick}"
                     android:layout_below="@+id/text"
                     android:text="@string/ra_text_2"
+                    android:textColor="@color/color_49_BE_FF"
+                    android:textSize="14sp" />
+                <TextView
+                    android:id="@+id/tv_xy_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{model::onClick}"
+                    android:layout_below="@+id/text"
+                    android:layout_toRightOf="@+id/tv_xy_2"
+                    android:text="@string/ra_text_3"
                     android:textColor="@color/color_49_BE_FF"
                     android:textSize="14sp" />
             </RelativeLayout>

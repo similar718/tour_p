@@ -55,23 +55,22 @@
                 android:layout_width="78dp"
                 android:layout_height="78dp"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="20dp"
                 android:src="@drawable/icon_head_default" />
             <!-- 手机号码登录 -->
             <LinearLayout
                 android:id="@+id/ll_phone_login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="20dp"
                 android:orientation="vertical"
                 android:visibility="@{model.isPhoneLogin?View.VISIBLE:View.GONE}">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/dp_45"
                     android:layout_marginLeft="30dp"
-                    android:layout_marginRight="30dp"
-                    android:layout_marginTop="@dimen/size_40">
+                    android:layout_marginRight="30dp">
 
                     <ImageView
                         android:id="@+id/iv_phone_delete"
@@ -86,7 +85,7 @@
                     <EditText
                         android:id="@+id/et_phone"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_centerVertical="true"
                         android:layout_toLeftOf="@+id/iv_phone_delete"
                         android:background="@null"
@@ -103,15 +102,14 @@
                 <TextView
                     style="@style/DivisionLine"
                     android:layout_marginLeft="30dp"
-                    android:layout_marginRight="30dp"
-                    android:layout_marginTop="8dp" />
+                    android:layout_marginRight="30dp" />
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/dp_45"
                     android:layout_marginLeft="30dp"
                     android:layout_marginRight="30dp"
-                    android:layout_marginTop="35dp">
+                    android:layout_marginTop="@dimen/dp_10">
 
 
                     <TextView
@@ -129,8 +127,7 @@
                     <EditText
                         android:id="@+id/et_code"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignBottom="@+id/tv_code"
+                        android:layout_height="match_parent"
                         android:layout_alignParentLeft="true"
                         android:layout_toLeftOf="@+id/tv_code"
                         android:background="@null"
@@ -146,8 +143,7 @@
                 <TextView
                     style="@style/DivisionLine"
                     android:layout_marginLeft="30dp"
-                    android:layout_marginRight="30dp"
-                    android:layout_marginTop="8dp" />
+                    android:layout_marginRight="30dp"/>
             </LinearLayout>
 
             <!-- 账号密码登录 -->
@@ -155,16 +151,15 @@
                 android:id="@+id/ll_psd_login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="20dp"
                 android:orientation="vertical"
                 android:visibility="@{model.isPhoneLogin?View.GONE:View.VISIBLE}">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/dp_45"
                     android:layout_marginLeft="30dp"
-                    android:layout_marginRight="30dp"
-                    android:layout_marginTop="40dp">
+                    android:layout_marginRight="30dp">
 
                     <ImageView
                         android:id="@+id/account_iv"
@@ -185,7 +180,7 @@
                     <EditText
                         android:id="@+id/account_et"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_centerVertical="true"
                         android:layout_toLeftOf="@+id/delete_iv"
                         android:layout_toRightOf="@+id/account_iv"
@@ -205,16 +200,15 @@
                 <TextView
                     style="@style/DivisionLine"
                     android:layout_marginLeft="30dp"
-                    android:layout_marginRight="30dp"
-                    android:layout_marginTop="8dp" />
+                    android:layout_marginRight="30dp" />
 
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/dp_45"
                     android:layout_marginLeft="30dp"
                     android:layout_marginRight="30dp"
-                    android:layout_marginTop="35dp">
+                    android:layout_marginTop="10dp">
 
                     <ImageView
                         android:id="@+id/pwd_iv"
@@ -239,7 +233,7 @@
                     <EditText
                         android:id="@+id/pwd_et"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_centerVertical="true"
                         android:layout_toLeftOf="@+id/tv_forget_pwd"
                         android:layout_toRightOf="@+id/pwd_iv"
@@ -259,8 +253,7 @@
                 <TextView
                     style="@style/DivisionLine"
                     android:layout_marginLeft="30dp"
-                    android:layout_marginRight="30dp"
-                    android:layout_marginTop="8dp" />
+                    android:layout_marginRight="30dp"/>
 
             </LinearLayout>
 

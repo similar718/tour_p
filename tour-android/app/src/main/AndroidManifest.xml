@@ -1055,7 +1055,7 @@
             android:name=".home.activity.SelectedLineActivity"
             android:screenOrientation="portrait" /> <!-- 签到界面 -->
         <activity
-            android:name=".mine.activity.SignInActivity"
+            android:name=".mine.activity.SignInActivity1"
             android:screenOrientation="portrait" /> <!-- 共享导航 -->
         <activity
             android:name=".selfdrivingtools.activity.SharedNavigationMapActivity"

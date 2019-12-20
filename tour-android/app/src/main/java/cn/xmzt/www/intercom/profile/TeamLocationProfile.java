@@ -128,9 +128,6 @@ public class TeamLocationProfile {
                     if (TextUtils.isEmpty(locationBean.getSend_msg_id())){
                         return;
                     }
-                    if (TextUtils.isEmpty(locationBean.getSend_msg_avatar())){
-                        return;
-                    }
 
                     GroupUserInfo userInfo = TourDatabase.getDefault(ActivityUtils.getTopActivity()).getGroupUserInfoDao().getData(locationBean.getGroup_id(),locationBean.getSend_msg_id());
                     if (userInfo != null) {

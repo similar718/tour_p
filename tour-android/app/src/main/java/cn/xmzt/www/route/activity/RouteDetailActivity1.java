@@ -442,7 +442,7 @@ public class RouteDetailActivity1 extends TourBaseActivity<RouteDetailViewModel,
                 break;
             }
             case R.id.tvReserve:{
-                //立即预定
+                //立即预订
                 if(SPUtils.iSLoginLive()){
                     Intent intent = new Intent();
                     intent.putExtra("A",routeId);

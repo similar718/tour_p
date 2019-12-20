@@ -43,5 +43,7 @@ public class FloatIntercomManage {
     public void setTalkStatus(int type){
         FloatViewManager.get().getView().setTalkStatus(type);
     }
-
+    public void setCanTalk(boolean canTalk){
+        FloatViewManager.get().getView().setCanTalk(canTalk);
+    }
 }
